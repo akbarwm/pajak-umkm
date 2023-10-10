@@ -1,0 +1,68 @@
+[07-Aug-2023 21:43:43 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/alt-php73/sess_d97f9ae4c9e1d9186ffca3b211c9717c, O_RDWR) failed: No such file or directory (2) in /home/taxcente/sudutpajak.taxcenter-polibatam.id/konsultasi/index.php on line 3
+[07-Aug-2023 21:43:43 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/alt-php73) in /home/taxcente/sudutpajak.taxcenter-polibatam.id/konsultasi/index.php on line 3
+[07-Aug-2023 21:46:18 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/alt-php73/sess_40249943f0ab6c5b5212c6a148f2d499, O_RDWR) failed: No such file or directory (2) in /home/taxcente/sudutpajak.taxcenter-polibatam.id/konsultasi/index.php on line 3
+[07-Aug-2023 21:46:18 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/alt-php73) in /home/taxcente/sudutpajak.taxcenter-polibatam.id/konsultasi/index.php on line 3
+[08-Aug-2023 00:32:44 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/alt-php73/sess_0d179cd4a7e3102e6439b3f0851336db, O_RDWR) failed: No such file or directory (2) in /home/taxcente/sudutpajak.taxcenter-polibatam.id/konsultasi/index.php on line 3
+[08-Aug-2023 00:32:44 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/alt-php73) in /home/taxcente/sudutpajak.taxcenter-polibatam.id/konsultasi/index.php on line 3
+[08-Aug-2023 00:32:44 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/alt-php73/sess_0d179cd4a7e3102e6439b3f0851336db, O_RDWR) failed: No such file or directory (2) in /home/taxcente/sudutpajak.taxcenter-polibatam.id/konsultasi/index.php on line 3
+[08-Aug-2023 00:32:44 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/alt-php73) in /home/taxcente/sudutpajak.taxcenter-polibatam.id/konsultasi/index.php on line 3
+[08-Aug-2023 00:55:49 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/alt-php73/sess_0d179cd4a7e3102e6439b3f0851336db, O_RDWR) failed: No such file or directory (2) in /home/taxcente/sudutpajak.taxcenter-polibatam.id/konsultasi/index.php on line 3
+[08-Aug-2023 00:55:49 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/alt-php73) in /home/taxcente/sudutpajak.taxcenter-polibatam.id/konsultasi/index.php on line 3
+[08-Aug-2023 00:55:49 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/alt-php73/sess_0d179cd4a7e3102e6439b3f0851336db, O_RDWR) failed: No such file or directory (2) in /home/taxcente/sudutpajak.taxcenter-polibatam.id/konsultasi/index.php on line 3
+[08-Aug-2023 00:55:49 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/alt-php73) in /home/taxcente/sudutpajak.taxcenter-polibatam.id/konsultasi/index.php on line 3
+[08-Aug-2023 06:56:02 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/alt-php73/sess_obdfpiol65p7plilh5dql7u9ql, O_RDWR) failed: No such file or directory (2) in /home/taxcente/sudutpajak.taxcenter-polibatam.id/konsultasi/index.php on line 3
+[08-Aug-2023 06:56:02 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/alt-php73) in /home/taxcente/sudutpajak.taxcenter-polibatam.id/konsultasi/index.php on line 3
+[08-Aug-2023 06:56:03 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/alt-php73/sess_obdfpiol65p7plilh5dql7u9ql, O_RDWR) failed: No such file or directory (2) in /home/taxcente/sudutpajak.taxcenter-polibatam.id/konsultasi/index.php on line 3
+[08-Aug-2023 06:56:03 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/alt-php73) in /home/taxcente/sudutpajak.taxcenter-polibatam.id/konsultasi/index.php on line 3
+[08-Aug-2023 08:46:05 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/alt-php73/sess_u39llpfrsno8knsis4jnidca4h, O_RDWR) failed: No such file or directory (2) in /home/taxcente/sudutpajak.taxcenter-polibatam.id/konsultasi/konsultasi.php on line 3
+[08-Aug-2023 08:46:05 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/alt-php73) in /home/taxcente/sudutpajak.taxcenter-polibatam.id/konsultasi/konsultasi.php on line 3
+[08-Aug-2023 08:46:21 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/alt-php73/sess_u39llpfrsno8knsis4jnidca4h, O_RDWR) failed: No such file or directory (2) in /home/taxcente/sudutpajak.taxcenter-polibatam.id/konsultasi/konsultasi.php on line 3
+[08-Aug-2023 08:46:21 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/alt-php73) in /home/taxcente/sudutpajak.taxcenter-polibatam.id/konsultasi/konsultasi.php on line 3
+[08-Aug-2023 08:46:32 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/alt-php73/sess_u39llpfrsno8knsis4jnidca4h, O_RDWR) failed: No such file or directory (2) in /home/taxcente/sudutpajak.taxcenter-polibatam.id/konsultasi/konsultasi.php on line 3
+[08-Aug-2023 08:46:32 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/alt-php73) in /home/taxcente/sudutpajak.taxcenter-polibatam.id/konsultasi/konsultasi.php on line 3
+[08-Aug-2023 09:01:36 UTC] PHP Warning:  session_start(): open(/var/cpanel/php/sessions/alt-php73/sess_u39llpfrsno8knsis4jnidca4h, O_RDWR) failed: No such file or directory (2) in /home/taxcente/sudutpajak.taxcenter-polibatam.id/konsultasi/konsultasi.php on line 3
+[08-Aug-2023 09:01:36 UTC] PHP Warning:  session_start(): Failed to read session data: files (path: /var/cpanel/php/sessions/alt-php73) in /home/taxcente/sudutpajak.taxcenter-polibatam.id/konsultasi/konsultasi.php on line 3
+[08-Aug-2023 13:04:52 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/elusivet/sudutpajak.elusivetako.my.id/konsultasi/konsultasi_previewConsultant.php on line 69
+[08-Aug-2023 13:04:52 UTC] PHP Warning:  session_start(): Cannot start session when headers already sent in /home/elusivet/sudutpajak.elusivetako.my.id/konsultasi/konsultasi_previewConsultant.php on line 69
+[14-Sep-2023 09:05:10 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/conf/config.php:12
+Stack trace:
+#0 /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/conf/config.php(12): mysqli_connect('localhost', 'root', '', 'pajak2')
+#1 /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/index.php(6): include('/home/zaxnpiwc/...')
+#2 {main}
+  thrown in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/conf/config.php on line 12
+[14-Sep-2023 09:05:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/conf/config.php:12
+Stack trace:
+#0 /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/conf/config.php(12): mysqli_connect('localhost', 'root', '', 'pajak2')
+#1 /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/index.php(6): include('/home/zaxnpiwc/...')
+#2 {main}
+  thrown in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/conf/config.php on line 12
+[15-Sep-2023 05:24:01 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/conf/config.php:12
+Stack trace:
+#0 /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/conf/config.php(12): mysqli_connect('localhost', 'root', '', 'pajak2')
+#1 /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/index.php(6): include('/home/zaxnpiwc/...')
+#2 {main}
+  thrown in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/conf/config.php on line 12
+[15-Sep-2023 13:20:05 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/conf/config.php:12
+Stack trace:
+#0 /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/conf/config.php(12): mysqli_connect('localhost', 'root', '', 'pajak2')
+#1 /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/index.php(6): include('/home/zaxnpiwc/...')
+#2 {main}
+  thrown in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/conf/config.php on line 12
+[15-Sep-2023 17:18:00 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/conf/config.php:12
+Stack trace:
+#0 /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/conf/config.php(12): mysqli_connect('localhost', 'root', '', 'pajak2')
+#1 /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/index.php(6): include('/home/zaxnpiwc/...')
+#2 {main}
+  thrown in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/conf/config.php on line 12
+[17-Sep-2023 13:19:19 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/conf/config.php:12
+Stack trace:
+#0 /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/conf/config.php(12): mysqli_connect('localhost', 'root', '', 'pajak2')
+#1 /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/index.php(6): include('/home/zaxnpiwc/...')
+#2 {main}
+  thrown in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/conf/config.php on line 12
+[18-Sep-2023 13:15:30 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/conf/config.php:12
+Stack trace:
+#0 /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/conf/config.php(12): mysqli_connect('localhost', 'root', '', 'pajak2')
+#1 /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/index.php(6): include('/home/zaxnpiwc/...')
+#2 {main}
+  thrown in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/konsultasi/conf/config.php on line 12

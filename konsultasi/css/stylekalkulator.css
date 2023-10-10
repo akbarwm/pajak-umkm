@@ -1,0 +1,558 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding: 70px 0;
+    margin-left: 15%;
+}
+
+body {
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: var(--bs-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none
+}
+
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+    color: #0d6efd;
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: .5rem;
+    padding-bottom: .5rem
+}
+
+.navbar>.container,
+.navbar>.container-fluid,
+.navbar>.container-lg,
+.navbar>.container-md,
+.navbar>.container-sm,
+.navbar>.container-xl,
+.navbar>.container-xxl {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between
+}
+
+.navbar-brand {
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    white-space: nowrap
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none
+}
+
+.navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0
+}
+
+.navbar-nav .dropdown-menu {
+    position: static
+}
+
+.navbar-text {
+    padding-top: .5rem;
+    padding-bottom: .5rem
+}
+
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center
+}
+
+.navbar-toggler {
+    padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: box-shadow .15s ease-in-out
+}
+
+.navbar .getstarted {
+    background: #106eea;
+    margin-left: 30px;
+    border-radius: 4px;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    line-height: 2.3;
+}
+
+.navbar-nav a {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.navbar-light .navbar-brand {
+    color: #000;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover {
+    color: #000;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #000;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #000;
+}
+
+.collapse:not(.show) {
+    display: none
+}
+
+.collapsing {
+    height: 0;
+    overflow: hidden;
+    transition: height .35s ease
+}
+
+.navbar-expand-lg {
+    flex-wrap: nowrap;
+    justify-content: flex-start
+}
+
+.navbar-expand-lg .navbar-nav {
+    flex-direction: row
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    position: absolute
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: .5rem;
+    padding-left: .5rem
+}
+
+.navbar-expand-lg .navbar-nav-scroll {
+    overflow: visible
+}
+
+.navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto
+}
+
+.navbar-expand-lg .navbar-toggler {
+    display: none
+}
+
+.navbar-expand-lg .offcanvas-header {
+    display: none
+}
+
+.navbar-expand-lg .offcanvas {
+    position: inherit;
+    bottom: 0;
+    z-index: 1000;
+    flex-grow: 1;
+    visibility: visible !important;
+    background-color: transparent;
+    border-right: 0;
+    border-left: 0;
+    transition: none;
+    transform: none
+}
+
+.navbar-expand-lg .offcanvas-bottom,
+.navbar-expand-lg .offcanvas-top {
+    height: auto;
+    border-top: 0;
+    border-bottom: 0
+}
+
+.navbar-expand-lg .offcanvas-body {
+    display: flex;
+    flex-grow: 0;
+    padding: 0;
+    overflow-y: visible
+}
+
+ol,
+ul {
+    padding-left: 2rem
+}
+
+dl,
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 1rem
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+    margin-bottom: 0
+}
+
+.text-center {
+    text-align: center !important
+}
+
+::selection {
+    color: #fff;
+    background: #3edda3;
+    ;
+}
+
+.container {
+    width: 800px;
+    position: relative;
+    background: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 35px 10px 35px;
+}
+
+.container header {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.container .form-outer {
+    width: 100%;
+    overflow: hidden;
+}
+
+.container .form-outer form {
+    display: flex;
+    width: 400%;
+}
+
+.form-outer form .page {
+    width: 25%;
+    transition: margin-left 0.3s ease-in-out;
+    /* margin-top: -5px; */
+}
+
+.form-outer form .page .title {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 450;
+}
+
+.form-outer form .page .field {
+    width: 800px;
+    height: 15px;
+    margin: 20px 0;
+    display: row;
+    position: relative;
+}
+
+.form-outer form .page .field-pph {
+    width: 800px;
+    height: 5px;
+    margin: 18px 0;
+    display: row;
+    position: relative;
+}
+
+form .page .field .label {
+    font-weight: 600;
+    font-size: 11px;
+    float: left;
+    width: 30%;
+    display: inline-block;
+    text-align: left;
+}
+
+form .page .field .label-long {
+    font-weight: 600;
+    font-size: 12px;
+    float: left;
+    width: 70%;
+    display: inline-block;
+    text-align: left;
+}
+
+form .page .field-pph .label-pph {
+    font-weight: 600;
+    font-size: 11px;
+    float: left;
+    width: 70%;
+    display: inline-block;
+    text-align: left;
+    line-height: 15px;
+    height: 5px;
+    padding: 2px 2px 0 2px;
+}
+
+form .page .field .col-75 {
+    float: left;
+    padding-left: 10%;
+    width: 19%;
+}
+
+form .page .field-pph input {
+    border: 1px solid lightgrey;
+    font-size: 12px;
+    width: 20%;
+    float: right;
+}
+
+form .page .field input {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    padding-left: 15px;
+    padding-right: 1%;
+    font-size: 12px;
+    float: right;
+}
+
+form .page .field .label-radio {
+    margin-top: -4px;
+    float: left !important;
+}
+
+form .page .field .radio {
+    height: 100%;
+    width: 8%;
+    margin-left: 50px;
+    float: left !important;
+}
+
+form .page .field select {
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 8%;
+}
+
+form .page .field .select {
+    float: left;
+    padding-left: 1%;
+    width: 60%;
+}
+
+form .page .field .select-month {
+    font-weight: 500;
+    float: left;
+    padding-left: 6%;
+    width: 20%;
+    display: inline-block;
+    text-align: left;
+}
+
+.form-outer form .page .field .firstNext {
+    margin: 2% 0;
+    width: 60%;
+    float: right;
+    margin-right: 2%;
+}
+
+.form-outer form .page .btns {
+    width: 800px;
+    height: 15px;
+    margin: 30px 0;
+    display: row;
+    position: relative;
+}
+
+form .page .btns button {
+    margin-top: -15px !important;
+    width: 48% !important;
+}
+
+form .page .field button {
+    width: 100%;
+    height: calc(100% + 10px);
+    border: none;
+    background: #3edda3;
+    margin-top: -15px;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+}
+
+form .page .field button:hover {
+    background: #000;
+}
+
+form .page .btns button.prev {
+    margin-right: 1%;
+    font-size: 17px;
+}
+
+form .page .btns button.next {
+    margin-left: 1%;
+}
+
+.container .progress-bar {
+    display: flex;
+    margin: 15px 0;
+    user-select: none;
+}
+
+.container .progress-bar .step {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.container .progress-bar .step p {
+    font-weight: 500;
+    font-size: 15px;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.progress-bar .step .bullet {
+    height: 25px;
+    width: 25px;
+    border: 2px solid #000;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    transition: 0.2s;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.progress-bar .step .bullet.active {
+    border-color: #3edda3;
+    background: #3edda3;
+}
+
+.progress-bar .step .bullet span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.progress-bar .step .bullet.active span {
+    display: none;
+}
+
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 11px;
+    right: -1400%;
+    height: 3px;
+    width: 1400%;
+    background: #262626;
+}
+
+.progress-bar .step .bullet.active:after {
+    background: #3edda3;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 0.3s linear forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after {
+    display: none;
+}
+
+.progress-bar .step p.active {
+    color: #3edda3;
+    transition: 0.2s linear;
+}
+
+.progress-bar .step .check {
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+header .arrow {
+    position: relative;
+    float: left;
+    color: #3edda3;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+header .arrow:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+.progress-bar .step .check.active {
+    display: block;
+    color: #fff;
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+    cursor: not-allowed;
+    background-color: #eee;
+    opacity: 1;
+}

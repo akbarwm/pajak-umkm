@@ -1,0 +1,8 @@
+konfigurasi hosting
+
+1. sudutpajak/connection.php
+2. sudutpajak\sudutpajak\user\config\connection.php
+3. sudutpajak\konsultasi\conf\config.php
+4. sudutpajak\konsultasi\Admin\config\connection.php
+5. sudutpajak\konsultasi\konsultan\conf\config.php
+

@@ -1,0 +1,14 @@
+[17-Sep-2023 09:53:32 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/user/reschedule_appt.php on line 5
+[17-Sep-2023 09:53:32 UTC] PHP Warning:  include(../conf/config.php): Failed to open stream: No such file or directory in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/user/reschedule_appt.php on line 6
+[17-Sep-2023 09:53:32 UTC] PHP Warning:  include(../conf/config.php): Failed to open stream: No such file or directory in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/user/reschedule_appt.php on line 6
+[17-Sep-2023 09:53:32 UTC] PHP Warning:  include(): Failed opening '../conf/config.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/user/reschedule_appt.php on line 6
+[17-Sep-2023 09:53:32 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/user/reschedule_appt.php:1) in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/user/reschedule_appt.php on line 8
+[17-Sep-2023 09:53:32 UTC] PHP Warning:  Undefined global variable $_SESSION in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/user/reschedule_appt.php on line 10
+[17-Sep-2023 09:53:32 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/user/reschedule_appt.php on line 10
+[17-Sep-2023 09:53:32 UTC] PHP Warning:  Undefined array key "id_reschedule" in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/user/reschedule_appt.php on line 11
+[17-Sep-2023 09:53:32 UTC] PHP Warning:  Undefined variable $koneksi in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/user/reschedule_appt.php on line 12
+[17-Sep-2023 09:53:32 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/user/reschedule_appt.php:12
+Stack trace:
+#0 /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/user/reschedule_appt.php(12): mysqli_query(NULL, 'SELECT * FROM t...')
+#1 {main}
+  thrown in /home/zaxnpiwc/sudutpajak.taxcenter-polibatam.id/user/reschedule_appt.php on line 12

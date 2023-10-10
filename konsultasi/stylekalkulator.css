@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: visible;
+  background: url(/assets/images/bg.jpeg) no-repeat center fixed;
+}
+::selection {
+  color: #fff;
+  background: #d43f8d;
+}
+.container {
+  width: 800px;
+  position: relative;
+  background: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 2px 35px 2px 35px;
+}
+.container header {
+  font-size: 25px;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+}
+.container .form-outer {
+  width: 100%;
+  overflow: hidden;
+}
+.container .form-outer form {
+  display: flex;
+  width: 400%;
+}
+.form-outer form .page {
+  width: 25%;
+  transition: margin-left 0.3s ease-in-out;
+  /* margin-top: -5px; */
+}
+.form-outer form .page .title {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 450;
+}
+.form-outer form .page .field {
+  width: 800px;
+  height: 15px;
+  margin: 20px 0;
+  display: row;
+  position: relative;
+}
+.form-outer form .page .field-pph {
+  width: 800px;
+  height: 5px;
+  margin: 18px 0;
+  display: row;
+  position: relative;
+}
+form .page .field .label {
+  font-weight: 600;
+  font-size: 11px;
+  float: left;
+  width: 30%;
+  display: inline-block;
+  text-align: left;
+}
+form .page .field .label-long {
+  font-weight: 600;
+  font-size: 12px;
+  float: left;
+  width: 70%;
+  display: inline-block;
+  text-align: left;
+}
+form .page .field-pph .label-pph {
+  font-weight: 600;
+  font-size: 11px;
+  float: left;
+  width: 70%;
+  display: inline-block;
+  text-align: left;
+  line-height: 15px;
+  height: 5px;
+  padding: 2px 2px 0 2px;
+}
+form .page .field .col-75 {
+  float: left;
+  padding-left: 10%;
+  width: 19%;
+}
+form .page .field-pph input {
+  border: 1px solid lightgrey;
+  font-size: 12px;
+  width: 20%;
+  float: right;
+}
+form .page .field input {
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgrey;
+  padding-left: 15px;
+  padding-right: 1%;
+  font-size: 12px;
+  float: right;
+}
+form .page .field .label-radio {
+  margin-top: -4px;
+  float: left !important;
+}
+form .page .field .radio {
+  height: 100%;
+  width: 8%;
+  margin-left: 50px;
+  float: left !important;
+}
+form .page .field select {
+  font-size: 17px;
+  font-weight: 500;
+  margin-left: 8%;
+}
+form .page .field .select {
+  float: left;
+  padding-left: 1%;
+  width: 60%;
+}
+form .page .field .select-month {
+  font-weight: 500;
+  float: left;
+  padding-left: 6%;
+  width: 20%;
+  display: inline-block;
+  text-align: left;
+}
+.form-outer form .page .field .firstNext {
+  margin: 2% 0;
+  width: 60%;
+  float: right;
+  margin-right: 2%;
+}
+.form-outer form .page .btns {
+  width: 800px;
+  height: 15px;
+  margin: 30px 0;
+  display: row;
+  position: relative;
+}
+form .page .btns button {
+  margin-top: -15px !important;
+  width: 48% !important;
+}
+form .page .field button {
+  width: 100%;
+  height: calc(100% + 10px);
+  border: none;
+  background: #d33f8d;
+  margin-top: -15px;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s ease;
+}
+form .page .field button:hover {
+  background: #000;
+}
+
+form .page .btns button.prev {
+  margin-right: 1%;
+  font-size: 17px;
+}
+form .page .btns button.next {
+  margin-left: 1%;
+}
+.container .progress-bar {
+  display: flex;
+  margin: 15px 0;
+  user-select: none;
+}
+.container .progress-bar .step {
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+.container .progress-bar .step p {
+  font-weight: 500;
+  font-size: 15px;
+  color: #000;
+  margin-bottom: 5px;
+}
+.progress-bar .step .bullet {
+  height: 25px;
+  width: 25px;
+  border: 2px solid #000;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  transition: 0.2s;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+}
+.progress-bar .step .bullet.active {
+  border-color: #d43f8d;
+  background: #d43f8d;
+}
+.progress-bar .step .bullet span {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.progress-bar .step .bullet.active span {
+  display: none;
+}
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after {
+  position: absolute;
+  content: "";
+  bottom: 11px;
+  right: -395px;
+  height: 3px;
+  width: 393px;
+  background: #262626;
+}
+.progress-bar .step .bullet.active:after {
+  background: #d43f8d;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate 0.3s linear forwards;
+}
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after {
+  display: none;
+}
+.progress-bar .step p.active {
+  color: #d43f8d;
+  transition: 0.2s linear;
+}
+.progress-bar .step .check {
+  position: absolute;
+  left: 50%;
+  top: 65%;
+  font-size: 15px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+header .arrow {
+  position: relative;
+  float: left;
+  color: #d43f8d;
+  background-color: #fff;
+  border-radius: 50%;
+}
+header .arrow:hover {
+  color: #000;
+  background-color: #fff;
+}
+.progress-bar .step .check.active {
+  display: block;
+  color: #fff;
+}
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  cursor: not-allowed;
+  background-color: #eee;
+  opacity: 1;
+}

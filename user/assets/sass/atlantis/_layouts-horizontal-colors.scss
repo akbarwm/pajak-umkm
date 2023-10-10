@@ -1,0 +1,232 @@
+/*     	Customable Layouts Colors     */
+
+.main-header {
+	&[data-background-color]{
+		.nav-search{
+			.input-group {
+				border: 0;
+				background: rgba(0, 0, 0, 0.14);
+				box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.07);
+				transition: all .4s;
+				.form-control {
+					color: $white-color;
+					&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+						opacity: 1;
+					}
+					&::-moz-placeholder { /* Firefox 19+ */
+						opacity: 1;
+					}
+					&:-ms-input-placeholder { /* IE 10+ */
+						opacity: 1;
+					}
+					&:-moz-placeholder { /* Firefox 18- */
+						opacity: 1;
+					}
+				}
+				.search-icon {
+					color: $white-color !important;
+				}
+				&.focus {
+					background: #fff !important;
+					.form-control {
+						color: inherit !important;
+						&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+							color: #bfbfbf !important;
+						}
+						&::-moz-placeholder { /* Firefox 19+ */
+							color: #bfbfbf !important;
+						}
+						&:-ms-input-placeholder { /* IE 10+ */
+							color: #bfbfbf !important;
+						}
+						&:-moz-placeholder { /* Firefox 18- */
+							color: #bfbfbf !important;
+						}
+					}
+					.search-icon {
+						color: #bfbfbf !important;
+					}
+				}
+			}
+		}
+		#search-nav{
+			&.focus {
+				.nav-search{
+					.input-group {
+						background: #fff !important;
+						.form-control {
+							color: inherit !important;
+							&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+								color: #bfbfbf !important;
+							}
+							&::-moz-placeholder { /* Firefox 19+ */
+								color: #bfbfbf !important;
+							}
+							&:-ms-input-placeholder { /* IE 10+ */
+								color: #bfbfbf !important;
+							}
+							&:-moz-placeholder { /* Firefox 18- */
+								color: #bfbfbf !important;
+							}
+						}
+						.search-icon {
+							color: #bfbfbf !important;
+						}
+					}
+				}
+			}
+		}
+		.navbar-nav .nav-item {
+			.nav-link {
+				color: $white-color !important;
+				&:hover, &:focus {
+					background: rgba(236, 236, 255, 0.2);
+				}
+			}
+			&.active {
+				.nav-link {
+					background: rgba(236, 236, 255, 0.2);
+				}
+			}
+		}
+		.navbar-toggler {
+			.navbar-toggler-icon {
+				color: $white-color !important;
+			}
+		}
+		.more {
+			color: $white-color !important;
+		}
+	}
+	&[data-background-color="dark"], &[data-background-color="dark2"] {
+		.nav-search {
+			.input-group {
+				background: rgba(185, 185, 185, 0.18);
+			}
+		}
+		.navbar-nav .nav-item {
+			.nav-link {
+				&:hover, &:focus {
+					background: rgba(185, 185, 185, 0.18);
+				}
+			}
+			&.active {
+				.nav-link {
+					background: rgba(185, 185, 185, 0.18);
+				}
+			}
+		}
+	}
+	&[data-background-color="transparent"]{
+		background: transparent;
+	}
+	&[data-background-color="white"], &.fixed[data-background-color="transparent"] {
+		.nav-search {
+			.input-group {
+				background: #eee;
+				.form-control {
+					color: #666 !important;
+				}
+				.search-icon {
+					color: #666 !important;
+				}
+			}
+		}
+		.navbar-nav .nav-item {
+			.nav-link {
+				color: #666 !important;
+				&:hover, &:focus {
+					background: #eee !important;
+				}
+			}
+			&.active {
+				.nav-link {
+					background: #eee !important;
+				}
+			}
+		}
+		.navbar-toggler .navbar-toggler-icon, .more, .btn-toggle {
+			color: #666 !important;
+		}
+	}
+}
+
+.btn-toggle {
+	color: #fff !important;
+}
+
+@mixin main-header-color-style($color) {
+	background: $color !important;
+	.nav-top {
+		background: $color !important;
+	}
+	.navbar-header {
+		background: $color !important;
+	}
+	.nav-bottom {
+		.title-menu {
+			background: $color !important;
+		}
+	}
+}
+
+//[data-background-color="white"]
+.main-header[data-background-color="white"] {
+	@include main-header-color-style($white-color);
+}
+
+//[data-background-color="dark"]
+.main-header[data-background-color="dark"] {
+	@include main-header-color-style($black-color);
+}
+.main-header[data-background-color="dark2"] {
+	@include main-header-color-style($black2-color);
+}
+
+//[data-background-color="blue"]
+.main-header[data-background-color="blue"] {
+	@include main-header-color-style($primary-color);
+}
+.main-header[data-background-color="blue2"] {
+	@include main-header-color-style($primary2-color);
+}
+
+//[data-background-color="purple"]
+.main-header[data-background-color="purple"] {
+	@include main-header-color-style($secondary-color);
+}
+.main-header[data-background-color="purple2"] {
+	@include main-header-color-style($secondary2-color);
+}
+
+//[data-background-color="light-blue"]
+.main-header[data-background-color="light-blue"] {
+	@include main-header-color-style($info-color);
+}
+.main-header[data-background-color="light-blue2"] {
+	@include main-header-color-style($info2-color);
+}
+
+//[data-background-color="green"]
+.main-header[data-background-color="green"] {
+	@include main-header-color-style($success-color);
+}
+.main-header[data-background-color="green2"] {
+	@include main-header-color-style($success2-color);
+}
+
+//[data-background-color="orange"]
+.main-header[data-background-color="orange"] {
+	@include main-header-color-style($warning-color);
+}
+.main-header[data-background-color="orange2"] {
+	@include main-header-color-style($warning2-color);
+}
+
+//[data-background-color="red"]
+.main-header[data-background-color="red"] {
+	@include main-header-color-style($danger-color);
+}
+.main-header[data-background-color="red2"] {
+	@include main-header-color-style($danger2-color);
+}

@@ -1,0 +1,1120 @@
+/**
+*
+* -----------------------------------------------------------------------------
+*
+* Template : Neuron - Machine Learning & AI Startups HTML5 Template
+* Author : rs-theme
+* Author URI : http://www.rstheme.com/
+*
+* -----------------------------------------------------------------------------
+*
+**/
+
+@media only screen and (min-width: 1366px){ 
+	.container {
+	    max-width: 1200px;
+	}
+}
+
+@media only screen and (min-width: 1500px){ 
+	.container {
+	    max-width: 1410px;
+	    padding: 0 20px;
+	}
+}
+
+@media only screen and (max-width: 1440px){ 
+	.sec-title .title,
+	.sec-title .title2 {
+		font-size: 35px;
+	}
+	.sec-title.mb-70,
+	.sec-title.mb-55,
+	.sec-title.mb-61 {
+		margin-bottom: 45px;
+	}
+	.sec-title .title::after {
+		top: 30px;
+	}
+	.neuron-contact-page .sec-title p {
+		font-size: 15px;
+	}
+	.rs-main-slider.home2 .owl-stage-outer {
+	    padding: 150px 0;
+	}
+	.rs-main-slider .dsc h1 {
+	    font-size: 46px;
+	    line-height: 60px;
+	}
+	.breadcrumbs .breadcrumbs-wrap img {
+		min-height: 350px;
+	}
+	.neuron-work .language-work {
+	    padding: 20px 30px;
+	}
+	.neuron-work .language-work.long-work {
+	    padding: 50px 30px;
+	}
+	.neuron-newsletter .newsletter-part .newsletter-icon {
+	    padding-left: 50px;
+	}
+	.neuron-newsletter .newsletter-part .newsletter-text {
+	    padding-right: 50px;
+	}
+	.neuron-about .single-about .about-title .title {
+		font-size: 20px !important;
+	}
+	.neuron-about .single-about.style4.icon-style .title {
+	    font-size: 18px !important;
+	}
+	.neuron-feature .flip-icon-box.style2 .text-part .flip-box-title {
+		font-size: 18px;
+	}
+	.what-we-do .tab-style .tab-content .tab-pane .project-item .project-content .title {
+		font-size: 22px;
+	}
+	.neuron-pricing .style1 .pricing-wrap .middle-part,
+	.neuron-pricing .style2 .pricing-wrap .middle-part {
+		max-width: 100%;
+	}
+	.neuron-counter-area .neuron-count .neuron-counter-part .counter-text .neuron-counter {
+	    font-size: 35px;
+	    margin-bottom: 10px;
+	}
+	.neuron-counter-area .neuron-count .neuron-counter-part .counter-text .counter-txt {
+		font-size: 18px;
+	}
+	.neuron-contact-page.neuron-contact .contact-info {
+		padding: 0 0 25px;
+	}
+	.neuron-blog .single-blog.style4 .blog-details .blog-desc .blog-title {
+		font-size: 35px;
+	}
+	.neuron-blog .single-blog.style4 .blog-details .blog-desc .blog-title.sidebar-title {
+		font-size: 25px;
+	}
+	.neuron-blog .single-blog .blog-details {
+	    padding: 30px 25px;
+	}
+	.neuron-blog .single-blog .blog-details .blog-desc .blog-title {
+		font-size: 20px;
+	}
+	.neuron-error .content-wrap .title-part .title {
+		font-size: 100px;
+		text-shadow: 12px 0 0 rgba(0, 0, 0, 0.3);
+		line-height: 110px;
+	}
+	.neuron-error .content-wrap .title-part .sub-title {
+		font-size: 30px;
+		line-height: 30px;
+	}
+	.neuron-error .content-wrap .title-part {
+		padding-bottom: 350px;
+	}
+	.neuron-error .content-wrap .button-part .back-btn {
+		font-size: 15px;
+		padding: 12px 50px;
+	}
+	.neuron-coming-soon .content-wrap .countdown-inner .countdown div {
+		font-size: 25px;
+		width: 100px;
+		height: 100px;
+	}
+	.neuron-coming-soon .content-wrap .countdown-inner {
+		padding: 25px 0 20px;
+	}
+	.neuron-coming-soon .content-wrap .title-part .title {
+		font-size: 40px;
+		line-height: 1;
+	}
+	.neuron-coming-soon .content-wrap .logo {
+		padding-bottom: 20px;
+	}
+	.neuron-coming-soon .content-wrap .social-links {
+		padding-top: 50px;
+	}
+	.neuron-coming-soon .content-wrap .title-part .desc {
+		font-size: 16px;
+		line-height: 26px;
+	}
+	.neuron-coming-soon .content-wrap .countdown-inner .countdown {
+		width: 500px;
+	}
+	.neuron-contact.neuron-contact-page.neuron-contact .sec-title,
+	.neuron-contact.neuron-contact-page.neuron-contact .contact-info {
+		padding: 0;
+	}
+	.neuron-blog .single-blog .blog-details .blog-meta li {
+		padding-right: 12px;
+	}
+	.neuron-about .single-about {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.neuron-about .single-about.style4.icon-style{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+@media only screen and (max-width: 1199px){
+
+	.sec-title .title,
+	.sec-title .title2,
+	.neuron-single-product .single-price-info .product-title {
+		font-size: 30px;
+	}
+	.sec-title .sub-title {
+		font-size: 16px;
+	}
+	.sec-title .title::after {
+		top: 28px;
+	}
+	.rs-main-slider .owl-stage-outer {
+	    padding: 120px 0;
+	}
+	.rs-main-slider.home2 .owl-stage-outer {
+	    padding: 100px 0;
+	}
+	.blog-sidebar .sidebar-single-part {
+		padding: 30px 25px;
+	}
+	.neuron-blog .col-lg-4.pr-60 {
+		padding-right: 30px;
+	}
+	.neuron-blog .col-lg-4.pl-60 {
+		padding-left: 30px;
+	}
+	.rs-main-slider .dsc h1 {
+	    font-size: 35px;
+	    line-height: 45px;
+	}
+	.home-banner {
+		padding: 250px 0 200px;
+	}
+	.neuron-about-video.soft-demo .soft-desc {
+		max-width: 100%;
+	}
+	.breadcrumbs .breadcrumbs-wrap img {
+	    min-height: 300px;
+	}
+	.rs-main-slider.mobile-app .btm-date {
+		font-size: 15px;
+	}
+	.neuron-contact-page .contact-form{
+		padding: 40px;
+	}
+	.rs-footer .about-widget.pr-20{
+		padding-right: 0;
+	}
+	.neuron-contact-page .sec-title p {
+	    font-size: 15px;
+	}
+	.neuron-blog .single-blog .blog-details .blog-meta li {
+		padding-right: 10px;
+	}
+	#rs-header .menu-area .right-bar-icon {
+		margin-left: 35px;
+	}
+	#rs-header .menu-area .rs-menu ul li + li {
+		margin-left: 15px;
+	}
+	.neuron-newsletter .newsletter-part .newsletter-icon i::before {
+		font-size: 200px;
+	}
+	.neuron-newsletter .newsletter-part .newsletter-text .newsletter-box {
+	    max-width: 550px;
+	}
+	.neuron-newsletter .newsletter-part .newsletter-text .newsletter-box input {
+	    max-width: 525px;
+	}
+	.neuron-work .single-work .work-title {
+	    margin: 15px 0 30px;
+	}
+	.neuron-work .single-work .work-title .title {
+	    font-size: 20px;
+	}
+	.neuron-work .single-work .work-icon i::before {
+	    height: 150px;
+	    width: 150px;
+		line-height: 150px;
+		font-size: 75px;
+	    margin: 15px;
+	}
+	.neuron-work .single-work::before {
+		left: 62%;
+	}
+	.neuron-work .single-work::after {
+		left: 74%;
+		width: 83%;
+	}
+	.rs-footer .footer-top .chatbox-part {
+		right: 60px;
+	}
+	.neuron-blog .single-blog.style4 .blog-details .blog-desc .blog-title.sidebar-title,
+	.neuron-blog .single-blog.sidebar .blog-details .blog-desc .blog-title,
+	.single-article-part .article-content .blog-details-title {
+		font-size: 23px;
+	}
+	.blog-sidebar .col-lg-4  {
+
+	}
+	.blog-sidebar .sidebar-single-part {
+		padding: 30px 15px;
+	}
+	.blog-sidebar .sidebar-popular-post .single-post .post-desc ul li {
+		margin-right: 5px;
+		font-size: 13px;
+	}
+	.neuron-cart .cart-body .cart-detail table tr .product-thumbnail {
+		width: 55%;
+	}
+	.neuron-error .content-wrap .title-part {
+		padding-bottom: 280px;
+	}
+	.neuron-pricing .style1 .pricing-wrap,
+	.neuron-pricing .style2 .pricing-wrap {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	.neuron-about .single-about {
+	    padding: 40px 15px 25px;
+	}
+	.neuron-contact .contact-info .contact-icon .icon-part {
+		margin-right: 10px;
+	}
+	.neuron-contact-page.neuron-contact .contact-info{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.neuron-contact .contact-info .contact-icon .icon-text .icon-title{
+		font-size: 16px;
+	}
+	.neuron-contact .contact-info .contact-icon .icon-text p,
+	.neuron-contact .contact-info .contact-icon .icon-text a{
+		font-size: 14px;
+	}
+}
+
+@media only screen and (min-width: 992px){
+	#rs-header.transparent-header .menu-sticky.sticky {
+		background: linear-gradient(-41deg, #09c778, #01a0f9);
+		position: fixed;
+		z-index: 999;
+		margin: 0 auto;
+		padding: 0;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		-webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+		box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+		-webkit-animation-name: sticky-animation;
+		animation-name: sticky-animation;
+		-webkit-animation-duration: .5s;
+		animation-duration: .5s;
+		-webkit-animation-name: sticky-animation;
+		animation-name: sticky-animation;
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+		-webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+	}
+	#rs-header.transparent-header.style2 .menu-sticky.sticky {
+		background: linear-gradient(-150deg, #00aeef, #1292c2);
+	}
+	#rs-header.transparent-header.style3 .menu-sticky.sticky {
+		background: linear-gradient(-150deg, #12b4c8, #6669e6);
+	}
+	#rs-header.transparent-header.style2 .menu-sticky .sticky-visible {
+		display: none;
+	}
+	#rs-header.transparent-header.style2 .menu-sticky.sticky .sticky-hidden {
+		display: none;
+	}
+	#rs-header.transparent-header.style2 .menu-sticky.sticky .sticky-visible {
+		display: block;
+	}
+	#rs-header .menu-area .rs-menu ul li:hover ul {
+		opacity: 1;
+		transform: scaleY(1);
+		visibility: visible;
+	}
+	#rs-header .menu-area .rs-menu ul li .sub-menu {
+		background: #ffffff;
+		left: 0;
+		opacity: 0;
+		position: absolute;
+		top: 100%;
+		transform: scaleY(0);
+		transform-origin: 0 0 0;
+		transition: all 0.5s ease 0s;
+		width: 300px;
+		padding: 15px 0;
+		z-index: 99999 !important;
+		text-align: left;
+		visibility: hidden;
+		-webkit-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.06);
+		-moz-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.06);
+		box-shadow: 0 3px 20px rgba(0, 0, 0, 0.06);
+	}
+}
+
+@media only screen and (max-width: 991px){
+	.col-20 {
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+	.col-20 [class*="col-"],
+	.col-padding-md {
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+	}
+	.hidden-md {
+		display: none;
+	}
+	.order-first,
+	.order-last {
+		order: unset;
+	}
+	.md-text-left {
+		text-align: left !important;
+	}
+	.md-text-center {
+		text-align: center !important;
+	}
+	.md-text-right {
+		text-align: right !important;
+	}
+	#rs-header.transparent-header.style2 .menu-sticky .sticky-visible {
+		display: none;
+	}
+	#rs-header .menu-area .right-bar-icon ul {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	}
+	.rs-main-slider .owl-stage-outer {
+	    padding: 100px 0;
+	}
+	.rs-main-slider.home2 .owl-stage-outer {
+	    padding: 35px 0;
+	}
+	.home-banner {
+	    padding: 175px 0 125px;
+	}
+	.home-banner .banner-item .banner-text h1 {
+		font-size: 35px;
+		line-height: 45px;
+	}	
+	.neuron-team .team-item .detail-part .author .name {
+		font-size: 18px;
+		margin-bottom: 0;
+	}
+	.neuron-contact-page.neuron-contact .contact-info{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.sec-title.text-center{
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner .breadcrumbs-text .breadcrumbs-title {
+		font-size: 35px;
+		margin-bottom: 10px;
+	}
+	.neuron-newsletter .newsletter-part.top-margin {
+	    margin-bottom: 0;
+	}
+	.neuron-newsletter .newsletter-part .newsletter-icon i::before {
+	    font-size: 150px;
+	}
+	.neuron-newsletter .newsletter-part .newsletter-icon {
+	    padding: 0 50px 30px;
+	}
+	.neuron-newsletter .newsletter-part .newsletter-text {
+	    padding: 0 50px;
+	}
+	.neuron-newsletter .newsletter-part .newsletter-text .sec-title.mb-55 {
+	    margin-bottom: 25px;
+	}
+	.neuron-contact .contact-info {
+		margin-top: 80px;
+	}
+	.neuron-partner .partner-image-part .partner-item {
+	    width: 30%;
+	    padding: 0 10px;
+	    margin-bottom: 30px;
+	}
+	.rs-footer{
+		padding-top: 75px;
+	}
+	.rs-footer .single-footer-column{
+		max-width: 400px;
+	}
+	.rs-footer .single-footer-column p{
+		margin-bottom: 10px;
+	}
+	.rs-footer .single-footer-column p:last-child{
+		margin-bottom: 0;
+	}
+	.rs-footer .single-footer-column + .single-footer-column{
+		margin-top: 50px;
+	}
+	.rs-footer .footer-top .footer-logo,
+	.rs-footer .footer-top .footer-title{
+		margin-bottom: 30px;
+	}
+	.rs-footer .footer-top .chatbox-part .chatbox.active {
+		bottom: 78px;
+	}
+	.menu-area .row{
+		position: relative;
+	}
+	.menu-area .logo-area{
+		padding: 15px 0;
+	}
+	.menu-area .logo-area img{
+		position: relative;
+		z-index: 11;
+	}
+	#rs-header .mobile-menu-area {
+		width: 100%;
+		position: absolute;
+		right: 0;
+		top: 5px;
+	}
+	#rs-header .rs-menu-toggle{
+		padding-right: 85px;
+	}
+	.mobile-menu-area .rs-menu-area{
+		display: block;
+		width: 100%;
+		text-align: right;
+	}
+	#rs-header .menu-area .rs-menu ul li{
+		display: block;
+	}
+	#rs-header .menu-area .rs-menu ul li + li,
+	#rs-header.transparent-header .menu-area .rs-menu ul li a{
+		margin-left: 0;
+	}
+	#rs-header .menu-area .right-bar-icon {
+		position: absolute;
+		right: 15px;
+		top: 14px;
+	}
+	#rs-header .menu-area .rs-menu ul li > a{
+		height: 48px;
+		line-height: 48px;
+		padding: 0 20px;
+	}
+	.neuron-about .single-about .about-title .title {
+		font-size: 18px !important;
+	}
+	#rs-header .menu-area .rs-menu ul li .sub-menu li a{
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	#rs-header .menu-area .main-menu .rs-menu ul.sub-menu{
+		padding-top: 17px;
+	}
+	#rs-header .menu-area .rs-menu ul li .sub-menu li a{
+		color: #ffffff !important;
+	}
+	#rs-header .menu-area .rs-menu ul li .sub-menu li{
+		border-top: 1px solid #0697e8;
+	}
+	#rs-header .menu-area .rs-menu ul li .sub-menu li:first-child{
+		border-top: 0;
+	}
+	.neuron-work .single-work::before,
+	.neuron-work .single-work::after,
+	.neuron-work .single-work .round-shape {
+		display: none;
+	}
+	.neuron-work .single-work .work-title {
+		margin: 20px 0 0;
+	}
+	#rs-header .menu-area .rs-menu ul .rs-mega-menu .mega-menu .mega-menu-container .single-megamenu .sub-menu .sub-menu-close{ display: none; }
+	#rs-header .menu-area .rs-menu ul .rs-mega-menu .mega-menu .mega-menu-container .single-megamenu{
+		float: none;
+		width: 100%;
+	}
+	.pagination-area .pagination-part li i, .pagination-area .pagination-part li i::before {
+		font-size: 20px;
+	}
+	.neuron-blog .single-blog.style4 .blog-details .blog-desc .blog-title {
+		font-size: 28px;
+	}
+	.neuron-blog .pb-70 {
+		padding-bottom: 50px;
+	}
+	.blog-sidebar .sidebar-single-part {
+		padding: 30px;
+	}
+	.neuron-single-product .tab-area ul.nav-tabs {
+		margin-bottom: 31px;
+	}
+	.neuron-single-product .tab-area .tab-content .tab-pane .tab-title {
+		font-size: 25px;
+	}
+	.single-product-nav .slick-track {
+		width: 270px !important;
+	}
+	.single-product-nav .slick-track .slick-slide {
+		width: 135px !important;
+	}
+	.neuron-pricing .style1 .pricing-wrap,
+	.neuron-pricing .style2 .pricing-wrap {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.neuron-pricing .style2 .pricing-wrap {
+		background-size: 100%;
+	}
+	.neuron-privacy .privacy-part .single-privacy .privacy-title {
+		font-size: 25px;
+	}
+	.neuron-privacy .privacy-part .single-privacy .privacy-list-title {
+		font-size: 17px;
+	}
+	.rs-main-slider.mobile-app .dsc .btn-slider .slider-btn {
+		margin: 0;
+	}
+	.rs-main-slider.mobile-app .dsc h1 {
+		font-size: 32px;
+		line-height: 42px;
+	}
+	.rs-main-slider .dsc .btn-slider .slider-btn img {
+		width: 150px !important;
+		height: 50px;
+		line-height: 50px;
+	}
+	.neuron-contact.neuron-contact-page.neuron-contact .contact-info {
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 767px){
+	.hidden-sm {
+		display: none;
+	}
+	.col-padding-sm {
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+	}
+	.sm-text-left {
+		text-align: left !important;
+	}
+	.sm-text-center {
+		text-align: center !important;
+	}
+	.sm-text-right {
+		text-align: right !important;
+	}
+	.chatbox-part{
+		display: none;
+	}
+	.readon {
+		font-size: 15px;
+		padding: 15px 35px;
+	}
+	.sec-title .title,
+	.sec-title .title2 {
+		font-size: 30px;
+	}
+	.sec-title .title:after{
+		top: 26px;
+	}	
+	.sec-title .sub-title {
+		font-size: 15px;
+		margin: 0;
+	}
+	.neuron-about-inner .single-about .about-desc {
+		max-width: 250px;
+		margin: 0 auto;
+	}
+	#loading.icon-preloader .loader i::before {
+		font-size: 60px;
+	}
+	.rs-main-slider .owl-stage-outer {
+	    padding: 80px 0;
+	}
+	.rs-main-slider.home2 {
+		background: url(../images/slider/h2-s1.png);
+		background-position: top right;
+	}
+	.rs-main-slider.home2 .owl-stage-outer {
+	    padding: 75px 0;
+	}
+	#rs-header.transparent-header.style2 .menu-sticky .sticky-hidden {
+	    display: none;
+	}
+	#rs-header.transparent-header.style2 .menu-sticky .sticky-visible {
+	    display: block;
+	}
+	.rs-main-slider.home2 .dsc h1 {
+		color: #fff!important;
+	}
+	.rs-main-slider .item.gap-pt {
+	    padding-top: 37px;
+	}
+	.rs-main-slider .dsc h1 {
+	    font-size: 30px;
+	    line-height: 40px;
+	}
+	.rs-main-slider .btm-date {
+	    padding: 10px 0 30px;
+	}
+	.rs-main-slider .dsc .btn-slider .btn1, 
+	.rs-main-slider .dsc .btn-slider .btn2 {
+		padding: 5px 20px;
+		font-size: 13px;
+	}
+	.rs-main-slider .dsc .btn-slider .btn2 {
+	    margin-left: 10px;
+	}
+	.home-banner {
+	    padding: 150px 0 75px;
+	}
+	.home-banner .banner-item .banner-text h1 {
+		font-size: 30px;
+		line-height: 40px;
+	}
+	.what-we-do .tab-style ul.nav-pills li {
+	    margin: 0 0 15px;
+	    display: block;
+	    width: 100%;
+	}
+	.neuron-contact.neuron-contact-page .contact-form {
+		padding: 40px;
+	}
+	.neuron-about .single-about.top-border {
+		padding: 15px 0 0;
+	}
+	.neuron-about .single-about .about-title .title {
+	    margin-bottom: 10px;
+	}
+	.neuron-about .single-about.style4 {
+	    padding: 45px 30px 75px;
+	}
+	.neuron-about .single-about.style4::after {
+		bottom: 45px;
+	}
+	.neuron-counter-area .neuron-count .neuron-counter-part .counter-text .neuron-counter {
+	    font-size: 30px;
+	}
+	.neuron-counter-area .neuron-count .neuron-counter-part .counter-text .counter-txt {
+		font-size: 15px;
+	}
+	.neuron-testimonial .testimonial-vertical-carousel {
+		padding: 50px 0;
+	}
+	.neuron-newsletter .newsletter-part .newsletter-text .newsletter-box {
+	    max-width: 350px;
+	}
+	.neuron-newsletter .newsletter-part .newsletter-text .newsletter-box input {
+	    max-width: unset;
+	    width: 95%;
+	}
+	.neuron-contact-page.neuron-contact .contact-info{
+		display: block;
+	}
+	.neuron-contact-page .contact-map iframe{
+		height: 400px;
+	}
+	.neuron-contact .contact-form .form-button button {
+		height: 50px;
+		line-height: 50px;
+		font-size: 16px;
+	}
+	.neuron-blog .single-blog.style4 .blog-details .blog-desc .blog-title {
+		font-size: 20px;
+	}
+	.pagination-area .pagination-part li {
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+	}
+	.pagination-area .pagination-part li i,
+	.pagination-area .pagination-part li i::before {
+		line-height: 50px;
+	}
+	.neuron-blog .single-blog.style4 .blog-details .blog-desc .blog-title.sidebar-title,
+	.single-article-part .article-content .blog-details-title,
+	.neuron-checkout .checkout-title h3 {
+		font-size: 20px;
+	}
+	.single-article-part .article-content .markup-text {
+		padding: 20px;
+		font-size: 15px;
+	}
+	.comment-block .comment-list .single-comment .comment-part {
+		display: block;
+		margin: 0;
+	}
+	.comment-block .comment-list .single-comment .comment-img {
+		margin: 0 0 15px;
+	}
+	.comment-block .comment-list .single-comment {
+		padding: 25px 0 0;
+		border: none;
+	}
+	.article-tags {
+		display: block;
+	}
+	.article-tags .tag-part {
+		display: block;
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	.article-tags .social-icons {
+		width: 100%;
+		text-align: left;
+	}
+	.article-nav {
+		padding: 35px 0 40px;
+	}
+	.neuron-blog .single-blog .blog-details {
+		padding: 30px 15px;
+	}
+	.neuron-cart .cart-body .cart-detail .action .cupon ul li {
+		margin-right: 5px;
+	}
+	.neuron-cart .cart-body .cart-detail table tr .product-thumbnail {
+		width: 33%;
+	}
+	.neuron-cart .cart-body .cart-detail table tr .product-thumbnail img {
+		padding: 10px 0;
+	}
+	.neuron-checkout .coupon-toggle .accordion .card .card-body .coupon-code-input {
+		width: 80%;
+		float: none;
+		margin: 0 auto 20px;
+	}
+	.neuron-checkout .coupon-toggle .accordion .card .card-body,
+	.neuron-checkout .coupon-toggle .accordion .card .card-body .coupon-code-input input {
+		text-align: center;
+	}
+	.neuron-checkout .coupon-toggle .accordion .card .card-body {
+		padding: 20px 20px 30px 20px;
+	}
+	.neuron-error .content-wrap .title-part .title {
+		font-size: 80px;
+		text-shadow: 8px 0 0 rgba(0, 0, 0, 0.3);
+		line-height: 80px;
+	}
+	.neuron-error .content-wrap .title-part .sub-title {
+		font-size: 25px;
+		line-height: 25px;
+	}
+	.neuron-error .content-wrap .button-part .back-btn {
+		font-size: 15px;
+		padding: 10px 30px;
+	}
+	.neuron-error .content-wrap .title-part {
+		padding-bottom: 175px;
+	}
+	.neuron-coming-soon .content-wrap .newsletter-box .input-area {
+		max-width: 500px;
+	}
+	.neuron-newsletter .newsletter-part.style3 .newsletter-text .newsletter-box input,
+	.neuron-newsletter .newsletter-part.style3 .newsletter-text .newsletter-box button {
+		height: 45px;
+		line-height: 45px;
+	}
+	.neuron-newsletter .newsletter-part.style3 .display-flex {
+		display: block;
+	}
+	.neuron-newsletter .newsletter-part.style3 .newsletter-icon {
+		padding: 0;
+		margin-bottom: 15px;
+		float: none;
+	}
+	.neuron-newsletter .newsletter-part.style3 .newsletter-text {
+		padding: 0; 
+		margin-top: 20px;
+	}
+	.neuron-pricing .style1 .pricing-wrap .middle-part,
+	.neuron-pricing .style2 .pricing-wrap .middle-part {
+		max-width: 75%;
+	}
+	.neuron-privacy .privacy-part .single-privacy .privacy-title {
+		font-size: 20px;
+	}
+	.rs-main-slider.mobile-app .owl-stage-outer {
+		padding: 100px 0 50px;
+	}
+}
+
+@media only screen and (max-width: 575px){
+	.hidden-xs {
+		display: none;
+	}
+	.xs-text-left {
+		text-align: left !important;
+	}
+	.neuron-testimonial.style2 .single-testimonial .author-rating.text-right {
+		text-align: left !important;
+		margin-left: 80px;
+	}
+	.neuron-testimonial.style2 .testimonial-part .single-testimonial .auther-top .author-info span.name {
+		font-size: 17px;
+		margin-bottom: 0;
+	}
+	.neuron-testimonial.style2 .testimonial-part .single-testimonial .auther-top .author-info span.position {
+		font-size: 13px;
+	}	
+	.neuron-newsletter .newsletter-part.style3 .newsletter-text .newsletter-box button {
+		width: 80px;
+	}
+	.neuron-blog .single-blog.style4 .blog-details {
+		padding: 30px 0 0;
+	}
+	.neuron-blog .single-blog.style4 .blog-details .blog-desc .blog-title,
+	.neuron-blog .single-blog.style4 .blog-details .blog-desc .blog-title.sidebar-title,
+	.neuron-blog .single-blog.sidebar .blog-details .blog-desc .blog-title {
+		font-size: 18px;
+	}
+	.bullet ul li a {
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+	}
+	.bullet ul li a i::before {
+		line-height: 50px;
+	}
+	.neuron-single-product .tab-area .tab-content .tab-pane .reviews-grid .top-area h4 {
+		font-size: 20px;
+	}
+	.neuron-cart .cart-body .cart-detail table tr .product-thumbnail img {
+		width: 100px;
+	}
+	.neuron-cart .cart-body .cart-detail .action .cupon ul li form input {
+		margin-right: 10px;
+		width: 140px;
+	}
+	.neuron-coming-soon .content-wrap .newsletter-box .input-area {
+		max-width: 350px;
+	}
+	.neuron-coming-soon .content-wrap .countdown-inner .countdown div {
+		margin-bottom: 30px;
+	}
+	.neuron-coming-soon .content-wrap .countdown-inner .countdown {
+		display: block;
+	}
+	.neuron-coming-soon {
+		height: 1000px;
+	}
+	.neuron-login .login-width .login-form .lost-psw {
+		text-align: left;
+	}
+	.neuron-login .login-width .login-btn {
+		margin-top: 20px !important;
+	}
+	.rs-main-slider.mobile-app .dsc h1 {
+		font-size: 33px;
+	}
+}
+
+@media only screen and (max-width: 480px){
+	.hidden-420 {
+		display: none;
+	}
+	#rs-header .menu-area .right-bar-icon ul > li.cart-inner{
+		padding-right: 15px;
+	}
+	#rs-header .rs-menu-toggle {
+	    padding-right: 64px;
+	}
+	.rs-main-slider .owl-stage-outer {
+	    padding: 80px 0;
+	}
+	.rs-main-slider .dsc h1,
+	.neuron-single-product .single-price-info .product-title {
+	    font-size: 25px;
+	    line-height: 35px;
+	}
+	.sec-title .title,
+	.sec-title .title2 {
+		font-size: 20px;
+	}
+	.home-banner .banner-item .banner-text h1 {
+		font-size: 24px;
+		line-height: 36px;
+	}
+	.sec-title .title::after {
+	    top: 16px;
+	}
+	.neuron-newsletter .newsletter-part .newsletter-icon {
+	    padding: 0 15px 20px;
+	}
+	.neuron-newsletter .newsletter-part .newsletter-text {
+	    padding: 0 15px;
+	}
+	.neuron-about .single-about.style3,
+	.neuron-contact.neuron-contact-page .contact-form{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.neuron-feature .flip-icon-box.style2 {
+		padding-left: 14px;
+		padding-right: 14px;
+	}
+	.neuron-single-product .tab-area ul.nav-tabs li a {
+		padding: 14px 20px;
+	}
+	.neuron-testimonial .testimonial-vertical-carousel .slider-for .item {
+	    padding: 0 30px;
+	}
+	.neuron-testimonial .testimonial-vertical-carousel .slider-for .item .author-desc {
+	    padding: 50px 0 20px;
+	    font-size: 16px;
+	}
+	.breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner .breadcrumbs-text .breadcrumbs-title {
+		font-size: 28px;
+	}
+	.neuron-testimonial .testimonial-vertical-carousel .slider-for .item .author-desc::before {
+		font-size: 35px;
+	}	
+	.neuron-partner .partner-image-part .partner-item {
+	    padding: 0 5px;
+	    margin-bottom: 15px;
+	}
+	.neuron-contact .contact-info {
+		padding: 30px 30px 20px;
+	}
+	.neuron-contact-page .contact-form {
+	    padding: 20px;
+	}
+	.neuron-contact .contact-form .form-button button,
+	.neuron-contact .contact-form .form-field input{
+		height: 45px;
+		line-height: 45px;
+	}
+	.neuron-contact .contact-form .form-field input, 
+	.neuron-contact .contact-form .form-field textarea {
+		margin-bottom: 20px;
+	}
+	.sec-title .title br, 
+	.sec-title .title2 br{
+		display: none;
+	}
+	.rs-footer .footer-top .footer-title:after {
+		bottom: 5px;
+	}
+	.rs-footer .footer-top .footer-title {
+		font-size: 18px;
+	}
+	.neuron-contact-page .contact-map .maps-imgage {
+		left: 42%;
+	}
+	.neuron-blog .single-blog .blog-details .blog-meta li {
+		font-size: 13px;
+		padding-right: 8px;
+	}
+	.neuron-blog .single-blog.style4 .blog-details {
+		padding: 25px 0 0;
+	}
+	.blog-sidebar .sidebar-single-part {
+		padding: 20px;
+	}
+	.article-tags .tag-part a {
+		padding: 0;
+	}
+	.comment-block .comment-list .child-comment {
+		padding-left: 30px;
+	}
+	.comment-block .comment-list .child-comment .single-comment .comment-text .comment-title {
+		margin-bottom: 10px;
+	}
+	.comment-block .comment-list .child-comment .single-comment .comment-text .comment-title,
+	.comment-block .comment-list .child-comment .single-comment .comment-text .comment-meta {
+		float: none;
+	}
+	.neuron-single-product .single-product-nav .images-slide-single img {
+		width: 100%;
+	}
+	.neuron-single-product .tab-area .tab-content .tab-pane .reviews-grid .top-area h4 {
+		font-size: 15px;
+	}
+	.neuron-single-product .tab-area .tab-content .tab-pane .reviews-grid .comment-form p.comment-notes {
+		font-size: 14px;
+	}
+	.neuron-shop .rp-title,
+	.rp-area .rp-title,
+	.neuron-cart .cart-body .cart-total .total-cart-title {
+		font-size: 25px;
+	}
+	.neuron-cart .cart-body .cart-detail table tr .product-thumbnail img {
+		width: 70px;
+		margin-right: 0;
+	}
+	.neuron-cart .cart-body .cart-detail .action .cupon ul li,
+	.neuron-cart .cart-body .cart-detail .action .cupon ul li .readon,
+	.neuron-cart .cart-body .cart-detail .action .cupon ul li input {
+		display: block;
+		text-align: center;
+		width: 100% !important;
+		margin: 0 auto 30px !important;
+	}
+	.neuron-cart .cart-body .cart-detail .action .cupon ul li input {
+		padding: 10px;
+	}
+	.neuron-cart .cart-body .cart-detail .action .cupon ul li:last-child,
+	.neuron-cart .cart-body .cart-detail .action .cupon ul li:last-child .readon {
+		margin-bottom: 0 !important;
+	}
+	.neuron-cart .cart-body .cart-detail table tr th {
+		font-size: 14px;
+	}
+	.neuron-checkout .coupon-toggle .accordion .card .card-body .coupon-code-input {
+		width: 100%;
+	}
+	.neuron-work .language-work.long-work .work-title .title,
+	.neuron-blog .single-blog .blog-details .blog-desc .blog-title {
+		font-size: 18px;
+	}
+	.neuron-checkout .coupon-toggle .accordion .card .card-header .card-title button {
+		padding: 0;
+	}
+	.neuron-about-video.responsive-modify .about-btn {
+		display: block;
+	}
+	.neuron-about-video.responsive-modify .about-btn .readon {
+		margin-right: 0;
+		margin-bottom: 30px;
+		display: block;
+		text-align: center;
+	}
+	.neuron-registration .register-width .submit-btn{
+		margin-top: 30px;
+	}
+	.neuron-pricing .style2 .pricing-wrap .top-part .title,
+	.neuron-pricing .style2 .pricing-wrap .top-part .icon-part {
+		margin-bottom: 5px;
+	}
+	.neuron-pricing .style1 .pricing-wrap .middle-part,
+	.neuron-pricing .style2 .pricing-wrap .middle-part {
+		max-width: 85%;
+	}
+	.rs-main-slider.mobile-app .btm-date {
+		padding: 10px 0 25px;
+	}
+	.rs-main-slider.mobile-app .dsc h1 {
+		font-size: 25px;
+	}
+	.rs-main-slider.mobile-app .dsc h1 {
+		font-size: 25px;
+		line-height: 35px;
+	}
+	.rs-main-slider .btm-date {
+		font-size: 16px;
+		line-height: 26px;
+	}
+}

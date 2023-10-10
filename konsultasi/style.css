@@ -1,0 +1,6146 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800|Poppins:400,500,600,700,800&amp;display=swap');
+
+/**
+*
+* -----------------------------------------------------------------------------
+*
+* Template : Neuron - Machine Learning & AI Startups HTML5 Template
+* Author : 
+* Author URI : 
+*
+* -----------------------------------------------------------------------------
+*
+**/
+
+
+/* Table Of Content
+---------------------------------------------------------
+    01. General CSS
+    02. Common CSS
+    03. Header Section CSS
+    04. Home Slider Area Start Here
+    05. Banner CSS
+    06. Breadcrumbs CSS
+    07. About Section CSS
+    08. Feature Section CSS
+    09. Counter Section CSS
+    10. Project Section CSS
+    11. CTA Section CSS
+    12. Newsletter Section CSS
+    13. Privacy Section CSS
+    14. What We Do Part CSS
+    15. How We Work Part CSS
+    16. Learning Part CSS
+    17. Team Section CSS
+    18. Testimonial Part CSS
+    19. Pricing Plan Section CSS
+    20. Partner Section CSS
+    21. Blog Section CSS
+    22. Contact Section CSS
+    23. Login Form Section
+    24. Registration Form Section
+    25. Error Section CSS
+    26. Coming Soon CSS
+    27. Shop Section CSS
+    28. Shop Single CSS
+    29. Cart Section CSS
+    30. Checkout Section CSS
+    31. Footer Section CSS
+    32. Preloader CSS
+    33. Animation CSS
+--------------------------------------------------------*/
+
+
+/* -----------------------------------
+    01. General CSS
+-------------------------------------*/
+
+html,
+body {
+    font-size: 15px;
+    color: #666666;
+    font-family: 'Poppins', sans-serif;
+    vertical-align: baseline;
+    font-weight: 400;
+    overflow-x: hidden;
+    line-height: 26px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    margin: 0 0 26px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+    margin: 0 0 26px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 42px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+a {
+    color: #01a0f9;
+    transition: all 0.5s ease 0s;
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+a:active,
+a:hover {
+    text-decoration: none;
+    outline: 0 none;
+    color: #09c778;
+}
+
+ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+.text-justifys {
+    text-align: justify;
+}
+
+
+/* -----------------------------------
+    konsultasi css
+-------------------------------------*/
+
+
+
+
+
+#konsultasi {}
+
+.max-width {
+    width: 100%;
+}
+
+.panel-pakar img {
+    width: 120px;
+    height: 120px;
+}
+
+
+/* -----------------------------------
+    02. Common CSS
+-------------------------------------*/
+
+.col-20 {
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.col-20 [class*="col-"] {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+[class^="flaticon-"]::before,
+[class*=" flaticon-"]::before,
+[class^="flaticon-"]::after,
+[class*=" flaticon-"]::after {
+    margin: 0;
+    display: block;
+    line-height: 1;
+}
+
+.clear {
+    clear: both;
+}
+
+.display-flex,
+.display-flex-center {
+    display: flex;
+}
+
+.display-flex-center {
+    align-items: center;
+}
+
+.z-index-0 {
+    z-index: 0 !important;
+}
+
+.primary-color {
+    color: #01a0f9;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.margin-center {
+    margin: 0 auto;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.no-background {
+    background-color: unset !important;
+}
+
+.no-border {
+    border: none !important;
+}
+
+.relative {
+    position: relative !important;
+}
+
+.normal {
+    font-weight: 400 !important;
+}
+
+.medium {
+    font-weight: 500 !important;
+}
+
+.semi-bold {
+    font-weight: 600 !important;
+}
+
+.bold {
+    font-weight: 700 !important;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.bs-none {
+    box-shadow: none !important;
+}
+
+.no-bg {
+    background: none !important;
+}
+
+.lh-1 {
+    line-height: 1 !important;
+}
+
+.block {
+    display: block !important;
+}
+
+.sec-spacer {
+    padding: 100px 0;
+}
+
+.sec-spacer2 {
+    padding: 70px 0;
+}
+
+.sec-color {
+    color: #f7f7f7 !important;
+}
+
+.sec-bg {
+    background-color: #f7f7f7 !important;
+}
+
+.software-demo-bg {
+    background: url(images/bg/software-demo-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.radius-0 {
+    border-radius: unset !important;
+}
+
+.box-shadow {
+    box-shadow: 2px 10px 50px rgba(50, 50, 50, 0.25);
+}
+
+.box-shadow-2 {
+    box-shadow: 0 15px 30px rgba(34, 34, 34, 0.03);
+}
+
+.gradient-bg {
+    background: linear-gradient(-41deg, #09c778, #01a0f9);
+}
+
+.gradient-bg-hover {
+    background: linear-gradient(41deg, #09c778, #01a0f9);
+}
+
+.gradient-bg2 {
+    background: linear-gradient(-90deg, #1292c2, #00aeef);
+}
+
+.gradient-bg2-hover {
+    background: linear-gradient(90deg, #1292c2, #00aeef);
+}
+
+.gradient-bg3 {
+    background: linear-gradient(-150deg, #12b4c8, #6669e6);
+}
+
+.gradient-bg3-hover {
+    background: linear-gradient(150deg, #12b4c8, #6669e6);
+}
+
+.gradient-bg-section {
+    background: linear-gradient(0deg, #01a0f9, #09c778);
+}
+
+.gradient-bg2-section {
+    background: linear-gradient(0deg, #00aeef, #1292c2);
+}
+
+.gradient-bg3-section {
+    background: linear-gradient(90deg, #6669e6, #12b4c8);
+}
+
+.gradient-bg-icon {
+    background: linear-gradient(0deg, #09c778, #01a0f9);
+}
+
+.gradient-bg2-icon {
+    background: linear-gradient(0deg, #1292c2, #00aeef);
+}
+
+.gradient-bg3-icon {
+    background: linear-gradient(0deg, #6669e6, #12b4c8);
+}
+
+.hover-gradient-bg:hover {
+    background: linear-gradient(-41deg, #09c778, #01a0f9) !important;
+}
+
+.body-color {
+    color: #666666 !important;
+}
+
+.gray-color {
+    color: #eff1f7 !important;
+}
+
+.gray-bg {
+    background-color: #eff1f7 !important;
+}
+
+.white-color {
+    color: #ffffff !important;
+}
+
+.white-bg {
+    background-color: #ffffff !important;
+}
+
+.title-color {
+    color: #1f628e !important;
+}
+
+.title-bg {
+    background-color: #333333 !important;
+}
+
+.secondary-color {
+    color: #09c778 !important;
+}
+
+.secondary-bg {
+    background: #09c778 !important;
+}
+
+.primary-color {
+    color: #01a0f9 !important;
+}
+
+.primary-bg {
+    background: #01a0f9 !important;
+}
+
+.bg-fixed {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.max-750 {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.extra-none:before,
+.extra-none:after {
+    display: none;
+}
+
+.owl-carousel .owl-item img {
+    width: unset;
+    display: unset;
+}
+
+.pt-300 {
+    padding-top: 300px;
+}
+
+.social-icons {
+    padding-top: 20px;
+    margin-top: 15px;
+    position: relative;
+}
+
+.social-icons ul li {
+    display: inline;
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+.social-icons ul li a {
+    color: #bcbbbb;
+}
+
+.social-icons ul li a:hover {
+    color: #01a0f9;
+}
+
+.social-icons ul li:last-child {
+    margin-right: 0;
+}
+
+.social-icons:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 50%;
+    width: 170px;
+    transform: translateX(-50%);
+    border-top: 1px dashed #e1e1e1;
+}
+
+.social-icons.style2:before {
+    width: 100%;
+}
+
+.social-icons.border-none:before {
+    position: unset;
+    content: unset;
+}
+
+.hover-grow {
+    overflow: hidden;
+}
+
+.hover-grow img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.hover-grow:hover img {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+.hover-shine figure {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+}
+
+.hover-shine figure:before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+
+.hover-shine figure:hover:before {
+    -webkit-animation: shine .75s;
+    animation: shine .75s;
+}
+
+.hover-shine.style-1 figure:before {
+    left: 0;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+    -webkit-transform: skewX(-54deg);
+    transform: skewX(-54deg);
+}
+
+.hover-shine.style-1 figure:after {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
+    -webkit-transform: skewX(-54deg);
+    transform: skewX(-54deg);
+}
+
+.rs-vertical-bottom {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: flex-end;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+}
+
+.rs-vertical-middle {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+::-moz-selection {
+    background: #01a0f9;
+    text-shadow: none;
+    color: #ffffff;
+}
+
+::selection {
+    background: #01a0f9;
+    text-shadow: none;
+    color: #ffffff;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.dot-none .owl-controls .owl-dots {
+    display: none !important;
+}
+
+.nav-none .owl-controls .owl-nav {
+    display: none !important;
+}
+
+
+/*Grayscale*/
+
+.grayscale img {
+    filter: gray;
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    -ms-filter: grayscale(0);
+    -o-filter: grayscale(0);
+    filter: grayscale(0);
+    transition: all 0.3s ease 0s;
+}
+
+.grayscale img:hover {
+    filter: none;
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+
+/*Section Title*/
+
+.sec-title {
+    z-index: 1;
+    position: relative;
+}
+
+.sec-title .title {
+    font-size: 42px;
+    font-weight: 600;
+    position: relative;
+}
+
+.sec-title .title:after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 10px;
+    background: linear-gradient(90deg, #01a0f9 45%, #09c778 60%);
+    top: 35px;
+    z-index: -1;
+}
+
+.sec-title .title.bg-left:after {
+    left: 2px;
+}
+
+.sec-title .title.bg-center:after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sec-title .title.bg-right:after {
+    right: 2px;
+}
+
+.sec-title .sub-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 10px;
+    display: inline-block;
+}
+
+.sec-title .title2 {
+    font-size: 42px;
+    right: 70px;
+    font-weight: 500;
+    color: #1f628e
+}
+
+
+/*Readon Button*/
+
+.readon {
+    position: relative;
+    color: #ffffff;
+    font-size: 16px;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.7s ease 0s;
+    outline: none;
+    padding: 17px 43px;
+    text-transform: uppercase;
+    line-height: 1;
+    z-index: 99;
+}
+
+.readon.radius {
+    border-radius: 50px;
+}
+
+.readon.radius:before {
+    border-radius: 50px;
+}
+
+.readon.radius:after {
+    border-radius: 50px;
+}
+
+.readon.white {
+    color: #01a0f9;
+    background: #ffffff;
+}
+
+.readon.white:before {
+    display: none;
+}
+
+.readon.white:after {
+    display: none;
+}
+
+.readon.white:hover {
+    color: #ffffff;
+    background: #01a0f9;
+}
+
+.readon.banner {
+    color: #333333;
+}
+
+.readon.banner:before {
+    background: #ffffff;
+}
+
+.readon.banner:after {
+    background: linear-gradient(-150deg, #12b4c8, #6669e6);
+}
+
+.readon.banner:hover {
+    color: #ffffff;
+    background: #01a0f9;
+}
+
+.readon.banner:hover:before {
+    opacity: 0;
+}
+
+.readon.banner:hover:after {
+    opacity: 1;
+}
+
+.readon.style2:before {
+    background: linear-gradient(-90deg, #1292c2, #00aeef);
+}
+
+.readon.style2:after {
+    background: linear-gradient(90deg, #1292c2, #00aeef);
+}
+
+.readon.style2:hover {
+    background: #01a0f9;
+}
+
+.readon.style2:hover:before {
+    opacity: 0;
+}
+
+.readon.style2:hover:after {
+    opacity: 1;
+}
+
+.readon.style3:before {
+    background: linear-gradient(-150deg, #12b4c8, #6669e6);
+}
+
+.readon.style3:after {
+    background: linear-gradient(150deg, #12b4c8, #6669e6);
+}
+
+.readon.style3:hover {
+    background: #01a0f9;
+}
+
+.readon.style3:hover:before {
+    opacity: 0;
+}
+
+.readon.style3:hover:after {
+    opacity: 1;
+}
+
+.readon.junior-btn {
+    font-weight: 500;
+    border-radius: 3px;
+    padding: 13px 37px;
+}
+
+.readon.junior-btn.solid:before {
+    background: transparent;
+}
+
+.readon.junior-btn:before {
+    border-radius: 3px;
+}
+
+.readon.junior-btn:after {
+    border-radius: 3px;
+}
+
+.readon:before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(-41deg, #09c778, #01a0f9);
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.7s ease 0s;
+}
+
+.readon:after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(41deg, #09c778, #01a0f9);
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.7s ease 0s;
+}
+
+.readon:hover {
+    color: #ffffff;
+    background: #01a0f9;
+}
+
+.readon:hover:before {
+    opacity: 0;
+}
+
+.readon:hover:after {
+    opacity: 1;
+}
+
+
+/*Pagination*/
+
+.pagination-area .pagination-part li {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    margin: 0 5px;
+}
+
+.pagination-area .pagination-part li i,
+.pagination-area .pagination-part li i:before {
+    font-size: 28px;
+    margin: 0;
+    line-height: 60px;
+}
+
+.pagination-area .pagination-part li:hover,
+.pagination-area .pagination-part li.active {
+    border-color: #eff1f7;
+}
+
+
+/*Video Icon*/
+
+.media-icon {
+    position: relative;
+}
+
+.media-icon .popup-videos:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    animation: pulse-border 1500ms ease-out infinite;
+    transition: all 0.5s ease 0s;
+}
+
+.media-icon .popup-videos:hover:before {
+    background: linear-gradient(-41deg, #09c778, #01a0f9);
+}
+
+
+/*Hover Pulse Effect*/
+
+.hover-pulse:hover:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-41deg, #09c778, #01a0f9);
+    border-radius: 50%;
+    animation: pulse-border 1500ms ease-out infinite;
+}
+
+
+/*Blockquote*/
+
+blockquote {
+    padding: 40px 60px 40px 100px;
+    margin: 0;
+    font-size: 20px;
+    position: relative;
+}
+
+blockquote .rotate-icon {
+    transform: rotate(180deg);
+    position: absolute;
+    top: 25px;
+    left: 50px;
+    margin-left: 10px;
+}
+
+blockquote .last-icon {
+    position: absolute;
+    bottom: 30px;
+    margin-left: 10px;
+}
+
+blockquote i:before {
+    margin: 0 !important;
+    font-size: 30px !important;
+}
+
+
+/*Search Modal*/
+
+.search-modal .modal-content {
+    background: transparent;
+    position: initial;
+    border: 0;
+}
+
+.search-modal .search-block input {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 15px;
+    background: transparent;
+    border-width: 0 0 1px 0;
+    border-radius: 0;
+    border-color: #ffffff;
+    box-shadow: none;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
+.search-modal .search-block ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #ffffff;
+    opacity: 1;
+}
+
+.search-modal .search-block ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #ffffff;
+    opacity: 1;
+}
+
+.search-modal .search-block :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #ffffff;
+    opacity: 1;
+}
+
+.search-modal .search-block :-moz-placeholder {
+    /* Firefox 18- */
+    color: #ffffff;
+    opacity: 1;
+}
+
+.search-modal .close {
+    color: #01a0f9;
+    margin-top: 20px;
+    font-size: 20px;
+    background-color: #ffffff;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    border-radius: 50%;
+    opacity: 1;
+    outline: none;
+    transition: all 0.5s ease 0s;
+}
+
+.search-modal .close span {
+    line-height: 52px;
+}
+
+.search-modal .close span:before {
+    margin: 0;
+}
+
+.search-modal .close:hover {
+    background-color: #01a0f9;
+    color: #ffffff;
+}
+
+.modal-backdrop.show {
+    opacity: 0.9;
+    z-index: 999;
+}
+
+
+/*Navigation*/
+
+.nav-style .owl-carousel {
+    padding-top: 0;
+}
+
+.nav-style .owl-carousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.nav-style .owl-carousel .owl-nav [class*="owl-"] {
+    background: transparent;
+    border: 1px solid #01a0f9;
+    color: #01a0f9;
+    font-size: 0;
+    width: 45px;
+    height: 45px;
+    line-height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: all 0.5s ease 0s;
+}
+
+.nav-style .owl-carousel .owl-nav [class*="owl-"]:before {
+    font-family: FontAwesome;
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.nav-style .owl-carousel .owl-nav [class*="owl-"].owl-prev {
+    left: 0;
+}
+
+.nav-style .owl-carousel .owl-nav [class*="owl-"].owl-prev:before {
+    content: "\f104";
+}
+
+.nav-style .owl-carousel .owl-nav [class*="owl-"].owl-next {
+    right: 0;
+}
+
+.nav-style .owl-carousel .owl-nav [class*="owl-"].owl-next:before {
+    content: "\f105";
+}
+
+.nav-style .owl-carousel .owl-nav [class*="owl-"]:hover {
+    background-color: #01a0f9;
+    color: #ffffff;
+}
+
+.nav-style .owl-carousel:hover [class*="owl-"] {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.nav-style .owl-carousel:hover [class*="owl-"] .owl-prev {
+    left: -60px;
+}
+
+.nav-style .owl-carousel:hover [class*="owl-"] .owl-next {
+    right: -60px;
+}
+
+
+/* listing style */
+
+.listying li {
+    font-size: 16px;
+    color: #333333;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.listying li:before {
+    font-family: FontAwesome;
+    content: "\f105";
+    padding-right: 10px;
+    color: #01a0f9;
+}
+
+.listying li:last-child {
+    margin: 0;
+}
+
+
+/* page nav */
+
+.bullet {
+    text-align: center;
+}
+
+.bullet ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.bullet ul li a {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    display: inline-block;
+    color: #666666;
+    font-size: 15px;
+    border: 1px solid;
+    border-color: transparent;
+}
+
+.bullet ul li a i:before {
+    margin: 0;
+    font-size: 15px;
+    line-height: 60px;
+}
+
+.bullet ul li:last-child {
+    margin-right: 0;
+}
+
+.bullet ul li.active a {
+    border-color: #f1f1f1;
+}
+
+.bullet ul li:hover a {
+    border-color: #f1f1f1;
+}
+
+
+/* ---------------------------
+    03. Header Section CSS
+------------------------------*/
+
+.main-menu > * {
+    vertical-align: middle;
+}
+
+
+#rs-header .toolbar-area {
+    background: #01a0f9;
+    padding: 0 0 6px;
+}
+
+#rs-header .toolbar-area .toolbar-contact ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 2.50;
+}
+
+#rs-header .toolbar-area .toolbar-contact ul li {
+    display: inline-block;
+    margin-right: 25px;
+    color: #fff;
+}
+
+#rs-header .toolbar-area .toolbar-contact ul li i {
+    margin-right: 10px;
+    color: #fff;
+}
+
+#rs-header .toolbar-area .toolbar-contact ul li a {
+    transition: all 0.5s ease 0s;
+    color: #fff;
+}
+
+#rs-header .toolbar-area .toolbar-contact ul li a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#rs-header .toolbar-area .toolbar-sl-share ul {
+    text-align: right;
+    line-height: 2.50;
+}
+
+#rs-header .toolbar-area .toolbar-sl-share ul li.follow {
+    color: #fff;
+    font-size: 13px;
+}
+
+#rs-header .toolbar-area .toolbar-sl-share ul li {
+    display: inline-block;
+}
+
+#rs-header .toolbar-area .toolbar-sl-share ul li+li {
+    margin-left: 15px;
+}
+
+#rs-header .toolbar-area .toolbar-sl-share ul li a {
+    display: block;
+    font-size: 14px;
+    color: #fff;
+    transition: all 0.5s ease 0s;
+    text-decoration: none;
+}
+
+#rs-header .toolbar-area .toolbar-sl-share ul li a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#rs-header .toolbar-area .toolbar-sl-share ul li a i {
+    text-align: center;
+    display: inline-block;
+}
+
+#rs-header .menu-area {
+    background: #ffffff;
+}
+
+#rs-header .menu-area .logo-area a {
+    font-weight: 700;
+    font-size: 27px;
+    color: #01a0f9;
+    display: block;
+    text-transform: lowercase;
+    transition: all 0.5s ease 0s;
+}
+
+#rs-header .menu-area .logo-area a img {
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+
+#rs-header .menu-area .navbar-collapse {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#rs-header .menu-area .rs-menu {
+    margin-bottom: 0;
+    border: 0;
+}
+
+#rs-header .menu-area .rs-menu ul {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+#rs-header .menu-area .rs-menu ul li {
+    display: inline-block;
+    transition: all 0.5s ease 0s;
+    /* Dropdown Menu area */
+}
+
+#rs-header .menu-area .rs-menu ul li+li {
+    margin-left: 20px;
+}
+
+#rs-header .menu-area .rs-menu ul li>a {
+    display: block;
+    text-decoration: none;
+    color: #bcbbbb;
+    font-weight: 500;
+    transition: all 0.5s ease 0s;
+    margin-left: 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+    height: 70px;
+    line-height: 70px;
+}
+
+#rs-header .menu-area .rs-menu ul li>a i {
+    margin-left: 5px;
+}
+
+#rs-header .menu-area .rs-menu ul li:hover a:before,
+#rs-header .menu-area .rs-menu ul li:hover a:after {
+    width: 20px;
+}
+
+#rs-header .menu-area .rs-menu ul li .sub-menu li {
+    line-height: normal;
+    height: auto;
+    display: block;
+    border-top: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+#rs-header .menu-area .rs-menu ul li .sub-menu li a {
+    display: block;
+    padding: 10px 25px;
+    transition: all 0.5s ease 0s;
+    color: #333333;
+    font-weight: 500;
+    width: 100%;
+    margin: 0;
+    font-size: 14px;
+    text-transform: capitalize;
+    height: unset;
+    line-height: unset;
+}
+
+#rs-header .menu-area .rs-menu ul li .sub-menu li a:before,
+#rs-header .menu-area .rs-menu ul li .sub-menu li a:after {
+    display: none;
+}
+
+#rs-header .menu-area .rs-menu ul li .sub-menu li:hover>a {
+    color: #01a0f9;
+}
+
+#rs-header .menu-area .rs-menu ul li .sub-menu li.active>a {
+    color: #01a0f9;
+}
+
+#rs-header .menu-area .rs-menu ul li .sub-menu li .sub-menu {
+    position: absolute;
+    top: 0;
+    left: 130%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+}
+
+#rs-header .menu-area .rs-menu ul li .sub-menu li:hover .sub-menu {
+    left: 100%;
+    opacity: 1;
+    visibility: visible;
+}
+
+#rs-header .menu-area .rs-menu ul li.current-menu-item>a {
+    color: #000 !important;
+}
+
+#rs-header .menu-area .rs-menu ul .rs-mega-menu .mega-menu {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.06);
+}
+
+#rs-header .menu-area .rs-menu ul .rs-mega-menu .mega-menu .mega-menu-container {
+    padding: 0;
+    margin: 0;
+}
+
+#rs-header .menu-area .rs-menu ul .rs-mega-menu .mega-menu .mega-menu-container .single-megamenu {
+    width: 33%;
+    float: left;
+}
+
+#rs-header .menu-area .rs-menu ul .rs-mega-menu .mega-menu .mega-menu-container .single-megamenu .sub-menu {
+    box-shadow: none;
+    position: unset;
+    transform: unset;
+    width: unset;
+}
+
+#rs-header .menu-area .rs-menu ul .rs-mega-menu .mega-menu .mega-menu-container .single-megamenu .sub-menu .menu-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px 15px;
+    color: #333333;
+    transition: all 0.5s ease 0s;
+}
+
+#rs-header .menu-area .rs-menu ul .rs-mega-menu .mega-menu .mega-menu-container .single-megamenu:hover .sub-menu .menu-title {
+    color: #09c778;
+}
+
+/* custom */
+#rs-header .menu-area .rs-menu ul .rs-mega-menu2 .mega-menu {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0px 3px 20px 0px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.06);
+}
+
+#rs-header .menu-area .rs-menu ul .rs-mega-menu .mega-menu2 .mega-menu-container {
+    padding: 0;
+    margin-left: 100;
+}
+
+#rs-header .menu-area .rs-menu ul .rs-mega-menu .mega-menu2 .mega-menu-container .single-megamenu {
+    width: 10%;
+    float: left;
+}
+
+#rs-header .menu-area .rs-menu ul .rs-mega-menu .mega-menu2 .mega-menu-container .single-megamenu .sub-menu {
+    box-shadow: none;
+    position: unset;
+    transform: unset;
+    width: unset;
+}
+
+#rs-header .menu-area .rs-menu ul .rs-mega-menu .mega-menu2 .mega-menu-container .single-megamenu .sub-menu .menu-title {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0px;
+    color: #333333;
+    transition: all 0.5s ease 0s;
+}
+
+#rs-header .menu-area .rs-menu ul .rs-mega-menu .mega-menu2 .mega-menu-container .single-megamenu:hover .sub-menu .menu-title {
+    color: #09c778;
+}
+
+/* end custom */
+#rs-header .menu-area .rs-menu ul>li:first-child a {
+    margin-left: 0;
+}
+
+#rs-header .menu-area .rs-menu .navbar-toggle {
+    background-color: #01a0f9;
+    border-radius: 2px;
+    -webkit-transition: .4s ease all;
+    transition: .4s ease all;
+}
+
+#rs-header .menu-area .rs-menu .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+#rs-header .menu-area .rs-menu .navbar-toggle:hover {
+    opacity: 0.8;
+}
+
+#rs-header .menu-area .right-bar-icon {
+    margin-left: 60px;
+}
+
+#rs-header .menu-area .right-bar-icon .cart-icon {
+    cursor: pointer;
+}
+
+#rs-header .menu-area .right-bar-icon ul>li.icon-bar {
+    display: inline-block;
+}
+
+#rs-header .menu-area .right-bar-icon ul>li.icon-bar>a {
+    color: #ffffff;
+}
+
+#rs-header .menu-area .right-bar-icon ul>li.icon-bar>a:hover {
+    color: #666666;
+}
+
+#rs-header .menu-area .right-bar-icon ul>li.cart-inner {
+    padding-right: 27px;
+}
+
+#rs-header .menu-area .cart-btn a {
+    display: inline-block;
+}
+
+#rs-header.transparent-header {
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+}
+
+#rs-header.transparent-header .menu-area.affix {
+    background: #000 !important;
+}
+
+#rs-header.transparent-header hr {
+    margin: 10px 0 0;
+    border-color: #0494e3;
+    opacity: 0.5;
+}
+
+#rs-header.transparent-header .rs-menu-area {
+    justify-content: flex-end;
+}
+
+#rs-header.transparent-header .toolbar-area {
+    padding-top: 10px;
+}
+
+#rs-header.transparent-header .menu-area,
+#rs-header.transparent-header .toolbar-area {
+    background: transparent;
+}
+
+#rs-header.transparent-header .menu-area .rs-menu ul li a {
+    color: #000;
+}
+
+#rs-header.transparent-header .menu-area .rs-menu ul li a:hover {
+    color: #cccccc;
+}
+
+#rs-header.transparent-header .menu-sticky {
+    box-shadow: none;
+    transition: all 0.5s ease 0s;
+}
+
+
+/* ------------------------------------
+    04. Home Slider Area Start Here 
+---------------------------------------*/
+
+.rs-main-slider {
+    position: relative;
+    overflow: hidden;
+    background: url(images/slider/h1-s1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.rs-main-slider .owl-stage-outer {
+    padding: 117px 0;
+}
+
+.rs-main-slider .item {
+    position: relative;
+}
+
+.rs-main-slider .item img {
+    width: 100%;
+}
+
+.rs-main-slider .item.gap-pt {
+    padding-top: 100px;
+}
+
+.rs-main-slider .btm-date {
+    color: #fff;
+    padding: 14px 0 42px;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.rs-main-slider .btm-date a {
+    color: #fff;
+    margin: 0 6px;
+}
+
+.rs-main-slider .dsc h1 {
+    font-size: 60px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    line-height: 70px;
+}
+
+.rs-main-slider .dsc .btn-slider .btn1,
+.rs-main-slider .dsc .btn-slider .btn2 {
+    padding: 12px 36px;
+    display: inline-block;
+    border-radius: 30px !important;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: all 0.3s ease 0s;
+    border: 1px solid #ffffff;
+}
+
+.rs-main-slider .dsc .btn-slider .btn1 {
+    background-color: #ffffff;
+    color: #01a0f9;
+}
+
+.rs-main-slider .dsc .btn-slider .btn1:hover {
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.rs-main-slider .dsc .btn-slider .btn2 {
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.rs-main-slider .dsc .btn-slider .btn2:hover {
+    background-color: #ffffff;
+    color: #01a0f9;
+}
+
+.rs-main-slider .dsc .btn-slider .btn2 {
+    margin-left: 16px;
+    margin-right: 0;
+}
+
+.rs-main-slider .dsc .btn-slider .slider-btn {
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.rs-main-slider .dsc .btn-slider .slider-btn img {
+    width: 190px !important;
+    height: 56px;
+    line-height: 56px;
+    transform: scale(1);
+    transition: all 0.5s ease 0s;
+}
+
+.rs-main-slider .dsc .btn-slider .slider-btn:hover img {
+    transform: scale(1.1);
+}
+
+.rs-main-slider.home2 {
+    background: url(images/slider/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.rs-main-slider.home2 .owl-stage-outer {
+    padding: 220px 0;
+}
+
+.rs-main-slider.mobile-app {
+    background: url(images/slider/mobile-app-s1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+.rs-main-slider.mobile-app .owl-stage-outer {
+    padding: 170px 0 70px;
+}
+
+.rs-main-slider.mobile-app .btm-date {
+    padding: 25px 0 40px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+/* ------------------------------------
+    05. Banner CSS
+-------------------------------------*/
+
+.home-banner {
+    position: relative;
+    background: url(images/banner/home3banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 300px 0 250px;
+}
+
+
+/* ------------------------------------
+    06. Breadcrumbs CSS
+-------------------------------------*/
+
+.breadcrumbs .breadcrumbs-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.breadcrumbs .breadcrumbs-wrap img {
+    width: 100%;
+}
+
+.breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner {
+    width: 100%;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-40%);
+}
+
+.breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner .breadcrumbs-text {
+    text-align: center;
+}
+
+.breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner .breadcrumbs-text .breadcrumbs-title {
+    width: 100%;
+    font-size: 48px;
+    text-transform: capitalize;
+    color: #ffffff;
+    font-weight: 600;
+    float: left;
+    line-height: 50px;
+}
+
+.breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner .breadcrumbs-text .categories ul li {
+    display: inline;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner .breadcrumbs-text .categories ul li a {
+    color: #ffffff;
+}
+
+.breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner .breadcrumbs-text .categories ul li a:hover {
+    color: #ccc;
+}
+
+.breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner .breadcrumbs-text .categories ul li:after {
+    content: "//";
+    margin: 0 3px 0 7px;
+    color: #ffffff;
+}
+
+.breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner .breadcrumbs-text .categories ul li:last-child:after {
+    content: unset;
+    margin: 0;
+}
+
+.breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner .breadcrumbs-text .post-date-author {
+    margin-top: 10px;
+}
+
+.breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner .breadcrumbs-text .post-date-author ul li {
+    display: inline;
+    margin-right: 12px;
+    color: #666666;
+    font-size: 14px;
+}
+
+.breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner .breadcrumbs-text .post-date-author ul li i {
+    margin-right: 10px;
+}
+
+.breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner .breadcrumbs-text .post-date-author ul li a {
+    color: #666666;
+}
+
+.breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner .breadcrumbs-text .post-date-author ul li a:hover {
+    color: #808080;
+}
+
+.breadcrumbs .breadcrumbs-wrap .breadcrumbs-inner .breadcrumbs-text .post-date-author ul li:last-child {
+    margin-right: 0;
+}
+
+
+/* ------------------------------------
+    07. About Section CSS
+-------------------------------------*/
+
+.neuron-about .single-about {
+    padding: 40px 25px 25px;
+    background: #ffffff;
+    border-radius: 10px;
+    transition: all 0.5s ease 0s;
+    position: relative;
+}
+
+.neuron-about .single-about:before {
+    background: linear-gradient(-41deg, #09c778, #01a0f9);
+    opacity: 0;
+    content: "";
+    height: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    transition: all 0.7s ease 0s;
+    border-radius: 5px;
+}
+
+.neuron-about .single-about .about-icon {
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-about .single-about .about-icon i:before {
+    margin: 0;
+    font-size: 70px;
+    line-height: 1;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(0deg, #09c778, #01a0f9);
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-about .single-about .about-title {
+    position: relative;
+    z-index: 1;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-about .single-about .about-title .title {
+    font-size: 22px;
+    font-weight: 600;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-about .single-about .about-desc {
+    position: relative;
+    z-index: 1;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-about .single-about .about-desc .desc-txt {
+    margin: 0;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-about .single-about.style2 {
+    padding: 62px 30px 60px;
+}
+
+.neuron-about .single-about.style3 {
+    padding: 50px 40px 40px;
+    border-radius: unset;
+}
+
+.neuron-about .single-about.style3 .about-icon {
+    margin-bottom: 30px;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    border-radius: 50%;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-about .single-about.style3 .about-icon i:before {
+    font-size: 50px;
+    line-height: 100px;
+    color: #ffffff;
+}
+
+.neuron-about .single-about.style3 .about-icon:before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(-90deg, #1292c2, #00aeef);
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-about .single-about.style3 .about-title .title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.neuron-about .single-about.style3:before {
+    background: linear-gradient(-90deg, #1292c2, #00aeef);
+}
+
+.neuron-about .single-about.style3:hover .about-icon {
+    background: #ffffff;
+}
+
+.neuron-about .single-about.style3:hover .about-icon:before {
+    opacity: 0;
+}
+
+.neuron-about .single-about.style3:hover .about-icon i:before {
+    color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(-90deg, #1292c2, #00aeef);
+}
+
+.neuron-about .single-about.style3:hover:before {
+    opacity: 1;
+}
+
+.neuron-about .single-about.style3.features .about-icon:before {
+    background: linear-gradient(-41deg, #09c778, #01a0f9);
+}
+
+.neuron-about .single-about.style3.features:before {
+    background: linear-gradient(-41deg, #09c778, #01a0f9);
+}
+
+.neuron-about .single-about.style3.features:hover i:before {
+    color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(-41deg, #09c778, #01a0f9);
+}
+
+.neuron-about .single-about.style4 {
+    padding: 55px 30px 135px;
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.5s ease 0s;
+}
+
+.neuron-about .single-about.style4 .title {
+    font-size: 24px;
+}
+
+.neuron-about .single-about.style4:before {
+    background: linear-gradient(-150deg, #12b4c8, #6669e6);
+}
+
+.neuron-about .single-about.style4:after {
+    content: '';
+    position: absolute;
+    height: 8px;
+    width: 70px;
+    background: linear-gradient(-150deg, #12b4c8, #6669e6);
+    left: 30px;
+    bottom: 65px;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-about .single-about.style4.icon-style {
+    padding: 65px 30px 85px;
+    text-align: center;
+}
+
+.neuron-about .single-about.style4.icon-style .about-icon {
+    margin-bottom: 15px;
+}
+
+.neuron-about .single-about.style4.icon-style .about-icon i:before {
+    background-image: linear-gradient(0deg, #6669e6, #12b4c8);
+    font-size: 60px;
+}
+
+.neuron-about .single-about.style4.icon-style .title {
+    font-size: 20px;
+}
+
+.neuron-about .single-about.style4.icon-style:after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.neuron-about .single-about.style4:hover:before {
+    opacity: 1;
+}
+
+.neuron-about .single-about.style4:hover:after {
+    background: #ffffff;
+}
+
+.neuron-about .single-about.no-bg-style:before {
+    background: unset;
+}
+
+.neuron-about .single-about.no-bg-style .title {
+    font-size: 20px;
+}
+
+.neuron-about .single-about.no-bg-style:hover {
+    background: unset;
+}
+
+.neuron-about .single-about.no-bg-style:hover .title {
+    color: #333333;
+}
+
+.neuron-about .single-about.no-bg-style:hover .desc-txt {
+    color: unset;
+}
+
+.neuron-about .single-about.top-border {
+    position: relative;
+    padding: 35px 0 0;
+}
+
+.neuron-about .single-about.top-border:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 8px;
+    width: 70px;
+    background: linear-gradient(-150deg, #12b4c8, #6669e6);
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-about .single-about:hover:before {
+    opacity: 1;
+}
+
+.neuron-about .single-about:hover i:before {
+    color: #ffffff;
+}
+
+.neuron-about .single-about:hover .title,
+.neuron-about .single-about:hover .desc-txt {
+    color: #ffffff;
+}
+
+.neuron-about .neuron-about-img-part {
+    display: inline-flex;
+}
+
+.neuron-about .neuron-about-img-part .about-img img {
+    border-radius: 5px;
+}
+
+.neuron-about.about-bg {
+    background: url(images/bg/about-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.neuron-about-video .about-btn {
+    display: inline-flex;
+    align-items: center;
+}
+
+.neuron-about-video .about-btn .readon {
+    margin-right: 30px;
+}
+
+.neuron-about-video .about-btn .readon:last-child {
+    margin: 0;
+}
+
+.neuron-about-video .about-btn .popup-videos i:before {
+    margin: 0;
+    font-size: 50px;
+    line-height: 1.2;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(0deg, #09c778, #01a0f9);
+}
+
+.neuron-about-video .about-btn .popup-videos:hover i:before {
+    background-image: linear-gradient(41deg, #09c778, #01a0f9);
+}
+
+.neuron-about-video.soft-demo .soft-desc {
+    max-width: 73%;
+}
+
+.about-inner .content-wrap .signature .title p {
+    display: inline-block;
+    font-size: 13px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.about-inner .content-wrap .signature .title p:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: #01a0f9;
+    opacity: 0.3;
+}
+
+.about-inner .content-wrap .signature img {
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+/* ------------------------------------
+    08. Feature Section CSS
+-------------------------------------*/
+
+.neuron-feature .flip-icon-box {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 15px 20px;
+    position: relative;
+    z-index: 99;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-feature .flip-icon-box .icon-part {
+    margin-right: 15px;
+}
+
+.neuron-feature .flip-icon-box .icon-part i:before {
+    font-size: 30px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(-41deg, #09c778, #01a0f9);
+}
+
+.neuron-feature .flip-icon-box .text-part .flip-box-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #666666;
+    margin: 0;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-feature .flip-icon-box.style2 {
+    display: block;
+    align-items: center;
+    border-radius: 5px;
+    padding: 25px 25px 20px;
+}
+
+.neuron-feature .flip-icon-box.style2 .icon-part {
+    margin: 0 0 15px;
+}
+
+.neuron-feature .flip-icon-box.style2 .icon-part i:before {
+    font-size: 40px;
+}
+
+.neuron-feature .flip-icon-box.style2 .text-part .flip-box-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333333;
+    margin: 0 0 10px;
+}
+
+.neuron-feature .flip-icon-box.style2 .text-part p {
+    margin: 0;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-feature .flip-icon-box:before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(-41deg, #09c778, #01a0f9);
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    z-index: -1;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-feature .flip-icon-box:hover:before {
+    opacity: 1;
+}
+
+.neuron-feature .flip-icon-box:hover .icon-part i:before {
+    color: #ffffff;
+}
+
+.neuron-feature .flip-icon-box:hover .text-part .flip-box-title,
+.neuron-feature .flip-icon-box:hover .text-part p {
+    color: #ffffff;
+}
+
+
+/* ------------------------------------
+    09. Counter Section CSS
+-------------------------------------*/
+
+.neuron-counter-area .neuron-count .neuron-counter-part .counter-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.neuron-counter-area .neuron-count .neuron-counter-part .counter-text .neuron-counter {
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.neuron-counter-area .neuron-count .neuron-counter-part .counter-text .neuron-counter:after {
+    content: "+";
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.neuron-counter-area .neuron-count .neuron-counter-part .counter-text .counter-txt {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.neuron-counter-area.style2 .neuron-count .neuron-counter-part .counter-text {
+    position: unset;
+    transform: unset;
+}
+
+
+/* ------------------------------------
+    10. Project Section CSS
+-------------------------------------*/
+
+.neuron-project-section .project-item {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.neuron-project-section .project-item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-41deg, #09c778, #01a0f9);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease 0s;
+}
+
+.neuron-project-section .project-item .project-content .title {
+    position: absolute;
+    z-index: 11;
+    margin: 0;
+    bottom: -100px;
+    left: 25px;
+    font-size: 22px;
+    font-weight: 600;
+    transition: all 0.5s ease 0s;
+}
+
+.neuron-project-section .project-item .project-content .title a {
+    color: #ffffff;
+    transition: all 0.5s ease 0s;
+}
+
+.neuron-project-section .project-item .project-content .title a:hover {
+    color: #333333;
+}
+
+.neuron-project-section .project-item:hover .project-content .title {
+    bottom: 20px;
+}
+
+.neuron-project-section .project-item:hover .project-content .title {
+    opacity: 1;
+    visibility: visible;
+}
+
+.neuron-project-section .project-item:hover:before {
+    opacity: 0.9;
+    visibility: visible;
+}
+
+
+/* ------------------------------------
+    11. CTA Section CSS
+-------------------------------------*/
+
+.neuron-cta {
+    display: inline-block;
+    width: 100%;
+}
+
+.neuron-cta .cta-text {
+    float: left;
+}
+
+.neuron-cta .cta-btn {
+    float: right;
+}
+
+.software-info li {
+    display: inline-flex;
+    margin-right: 30px;
+}
+
+.software-info li.rating-part .software-rating {
+    padding: 0 5px;
+}
+
+.software-info li.rating-part .software-rating i {
+    color: #f1ce0c;
+}
+
+.software-info li:last-child {
+    margin: 0;
+}
+
+
+/* ------------------------------------
+    12. Newsletter Section CSS
+-------------------------------------*/
+
+.neuron-newsletter .newsletter-part {
+    border-radius: 10px;
+    position: relative;
+}
+
+.neuron-newsletter .newsletter-part .newsletter-icon {
+    padding-left: 100px;
+}
+
+.neuron-newsletter .newsletter-part .newsletter-icon i:before {
+    font-size: 275px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(0deg, #09c778, #01a0f9);
+}
+
+.neuron-newsletter .newsletter-part .newsletter-text .newsletter-box {
+    position: relative;
+    max-width: 720px;
+}
+
+.neuron-newsletter .newsletter-part .newsletter-text .newsletter-box input {
+    border: none;
+    border-bottom: 1px solid rgba(1, 160, 249, 0.2);
+    outline: none;
+    box-shadow: none;
+    width: 100%;
+    max-width: 700px;
+    padding: 0;
+    height: 40px;
+    line-height: 40px;
+}
+
+.neuron-newsletter .newsletter-part .newsletter-text .newsletter-box button {
+    position: absolute;
+    right: 0;
+    background: unset;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    transform: rotate(-45deg);
+    cursor: pointer;
+    z-index: 9;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-newsletter .newsletter-part .newsletter-text .newsletter-box button i:before {
+    font-size: 15px;
+}
+
+.neuron-newsletter .newsletter-part .newsletter-text .newsletter-box button:before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(-41deg, #09c778, #01a0f9);
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 50px;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-newsletter .newsletter-part .newsletter-text .newsletter-box button:after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(41deg, #09c778, #01a0f9);
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 50px;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-newsletter .newsletter-part .newsletter-text .newsletter-box button:hover:before {
+    opacity: 0;
+}
+
+.neuron-newsletter .newsletter-part .newsletter-text .newsletter-box button:hover:after {
+    opacity: 1;
+}
+
+.neuron-newsletter .newsletter-part .newsletter-text .newsletter-box ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #666666;
+    opacity: 1;
+}
+
+.neuron-newsletter .newsletter-part .newsletter-text .newsletter-box ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #666666;
+    opacity: 1;
+}
+
+.neuron-newsletter .newsletter-part .newsletter-text .newsletter-box :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #666666;
+    opacity: 1;
+}
+
+.neuron-newsletter .newsletter-part .newsletter-text .newsletter-box :-moz-placeholder {
+    /* Firefox 18- */
+    color: #666666;
+    opacity: 1;
+}
+
+.neuron-newsletter .newsletter-part.style2 .newsletter-text .sec-title .sub-title {
+    font-size: 20px;
+}
+
+.neuron-newsletter .newsletter-part.style2 .newsletter-text .newsletter-box {
+    max-width: 670px;
+}
+
+.neuron-newsletter .newsletter-part.style2 .newsletter-text .newsletter-box input {
+    border: none;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    max-width: 670px;
+    padding-left: 20px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.neuron-newsletter .newsletter-part.style2 .newsletter-text .newsletter-box button {
+    background: unset;
+    color: #ffffff;
+    height: 44px;
+    line-height: 44px;
+    right: 3px;
+    top: 3px;
+    width: 100px;
+    border-radius: 50px;
+    transform: unset;
+}
+
+.neuron-newsletter .newsletter-part.style2 .newsletter-text .newsletter-box button:before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(-41deg, #09c778, #01a0f9);
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 50px;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-newsletter .newsletter-part.style2 .newsletter-text .newsletter-box button:after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(41deg, #09c778, #01a0f9);
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 50px;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-newsletter .newsletter-part.style2 .newsletter-text .newsletter-box button:hover:before {
+    opacity: 0;
+}
+
+.neuron-newsletter .newsletter-part.style2 .newsletter-text .newsletter-box button:hover:after {
+    opacity: 1;
+}
+
+.neuron-newsletter .newsletter-part.style2 .newsletter-text .newsletter-box ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #ffffff;
+    opacity: 1;
+}
+
+.neuron-newsletter .newsletter-part.style2 .newsletter-text .newsletter-box ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #ffffff;
+    opacity: 1;
+}
+
+.neuron-newsletter .newsletter-part.style2 .newsletter-text .newsletter-box :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #ffffff;
+    opacity: 1;
+}
+
+.neuron-newsletter .newsletter-part.style2 .newsletter-text .newsletter-box :-moz-placeholder {
+    /* Firefox 18- */
+    color: #ffffff;
+    opacity: 1;
+}
+
+.neuron-newsletter .newsletter-part.style3 .newsletter-icon {
+    padding-left: unset;
+    float: left;
+}
+
+.neuron-newsletter .newsletter-part.style3 .newsletter-icon i:before {
+    font-size: 100px;
+    color: #ffffff;
+}
+
+.neuron-newsletter .newsletter-part.style3 .newsletter-text .newsletter-box {
+    position: relative;
+    max-width: 525px;
+}
+
+.neuron-newsletter .newsletter-part.style3 .newsletter-text .newsletter-box input {
+    border: none;
+    padding-left: 20px;
+    width: 100%;
+    max-width: 525px;
+    height: 70px;
+    line-height: 70px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+}
+
+.neuron-newsletter .newsletter-part.style3 .newsletter-text .newsletter-box button {
+    position: absolute;
+    right: 0;
+    background: #ffffff;
+    color: #666666;
+    height: 70px;
+    line-height: 70px;
+    width: 120px;
+    border-radius: 0 50px 50px 0;
+    transform: unset;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-newsletter .newsletter-part.style3 .newsletter-text .newsletter-box button:before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(-41deg, #09c778, #01a0f9);
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 0 50px 50px 0;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-newsletter .newsletter-part.style3 .newsletter-text .newsletter-box button:after {
+    display: none;
+}
+
+.neuron-newsletter .newsletter-part.style3 .newsletter-text .newsletter-box button:hover {
+    background: unset;
+    color: #ffffff;
+}
+
+.neuron-newsletter .newsletter-part.style3 .newsletter-text .newsletter-box button:hover:before {
+    opacity: 1;
+}
+
+.neuron-newsletter .newsletter-part.style3 .newsletter-text .newsletter-box ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #ffffff;
+    opacity: 1;
+}
+
+.neuron-newsletter .newsletter-part.style3 .newsletter-text .newsletter-box ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #ffffff;
+    opacity: 1;
+}
+
+.neuron-newsletter .newsletter-part.style3 .newsletter-text .newsletter-box :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #ffffff;
+    opacity: 1;
+}
+
+.neuron-newsletter .newsletter-part.style3 .newsletter-text .newsletter-box :-moz-placeholder {
+    /* Firefox 18- */
+    color: #ffffff;
+    opacity: 1;
+}
+
+.neuron-newsletter .newsletter-part.top-margin {
+    margin-bottom: -200px;
+}
+
+
+/* ------------------------------------
+    13. Privacy Section CSS
+-------------------------------------*/
+
+.neuron-privacy .privacy-part .single-privacy .privacy-title {
+    font-size: 30px;
+}
+
+.neuron-privacy .privacy-part .single-privacy .privacy-list-title {
+    font-size: 22px;
+}
+
+
+/* ------------------------------------
+    14. What We Do Part CSS
+---------------------------------------*/
+
+.what-we-do .tab-style ul.nav-pills {
+    justify-content: center;
+}
+
+.what-we-do .tab-style ul.nav-pills li {
+    margin-right: 20px;
+}
+
+.what-we-do .tab-style ul.nav-pills li a {
+    background: #ffffff;
+    transition: all 0.5s ease 0s;
+    color: #666666;
+    border-radius: 27.5px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 35px;
+    font-weight: 500;
+}
+
+.what-we-do .tab-style ul.nav-pills li a.active {
+    color: #ffffff;
+    background: linear-gradient(-41deg, #09c778, #01a0f9);
+}
+
+.what-we-do .tab-style ul.nav-pills li:last-child {
+    margin: 0;
+}
+
+.what-we-do .tab-style .tab-content .tab-pane .project-item {
+    background: #ffffff;
+    padding: 60px 30px 58px;
+    transition: all 0.7s ease 0s;
+    border-radius: 5px;
+    position: relative;
+    z-index: 99;
+}
+
+.what-we-do .tab-style .tab-content .tab-pane .project-item .icon-part i:before {
+    margin: 0;
+    font-size: 60px;
+    line-height: 1.2;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(-41deg, #09c778, #01a0f9);
+    transition: all 0.7s ease 0s;
+}
+
+.what-we-do .tab-style .tab-content .tab-pane .project-item .project-content .title {
+    font-size: 24px;
+    font-weight: 600;
+    transition: all 0.7s ease 0s;
+}
+
+.what-we-do .tab-style .tab-content .tab-pane .project-item .project-content .title a {
+    color: #333333;
+    transition: all 0.5s ease 0s;
+}
+
+.what-we-do .tab-style .tab-content .tab-pane .project-item .project-content .desc {
+    transition: all 0.7s ease 0s;
+}
+
+.what-we-do .tab-style .tab-content .tab-pane .project-item:before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(-41deg, #09c778, #01a0f9);
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    z-index: -1;
+    transition: all 0.7s ease 0s;
+}
+
+.what-we-do .tab-style .tab-content .tab-pane .project-item:hover {
+    background: unset;
+}
+
+.what-we-do .tab-style .tab-content .tab-pane .project-item:hover:before {
+    opacity: 1;
+}
+
+.what-we-do .tab-style .tab-content .tab-pane .project-item:hover .icon-part i:before {
+    color: #ffffff;
+}
+
+.what-we-do .tab-style .tab-content .tab-pane .project-item:hover .project-content .title a {
+    color: #ffffff;
+}
+
+.what-we-do .tab-style .tab-content .tab-pane .project-item:hover .project-content .title a:hover {
+    color: #d9d9d9;
+}
+
+.what-we-do .tab-style .tab-content .tab-pane .project-item:hover .project-content .desc {
+    color: #ffffff;
+}
+
+
+/* ------------------------------------
+    15. How We Work Part CSS
+---------------------------------------*/
+
+.neuron-work .single-work {
+    position: relative;
+}
+
+.neuron-work .single-work .work-icon {
+    display: inline-block;
+    border: 1px dashed #01a0f9;
+    border-radius: 50%;
+    position: relative;
+}
+
+.neuron-work .single-work .work-icon i:before {
+    height: 210px;
+    width: 210px;
+    background: linear-gradient(-41deg, #09c778, #01a0f9);
+    border-radius: 50%;
+    line-height: 225px;
+    font-size: 125px;
+    color: #ffffff;
+    display: inline-block;
+    margin: 25px;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-work .single-work .work-title {
+    margin: 20px 0 50px;
+}
+
+.neuron-work .single-work .work-title .title {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.neuron-work .single-work .work-title .title span {
+    color: #666666;
+}
+
+.neuron-work .single-work .round-shape {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border: 1px dashed #01a0f9;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.neuron-work .single-work .round-shape:after {
+    content: '';
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background: linear-gradient(-41deg, #09c778, #01a0f9);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.neuron-work .single-work:before {
+    content: "\f126";
+    font-family: Flaticon;
+    font-size: 20px;
+    position: absolute;
+    bottom: 7px;
+    left: 58%;
+    color: #09c778;
+}
+
+.neuron-work .single-work:after {
+    content: '';
+    position: absolute;
+    width: 87%;
+    border: 1px dashed #01a0f9;
+    left: 67%;
+    bottom: 20px;
+}
+
+.neuron-work .language-work {
+    padding: 20px 60px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.neuron-work .language-work .work-icon {
+    position: relative;
+}
+
+.neuron-work .language-work .work-icon i:before {
+    font-size: 50px;
+    line-height: 1.2;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(0deg, #6669e6, #12b4c8);
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-work .language-work .work-title {
+    position: relative;
+}
+
+.neuron-work .language-work .work-title .title {
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: all 0.5s ease 0s;
+}
+
+.neuron-work .language-work .work-title .title span {
+    font-size: 13px;
+    display: block;
+    margin: 5px 0 0;
+    text-transform: capitalize;
+    color: #666666;
+    transition: all 0.5s ease 0s;
+}
+
+.neuron-work .language-work.long-work {
+    padding: 55px 60px;
+}
+
+.neuron-work .language-work.long-work .work-icon i:before {
+    font-size: 120px;
+}
+
+.neuron-work .language-work.long-work .work-title .title {
+    font-size: 20px;
+}
+
+.neuron-work .language-work.style3:before {
+    background: linear-gradient(-150deg, #12b4c8, #6669e6);
+}
+
+.neuron-work .language-work:before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(-41deg, #09c778, #01a0f9);
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    border-radius: 5px;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-work .language-work:hover:before {
+    opacity: 1;
+}
+
+.neuron-work .language-work:hover .work-icon i:before {
+    color: #ffffff;
+}
+
+.neuron-work .language-work:hover .work-title .title {
+    color: #ffffff !important;
+}
+
+.neuron-work .language-work:hover .work-title .title span {
+    color: #ffffff;
+}
+
+.neuron-author .single-author .author-details .author-title {
+    font-size: 20px;
+}
+
+.neuron-author .single-author .author-details .author-title a {
+    color: #ffffff;
+}
+
+.neuron-author .single-author .author-details .author-title a:hover {
+    color: #333333;
+}
+
+.neuron-author .single-author .author-details .author-desc {
+    color: #ffffff;
+}
+
+
+/* ------------------------------------
+    16. Learning Part CSS
+---------------------------------------*/
+
+.neuron-learning .single-learning .learning-img img {
+    border-radius: 5px;
+}
+
+.neuron-learning.learning-bg {
+    background: url(images/bg/learning-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* ------------------------------------
+    17. Team Section CSS
+-------------------------------------*/
+
+.neuron-team .team-item {
+    background: #eff1f7;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.neuron-team .team-item .detail-part .fly {
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+    z-index: 1;
+}
+
+.neuron-team .team-item .detail-part .author {
+    top: -10%;
+    padding: 31px 25px 0;
+}
+
+.neuron-team .team-item .detail-part .author .name {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.neuron-team .team-item .detail-part .author .name a {
+    color: #ffffff;
+}
+
+.neuron-team .team-item .detail-part .author .name a:hover {
+    color: #e6e6e6;
+}
+
+.neuron-team .team-item .detail-part .author .designation {
+    color: #ffffff;
+}
+
+.neuron-team .team-item .detail-part .social-links {
+    bottom: -10%;
+    padding: 0 25px 35px;
+}
+
+.neuron-team .team-item .detail-part .social-links ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.neuron-team .team-item .detail-part .social-links ul li a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 20px;
+    background: #ffffff;
+}
+
+.neuron-team .team-item .detail-part .social-links ul li a i {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(-41deg, #09c778, #01a0f9);
+    transition: all 0.5s ease 0s;
+}
+
+.neuron-team .team-item .detail-part .social-links ul li a:hover i {
+    color: #333333;
+}
+
+.neuron-team .team-item .detail-part .social-links ul li:last-child {
+    margin: 0;
+}
+
+.neuron-team .team-item:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+    background: linear-gradient(-41deg, #09c778, #01a0f9);
+}
+
+.neuron-team .team-item:hover .detail-part .fly {
+    opacity: 1;
+}
+
+.neuron-team .team-item:hover .detail-part .author {
+    top: 0;
+}
+
+.neuron-team .team-item:hover .detail-part .social-links {
+    bottom: 0;
+}
+
+.neuron-team .team-item:hover:after {
+    opacity: 0.95;
+}
+
+
+/* ------------------------------------
+    18. Testimonial Part CSS
+---------------------------------------*/
+
+.neuron-testimonial .testimonial-part .single-testimonial {
+    padding: 50px 30px 40px;
+    border-radius: 5px;
+}
+
+.neuron-testimonial .testimonial-part .single-testimonial .auther-top {
+    display: inline-flex;
+    margin-bottom: 20px;
+}
+
+.neuron-testimonial .testimonial-part .single-testimonial .auther-top .team-img {
+    margin-right: 20px;
+}
+
+.neuron-testimonial .testimonial-part .single-testimonial .auther-top .team-img img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.neuron-testimonial .testimonial-part .single-testimonial .auther-top .author-info span {
+    display: block;
+}
+
+.neuron-testimonial .testimonial-part .single-testimonial .auther-top .author-info span.name {
+    font-size: 20px;
+    font-weight: 500;
+    color: #333333;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+.neuron-testimonial .testimonial-part .single-testimonial .auther-top .author-info span.position {
+    text-transform: uppercase;
+}
+
+.neuron-testimonial .testimonial-part .single-testimonial .author-bottom .author-rating i {
+    color: #e8c506;
+}
+
+.neuron-testimonial .testimonial-vertical-carousel {
+    padding: 45px 0 45px 72px;
+}
+
+.neuron-testimonial .testimonial-vertical-carousel .slider-nav .slick-list .item img {
+    border-radius: 100%;
+    padding: 20px;
+}
+
+.neuron-testimonial .testimonial-vertical-carousel .slider-nav .slick-list .item.slick-center img {
+    padding: 0;
+}
+
+.neuron-testimonial .testimonial-vertical-carousel .slider-for .item {
+    padding: 0 55px 0 45px;
+}
+
+.neuron-testimonial .testimonial-vertical-carousel .slider-for .item .author-desc {
+    position: relative;
+    padding: 70px 0 40px;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.neuron-testimonial .testimonial-vertical-carousel .slider-for .item .author-desc:before {
+    content: "\f115";
+    font-family: Flaticon;
+    display: inline-block;
+    font-weight: normal;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 50px;
+    line-height: 1;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(-150deg, #12b4c8, #6669e6);
+}
+
+.neuron-testimonial .testimonial-vertical-carousel .slider-for .item .author-desc:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 50px;
+    background: linear-gradient(-150deg, #12b4c8, #6669e6);
+}
+
+.neuron-testimonial .testimonial-vertical-carousel .slider-for .item .author-info .name {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.neuron-testimonial.testimonial-bg {
+    background: url(images/bg/testimonial-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.neuron-testimonial.style2 .owl-stage-outer {
+    padding: 30px 0;
+}
+
+.neuron-testimonial.style2 .testimonial-part .single-testimonial {
+    padding: 42px 40px 37px;
+    box-shadow: -4px 1px 30px rgba(34, 34, 34, 0.03);
+}
+
+.neuron-testimonial.style2 .testimonial-part .single-testimonial .auther-top {
+    margin: 0;
+}
+
+.neuron-testimonial.style2 .testimonial-part .single-testimonial .author-rating i {
+    color: #e8c506;
+}
+
+.neuron-testimonial.style2 .testimonial-part .single-testimonial .author-desc p {
+    margin: 0;
+}
+
+
+/* ------------------------------------
+    19. Pricing Plan Section CSS
+-------------------------------------*/
+
+.neuron-pricing .style1 .pricing-wrap {
+    padding: 33px 30px 45px;
+    box-shadow: 2px 10px 50px rgba(158, 158, 158, 0.1);
+}
+
+.neuron-pricing .style1 .pricing-wrap .top-part {
+    text-transform: uppercase;
+    border-bottom: 1px solid #efecec;
+    display: block;
+    padding-bottom: 15px;
+}
+
+.neuron-pricing .style1 .pricing-wrap .top-part .title {
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.neuron-pricing .style1 .pricing-wrap .top-part .plan-detail {
+    font-size: 48px;
+    line-height: 58px;
+    color: #01a0f9;
+}
+
+.neuron-pricing .style1 .pricing-wrap .top-part .plan-detail .time-limit {
+    font-size: 15px;
+}
+
+.neuron-pricing .style1 .pricing-wrap .middle-part {
+    padding: 28px 0 40px 0;
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+.neuron-pricing .style1 .pricing-wrap .middle-part ul li {
+    margin-bottom: 13px;
+    color: #333333;
+}
+
+.neuron-pricing .style1 .pricing-wrap .middle-part ul li i:before {
+    font-size: 13px;
+    margin-right: 5px;
+    display: inline;
+    font-weight: 600;
+}
+
+.neuron-pricing .style1 .pricing-wrap .middle-part ul li:last-child {
+    margin-bottom: 0;
+}
+
+.neuron-pricing .style2 .pricing-wrap {
+    padding: 20px 30px 40px;
+    box-shadow: 2px 10px 50px rgba(158, 158, 158, 0.1);
+    background-image: url(images/bg/pricing-bg.png);
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.neuron-pricing .style2 .pricing-wrap .top-part {
+    text-transform: uppercase;
+    display: block;
+}
+
+.neuron-pricing .style2 .pricing-wrap .top-part .icon-part {
+    height: 75px;
+    width: 75px;
+    margin: 0 auto 16px;
+    border-radius: 100%;
+    background: #ffffff;
+    position: relative;
+}
+
+.neuron-pricing .style2 .pricing-wrap .top-part .icon-part i {
+    position: absolute;
+    content: '';
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.neuron-pricing .style2 .pricing-wrap .top-part .icon-part i:before {
+    font-size: 40px;
+    margin: 0;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(180deg, #30e9f3 0%, #0562c1 89%);
+}
+
+.neuron-pricing .style2 .pricing-wrap .top-part .title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.neuron-pricing .style2 .pricing-wrap .top-part .plan-detail {
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.neuron-pricing .style2 .pricing-wrap .middle-part {
+    padding: 58px 0 34px 0;
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+.neuron-pricing .style2 .pricing-wrap .middle-part ul li {
+    margin-bottom: 13px;
+    color: #333333;
+}
+
+.neuron-pricing .style2 .pricing-wrap .middle-part ul li i:before {
+    font-size: 13px;
+    margin-right: 5px;
+    display: inline;
+    font-weight: 600;
+}
+
+.neuron-pricing .style2 .pricing-wrap .middle-part ul li:last-child {
+    margin-bottom: 0;
+}
+
+.neuron-pricing .style3 .pricing-wrap {
+    box-shadow: 2px 10px 50px rgba(158, 158, 158, 0.1);
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.neuron-pricing .style3 .pricing-wrap .top-part {
+    text-transform: uppercase;
+    display: block;
+}
+
+.neuron-pricing .style3 .pricing-wrap .top-part.primary-bg {
+    background: #01a0f9;
+}
+
+.neuron-pricing .style3 .pricing-wrap .top-part.secondary-bg {
+    background: #09c778;
+}
+
+.neuron-pricing .style3 .pricing-wrap .top-part.soil-bg {
+    background: #dd8507;
+}
+
+.neuron-pricing .style3 .pricing-wrap .top-part.purple-bg {
+    background: #a608c1;
+}
+
+.neuron-pricing .style3 .pricing-wrap .top-part .title {
+    font-size: 20px;
+    padding: 13px 15px;
+    line-height: 30px;
+    font-weight: 500;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.neuron-pricing .style3 .pricing-wrap .top-part .plan-detail {
+    font-size: 48px;
+    line-height: 58px;
+    color: #ffffff;
+    padding: 41px 15px 28px;
+}
+
+.neuron-pricing .style3 .pricing-wrap .top-part .plan-detail .currency {
+    font-size: 22px;
+    margin-right: 3px;
+}
+
+.neuron-pricing .style3 .pricing-wrap .top-part .plan-detail .time-limit {
+    font-size: 15px;
+}
+
+.neuron-pricing .style3 .pricing-wrap .bottom-part {
+    padding: 30px 15px 45px;
+}
+
+.neuron-pricing .style3 .pricing-wrap .bottom-part ul li {
+    margin-bottom: 13px;
+    color: #333333;
+}
+
+.neuron-pricing .style3 .pricing-wrap .bottom-part ul li i:before {
+    font-size: 13px;
+    margin-right: 5px;
+    display: inline;
+    font-weight: 600;
+}
+
+.neuron-pricing .style3 .pricing-wrap .bottom-part ul li:last-child {
+    margin-bottom: 0;
+}
+
+.neuron-pricing .style3 .pricing-wrap .bottom-part .buy-btn {
+    margin-top: 32px;
+}
+
+.neuron-pricing .style3 .pricing-wrap .bottom-part .buy-btn .readon.primary-bg {
+    background: #01a0f9;
+}
+
+.neuron-pricing .style3 .pricing-wrap .bottom-part .buy-btn .readon.secondary-bg {
+    background: #09c778;
+}
+
+.neuron-pricing .style3 .pricing-wrap .bottom-part .buy-btn .readon.soil-bg {
+    background: #dd8507;
+}
+
+.neuron-pricing .style3 .pricing-wrap .bottom-part .buy-btn .readon.purple-bg {
+    background: #a608c1;
+}
+
+
+/* ------------------------------------
+    20. Partner Section CSS
+---------------------------------------*/
+
+.neuron-partner .partner-image-part {
+    text-align: center;
+}
+
+.neuron-partner .partner-image-part .partner-item {
+    width: 19%;
+    display: inline-block;
+    text-align: center;
+}
+
+.neuron-partner.partner-bg {
+    background: url(images/bg/partner-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* ------------------------------------
+    21. Blog Section CSS
+---------------------------------------*/
+
+.neuron-blog .single-blog {
+    border-radius: 0 0 3px 3px;
+}
+
+.neuron-blog .single-blog .blog-img {
+    position: relative;
+}
+
+.neuron-blog .single-blog .blog-img img {
+    border-radius: 3px 3px 0 0;
+}
+
+.neuron-blog .single-blog .blog-details {
+    padding: 30px 40px;
+}
+
+.neuron-blog .single-blog .blog-details .blog-meta li {
+    display: inline-block;
+    padding-right: 15px;
+}
+
+.neuron-blog .single-blog .blog-details .blog-meta li i,
+.neuron-blog .single-blog .blog-details .blog-meta li span {
+    color: #01a0f9;
+    margin-right: 5px;
+}
+
+.neuron-blog .single-blog .blog-details .blog-meta li:last-child {
+    padding: 0;
+}
+
+.neuron-blog .single-blog .blog-details .blog-desc {
+    margin: 8px 0 0;
+}
+
+.neuron-blog .single-blog .blog-details .blog-desc .blog-title {
+    margin: 0 0 8px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.neuron-blog .single-blog .blog-details .blog-desc .blog-title a {
+    color: #333333;
+}
+
+.neuron-blog .single-blog .blog-details .blog-desc .blog-title a:hover {
+    color: #09c778;
+}
+
+.neuron-blog .single-blog .blog-details .blog-desc .blog-txt {
+    margin: 0 0 21px;
+}
+
+.neuron-blog .single-blog.style2 {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(34, 34, 34, 0.05);
+    margin: 5px;
+}
+
+.neuron-blog .single-blog.style2 .blog-details {
+    padding: 20px 0 0;
+}
+
+.neuron-blog .single-blog.style2 .blog-details .blog-desc .blog-title a:hover {
+    color: #00aeef;
+}
+
+.neuron-blog .single-blog.style3 {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(34, 34, 34, 0.05);
+    margin: 5px;
+}
+
+.neuron-blog .single-blog.style3 .blog-details {
+    padding: 20px 0 0;
+}
+
+.neuron-blog .single-blog.style3 .blog-details .blog-meta li i,
+.neuron-blog .single-blog.style3 .blog-details .blog-meta li span {
+    color: #6669e6;
+}
+
+.neuron-blog .single-blog.style3 .blog-details .blog-desc .blog-title a:hover {
+    color: #6669e6;
+}
+
+.neuron-blog .single-blog.style4 {
+    padding: unset;
+    border-radius: unset;
+}
+
+.neuron-blog .single-blog.style4 .blog-details {
+    padding: 35px 0 0;
+}
+
+.neuron-blog .single-blog.style4 .blog-details .blog-desc {
+    margin: 15px 0 0;
+}
+
+.neuron-blog .single-blog.style4 .blog-details .blog-desc .blog-title {
+    margin: 0 0 20px;
+    font-size: 42px;
+}
+
+.neuron-blog .single-blog.style4 .blog-details .blog-desc .blog-title.sidebar-title {
+    font-size: 36px;
+}
+
+.neuron-blog .single-blog.style4 .blog-details .blog-desc .blog-txt {
+    margin: 0 0 35px;
+}
+
+.neuron-blog .single-blog.sidebar {
+    padding: unset;
+    border-radius: unset;
+}
+
+.neuron-blog .single-blog.sidebar .blog-details .blog-desc {
+    margin: 15px 0 0;
+}
+
+.neuron-blog .single-blog.sidebar .blog-details .blog-desc .blog-title {
+    margin: 0 0 20px;
+    font-size: 36px;
+}
+
+.neuron-blog.home2-style .owl-carousel .owl-stage-outer {
+    margin: -5px;
+}
+
+.neuron-blog.home2-style .single-blog .blog-details {
+    padding-top: 24px;
+}
+
+.neuron-blog.home2-style .single-blog .blog-details .blog-desc {
+    margin: 0;
+}
+
+.neuron-blog.home2-style .single-blog .blog-details .blog-desc .blog-title {
+    margin-bottom: 13px;
+}
+
+.neuron-blog.home2-style .single-blog .blog-details .blog-meta {
+    margin-bottom: 30px;
+}
+
+
+/*Blog Sidebar CSS*/
+
+.blog-sidebar .sidebar-single-part {
+    padding: 30px 35px;
+}
+
+.blog-sidebar .sidebar-single-part .sidebar-title .title {
+    font-weight: 600;
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+.blog-sidebar .sidebar-search .search-bar {
+    position: relative;
+}
+
+.blog-sidebar .sidebar-search .search-bar input {
+    border: 1px solid #ddd;
+    color: #444444;
+    padding: 10px 17px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.blog-sidebar .sidebar-search .search-bar button {
+    background: transparent;
+    border: medium none;
+    color: #09c778;
+    padding: 11px 16px;
+    position: absolute;
+    right: 0px;
+    top: 0;
+    z-index: 10;
+    font-size: 20px;
+    outline: none;
+    transition: all 0.5s ease 0s;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(0deg, #09c778, #01a0f9);
+}
+
+.blog-sidebar .sidebar-search .search-bar button:hover {
+    background: #09c778;
+    color: #ffffff;
+}
+
+.blog-sidebar .sidebar-categories ul li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.blog-sidebar .sidebar-categories ul li a {
+    color: #666666;
+    transition: all 0.5s ease 0s;
+}
+
+.blog-sidebar .sidebar-categories ul li a:hover {
+    color: #555555;
+}
+
+.blog-sidebar .sidebar-categories ul li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background: linear-gradient(-41deg, #09c778, #01a0f9);
+}
+
+.blog-sidebar .sidebar-categories ul li:last-child {
+    margin: 0;
+}
+
+.blog-sidebar .sidebar-popular-post .single-post {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 3px;
+}
+
+.blog-sidebar .sidebar-popular-post .single-post .post-image {
+    max-width: 130px;
+    margin-right: 15px;
+}
+
+.blog-sidebar .sidebar-popular-post .single-post .post-image img {
+    height: 100px;
+}
+
+.blog-sidebar .sidebar-popular-post .single-post .post-desc {
+    padding: 10px 0;
+}
+
+.blog-sidebar .sidebar-popular-post .single-post .post-desc ul li {
+    display: inline-block;
+    margin-right: 12px;
+    color: #666666;
+}
+
+.blog-sidebar .sidebar-popular-post .single-post .post-desc ul li a {
+    color: #666666;
+}
+
+.blog-sidebar .sidebar-popular-post .single-post .post-desc ul li a:hover {
+    color: #555555;
+}
+
+.blog-sidebar .sidebar-popular-post .single-post .post-desc ul li:last-child {
+    margin-right: 0;
+}
+
+.blog-sidebar .sidebar-popular-post .single-post .post-desc .post-title h5 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 10px;
+}
+
+.blog-sidebar .sidebar-popular-post .single-post .post-desc .post-title h5 a {
+    color: #333333;
+}
+
+.blog-sidebar .sidebar-popular-post .single-post .post-desc .post-title h5 a:hover {
+    color: #555555;
+}
+
+.blog-sidebar .sidebar-tags li {
+    position: relative;
+    display: inline-block;
+    padding-right: 50px;
+    margin: 0 0 10px;
+}
+
+.blog-sidebar .sidebar-tags li a {
+    display: inline-block;
+    text-transform: capitalize;
+    -webkit-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+    color: #666666;
+}
+
+.blog-sidebar .sidebar-tags li a:hover {
+    color: #555555;
+}
+
+.blog-sidebar .sidebar-tags li:before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    background: #666666;
+    opacity: 0.3;
+}
+
+.blog-sidebar .sidebar-tags li:last-child {
+    padding: 0;
+}
+
+.blog-sidebar .sidebar-tags li:last-child:before {
+    display: none;
+}
+
+
+/*Single Article CSS*/
+
+.single-article-part .article-content .blog-details-title {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.single-article-part .article-content .markup-text {
+    padding: 20px 100px 20px 25px;
+    background: #eff1f7;
+    border-radius: 3px;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 18px;
+    color: #333333;
+}
+
+
+/* Single Article Comment Part */
+
+.comment-block .comment-block-title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.comment-block .comment-list .single-comment {
+    padding: 25px 0px 0px 15px;
+    border-bottom: 1px solid #f6f5f5;
+    margin-bottom: 0px;
+}
+
+.comment-block .comment-list .single-comment .comment-part {
+    display: inline-flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.comment-block .comment-list .single-comment .comment-img {
+    margin-right: 15px;
+}
+
+.comment-block .comment-list .single-comment .comment-img img {
+    max-width: unset;
+}
+
+.comment-block .comment-list .single-comment .comment-text {
+    overflow: hidden;
+}
+
+.comment-block .comment-list .single-comment .comment-text .comment-title {
+    float: left;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.comment-block .comment-list .single-comment .comment-text .comment-meta {
+    float: right;
+}
+
+.comment-block .comment-list .single-comment .comment-text .comment-meta i {
+    color: #01a0f9;
+}
+
+.comment-block .comment-list .single-comment .comment-text .comment-meta time {
+    margin-left: 7px;
+}
+
+.comment-block .comment-list .single-comment .comment-text .comment-body {
+    float: left;
+}
+
+.comment-block .comment-list .single-comment .comment-text .comment-body p {
+    margin: 0;
+}
+
+.comment-block .comment-list .single-comment .comment-text .comment-body p.comment-reply {
+    margin-top: 5px;
+}
+
+.comment-block .comment-list .single-comment .comment-text .comment-body p.comment-reply a {
+    color: #01a0f9;
+}
+
+.comment-block .comment-list .single-comment .comment-text .comment-body p.comment-reply a:hover {
+    color: #333333;
+}
+
+.comment-block .comment-list .child-comment {
+    padding-left: 70px;
+}
+
+.comment-block .comment-list .child-comment .single-comment {
+    padding-left: 0;
+}
+
+
+/*Article Tags*/
+
+.article-tags {
+    padding: 15px 0;
+    border-top: 1px solid #f6f5f5;
+    border-bottom: 1px solid #f6f5f5;
+    display: inline-flex;
+    width: 100%;
+}
+
+.article-tags .tag-part {
+    align-items: center;
+    display: flex;
+    width: 50%;
+}
+
+.article-tags .tag-part p {
+    float: left;
+    margin: 0 15px 0px 0;
+    color: #333333;
+}
+
+.article-tags .tag-part a {
+    display: inline-block;
+    margin: 0 10px 0 0;
+    line-height: 15px;
+    padding: 7px 10px;
+    color: #666666;
+    -webkit-transition: all .3s ease;
+    transition: all 0.5s ease 0s;
+    border: 1px solid #f6f5f5;
+    border-radius: 3px;
+}
+
+.article-tags .tag-part a:hover {
+    border-color: #01a0f9;
+    background: #01a0f9;
+    color: #ffffff;
+}
+
+.article-tags .social-icons {
+    width: 50%;
+    text-align: right;
+}
+
+.article-tags .social-icons a {
+    color: #666666;
+}
+
+.article-tags .social-icons a:hover {
+    color: #555555;
+}
+
+
+/*Single Article Navigation*/
+
+.article-nav {
+    padding: 45px 0 40px;
+}
+
+.article-nav ul {
+    display: inline-flex;
+    width: 100%;
+}
+
+.article-nav ul li {
+    width: 50%;
+}
+
+.article-nav ul li a {
+    color: #666666;
+}
+
+.article-nav ul li a:hover {
+    color: #555555;
+}
+
+.article-nav ul .next {
+    text-align: right;
+}
+
+
+/* ------------------------------------
+    22. Contact Section CSS
+---------------------------------------*/
+
+
+/*Contact Form CSS*/
+
+.neuron-contact-form form {
+    padding: 0;
+    max-width: 100%;
+}
+
+.neuron-contact-form form .form-field {
+    margin-bottom: 22px;
+}
+
+.neuron-contact-form form .form-field label {
+    display: block;
+}
+
+.neuron-contact-form form .form-field input,
+.neuron-contact-form form .form-field textarea {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #f6f5f5;
+    border-radius: 5px;
+    outline: unset;
+    resize: unset;
+}
+
+.neuron-contact-form form .form-field input {
+    height: 45px;
+    line-height: 45px;
+}
+
+.neuron-contact-form form .form-button button {
+    border: unset;
+    outline: unset;
+}
+
+
+/*Contact Part*/
+
+.neuron-contact .contact-info {
+    background: #ffffff;
+    padding: 44px 50px 30px;
+    border-radius: 5px;
+    margin-top: -75px;
+}
+
+.neuron-contact .contact-info .contact-info-icon {
+    margin: 0 0 20px;
+}
+
+.neuron-contact .contact-info .contact-info-icon i:before {
+    font-size: 100px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(0deg, #09c778, #01a0f9);
+}
+
+.neuron-contact .contact-info .contact-icon {
+    display: inline-flex;
+    width: 100%;
+    margin: 0 0 35px;
+}
+
+.neuron-contact .contact-info .contact-icon .icon-part {
+    margin-right: 20px;
+}
+
+.neuron-contact .contact-info .contact-icon .icon-part i:before {
+    font-size: 30px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(0deg, #09c778, #01a0f9);
+    margin: 6px 0 0;
+}
+
+.neuron-contact .contact-info .contact-icon .icon-text .icon-title {
+    margin: 0 0 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.neuron-contact .contact-info .contact-icon .icon-text p {
+    margin: 0;
+}
+
+.neuron-contact .contact-info .contact-icon .icon-text a {
+    display: block;
+    color: #666666;
+}
+
+.neuron-contact .contact-info .contact-icon .icon-text a:hover {
+    color: #09c778;
+}
+
+.neuron-contact .contact-form .form-field input,
+.neuron-contact .contact-form .form-field textarea {
+    background: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    border: unset;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 0 0 30px;
+    width: 100%;
+    outline: none;
+    box-shadow: none;
+    resize: none;
+}
+
+.neuron-contact .contact-form .form-field input {
+    height: 53px;
+    line-height: 53px;
+}
+
+.neuron-contact .contact-form .form-field ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #ffffff;
+    opacity: 1;
+}
+
+.neuron-contact .contact-form .form-field ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #ffffff;
+    opacity: 1;
+}
+
+.neuron-contact .contact-form .form-field :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #ffffff;
+    opacity: 1;
+}
+
+.neuron-contact .contact-form .form-field :-moz-placeholder {
+    /* Firefox 18- */
+    color: #ffffff;
+    opacity: 1;
+}
+
+.neuron-contact .contact-form .form-button button {
+    width: 100%;
+    background: #ffffff;
+    border: none;
+    outline: none;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-contact .contact-form .form-button button:hover {
+    color: #09c778;
+}
+
+.neuron-contact.style2 .contact-info {
+    background: linear-gradient(-90deg, #1292c2, #00aeef);
+}
+
+.neuron-contact.style2 .contact-info .contact-info-icon i:before {
+    color: #ffffff;
+}
+
+.neuron-contact.style2 .contact-info .contact-icon .icon-part i:before {
+    font-size: 30px;
+    color: #ffffff;
+}
+
+.neuron-contact.style2 .contact-info .contact-icon .icon-text .icon-title {
+    color: #ffffff;
+}
+
+.neuron-contact.style2 .contact-info .contact-icon .icon-text p {
+    color: #ffffff;
+}
+
+.neuron-contact.style2 .contact-info .contact-icon .icon-text a {
+    color: #ffffff;
+}
+
+.neuron-contact.style2 .contact-info .contact-icon .icon-text a:hover {
+    color: #09c778;
+}
+
+.neuron-contact.style2 .contact-form .form-field input,
+.neuron-contact.style2 .contact-form .form-field textarea {
+    background: #ffffff;
+    color: #666666;
+    max-width: 972px;
+}
+
+.neuron-contact.style2 .contact-form .form-field ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #666666;
+    opacity: 1;
+}
+
+.neuron-contact.style2 .contact-form .form-field ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #666666;
+    opacity: 1;
+}
+
+.neuron-contact.style2 .contact-form .form-field :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #666666;
+    opacity: 1;
+}
+
+.neuron-contact.style2 .contact-form .form-field :-moz-placeholder {
+    /* Firefox 18- */
+    color: #666666;
+    opacity: 1;
+}
+
+.neuron-contact.style2 .contact-form .form-button button {
+    background: unset;
+    color: #ffffff;
+    border-radius: 5px;
+    position: relative;
+    z-index: 99;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-contact.style2 .contact-form .form-button button:before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(-90deg, #1292c2, #00aeef);
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+    z-index: -1;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-contact.style2 .contact-form .form-button button:after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(90deg, #1292c2, #00aeef);
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+    z-index: -1;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-contact.style2 .contact-form .form-button button:hover:before {
+    opacity: 0;
+}
+
+.neuron-contact.style2 .contact-form .form-button button:hover:after {
+    opacity: 1;
+}
+
+.neuron-contact.contact-bg {
+    background: url(images/bg/contact-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.neuron-contact.neuron-contact-page .sec-title p {
+    font-size: 18px;
+}
+
+.neuron-contact.neuron-contact-page.neuron-contact .sec-title {
+    padding: 0 45px;
+}
+
+.neuron-contact.neuron-contact-page.neuron-contact .contact-info {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 50px 25px;
+}
+
+.neuron-contact.neuron-contact-page.neuron-contact .contact-info .icon-title {
+    font-weight: 500;
+}
+
+.neuron-contact.neuron-contact-page .contact-form {
+    background: -webkit-linear-gradient(-41deg, #09c778, #01a0f9);
+    background: -moz-linear-gradient(-41deg, #09c778, #01a0f9);
+    background: linear-gradient(-41deg, #09c778, #01a0f9);
+    border-radius: 8px;
+    padding: 75px;
+}
+
+.neuron-contact.neuron-contact-page .contact-form .form-button button {
+    background: #333333;
+    color: #ffffff;
+    transition: 0.4s;
+    border-radius: 3px;
+}
+
+.neuron-contact.neuron-contact-page .contact-form .form-button button:hover {
+    color: #09c778;
+}
+
+.neuron-contact.neuron-contact-page .contact-map {
+    position: relative;
+    overflow: hidden;
+}
+
+.neuron-contact.neuron-contact-page .contact-map iframe {
+    filter: grayscale(1);
+    float: left;
+    height: 570px;
+    width: 100%;
+    border: none;
+}
+
+.neuron-contact.neuron-contact-page .contact-map .maps-imgage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*----------------------------------
+    23. Login Form Section 
+-------------------------------------*/
+
+.neuron-login .section-title {
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    margin-top: -5px;
+}
+
+.neuron-login .login-width {
+    max-width: 570px;
+    margin: 0 auto;
+}
+
+.neuron-login .login-width .login-form label {
+    margin-bottom: 10px;
+}
+
+.neuron-login .login-width .login-form .custom-placeholder {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #ebebeb;
+    background: #fcfdfe;
+    outline: none;
+    color: #333333;
+    border-radius: 3px;
+    padding: 0 15px;
+    margin-bottom: 25px;
+}
+
+.neuron-login .login-width .login-form .checkbox {
+    color: #333333;
+    font-weight: 600;
+}
+
+.neuron-login .login-width .login-form .checkbox input {
+    margin-right: 6px;
+}
+
+.neuron-login .login-width .login-form .lost-psw {
+    text-align: right;
+    display: block;
+    color: #333333;
+    font-weight: 600;
+    transition: all 0.5s ease 0s;
+}
+
+.neuron-login .login-width .login-form .lost-psw:hover {
+    color: #01a0f9;
+}
+
+.neuron-login .login-width .login-form .readon {
+    border: none;
+    padding: 17px 25px;
+    width: 100%;
+    text-align: center;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.neuron-login .login-width .bottom-content .line-set {
+    font-weight: 600;
+    color: #333333;
+    position: relative;
+}
+
+.neuron-login .login-width .bottom-content .line-set:after {
+    position: absolute;
+    content: '';
+    background: #e4e4e4;
+    width: 45%;
+    height: 1px;
+    top: 12px;
+    right: 0;
+}
+
+.neuron-login .login-width .bottom-content .line-set:before {
+    position: absolute;
+    content: '';
+    background: #e4e4e4;
+    width: 45%;
+    height: 1px;
+    top: 12px;
+    left: 0;
+}
+
+.neuron-login .login-width .bottom-content .readon {
+    border: none;
+    padding: 17px 25px;
+    width: 100%;
+    text-align: center;
+    border-radius: 3px;
+    background: #ffffff;
+    color: #666666;
+    font-weight: 500;
+    border: 1px solid #ebebeb;
+}
+
+.neuron-login .login-width .bottom-content .readon:before {
+    display: none;
+}
+
+.neuron-login .login-width .bottom-content .readon:hover {
+    background: #01a0f9;
+    border-color: #01a0f9;
+    color: #ffffff;
+}
+
+
+/*----------------------------------
+    24. Registration Form Section 
+-------------------------------------*/
+
+.neuron-registration .section-title {
+    margin-bottom: 42px;
+    text-transform: uppercase;
+}
+
+.neuron-registration .section-title p {
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.neuron-registration .register-width {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.neuron-registration .register-width form.register-form input.custom-placeholder {
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #ebebeb;
+    outline: unset;
+    height: 45px;
+    border-radius: 3px;
+    margin-bottom: 25px;
+    color: #666666;
+    padding: 0 15px;
+}
+
+.neuron-registration .register-width form.register-form .margin-space {
+    margin-bottom: 25px;
+}
+
+.neuron-registration .register-width form.register-form .text-bold {
+    color: #333333;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+.neuron-registration .register-width form.register-form .date {
+    padding: 7px;
+    color: #666666;
+    border-radius: 3px;
+    outline: unset;
+    border: 1px solid #e4e4e4;
+    margin-right: 15px;
+}
+
+.neuron-registration .register-width form.register-form .checkbox {
+    margin-bottom: 25px;
+}
+
+.neuron-registration .register-width form.register-form .condition {
+    color: #01a0f9;
+}
+
+.neuron-registration .register-width form.register-form .condition:hover {
+    color: #09c778;
+}
+
+.neuron-registration .register-width form.register-form .readon {
+    margin-top: 0;
+    outline: unset;
+    border: none;
+}
+
+
+/* ------------------------------------
+    25. Error Section CSS
+---------------------------------------*/
+
+.neuron-error {
+    background: url(images/bg/error-bg.jpg);
+    background-size: cover;
+    background-position: center top;
+    height: 100vh;
+    position: relative;
+}
+
+.neuron-error .content-wrap {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.neuron-error .content-wrap .title-part {
+    padding-bottom: 450px;
+}
+
+.neuron-error .content-wrap .title-part .title {
+    font-size: 150px;
+    text-shadow: 20px 0 0 rgba(0, 0, 0, 0.3);
+    line-height: 140px;
+}
+
+.neuron-error .content-wrap .title-part .sub-title {
+    font-size: 52px;
+    text-transform: capitalize;
+    font-weight: 600;
+    line-height: 62px;
+}
+
+.neuron-error .content-wrap .button-part .back-btn {
+    color: #01a0f9;
+    background: #ffffff;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    display: inline-block;
+    padding: 14px 50px;
+}
+
+.neuron-error .content-wrap .button-part .back-btn:hover {
+    color: #ffffff;
+    background: #01a0f9;
+}
+
+
+/* ------------------------------------
+    26. Coming Soon CSS
+---------------------------------------*/
+
+.neuron-coming-soon {
+    background: url(images/bg/comeing-soon-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.neuron-coming-soon .content-wrap {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.neuron-coming-soon .content-wrap .logo {
+    padding-bottom: 42px;
+}
+
+.neuron-coming-soon .content-wrap .title-part .title {
+    font-weight: 600;
+}
+
+.neuron-coming-soon .content-wrap .title-part .desc {
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.neuron-coming-soon .content-wrap .countdown-inner {
+    padding: 58px 0 55px;
+}
+
+.neuron-coming-soon .content-wrap .countdown-inner .countdown {
+    max-width: 100%;
+    width: 600px;
+    margin: 0 auto;
+    display: inline-flex;
+}
+
+.neuron-coming-soon .content-wrap .countdown-inner .countdown div {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 600;
+    padding-top: 10px;
+    width: 120px;
+    height: 120px;
+    display: grid;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 100%;
+    border: 5px solid #ffffff;
+    background-image: linear-gradient(-41deg, #09c778, #01a0f9);
+    box-shadow: 0 0 52px rgba(0, 0, 0, 0.3);
+}
+
+.neuron-coming-soon .content-wrap .countdown-inner .countdown div span {
+    color: #ffffff;
+    text-transform: uppercase;
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: -30px;
+}
+
+.neuron-coming-soon .content-wrap .newsletter-box .desc {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.neuron-coming-soon .content-wrap .newsletter-box .input-area {
+    max-width: 670px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.neuron-coming-soon .content-wrap .newsletter-box .input-area input {
+    border: none;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    max-width: 700px;
+    padding-left: 20px;
+    height: 50px;
+    line-height: 50px;
+    outline: none;
+}
+
+.neuron-coming-soon .content-wrap .newsletter-box .input-area button {
+    position: absolute;
+    content: '';
+    color: #ffffff;
+    background: unset;
+    height: 44px;
+    line-height: 44px;
+    right: 3px;
+    top: 3px;
+    width: 100px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    z-index: 9;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-coming-soon .content-wrap .newsletter-box .input-area button:before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(-41deg, #09c778, #01a0f9);
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 50px;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-coming-soon .content-wrap .newsletter-box .input-area button:hover {
+    background: #01a0f9;
+}
+
+.neuron-coming-soon .content-wrap .newsletter-box .input-area button:hover:before {
+    opacity: 0;
+}
+
+.neuron-coming-soon .content-wrap .newsletter-box .input-area ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #ffffff;
+    opacity: 1;
+}
+
+.neuron-coming-soon .content-wrap .newsletter-box .input-area ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #ffffff;
+    opacity: 1;
+}
+
+.neuron-coming-soon .content-wrap .newsletter-box .input-area :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #ffffff;
+    opacity: 1;
+}
+
+.neuron-coming-soon .content-wrap .newsletter-box .input-area :-moz-placeholder {
+    /* Firefox 18- */
+    color: #ffffff;
+    opacity: 1;
+}
+
+.neuron-coming-soon .content-wrap .social-links {
+    padding-top: 70px;
+}
+
+.neuron-coming-soon .content-wrap .social-links ul li {
+    display: inline;
+    margin-right: 5px;
+}
+
+.neuron-coming-soon .content-wrap .social-links ul li a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 100%;
+    background: #ffffff;
+}
+
+.neuron-coming-soon .content-wrap .social-links ul li a i {
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(-41deg, #09c778, #01a0f9);
+}
+
+.neuron-coming-soon .content-wrap .social-links ul li:last-child {
+    margin: 0;
+}
+
+
+/*-----------------------------------------
+    27. Shop Section CSS
+-----------------------------------------*/
+
+.neuron-shop .product-grid,
+.rp-area .product-grid {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.neuron-shop .product-grid .shop-item,
+.rp-area .product-grid .shop-item {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.neuron-shop .product-grid .shop-item img,
+.rp-area .product-grid .shop-item img {
+    width: 100%;
+}
+
+.neuron-shop .product-grid .shop-item .icon-area,
+.rp-area .product-grid .shop-item .icon-area {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+}
+
+.neuron-shop .product-grid .shop-item .icon-area ul li,
+.rp-area .product-grid .shop-item .icon-area ul li {
+    display: inline;
+}
+
+.neuron-shop .product-grid .shop-item .icon-area ul li i,
+.rp-area .product-grid .shop-item .icon-area ul li i {
+    width: 30px;
+    height: 30px;
+    line-height: 27px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    transition: all 0.5s ease 0s;
+    text-align: center;
+}
+
+.neuron-shop .product-grid .shop-item .icon-area ul li i:hover,
+.rp-area .product-grid .shop-item .icon-area ul li i:hover {
+    border-color: #01a0f9;
+    color: #01a0f9;
+}
+
+.neuron-shop .product-grid .shop-item:after,
+.rp-area .product-grid .shop-item:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    transition: all 0.5s ease 0s;
+}
+
+.neuron-shop .product-grid .shop-content,
+.rp-area .product-grid .shop-content {
+    text-align: center;
+    padding: 25px 10px 30px 10px;
+}
+
+.neuron-shop .product-grid .shop-content h4.title,
+.rp-area .product-grid .shop-content h4.title {
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.neuron-shop .product-grid .shop-content h4.title a,
+.rp-area .product-grid .shop-content h4.title a {
+    color: #333333;
+}
+
+.neuron-shop .product-grid .shop-content h4.title a:hover,
+.rp-area .product-grid .shop-content h4.title a:hover {
+    color: #01a0f9;
+}
+
+.neuron-shop .product-grid .shop-content span.price,
+.rp-area .product-grid .shop-content span.price {
+    display: block;
+    margin-bottom: 11px;
+    font-weight: 500;
+}
+
+.neuron-shop .product-grid .shop-content a.readon,
+.rp-area .product-grid .shop-content a.readon {
+    padding: 13px 20px;
+    font-size: 15px;
+}
+
+.neuron-shop .product-grid:hover .shop-item:after,
+.rp-area .product-grid:hover .shop-item:after {
+    opacity: 1;
+}
+
+.neuron-shop .product-grid:hover .shop-item .icon-area,
+.rp-area .product-grid:hover .shop-item .icon-area {
+    opacity: 1;
+}
+
+.neuron-shop .rp-title,
+.rp-area .rp-title {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 55px;
+}
+
+
+/* ------------------------------------
+    28. Shop Single CSS
+---------------------------------------*/
+
+.neuron-single-product .single-product-slider .images-single img {
+    width: 100%;
+}
+
+.neuron-single-product .single-product-nav {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.neuron-single-product .single-product-nav .images-slide-single img {
+    cursor: pointer;
+    opacity: .5;
+}
+
+.neuron-single-product .single-product-nav .images-slide-single img:hover {
+    opacity: 1;
+}
+
+.neuron-single-product .single-product-nav .slick-list .slick-track {
+    margin: 0 auto;
+}
+
+.neuron-single-product .single-product-nav .slick-current img {
+    opacity: 1;
+}
+
+.neuron-single-product .single-price-info .product-title {
+    margin-bottom: 12px;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.neuron-single-product .single-price-info .rank div {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.neuron-single-product .single-price-info .rank div ul li {
+    display: inline;
+    margin-right: 5px;
+    color: #f5d109;
+}
+
+.neuron-single-product .single-price-info .rank div ul li:last-child {
+    margin: 0;
+}
+
+.neuron-single-product .single-price-info .rank div:last-child {
+    margin: 0;
+}
+
+.neuron-single-product .single-price-info .single-price {
+    color: #01a0f9;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.neuron-single-product .single-price-info .some-text {
+    margin-top: 15px;
+}
+
+.neuron-single-product .single-price-info form input {
+    height: 40px;
+    width: 70px;
+    line-height: 40px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 30px;
+    border: 1px solid rgba(54, 54, 54, 0.1);
+    outline: none;
+}
+
+.neuron-single-product .single-price-info form .readon {
+    font-size: 15px;
+    padding: 13px 20px;
+    border: none;
+    outline: unset;
+    margin-left: 10px;
+}
+
+.neuron-single-product .single-price-info p.category {
+    margin: 0;
+    padding-top: 25px;
+}
+
+.neuron-single-product .tab-area ul.nav-tabs {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e6ebee;
+    padding-bottom: 36px;
+}
+
+.neuron-single-product .tab-area ul.nav-tabs li {
+    margin-right: 10px;
+}
+
+.neuron-single-product .tab-area ul.nav-tabs li a {
+    position: relative;
+    color: #333333;
+    background: transparent;
+    font-size: 16px;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.7s ease 0s;
+    outline: none;
+    padding: 17px 43px;
+    border: 1px solid #01a0f9;
+    text-transform: uppercase;
+    line-height: 1;
+    z-index: 99;
+}
+
+.neuron-single-product .tab-area ul.nav-tabs li a:before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(-41deg, #09c778, #01a0f9);
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all 0.7s ease 0s;
+}
+
+.neuron-single-product .tab-area ul.nav-tabs li a:hover,
+.neuron-single-product .tab-area ul.nav-tabs li a.active {
+    color: #ffffff;
+    background: unset;
+    border: 1px solid transparent;
+}
+
+.neuron-single-product .tab-area ul.nav-tabs li a:hover:before,
+.neuron-single-product .tab-area ul.nav-tabs li a.active:before {
+    opacity: 1;
+}
+
+.neuron-single-product .tab-area ul.nav-tabs li:last-child {
+    margin-right: 0;
+}
+
+.neuron-single-product .tab-area .tab-content .tab-pane .tab-title {
+    margin-bottom: 25px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.neuron-single-product .tab-area .tab-content .tab-pane .dsc-p {
+    margin: 0;
+}
+
+.neuron-single-product .tab-area .tab-content .tab-pane .reviews-grid .top-area {
+    margin-bottom: 5px;
+}
+
+.neuron-single-product .tab-area .tab-content .tab-pane .reviews-grid .top-area p {
+    margin-bottom: 23px;
+}
+
+.neuron-single-product .tab-area .tab-content .tab-pane .reviews-grid .top-area h4 {
+    font-weight: 400;
+    color: unset;
+}
+
+.neuron-single-product .tab-area .tab-content .tab-pane .reviews-grid .comment-form p.comment-notes {
+    margin-bottom: 15px;
+}
+
+.neuron-single-product .tab-area .tab-content .tab-pane .reviews-grid .comment-form .placeholder-cntrl label {
+    font-weight: 600;
+    min-width: 100px;
+}
+
+.neuron-single-product .tab-area .tab-content .tab-pane .reviews-grid .comment-form .placeholder-cntrl input {
+    border: 1px solid rgba(54, 54, 54, 0.1);
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.neuron-single-product .tab-area .tab-content .tab-pane .reviews-grid .comment-form .placeholder-cntrl textarea {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    height: 75px;
+    border: 1px solid rgba(54, 54, 54, 0.1);
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.neuron-single-product .tab-area .tab-content .tab-pane .reviews-grid .comment-form .ratings {
+    font-weight: 600;
+    margin-bottom: 18px;
+    display: block;
+}
+
+.neuron-single-product .tab-area .tab-content .tab-pane .reviews-grid .comment-form .ratings ul li {
+    display: inline;
+}
+
+.neuron-single-product .tab-area .tab-content .tab-pane .reviews-grid .comment-form .ratings ul li i {
+    color: #f5d109;
+    font-weight: normal;
+}
+
+.neuron-single-product .tab-area .tab-content .tab-pane .reviews-grid .comment-form .readon {
+    font-weight: 500;
+    font-size: 15px;
+    padding: 13px 45px;
+    border: none;
+    outline: none;
+}
+
+
+/*-----------------------------------------
+    29. Cart Section CSS
+-----------------------------------------*/
+
+.neuron-cart .cart-body .cart-detail table {
+    width: 100%;
+}
+
+.neuron-cart .cart-body .cart-detail table tr {
+    border-bottom: 1px solid #dfe7ec;
+}
+
+.neuron-cart .cart-body .cart-detail table tr th,
+.neuron-cart .cart-body .cart-detail table tr td {
+    padding: 25px 0;
+}
+
+.neuron-cart .cart-body .cart-detail table tr th {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333333;
+    padding-top: 0;
+}
+
+.neuron-cart .cart-body .cart-detail table tr .product-remove i {
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
+}
+
+.neuron-cart .cart-body .cart-detail table tr .product-remove i:before {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.neuron-cart .cart-body .cart-detail table tr .product-remove i:hover {
+    color: #01a0f9;
+}
+
+.neuron-cart .cart-body .cart-detail table tr .product-price td,
+.neuron-cart .cart-body .cart-detail table tr .product-subtotal td {
+    font-weight: 500;
+}
+
+.neuron-cart .cart-body .cart-detail table tr .product-thumbnail {
+    width: 50%;
+}
+
+.neuron-cart .cart-body .cart-detail table tr .product-thumbnail img {
+    width: 140px;
+    margin-right: 30px;
+}
+
+.neuron-cart .cart-body .cart-detail table tr .product-thumbnail a {
+    font-weight: 500;
+    color: #333333;
+}
+
+.neuron-cart .cart-body .cart-detail table tr .product-thumbnail a:hover {
+    color: #01a0f9;
+}
+
+.neuron-cart .cart-body .cart-detail table tr .product-quantity input {
+    width: 70px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 30px;
+    outline: none;
+}
+
+.neuron-cart .cart-body .cart-detail .action {
+    padding-top: 30px;
+}
+
+.neuron-cart .cart-body .cart-detail .action .cupon {
+    display: initial;
+}
+
+.neuron-cart .cart-body .cart-detail .action .cupon ul li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.neuron-cart .cart-body .cart-detail .action .cupon ul li form input {
+    padding-bottom: 10px;
+    margin-right: 30px;
+    width: 190px;
+    border: none;
+    color: #333333;
+    font-weight: 500;
+    border-bottom: 1px solid #dfe7ec;
+    outline: none;
+}
+
+.neuron-cart .cart-body .cart-detail .action .cupon ul li form input::placeholder {
+    color: #333333;
+    font-weight: 500;
+    opacity: 1;
+}
+
+.neuron-cart .cart-body .cart-detail .action .cupon ul li .readon {
+    padding: 17px 20px;
+    border: none;
+    outline: unset;
+}
+
+.neuron-cart .cart-body .cart-detail .action .cupon ul li:last-child {
+    margin: 0;
+}
+
+.neuron-cart .cart-body .cart-total {
+    padding-top: 62px;
+}
+
+.neuron-cart .cart-body .cart-total .total-cart-title {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.neuron-cart .cart-body .cart-total table {
+    width: 100%;
+}
+
+.neuron-cart .cart-body .cart-total table tbody tr {
+    border-bottom: 1px solid #dfe7ec;
+}
+
+.neuron-cart .cart-body .cart-total table tbody tr th {
+    padding: 20px 0;
+    width: 30%;
+    font-weight: 600;
+}
+
+.neuron-cart .cart-body .cart-total table tbody tr td {
+    padding: 20px 0;
+}
+
+.neuron-cart .cart-body .cart-total .readon {
+    padding: 17px 25px;
+    outline: none;
+    text-transform: unset;
+}
+
+.woocommerce-mini-cart {
+    position: absolute;
+    padding: 30px 20px;
+    background: #fff;
+    right: 0;
+    top: 200%;
+    transition: all 0.5s ease 0s;
+    width: 270px;
+    z-index: 11;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.woocommerce-mini-cart li {
+    border-bottom: 1px solid rgba(170, 170, 170, 0.25);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.woocommerce-mini-cart .product-info {
+    padding: 0 30px;
+}
+
+.woocommerce-mini-cart .product-info a {
+    color: #01a0f9;
+}
+
+.woocommerce-mini-cart .readon {
+    height: 35px;
+    line-height: 35px;
+    padding: 0 15px;
+    font-size: 14px;
+    border-radius: 30px;
+}
+
+.woocommerce-mini-cart .readon:before {
+    border-radius: 30px;
+}
+
+.woocommerce-mini-cart .readon:after {
+    border-radius: 30px;
+}
+
+.woocommerce-mini-cart .total-price {
+    padding: 5px 0 20px;
+}
+
+.woocommerce-mini-cart .icon-cart i {
+    color: #666666;
+    width: 18px;
+    height: 18px;
+    line-height: 16px;
+    border: 1px solid #666666;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    transition: all 0.5s ease 0s;
+}
+
+.woocommerce-mini-cart .icon-cart i:hover {
+    color: #01a0f9;
+    border-color: #01a0f9;
+}
+
+.woocommerce-mini-cart .icon-cart,
+.woocommerce-mini-cart .product-image {
+    margin-top: 2px;
+}
+
+.woocommerce-mini-cart .product-image {
+    display: block;
+    float: right;
+    text-align: right;
+}
+
+.mini-cart-active:hover .woocommerce-mini-cart {
+    visibility: visible;
+    opacity: 1;
+    top: 100%;
+}
+
+#berita {
+    font-family: system-ui;
+    -webkit-font-smoothing: antialiased;
+    padding: 20px 0;
+}
+
+header {
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.container2 {
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+
+
+/*responsive*/
+
+@media (min-width:30em) {
+    .container2 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width:60em) {
+    .container2 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.card2 {
+    background: white;
+    text-decoration: none;
+    color: #444;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    position: relative;
+    top: 0;
+    transition: all 0.1s ease-in;
+}
+
+.card2:hover {
+    top: -2;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card2 .thumb {
+    padding-bottom: -2;
+    background-size: cover;
+    background-position: center;
+}
+
+.card2 article {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card2 h1 {
+    font-size: 20px;
+    margin: 0;
+    color: #333;
+    font-family: system-ui;
+    -webkit-font-smoothing: antialiased;
+}
+
+.card2 span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 2em 0 0 0;
+    font-family: system-ui;
+    -webkit-font-smoothing: antialiased;
+}
+
+.card2 p {
+    flex: 1;
+    line-height: 1, 4;
+    font-family: system-ui;
+    -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 30em) {
+    .artikel-1 {
+        grid-column: 1/span 2;
+    }
+}
+
+
+/* ------------------------------------
+    30. Checkout Section CSS
+-------------------------------------*/
+
+.neuron-checkout .checkout-title {
+    margin-bottom: 30px;
+}
+
+.neuron-checkout .checkout-title h3 {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.neuron-checkout .coupon-toggle .accordion .card {
+    border: unset;
+    border-top: 3px solid #01a0f9;
+    border-radius: 0;
+}
+
+.neuron-checkout .coupon-toggle .accordion .card .card-header {
+    border: none;
+    margin: 0;
+    border-radius: unset;
+}
+
+.neuron-checkout .coupon-toggle .accordion .card .card-header .card-title {
+    margin: 0;
+}
+
+.neuron-checkout .coupon-toggle .accordion .card .card-header .card-title span i {
+    margin-right: 10px;
+}
+
+.neuron-checkout .coupon-toggle .accordion .card .card-header .card-title button {
+    background: unset;
+    border: none;
+    color: #01a0f9;
+    transition: all 0.5s ease 0s;
+    outline: none;
+    cursor: pointer;
+}
+
+.neuron-checkout .coupon-toggle .accordion .card .card-header .card-title button:hover {
+    color: #09c778;
+}
+
+.neuron-checkout .coupon-toggle .accordion .card .card-body {
+    border: 1px solid #d3ced2;
+    padding: 20px 20px 50px 20px;
+    margin-top: 2em;
+    text-align: left;
+}
+
+.neuron-checkout .coupon-toggle .accordion .card .card-body .coupon-code-input {
+    width: 47%;
+    float: left;
+    margin-right: 50px;
+}
+
+.neuron-checkout .coupon-toggle .accordion .card .card-body .coupon-code-input input {
+    width: 100%;
+    height: 55px;
+    outline: none;
+    padding: 10px 18px;
+    color: #666666;
+    border: 1px solid rgba(54, 54, 54, 0.1);
+}
+
+.neuron-checkout .coupon-toggle .accordion .card .card-body .readon {
+    border: none;
+    outline: unset;
+}
+
+.neuron-checkout .full-grid {
+    margin-top: 25px;
+}
+
+.neuron-checkout .full-grid .form-content-box {
+    margin-bottom: 50px;
+}
+
+.neuron-checkout .full-grid .form-content-box .form-group label {
+    line-height: 2;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.neuron-checkout .full-grid .form-content-box .form-group select {
+    color: #666666;
+    opacity: .5;
+    padding-left: 8px;
+    padding-right: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    height: 45px;
+    line-height: 45px;
+    cursor: pointer;
+    width: 100%;
+    outline: none;
+}
+
+.neuron-checkout .full-grid .form-content-box .form-group textarea {
+    height: 4em;
+    line-height: 1.5;
+    display: block;
+    box-shadow: none;
+    width: 100%;
+    border: 1px solid rgba(54, 54, 54, 0.1);
+    padding: 10px 18px;
+    margin: 0;
+    outline: none;
+}
+
+.neuron-checkout .full-grid .form-content-box .form-group .form-control-mod {
+    border: 1px solid rgba(54, 54, 54, 0.1);
+    height: 45px;
+    padding: 10px 18px;
+    width: 100%;
+    margin: 0;
+    outline: none;
+    line-height: normal;
+    border-radius: unset;
+}
+
+.neuron-checkout .full-grid .form-content-box .form-group .form-control-mod.margin-bottom {
+    margin-bottom: 10px !important;
+}
+
+.neuron-checkout .full-grid .ordered-product table {
+    width: 100%;
+}
+
+.neuron-checkout .full-grid .ordered-product table tr th {
+    border: 1px solid #ccc;
+    padding: 9px 12px;
+}
+
+.neuron-checkout .full-grid .ordered-product table tr td {
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+}
+
+.neuron-checkout .full-grid .payment-method .top-area {
+    border-bottom: 1px solid #d3ced2;
+}
+
+.neuron-checkout .full-grid .payment-method .top-area .payment-co {
+    margin-bottom: 20px;
+}
+
+.neuron-checkout .full-grid .payment-method .top-area .payment-co span {
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.neuron-checkout .full-grid .payment-method .top-area .p-msg {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1em;
+    margin: 1em 0 2em;
+    font-size: .92em;
+    border-radius: 2px;
+    line-height: 1.5;
+    background-color: #f9f9f9;
+}
+
+.neuron-checkout .full-grid .payment-method .top-area .p-msg:before {
+    content: '';
+    display: block;
+    border: 1em solid #f9f9f9;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    position: absolute;
+    top: -0.75em;
+    left: 0;
+    margin: -1em 0 0 2em;
+}
+
+.neuron-checkout .full-grid .payment-method .bottom-area .readon {
+    border: none;
+    outline: unset;
+}
+
+
+/* -----------------------
+    31. Footer Section CSS
+--------------------------*/
+
+.rs-footer {
+    background: #eff1f7;
+    position: relative;
+    padding-top: 95px;
+    background: url(images/bg/footer-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.rs-footer .footer-top {
+    padding-bottom: 85px;
+}
+
+.rs-footer .footer-top .footer-logo {
+    margin-bottom: 33px;
+    margin-top: 5px;
+}
+
+.rs-footer .footer-top .footer-title {
+    margin-bottom: 40px;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+    z-index: 1;
+}
+
+.rs-footer .footer-top .footer-title:after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 5px;
+    background: linear-gradient(90deg, #01a0f9 45%, #09c778 60%);
+    bottom: 6px;
+    left: 1px;
+    z-index: -1;
+}
+
+.rs-footer .footer-top .contact-text {
+    margin-right: 20px;
+}
+
+.rs-footer .footer-top .contact-text a {
+    color: #666666;
+}
+
+.rs-footer .footer-top .contact-text a:hover {
+    color: #09c778;
+}
+
+.rs-footer .footer-top .about-widget .footer-desc {
+    margin-bottom: 6px;
+}
+
+.rs-footer .footer-top .about-widget .social-links {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.rs-footer .footer-top .about-widget .social-links li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.rs-footer .footer-top .about-widget .social-links li a {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 100px;
+    color: #ffffff;
+    display: block;
+    transition: all 0.7s ease 0s;
+    z-index: 99;
+}
+
+.rs-footer .footer-top .about-widget .social-links li a:before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(-41deg, #09c778, #01a0f9);
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 100px;
+    z-index: -1;
+    transition: all 0.7s ease 0s;
+}
+
+.rs-footer .footer-top .about-widget .social-links li a:after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(41deg, #09c778, #01a0f9);
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 100px;
+    z-index: -1;
+    transition: all 0.7s ease 0s;
+}
+
+.rs-footer .footer-top .about-widget .social-links li a:hover:before {
+    opacity: 0;
+}
+
+.rs-footer .footer-top .about-widget .social-links li a:hover:after {
+    opacity: 1;
+}
+
+.rs-footer .footer-top .about-widget .social-links li:last-child {
+    margin-right: 0;
+}
+
+.rs-footer .footer-top .footer-menu ul li {
+    display: block;
+    position: relative;
+    padding: 0 0 7px;
+}
+
+.rs-footer .footer-top .footer-menu ul li a {
+    color: #666666;
+}
+
+.rs-footer .footer-top .footer-menu ul li a:hover {
+    color: #01a0f9;
+}
+
+.rs-footer .footer-top .footer-menu ul li:last-child {
+    margin: 0;
+}
+
+.rs-footer .footer-top .footer-menu.two-col-menu ul {
+    overflow: hidden;
+}
+
+.rs-footer .footer-top .footer-menu.two-col-menu ul li {
+    float: left;
+    width: 50%;
+}
+
+.rs-footer .footer-top .chatbox-part {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 999;
+}
+
+.rs-footer .footer-top .chatbox-part .chat-icon {
+    float: right;
+    cursor: pointer;
+    position: relative;
+    z-index: 99;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    transition: all 0.7s ease 0s;
+}
+
+.rs-footer .footer-top .chatbox-part .chat-icon i:before {
+    color: #ffffff;
+    font-size: 40px;
+    line-height: 80px;
+}
+
+.rs-footer .footer-top .chatbox-part .chat-icon:before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(-41deg, #09c778, #01a0f9);
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: -1;
+    transition: all 0.7s ease 0s;
+}
+
+.rs-footer .footer-top .chatbox-part .chat-icon:after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(41deg, #09c778, #01a0f9);
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: -1;
+    transition: all 0.7s ease 0s;
+}
+
+.rs-footer .footer-top .chatbox-part .chat-icon:hover {
+    background: #01a0f9;
+}
+
+.rs-footer .footer-top .chatbox-part .chat-icon:hover:before {
+    opacity: 0;
+}
+
+.rs-footer .footer-top .chatbox-part .chat-icon:hover:after {
+    opacity: 1;
+}
+
+.rs-footer .footer-top .chatbox-part .chatbox {
+    width: 315px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 90px;
+    right: 0;
+    z-index: 999;
+    transition: all 0.5s ease 0s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.rs-footer .footer-top .chatbox-part .chatbox .chatbox-top {
+    padding: 15px;
+}
+
+.rs-footer .footer-top .chatbox-part .chatbox .chatbox-top .chat-img {
+    position: relative;
+    float: left;
+}
+
+.rs-footer .footer-top .chatbox-part .chatbox .chatbox-top .chat-img img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.rs-footer .footer-top .chatbox-part .chatbox .chatbox-top .chat-img span {
+    position: absolute;
+    right: 2px;
+    bottom: 2px;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background: #f00;
+}
+
+.rs-footer .footer-top .chatbox-part .chatbox .chatbox-top .chat-identity {
+    float: left;
+}
+
+.rs-footer .footer-top .chatbox-part .chatbox .chatbox-top .chat-identity .chat-title {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.rs-footer .footer-top .chatbox-part .chatbox .chatbox-top .chat-identity .active-status {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.rs-footer .footer-top .chatbox-part .chatbox .chatbox-top .close-icon {
+    float: right;
+}
+
+.rs-footer .footer-top .chatbox-part .chatbox .chatbox-top .close-icon i {
+    cursor: pointer;
+}
+
+.rs-footer .footer-top .chatbox-part .chatbox .chatbox-top .close-icon i:before {
+    font-size: 30px;
+    color: #ffffff;
+    transition: all 0.5s ease 0s;
+}
+
+.rs-footer .footer-top .chatbox-part .chatbox .chatbox-top .close-icon i:hover:before {
+    color: #333333;
+}
+
+.rs-footer .footer-top .chatbox-part .chatbox .chatbox-text {
+    padding: 90px 40px;
+}
+
+.rs-footer .footer-top .chatbox-part .chatbox .chatbox-text p {
+    color: #666666;
+}
+
+.rs-footer .footer-top .chatbox-part .chatbox .chatbox-btn {
+    padding: 0 15px 15px;
+    text-align: center;
+}
+
+.rs-footer .footer-top .chatbox-part .chatbox .chatbox-btn .readon {
+    width: 100%;
+}
+
+.rs-footer .footer-top .chatbox-part .chatbox.active {
+    opacity: 1;
+    visibility: visible;
+    bottom: 100px;
+}
+
+.rs-footer .footer-top .chatbox-part.style2 .chat-icon:before {
+    background: linear-gradient(-90deg, #1292c2, #00aeef);
+}
+
+.rs-footer .footer-top .chatbox-part.style2 .chat-icon:after {
+    background: linear-gradient(90deg, #1292c2, #00aeef);
+}
+
+.rs-footer .footer-top .chatbox-part.style3 .chat-icon:before {
+    background: linear-gradient(-150deg, #12b4c8, #6669e6);
+}
+
+.rs-footer .footer-top .chatbox-part.style3 .chat-icon:after {
+    background: linear-gradient(150deg, #12b4c8, #6669e6);
+}
+
+.rs-footer .footer-bottom {
+    padding: 24px 0;
+    border-top: 1px solid #e3e5ea;
+}
+
+.rs-footer .footer-bottom .copyright p {
+    margin: 0;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+
+.rs-footer .footer-bottom .copyright p,
+.rs-footer .footer-bottom .copyright a {
+    color: #333333;
+}
+
+.rs-footer .footer-bottom .copyright a:hover {
+    color: #01a0f9;
+}
+
+.rs-footer.style2 {
+    background: url(images/bg/footer-bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.rs-footer.style2 .footer-top .footer-title:after {
+    background: linear-gradient(90deg, #00aeef 45%, #1292c2 60%);
+}
+
+.rs-footer.style2 .footer-top .about-widget .social-links li a {
+    background: #ffffff;
+    color: #00aeef;
+}
+
+.rs-footer.style2 .footer-top .about-widget .social-links li a:before {
+    background: linear-gradient(-90deg, #1292c2, #00aeef);
+    opacity: 0;
+}
+
+.rs-footer.style2 .footer-top .about-widget .social-links li a:after {
+    display: none;
+}
+
+.rs-footer.style2 .footer-top .about-widget .social-links li a:hover {
+    background: unset;
+    color: #ffffff;
+}
+
+.rs-footer.style2 .footer-top .about-widget .social-links li a:hover:before {
+    opacity: 1;
+}
+
+.rs-footer.style2 .footer-top .footer-menu ul li a {
+    color: #ffffff;
+}
+
+.rs-footer.style2 .footer-top .footer-menu ul li a:hover {
+    color: #333333;
+}
+
+.rs-footer.style2 .footer-top p {
+    color: #ffffff;
+}
+
+.rs-footer.style2 .footer-bottom {
+    border-top: 1px solid rgba(187, 221, 233, 0.1);
+}
+
+.rs-footer.style2 .footer-bottom .copyright p,
+.rs-footer.style2 .footer-bottom .copyright a {
+    color: #ffffff;
+}
+
+.rs-footer.style2 .footer-bottom .copyright a:hover {
+    color: #333333;
+}
+
+.rs-footer.style3 {
+    background: url(images/bg/footer-bg3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.rs-footer.style3 .footer-top .footer-title:after {
+    background: linear-gradient(90deg, #6669e6 45%, #4776e6 60%);
+    bottom: 3px;
+}
+
+.rs-footer.style3 .footer-top .about-widget .social-links li a {
+    background: #ffffff;
+    color: #6669e6;
+}
+
+.rs-footer.style3 .footer-top .about-widget .social-links li a:before {
+    background: linear-gradient(-150deg, #12b4c8, #6669e6);
+    opacity: 0;
+}
+
+.rs-footer.style3 .footer-top .about-widget .social-links li a:after {
+    display: none;
+}
+
+.rs-footer.style3 .footer-top .about-widget .social-links li a:hover {
+    background: unset;
+    color: #ffffff;
+}
+
+.rs-footer.style3 .footer-top .about-widget .social-links li a:hover:before {
+    opacity: 1;
+}
+
+.rs-footer.style3 .footer-top .footer-menu ul li a {
+    color: #ffffff;
+}
+
+.rs-footer.style3 .footer-top .footer-menu ul li a:hover {
+    color: #333333;
+}
+
+.rs-footer.style3 .footer-top p {
+    color: #ffffff;
+}
+
+.rs-footer.style3 .footer-bottom {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.rs-footer.style3 .footer-bottom .copyright p,
+.rs-footer.style3 .footer-bottom .copyright a {
+    color: #ffffff;
+}
+
+.rs-footer.style3 .footer-bottom .copyright a:hover {
+    color: #333333;
+}
+
+
+/* ------------------------------------
+    32. Preloader CSS
+---------------------------------------*/
+
+#loading {
+    background-image: linear-gradient(-41deg, #09c778, #01a0f9);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    margin-top: 0px;
+    top: 0px;
+    z-index: 999999;
+}
+
+#loading.icon-preloader .loader {
+    position: absolute;
+    width: 300px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#loading.icon-preloader .loader i:before {
+    font-size: 80px;
+    color: #ffffff;
+}
+
+#loading.icon-preloader .loader img {
+    max-width: 80px;
+}
+
+
+/* -------------------------------------
+    33. Animation CSS 
+--------------------------------------*/
+
+.animate1 {
+    animation: animate1 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animate1 {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(0, -30px, 0);
+    }
+}
+
+.animate2 {
+    animation: animate2 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animate2 {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(-15px, 0, 0);
+    }
+}
+
+.animate3 {
+    animation: animate3 0.60s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animate3 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+
+/*Pulse Effect*/
+
+@keyframes pulse-border {
+    0% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.2);
+        opacity: 0;
+    }
+}
+
+.carousel {
+    width: 100%;
+}
+
+.slide-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .slide-box img {
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .slide-box img {
+        -ms-flex: 0 0 33.3333%;
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+    }
+}
+
+@media (min-width: 992px) {
+    .slide-box img {
+        -ms-flex: 0 0 33.33%;
+        flex: 0 0 33.33%;
+        max-width: 33.33%;
+    }
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: .5rem;
+}
+
+@media only screen and (max-width: 991px) {
+    #rs-header .menu-area .rs-menu ul {
+        background: #09c778;
+    }
+    #rs-header .menu-area .main-menu .rs-menu ul.sub-menu {
+        background: #01a0f9;
+    }
+}

@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.text-justifys {
+    text-align: justify;
+}
+
+
+/* =========Konsultasi-page1============ */
+
+section {
+    padding-top: 60px;
+}
+
+
+/* bagian tutorial chat pajak */
+
+.tutorialChatIlustration {
+    background: #fff;
+}
+
+.tutorialChatIlustration h4 {
+    color: #000;
+}
+
+.tutorialChatIlustration p {
+    color: #686868;
+}
+
+.tutorialChatIlustration .navigator img {
+    margin: 10px 10px 18px;
+}
+
+.mengapaChatSpesialis img {
+    margin-right: 20px;
+}
+
+
+/* END bagian tutorial chat pajak */
+
+.spesialis-chooser {
+    background: #fff;
+}
+
+.spesialis-chooser h3 {
+    color: #000;
+}
+
+.spesialis-chooser p {
+    color: #686868;
+}
+
+.panel-pakar img {
+    width: 120px;
+    height: 120px;
+}
+
+.panel-pakar h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.panel-pakar p {
+    margin: 0;
+    padding: 0;
+}
+
+.panel-pakar .experienceBtn {
+    height: 25px;
+    font-size: 8pt;
+}
+
+.panel-pakar .chatNow {
+    width: 140px;
+    height: 30px;
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.category btn {
+    order: none;
+    background-color: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    /* On mouse-over */
+}
+
+.category .btn:hover {
+    background: #eee;
+}
+
+.category img {
+    width: 80px;
+    height: 80px;
+}
+
+.category-title {
+    margin-top: 90px;
+}
+
+
+/*  */
+
+.paragrafSpace {
+    margin-top: 60px;
+}
+
+.paragrafSpace li {
+    font-weight: 500;
+}
+
+
+/*  */
+
+@media (min-width: 768px) {
+    .panel-pakar img {
+        /* width: 100px;
+        height: 120px; */
+    }
+    .panel-pakar-text {
+        padding-left: 50px;
+    }
+}
+
+
+/* =========END Konsultasi-page1============ */
+
+
+/* =========Konsultasi-page2============ */
+
+
+/* =========END Konsultasi-page2============ */
+
+
+/* =========Konsultasi_previewConsultant============ */
+
+.preview-spesialis img {}
+
+@media (min-width: 768px) {
+    .preview-spesialis img {}
+}
+
+
+/* =========END Konsultasi_previewConsultant============ */
+
+.font-small-10pt {
+    font-size: 10pt;
+}
+
+
+/* =========signUp page============ */
+
+
+/* =========End signUp page============ */
