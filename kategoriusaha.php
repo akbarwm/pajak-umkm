@@ -9,10 +9,12 @@
 
 <body>
     <?php
-    include './connection.php';
+
+    session_start();
+    // include './connection.php';
     ?>
-    <!-- Header Menu Start -->
-    <?php include './layout/navbar.php'; ?>
+    <!-- Header Section Start-->
+    <?php include 'konsultasi/navbar3.php'; ?>
     <!-- Header Menu End -->
 
     <!-- Breadcrumbs Start -->
@@ -50,70 +52,71 @@
             </div>
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="/img/kuliner.jpg" class="card-img-top" alt="...">
+                    <div class="card" style="width: 100%;">
+                        <img src="kuliner.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Bidang Kuliner</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="kuliner.php" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="/img/fashion.jpg" class="card-img-top" alt="...">
+                    <div class="card" style="width: 100%;">
+                        <img src="pesyen.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Bidang Fashion</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="fashion.php" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="/img/otomotif.jpg" class="card-img-top" alt="...">
+                    <div class="card" style="width: 100%;">
+                        <img src="mobil.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Bidang Otomotif</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="otomotif.php" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="/img/agri.jpg" class="card-img-top" alt="...">
+                    <div class="card" style="width: 100%;">
+                        <img src="agri.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Bidang Agribisnis</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="agribisnis.php" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="/img/kosmetik.jpg" class="card-img-top" alt="...">
+                    <div class="card" style="width: 100%;">
+                        <img src="kosmetik.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Bidang Komestik</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="kosmetik.php" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src="/img/event-organizer.jpg" class="card-img-top" alt="...">
+                    <div class="card" style="width: 100%;">
+                        <img src="event-organizer.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Bidang Event Organizer</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="event.php" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- Privacy Policy End -->
     <?php include './layout/footer.php'; ?>
 </body>
