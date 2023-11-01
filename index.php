@@ -142,7 +142,7 @@
             <div class="sec-title text-center mb-50">
                 <h2 class="title bg-center margin-0">Layanan</h2><br>
                 <div class="sec-title text-center mb-45">
-                    <div class="rs-carousel owl-carousel wow" data-loop="true" data-items="3" data-margin="30" data-autoplay="true" data-autoplay-timeout="500" data-smart-speed="3000" data-dots="false" data-nav="false" data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false" data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="1" data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="3" data-md-device-nav="false" data-md-device-dots="false">
+                    <div class="rs-carousel owl-carousel wow" data-loop="true" data-items="3" data-margin="30" data-autoplay="true" data-autoplay-timeout="700" data-smart-speed="5000" data-dots="false" data-nav="false" data-nav-speed="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false" data-ipad-device="2" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="1" data-ipad-device-nav2="false" data-ipad-device-dots2="false" data-md-device="3" data-md-device-nav="false" data-md-device-dots="false">
                         <div class="single-blog style2 white-bg ">
                             <div class="blog-img">
                                 <a href="#"><img src="images/Layanan 1.png" alt=""></a>
@@ -246,33 +246,33 @@
         <h2 class="title bg-center margin-0">Berita</h2>
         <!-- <h2 class="title extra-none title-color mb-0">Frequently Asked Questions</h2> -->
     </div>
-        <div class="container2">
-            <?php
-            $sql = "SELECT * FROM articles ORDER BY id DESC LIMIT 3";
-            $result = mysqli_query($db, $sql);
-            $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    <div class="container2">
+        <?php
+        $sql = "SELECT * FROM articles ORDER BY id DESC LIMIT 3";
+        $result = mysqli_query($db, $sql);
+        $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-            $idx = 1;
-            foreach ($row as $r) {
-            ?>
-                <div class="artikel-<?= $idx++; ?>">
-                    <div class="card2">
-                        <img class="thumb" src="./user/demo1/tables/cover_berita/<?= $r['cover'] ?>" alt="">
-                        <!-- <div class="thumb" style="background-image: url(http://localhost/PajakAdmin/<?= $r['cover'] ?>)"></div> -->
-                        <article>
-                            <h1 style="text-align: left;"><?= $r['judul'] ?></h1><br><br>
-                            <p style="text-align: left;"><?= substr($r['isi'], 0, 180) ?> <a href="detail_berita.php?id=<?= $r['id'] ?>">read more</a></p>
-                            <ul class="blog-meta">
-                                <li style="margin-right: 50px; color: #01a0f9; width:200px"><i class="fa fa-calendar-check-o" aria-hidden="true"></i><?= $r['tanggal_upload'] ?> <i class="fa fa-user-o" aria-hidden="true"></i>Admin</li>
-                                <!-- <li style="margin-left: 150px; color: #01a0f9;"></li> -->
-                            </ul>
-                        </article>
-                    </div>
+        $idx = 1;
+        foreach ($row as $r) {
+        ?>
+            <div class="artikel-<?= $idx++; ?>">
+                <div class="card2">
+                    <img class="thumb" src="./user/demo1/tables/cover_berita/<?= $r['cover'] ?>" alt="">
+                    <!-- <div class="thumb" style="background-image: url(http://localhost/PajakAdmin/<?= $r['cover'] ?>)"></div> -->
+                    <article>
+                        <h1 style="text-align: left;"><?= $r['judul'] ?></h1><br><br>
+                        <p style="text-align: left;"><?= substr($r['isi'], 0, 180) ?> <a href="detail_berita.php?id=<?= $r['id'] ?>">read more</a></p>
+                        <ul class="blog-meta">
+                            <li style="margin-right: 50px; color: #01a0f9; width:200px"><i class="fa fa-calendar-check-o" aria-hidden="true"></i><?= $r['tanggal_upload'] ?> <i class="fa fa-user-o" aria-hidden="true"></i>Admin</li>
+                            <!-- <li style="margin-left: 150px; color: #01a0f9;"></li> -->
+                        </ul>
+                    </article>
                 </div>
-            <?php
-            }
-            ?>
-        </div>
+            </div>
+        <?php
+        }
+        ?>
+    </div>
     </div>
     <div class="col-lg-3 col-md-4">
         <div class="show-more text-right sm-text-left mt-35 sm-mt-25">
@@ -283,101 +283,101 @@
 
     <!-- FAQ-->
     <div style="background-color: white; padding-top: 50px">
-    <div class="sec-title text-center mb-45" >
-        <h2 class="title bg-center margin-0">Frequently Asked Questions</h2>
-        <!-- <h2 class="title extra-none title-color mb-0">Frequently Asked Questions</h2> -->
-    </div>
-    <div class="container py-3" style="background-color: white;">
-        <div class="row" style="background-color:white;">
-            <div class="col-10 mx-auto">
-                <div class="accordion" id="faqExample">
-                    <div class="card">
-                        <div class="card-header p-2" id="headingOne">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Siapa saja yang dapat menggunakan website ini?
-                                </button>
-                            </h5>
-                        </div>
-
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqExample">
-                            <div class="card-body">
-                                <b></b> UMKM Kota Batam, Mahasiswa, Masyarakat Umum, Vendor Website (Admin), dan Konsultan Spesialis Pajak.
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header p-2" id="headingTwo">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Bagaimana cara User mendaftar di Website Sudut Pajak?
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqExample">
-                            <div class="card-body">
-                                <p>Klik log in pada tab log in</p>
-                                <p>Silahkan Klik Register</p>
-                                <p>Selesaikan Pendaftaran dengan melengkapi biodata diri</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header p-2" id="headingThree">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Bagaimana Cara Menggunakan Fitur Kalkulator di Sudut Pajak?
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqExample">
-                            <div class="card-body">
-                                Dalam Aplikasi Sudut Pajak, Anda dapat melakukan perhitungan PPh 21 atas gaji dengan
-                                langkah-langkah sebagai berikut
-                                <p>1. Klik opsi 'kalkulator' pada navigasi.</p>
-                                <p>2. Isilah informasi sesuai dengan data yang diperlukan.</p>
-                                <p>3. Setelah itu, klik tombol 'Selanjutnya', dan kalkulator akan menampilkan hasil perhitungan, Hasil ini menunjukkan jumlah PPh 21 yang harus dibayarkan pada periode tertentu.</p>
-                                <p>4. Jika Anda ingin mengulangi proses dengan data berbeda, cukup klik tombol reset</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header p-2" id="headingThree">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                                    Apa yang Dimaksud dengan Aplikasi Pajak?
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#faqExample">
-                            <div class="card-body">
-                                Fitur ini akan mengarahkan Anda ke situs Tax Center Politeknik Negeri Batam, yang
-                                menawarkan layanan bantuan perpajakan seperti Lapor Pajak Orang Pribadi dan Lapor Pajak
-                                Badan Usaha.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header p-2" id="headingThree">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapseThree">
-                                    Apa Fungsi dari Fitur Peraturan Pajak?
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapsefive" class="collapse" aria-labelledby="headingThree" data-parent="#faqExample">
-                            <div class="card-body">
-                                Fitur ini berisi informasi tentang Peraturan Pajak Pusat dan Peraturan Pajak Daerah Kota Batam. Anda dapat mengunduh rincian peraturan-peraturan ini dari laman tersebut.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        <div class="sec-title text-center mb-45">
+            <h2 class="title bg-center margin-0">Frequently Asked Questions</h2>
+            <!-- <h2 class="title extra-none title-color mb-0">Frequently Asked Questions</h2> -->
         </div>
-        <!--/row-->
-    </div>
+        <div class="container py-3" style="background-color: white;">
+            <div class="row" style="background-color:white;">
+                <div class="col-10 mx-auto">
+                    <div class="accordion" id="faqExample">
+                        <div class="card">
+                            <div class="card-header p-2" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Siapa saja yang dapat menggunakan website ini?
+                                    </button>
+                                </h5>
+                            </div>
+
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqExample">
+                                <div class="card-body">
+                                    <b></b> UMKM Kota Batam, Mahasiswa, Masyarakat Umum, Vendor Website (Admin), dan Konsultan Spesialis Pajak.
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header p-2" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Bagaimana cara User mendaftar di Website Sudut Pajak?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqExample">
+                                <div class="card-body">
+                                    <p>Klik log in pada tab log in</p>
+                                    <p>Silahkan Klik Register</p>
+                                    <p>Selesaikan Pendaftaran dengan melengkapi biodata diri</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header p-2" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Bagaimana Cara Menggunakan Fitur Kalkulator di Sudut Pajak?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqExample">
+                                <div class="card-body">
+                                    Dalam Aplikasi Sudut Pajak, Anda dapat melakukan perhitungan PPh 21 atas gaji dengan
+                                    langkah-langkah sebagai berikut
+                                    <p>1. Klik opsi 'kalkulator' pada navigasi.</p>
+                                    <p>2. Isilah informasi sesuai dengan data yang diperlukan.</p>
+                                    <p>3. Setelah itu, klik tombol 'Selanjutnya', dan kalkulator akan menampilkan hasil perhitungan, Hasil ini menunjukkan jumlah PPh 21 yang harus dibayarkan pada periode tertentu.</p>
+                                    <p>4. Jika Anda ingin mengulangi proses dengan data berbeda, cukup klik tombol reset</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header p-2" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                        Apa yang Dimaksud dengan Aplikasi Pajak?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-parent="#faqExample">
+                                <div class="card-body">
+                                    Fitur ini akan mengarahkan Anda ke situs Tax Center Politeknik Negeri Batam, yang
+                                    menawarkan layanan bantuan perpajakan seperti Lapor Pajak Orang Pribadi dan Lapor Pajak
+                                    Badan Usaha.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header p-2" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapseThree">
+                                        Apa Fungsi dari Fitur Peraturan Pajak?
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapsefive" class="collapse" aria-labelledby="headingThree" data-parent="#faqExample">
+                                <div class="card-body">
+                                    Fitur ini berisi informasi tentang Peraturan Pajak Pusat dan Peraturan Pajak Daerah Kota Batam. Anda dapat mengunduh rincian peraturan-peraturan ini dari laman tersebut.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--/row-->
+        </div>
     </div>
     <!--FAQEND-->
 

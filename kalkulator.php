@@ -140,10 +140,6 @@
                 <button class="firstNext next">
                   <a href="index.php">BERANDA</a>
                 </button>
-
-                <button class="firstNext next">
-                  <a href="index.php">BERANDA</a>
-                </button>
               </div>
             </div>
 
