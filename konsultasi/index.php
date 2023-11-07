@@ -32,6 +32,7 @@ if (isset($_GET['error'])) {
     <!-- meta tag -->
     <meta charset="utf-8">
     <title>Konsultasi | Sudut Pajak </title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon.png">
     <meta name="description" content="">
     <!-- responsive tag -->
     <meta http-equiv="x-ua-compatible" content="ie=edge">

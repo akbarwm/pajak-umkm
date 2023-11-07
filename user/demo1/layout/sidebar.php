@@ -191,19 +191,14 @@ function site_url()
 								</ul>
 							</div>
 						</li>
-						<li class="nav-item <?= (full_path() == site_url() . '/user/demo1/creat_usaha.php' || full_path() == site_url() . '/user/demo1/list_usaha.php') ? 'active' : '' ?>">
+						<li class="nav-item <?= (full_path() == site_url() . '/user/demo1/list_usaha.php') ? 'active' : '' ?>">
 							<a data-toggle="collapse" href="#usaha">
 								<i class="fas fa-newspaper"></i>
 								<p>Manajemen Usaha</p>
 								<span class="caret"></span>
 							</a>
-							<div class="collapse <?= (full_path() == site_url() . '/user/demo1/creat_usaha.php' || (explode("?", full_path())[0] == site_url() . '/user/demo1/edit_usaha.php') || full_path() == site_url() . '/user/demo1/list_usaha.php') ? 'show' : '' ?>" id="tables">
+							<div class="collapse <?= (full_path() == site_url() . '/user/demo1/creat_usaha.php' || (explode("?", full_path())[0] == site_url() . '/user/demo1/edit_usaha.php') || full_path() == site_url() . '/user/demo1/list_usaha.php') ? 'show' : '' ?>" id="usaha">
 								<ul class="nav nav-collapse">
-									<li class="<?= (full_path() == site_url() . '/user/demo1/creat_usaha.php') || (full_path() == site_url() . '/user/demo1/edit_usaha.php') ? 'active' : '' ?>">
-										<a href="creat_usaha.php">
-											<span class="sub-item ">Tambah Usaha</span>
-										</a>
-									</li>
 									<li class="<?= (full_path() == site_url() . '/user/demo1/list_usaha.php') ? 'active' : '' ?>">
 										<a href="list_usaha.php">
 											<span class="sub-item">List Usaha</span>

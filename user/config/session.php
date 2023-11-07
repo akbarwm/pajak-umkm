@@ -12,7 +12,7 @@ $ses_sql = mysqli_query($db, "SELECT `name` FROM users WHERE `LOGIN` = '$user_ch
 
 if (mysqli_num_rows($ses_sql) != 1) {
     if (is_file('../../login.php')) {
-        
+
         header("Location: ../../login.php");
     } else {
         header("Location: login.php");
