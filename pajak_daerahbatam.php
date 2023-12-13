@@ -13,7 +13,7 @@
     include './connection.php';
     ?>
     <!-- Header Menu Start -->
-    <?php include 'konsultasi/navbar3.php'; ?>
+    <?php include 'konsultasi/navbar4.php'; ?>
     <!-- Header Menu End -->
 
     <!-- Breadcrumbs Start -->
@@ -53,17 +53,17 @@
                     $previous = $halaman - 1;
                     $next = $halaman + 1;
 
-                    $data = mysqli_query($db, "select * from peraturan_pajak where kategori='pajak daerah batam'");
+                    $data = mysqli_query($db, "select * from peraturan_pajak where kategori='Peraturan Pajak Daerah Kota Batam'");
                     $jumlah_data = mysqli_num_rows($data);
                     $total_halaman = ceil($jumlah_data / $batas);
                     //  var_dump("select * peraturan_pajak  LIMIT $batas OFFSET $halaman_awal");die;
-                    $data_pegawai = mysqli_query($db, "select * FROM peraturan_pajak  where kategori='pajak daerah batam' LIMIT $batas OFFSET $halaman_awal");
+                    $data_pegawai = mysqli_query($db, "select * FROM peraturan_pajak  where kategori='Peraturan Pajak Daerah Kota Batam' LIMIT $batas OFFSET $halaman_awal");
                     $nomor = $halaman_awal + 1;
                     $idx = $halaman_awal;
 
                     while ($r = mysqli_fetch_array($data_pegawai)) {
                     ?>
-                        <h3 class="privacy-list-title semi-bold mb-20"><a style="color:#01a0f9;" href="view_pdf.php?nama=<?= $r['file'] ?>"><span><?= $idx += 1 ?>. </span><?= $r['judul'] ?></a></h3>
+                        <h3 class="privacy-list-title semi-bold mb-20"><a style="color:#01a0f9;" href="view_pdf.php?nama=<?= $r['file_pdf'] ?>"><span><?= $idx += 1 ?>. </span><?= $r['judul'] ?></a></h3>
                         <p class="privacy-desc"><?= $r['deskripsi'] ?></p>
 
                     <?php

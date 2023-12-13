@@ -9,12 +9,11 @@
 
 <body>
     <?php
-
     session_start();
     include './connection.php';
+    include 'konsultasi/navbar4.php';
     ?>
     <!-- Header Section Start-->
-    <?php include 'konsultasi/navbar3.php'; ?>
     <!-- Header Menu End -->
 
     <!-- Slider Section Start Here -->
@@ -45,7 +44,6 @@
         </a>
     </div>
     <!-- Slider Section end Here -->
-
 
     <!-- AboutSection Start-->
     <div class="container" id="profil">
@@ -149,12 +147,12 @@
                             </div>
                             <div class="blog-details">
                                 <div class="blog-desc">
-                                    <h3 class="blog-title"><a href="#">Konsultasi</a></h3>
+                                    <h3 class="blog-title"><a href="../PBL-25/konsultasi/index.php">Konsultasi</a></h3>
                                     <ul class="blog-meta">
                                         <li>Layanan konseling perpajakan yang dilaksanakan oleh expert perpajakan yang dimiliki oleh Sudut pajak sesuai dengan kebutuhan Wajib Pajak yang dibantu.</li>
                                     </ul>
                                     <div class="about-btn">
-                                        <a style="width: -10px; left: 5px;" class="readon radius" href="/konsultasi">Lebih Lanjut</a>
+                                        <a style="width: -10px; left: 5px;" class="readon radius" href="../PBL-25/konsultasi/index.php">Lebih Lanjut</a>
                                     </div>
                                 </div>
                             </div>

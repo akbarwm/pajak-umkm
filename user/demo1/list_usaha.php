@@ -1,5 +1,4 @@
 <?php
-error_reporting(false);
 session_start();
 include('../config/session.php');
 $id = $_SESSION['id_user'];

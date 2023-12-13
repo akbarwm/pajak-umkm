@@ -138,7 +138,7 @@ if (isset($_GET['error'])) {
         <link rel="stylesheet" type="text/css" href="css/responsive.css">
     </head>
 
-    <?php include 'navbar2.php'; ?>
+    <?php include 'navbar3.php'; ?>
     <!-- end navbar -->
     <!-- konsultasi -->
     <style>
@@ -154,6 +154,7 @@ if (isset($_GET['error'])) {
         }
     </style>
     <section>
+
         <div class="container mt-2 pt-2">
             <div class="row border-bottom ">
                 <div class="tutorialChatIlustration col-12 col-sm-5  p-3 border-end ">
@@ -171,7 +172,14 @@ if (isset($_GET['error'])) {
                         </div>
                     </div>
 
-
+                    <h1>
+                        <?php
+                        if (isset($_SESSION['user'])) {
+                            echo $_SESSION['user']['nama'];
+                        }
+                        ?>
+                        Selamat Datang di Forum PHP
+                    </h1>
 
                     <div class="row">
                         <div class="col-12 mt-10">

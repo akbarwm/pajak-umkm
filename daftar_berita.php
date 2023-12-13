@@ -13,7 +13,7 @@
     include './connection.php';
     ?>
     <!-- Header Menu Start -->
-    <?php include 'konsultasi/navbar3.php'; ?>
+    <?php include 'konsultasi/navbar4.php'; ?>
     <!-- Header Menu End -->
 
     <!-- Breadcrumbs Start -->
@@ -48,7 +48,6 @@
             $skip = $halaman == 1 ? 3 : (7 * ($halaman - 1)) + 3;
 
             $sql = "SELECT * FROM articles ORDER BY id DESC LIMIT $batas OFFSET $skip";
-            $halaman = isset($_GET['halaman']) ? (int)$_GET['halaman'] : 1;
             $result = mysqli_query($db, $sql);
             $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
@@ -58,17 +57,12 @@
             $data = mysqli_query($db, "select * from articles");
             $jumlah_data = mysqli_num_rows($data);
             $total_halaman = ceil($jumlah_data / $batas);
-            //  var_dump("select * peraturan_pajak  LIMIT $batas OFFSET $halaman_awal");die;
-            $nomor = $halaman_awal + 1;
-            $idx = $halaman_awal;
 
-            $idx = 1;
-            foreach ($row as $r) {
+            foreach ($row as $idx => $r) {
             ?>
-                <div class="artikel-<?= $idx++; ?>">
+                <div class="artikel-<?= $idx + 1; ?>">
                     <div class="card2">
                         <img class="thumb" src="./user/demo1/tables/cover_berita/<?= $r['cover'] ?>" alt="">
-                        <!-- <div class="thumb" style="background-image: url(http://localhost/PajakAdmin/<?= $r['cover'] ?>)"></div> -->
                         <article>
                             <h1 style="text-align: left;"><?= $r['judul'] ?></h1><br><br>
                             <p style="text-align: left;"><?= substr($r['isi'], 0, 180) ?> <a href="detail_berita.php?id=<?= $r['id'] ?>">read more</a></p>
@@ -82,6 +76,7 @@
             }
             ?>
         </div>
+
         <div style="display: flex; justify-content: flex-end; margin-right: 100px; margin-bottom: 100px; margin-top: 70px ">
             <nav aria-label="...">
                 <ul class="pagination">

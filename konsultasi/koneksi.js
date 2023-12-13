@@ -5,7 +5,7 @@ const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
-  database: 'pajak'
+  database: 'pajak2'
 });
 
 // Membuka koneksi ke MySQL

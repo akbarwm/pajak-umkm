@@ -1,5 +1,6 @@
 <?php
-error_reporting(false); session_start();
+error_reporting(false);
+session_start();
 include('../config/session.php');
 $id = $_SESSION['id_user'];
 $sql = "SELECT * FROM `users` WHERE id='$id'";
@@ -7,38 +8,35 @@ $result = mysqli_query($db, $sql);
 $row = mysqli_fetch_assoc($result);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $judul =  mysqli_real_escape_string($db, $_POST['judul']);
-    $deskripsi = mysqli_real_escape_string($db, $_POST['deskripsi']);
+
+    $judul = mysqli_real_escape_string($db, $_POST['judul']);
+    $isi = mysqli_real_escape_string($db, $_POST['deskripsi']);
     $kategori = $_POST['kategori'];
 
+    $namaFile2 = $_FILES['file_pdf']['name'];
+    $file_ext2 = pathinfo($namaFile2, PATHINFO_EXTENSION);
+    $namaUpload2 = $namaFile2;
+    $namaSementara2 = $_FILES['file_pdf']['tmp_name'];
 
-    $namaFile = $_FILES['file']['name'];
-    $file_ext = pathinfo($namaFile, PATHINFO_EXTENSION);
 
-    $namaUpload = time() . '.' . $file_ext;
-    $namaSementara = $_FILES['file']['tmp_name'];
-
-    $sql = "INSERT INTO peraturan_pajak (judul, deskripsi, kategori, file) VALUES ('$judul', '$deskripsi', '$kategori', '$namaUpload')";
+    $sql = "INSERT INTO peraturan_pajak (judul, deskripsi, file_pdf, kategori) VALUES ('$judul', '$isi', '$namaUpload2', '$kategori')";
     $result = mysqli_query($db, $sql);
 
     if ($result) {
         // tentukan lokasi file akan dipindahkan
-        $dirUpload = "tables/PDF/";
+        $dirUpload2 = "tables/PDF/";
 
-        $terupload = move_uploaded_file($namaSementara, $dirUpload . $namaUpload);
-        header('Content-Type: application/json; charset=utf-8');
-        echo json_encode(['data' => "/user/demo1/list_peraturanpajak.php", 'status' => 'sukses']);
-        return;
-        if ($terupload) {
+        $terupload2 = move_uploaded_file($namaSementara2, $dirUpload2 . $namaUpload2);
+
+        if ($terupload2) {
+            echo '<script>alert("Data berhasil ditambahkan!");</script>';
+            echo '<script>window.location.href = "list_peraturanpajak.php";</script>';
+            exit();  // Pastikan exit() ada setelah redireksi
         } else {
-            // header('Content-Type: application/json; charset=utf-8');
-            echo json_encode(['data' => "upload gagal", 'status' => 'error']);
-            return;
+            echo json_encode(['data' => "Upload gagal", 'status' => 'error']);
         }
     } else {
-        // echo $sql;
         echo json_encode(['data' => mysqli_error($db), 'status' => 'error']);
-        return;
     }
 }
 ?>
@@ -77,28 +75,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                         <label for="exampleFormControlTextarea1" class="form-label">Deskripsi <b class="text-danger">*</b> </label>
                                         <textarea name="deskripsi" class="form-control" id="deskripsi" rows="3"></textarea>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="formFile" class="form-label">File <b class="text-danger">*</b> </label>
-                                        <input name="file" class="form-control" type="file" id="file" accept=".pdf">
-                                    </div>
                                     <label for="texarea" class="form-label">Kategori <b class="text-danger">*</b> </label>
                                     <div class="input-group mb-3"><br>
                                         <select name="kategori" class="custom-select" id="kategori">
                                             <option selected>Pilih...</option>
-                                            <option value="pajak daerah">Peraturan Pajak Daerah</option>
-                                            <option value="pajak daerah">Peraturan Pajak Pusat</option>
-                                            <option value="pajak daerah batam">Peraturan Pajak Daerah Kota Batam</option>
+                                            <option value="Peraturan Pajak Daerah">Peraturan Pajak Daerah</option>
+                                            <option value="Peraturan Pajak Pusat">Peraturan Pajak Pusat</option>
+                                            <option value="Peraturan Pajak Daerah Kota Batam">Peraturan Pajak Daerah Kota Batam</option>
                                         </select>
                                         <div class="input-group-append">
                                             <label class="input-group-text" for="inputGroupSelect02">Pilihan <b class="text-danger">*</b> </label>
                                         </div>
                                     </div>
-                                    <button type="button" onclick="clicked()" id="alert_demo_4" class="btn btn-primary">Submit</button>
+                                    <div class="mb-3">
+                                        <label for="formFile" class="form-label">File PDF</label>
+                                        <input name="file_pdf" class="form-control" type="file" id="file_pdf" accept=".pdf">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

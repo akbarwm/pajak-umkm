@@ -85,7 +85,7 @@
                                     <li class="menu-item-has-children">
                                         <a href="../index.php">Beranda</a>
                                     </li>
-                                    <li><a href="../konsultasi/konsultasi.php">Konsultasi</a></li>
+                                    <li><a href="../layanan.php">Layanan</a></li>
                                     <li><a href="../kalkulator.php">Kalkulator</a></li>
                                     <li class="menu-item-has-children"><a href="https://taxcenter-polibatam.id">Aplikasi
                                             Pajak</a>

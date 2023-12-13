@@ -1,16 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db = "pajak2";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $db);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include 'koneksi.php';
 
 ?>
 
@@ -30,7 +19,7 @@ if ($conn->connect_error) {
     include './connection.php';
     ?>
     <!-- Header Section Start-->
-    <?php include 'konsultasi/navbar3.php'; ?>
+    <?php include 'konsultasi/navbar4.php'; ?>
     <!-- Header Menu End -->
 
     <!-- Breadcrumbs Start -->
@@ -63,19 +52,35 @@ if ($conn->connect_error) {
                 </div>
                 <?php
                 $query = "SELECT * FROM kategori_usaha";
-                $db = $conn->query($query);
+                $stmt = $conn->query($query);
 
-                // Menggeser pointer data ke baris kedua
-                mysqli_data_seek($db, 0);
+                // Menggunakan variabel untuk melacak nomor baris
+                $rowNumber = 0;
 
-                $data = mysqli_fetch_array($db, MYSQLI_ASSOC);
+                while ($data = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                    $rowNumber++;
 
-                if ($data) {
-                    echo "<p>" . $data["deskripsi"] . "</p>";
-                } else {
-                    echo "<p>Tidak ada data yang ditemukan</p>";
+                    // Menampilkan deskripsi hanya pada baris kedua
+                    if ($rowNumber == 6) {
+                        echo "<p>" . $data["deskripsi"] . "</p>";
+                    }
                 }
                 ?>
+
+            </div>
+            <div class="row col-20 pt-50 md-pt-80">
+                <div class="col-lg-4 col-md-6 sm-mb-30">
+                    <div class="single-about no-bg-style top-border">
+                        <div class="about-title">
+                            <a href="view_pdf.php?nama=<?= $data['file_pdf'] ?>">
+                                <h4 class="title mb-20">Unduh Materi PDF</h4>
+                            </a>
+                        </div>
+                        <div class="about-desc">
+                            <p class="desc-txt">Anda dapat mengunduh materi perpajakan sesuai dengan apa yang anda butuhkan untuk mengatasi permasalahan perpajakan anda</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

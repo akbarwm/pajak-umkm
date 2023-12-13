@@ -84,10 +84,10 @@
                             <nav style="margin-left: 90px;" class="rs-menu">
                                 <ul class="nav-menu">
                                     <li class="menu-item-has-children">
-                                        <a href="index.php">Beranda</a>
+                                        <a href="../index.php">Beranda</a>
                                     </li>
-                                    <li><a href="../PBL-25/konsultasi/konsultasi.php">Konsultasi</a></li>
-                                    <li><a href="kalkulator.php">Kalkulator</a></li>
+                                    <li><a href="../layanan.php">Layanan</a></li>
+                                    <li><a href="../kalkulator.php">Kalkulator</a></li>
                                     <li class="menu-item-has-children"><a href="https://taxcenter-polibatam.id">Aplikasi
                                             Pajak</a>
                                     </li>
@@ -98,214 +98,30 @@
                                                 <div class="mega-menu-innner">
                                                     <div class="single-megamenu">
                                                         <ul class="sub-menu">
-                                                            <li><a href="pajak_daerah.php">Peraturan Pajak Pusat</a> </li>
-                                                            <li><a href="pajak_daerahbatam.php">Peraturan Pajak Daerah Kota Batam</a> </li>
+                                                            <li><a href="../pajak_daerah.php">Peraturan Pajak Pusat</a> </li>
+                                                            <li><a href="../pajak_daerahbatam.php">Peraturan Pajak Daerah Kota Batam</a> </li>
                                                         </ul>
                                                     </div>
                                                 </div>
                                             </li>
                                         </ul>
                                     </li>
-                        </div>
-                        <?php
-                        if (isset($_SESSION['unique_id'])) {
-                        ?>
-                            <nav class="navbar navbar-expand-lg ">
+                                    <?php
+                                    $__menuAktif = isset($__menuAktif) ? $__menuAktif : '';
+                                    if (!isset($_SESSION['user']) || empty($_SESSION['user'])) {
+                                    ?>
+                                        <li>
+                                            <a class="<?= ($__menuAktif == 'login') ? 'active' : '' ?>" href="login2.php">Login</a>
+                                        </li>
+                                    <?php } else { ?>
+                                        <li>
+                                            <a class="<?= ($__menuAktif == 'profil') ? 'active' : '' ?>" href="user/account.php">Profil</a>
+                                        </li>
+                                    <?php } ?>
 
-                                <style>
-                                    .navigation {
-                                        position: fixed;
-                                        top: 20px;
-                                        right: 20px;
-                                        width: 120px;
-                                        height: 60px;
-                                        display: flex;
-                                        justify-content: space-between;
-                                        border-radius: 5px;
-                                        background: var(--white);
-                                        box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
-                                        overflow: hidden;
-                                        transition: height 0.5s, width 0.5s;
-                                        transition-delay: 0s, 0.5s;
-                                        z-index: 9999;
-                                    }
-
-                                    .navigation .user-box {
-                                        position: relative;
-                                        width: 60px;
-                                        height: 60px;
-                                        display: flex;
-
-                                        align-items: center;
-                                        overflow: hidden;
-                                        transition: 0.5s;
-                                        transition-delay: 0.5s;
-                                    }
-
-                                    .navigation .user-box .username {
-                                        font-size: 1.2rem;
-                                        white-space: nowrap;
-                                        color: var(--gray);
-                                    }
-
-                                    .navigation .user-box .image-box {
-                                        position: relative;
-                                        min-width: 60px;
-                                        height: 60px;
-                                        background: var(--white);
-                                        border-radius: 50%;
-                                        overflow: hidden;
-                                        border: 10px solid var(--white);
-
-                                    }
-
-                                    .navigation .user-box .image-box img {
-                                        position: absolute;
-                                        top: 0;
-                                        left: 0;
-                                        width: 100%;
-                                        height: 100%;
-                                        object-fit: cover;
-                                    }
-
-                                    .navigation .menu-toggle {
-                                        position: relative;
-                                        background-color: aqua;
-                                        width: 60px;
-                                        height: 60px;
-                                        display: flex;
-                                        justify-content: center;
-                                        align-items: center;
-                                        cursor: pointer;
-
-                                    }
-
-                                    .navigation .menu-toggle::before {
-                                        content: "";
-                                        position: absolute;
-                                        width: 32px;
-                                        height: 2px;
-                                        background: var(--gray);
-                                        transform: translateY(-10px);
-                                        box-shadow: 0 10px var(--gray);
-                                        transition: 0.5s;
-                                    }
-
-                                    .navigation .menu-toggle::after {
-                                        content: "";
-                                        position: absolute;
-                                        width: 32px;
-                                        height: 2px;
-                                        background: var(--gray);
-                                        transform: translateY(10px);
-                                        transition: 0.5s;
-
-                                    }
-
-                                    .menu {
-                                        position: absolute;
-                                        width: 100%;
-                                        height: calc(100% - 60px);
-                                        margin-top: 60px;
-                                        padding: 20px;
-
-                                        border-top: 1px solid rgba(0, 0, 0, 0.1);
-                                    }
-
-                                    .menu li {
-                                        list-style: none;
-
-                                    }
-
-                                    .menu li a {
-                                        display: flex;
-
-                                        align-items: center;
-                                        gap: 10px;
-                                        margin: 20px 0;
-                                        font-size: 1rem;
-                                        text-decoration: none;
-                                        color: var(--gray);
-                                    }
-
-                                    .menu li a ion-icon {
-                                        font-size: 1.5rem;
-                                    }
-
-                                    .menu li a:hover {
-                                        color: var(--purple);
-                                    }
-
-                                    .navigation.active .menu-toggle::before {
-                                        transform: translateY(0px) rotate(45deg);
-                                        box-shadow: none;
-
-                                    }
-
-                                    .navigation.active .menu-toggle::after {
-                                        transform: translateY(0px) rotate(-45deg);
-                                    }
-
-                                    .navigation.active {
-                                        width: 300px;
-                                        height: 350px;
-                                        transition: width 0.5s, height 0.5s;
-                                        transition-delay: 0s, 0.3s;
-
-                                    }
-
-                                    .navigation.active .user-box {
-                                        width: calc(100% - 60px);
-                                        transition-delay: 0s;
-                                    }
-                                </style>
-
-                                <div class="navigation">
-                                    <div class="user-box">
-                                        <div class="image-box">
-                                            <img src="./img/users_profil/<?= $_SESSION['foto_profil']; ?>" alt="avatar">
-                                        </div>
-                                        <p class="username text-center"><?= $_SESSION['nama']; ?>
-
-                                        </p>
-                                        <br><br>
-
-
-
-
-
-
-                                    </div>
-                                    <div class="menu-toggle"></div>
-                                    <ul class="menu">
-                                        <li><a href="konsultasi/user/account.php"><ion-icon name="log-out-outline"></ion-icon>Account</a></li>
-                                        <li><a href="#"><ion-icon name="notifications-outline"></ion-icon>Notification</a></li>
-                                        <li><a href="#"><ion-icon name="cog-outline"></ion-icon></ion-icon>Settings</a></li>
-                                        <li><a href="konsultasi/controller/logout.php"><ion-icon name="log-out-outline"></ion-icon>Logout</a></li>
-                                    </ul>
-                                </div>
-
-
+                                </ul>
                             </nav>
-                        <?php
-
-                        } else {
-                        ?>
-                            <div class="about-btn">
-                                <a style="width: -30px; left: 115px;" class="readon radius" rel="noopener noreferrer" href="konsultasi/login.php">Login</a>
-                            </div>
-                        <?php
-                        };
-                        ?>
-
-                        <script>
-                            let menuToggle = document.querySelector('.menu-toggle');
-                            let navigation = document.querySelector('.navigation');
-
-                            menuToggle.onclick = function() {
-                                navigation.classList.toggle('active');
-                            }
-                        </script>
+                        </div>
                     </div>
                 </div>
             </div>

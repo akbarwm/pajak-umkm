@@ -3,12 +3,11 @@
 
 <?php
 session_start();
-$id = $_SESSION['id'];
 
-if (!isset($_SESSION['unique_id'])) {
-    header("location: ../login.php?error=session_expired ");
+if (!isset($_SESSION['user']) || empty($_SESSION['user'])) {
+    header("Location: login.php");
+    exit;
 }
-require_once('../controller/session_expired.php');
 ?>
 
 

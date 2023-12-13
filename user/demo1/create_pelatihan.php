@@ -1,5 +1,6 @@
 <?php
-error_reporting(false); session_start();
+error_reporting(false);
+session_start();
 include('../config/session.php');
 $id = $_SESSION['id_user'];
 $sql = "SELECT * FROM `users` WHERE id='$id'";
@@ -42,19 +43,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $terupload1 = move_uploaded_file($namaSementara1, $dirUpload1 . $namaUpload1);
         $terupload2 = move_uploaded_file($namaSementara2, $dirUpload2 . $namaUpload2);
         $terupload3 = move_uploaded_file($namaSementara3, $dirUpload3 . $namaUpload3);
-        header('Content-Type: application/json; charset=utf-8');
-        echo json_encode(['data' => "/user/demo1/list_pelatihan.php", 'status' => 'sukses']);
-        return;
-        if ($terupload) {
+
+        if ($terupload1 && $terupload2 && $terupload3) {
+            echo '<script>alert("Data berhasil ditambahkan!");</script>';
+            echo '<script>window.location.href = "list_pelatihan.php";</script>';
+            exit();  // Pastikan exit() ada setelah redireksi
         } else {
-            // header('Content-Type: application/json; charset=utf-8');
-            echo json_encode(['data' => "upload gagal", 'status' => 'error']);
-            return;
+            echo json_encode(['data' => "Upload gagal", 'status' => 'error']);
         }
     } else {
-        // echo $sql;
         echo json_encode(['data' => mysqli_error($db), 'status' => 'error']);
-        return;
     }
 }
 ?>
@@ -100,13 +98,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     </div>
                                     <div class="mb-3">
                                         <label for="formFile" class="form-label">File PPT <b class="text-danger">*</b> </label>
-                                        <input name="file_ppt" class="form-control" type="file" id="file_ppt" accept=".pptx,ppt">
+                                        <input name="file_ppt" class="form-control" type="file" id="file_ppt" accept=".pdf">
                                     </div>
                                     <div class="mb-3">
                                         <label for="exampleFormControlInput1" class="form-label">Link Youtobe <b class="text-danger">*</b> </label>
                                         <input name="ytb" type="text" class="form-control" id="ytb" placeholder="">
                                     </div>
-                                    <button type="button" onclick="clicked()" id="alert_demo_4" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>
                             </div>
                         </div>

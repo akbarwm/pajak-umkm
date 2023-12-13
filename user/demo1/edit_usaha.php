@@ -1,35 +1,87 @@
 <?php
-error_reporting(false);
-session_start();
-include('../config/session.php');
-$id = $_SESSION['id_user'];
-$sql = "SELECT * FROM `users` WHERE id='$id'";
-$result = mysqli_query($db, $sql);
-$row = mysqli_fetch_assoc($result);
+// Koneksi ke database (gunakan kode koneksi yang telah diberikan sebelumnya)
+include '../config/koneksi.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Validasi data yang masuk
-    $judul = mysqli_real_escape_string($db, $_POST['judul']);
-    $deskripsi = mysqli_real_escape_string($db, $_POST['deskripsi']);
+// Periksa apakah parameter id telah diberikan melalui URL
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
 
-    // Update data kategori usaha
-    $sql = "UPDATE kategori_usaha SET judul = '$judul', deskripsi = '$deskripsi' WHERE id = '$id'";
-    $result = mysqli_query($db, $sql);
+    // Ambil data materi dari database berdasarkan id
+    $query = "SELECT * FROM kategori_usaha WHERE id = :id";
+    $statement = $koneksi->prepare($query);
+    $statement->bindParam(':id', $id);
+    $statement->execute();
+    $materi = $statement->fetch(PDO::FETCH_ASSOC);
 
-    if ($result) {
-        // Handle kesuksesan
-        header("Location: list_usaha.php"); // Arahkan ke halaman list_usaha.php
-        exit(); // Pastikan script berhenti di sini
+    if (!$materi) {
+        echo "Data tidak ditemukan.";
+        exit();
+    }
+} else {
+    echo "ID tidak diberikan.";
+    exit();
+}
+
+// Proses form jika ada data yang dikirimkan
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $judul = $_POST['judul'];
+    $deskripsi = $_POST['deskripsi'];
+
+    // Mengelola file PDF yang diunggah
+    if (!empty($_FILES['file_pdf']['name'])) {
+        $namaFilePdf = $_FILES['file_pdf']['name'];
+        $lokasiFilePdf = $_FILES['file_pdf']['tmp_name'];
+
+        // Tentukan folder penyimpanan PDF
+        $folderUploadPdf = "tables/PDF/";
+
+        // Buat path penyimpanan file PDF
+        $lokasiSimpanPdf = $folderUploadPdf . $namaFilePdf;
+
+        // Proses penyimpanan file PDF
+        if (move_uploaded_file($lokasiFilePdf, $lokasiSimpanPdf)) {
+            // Update data ke database dengan file PDF
+            $updateQueryPdf = "UPDATE kategori_usaha SET judul = :judul, deskripsi = :deskripsi, file_pdf = :file_pdf WHERE id = :id";
+            $updateStatementPdf = $koneksi->prepare($updateQueryPdf);
+            $updateStatementPdf->bindParam(':judul', $judul);
+            $updateStatementPdf->bindParam(':deskripsi', $deskripsi);
+            $updateStatementPdf->bindParam(':file_pdf', $namaFilePdf);
+            $updateStatementPdf->bindParam(':id', $id);
+
+            if ($updateStatementPdf->execute()) {
+                echo '<script>alert("Data berhasil di update!");</script>';
+                echo '<script>window.location.href = "list_usaha.php";</script>';
+                exit();
+            } else {
+                echo "Gagal mengupdate data: " . $updateStatementPdf->errorInfo()[2];
+            }
+        } else {
+            echo "Gagal menyimpan file PDF: " . $_FILES['file_pdf']['error'];
+        }
     } else {
-        // Handle kegagalan
-        echo "Gagal mengupdate data kategori usaha: " . mysqli_error($db);
+        // Update data ke database tanpa mengganti file PDF
+        $updateQuery = "UPDATE kategori_usaha SET judul = :judul, deskripsi = :deskripsi WHERE id = :id";
+        $updateStatement = $koneksi->prepare($updateQuery);
+        $updateStatement->bindParam(':judul', $judul);
+        $updateStatement->bindParam(':deskripsi', $deskripsi);
+        $updateStatement->bindParam(':id', $id);
+
+        if ($updateStatement->execute()) {
+            echo '<script>alert("Data berhasil diupdate!");</script>';
+            echo '<script>window.location.href = "list_usaha.php";</script>';
+            exit();
+        } else {
+            echo "Gagal mengupdate data: " . $updateStatement->errorInfo()[2];
+        }
     }
 }
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
-<title>Edit Berita | Sudut Pajak </title>
+<title>Tambah Peraturan | Sudut Pajak </title>
 <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon.png">
 
 <body>
@@ -39,12 +91,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="container">
             <div class="page-inner">
                 <div class="page-header">
-                    <h4 class="page-title">Edit Berita</h4>
+                    <h4 class="page-title">Form Input Materi Pelatihan</h4>
                     <ul class="breadcrumbs">
                         <li class="nav-home">
-                            <a href="index.php">
-                                <i class="flaticon-home"></i>
-                            </a>
                         </li>
                     </ul>
                 </div>
@@ -52,79 +101,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body">
-                                <?php
-                                $sql = "SELECT * FROM kategori_usaha where id=" . "'" . $_GET['id'] . "'";
-                                $result = mysqli_query($db, $sql);
-                                $row = mysqli_fetch_assoc($result);
-                                // var_dump($row);die;
-                                ?>
                                 <form action="" method="post" enctype="multipart/form-data">
                                     <div class="mb-3">
                                         <label for="exampleFormControlInput1" class="form-label">Judul</label>
-                                        <input name="judul" value="<?= $row['judul'] ?>" type="text" class="form-control" id="judul" placeholder="">
+                                        <input name="judul" value="<?php echo $materi['judul']; ?>" type="text" class="form-control" id="judul" placeholder="">
                                     </div>
                                     <div class="mb-3">
                                         <label for="exampleFormControlTextarea1" class="form-label">Deskripsi</label>
-                                        <textarea name="isi" value="" type="text" class="form-control" id="isi" rows="3"><?= $row['deskripsi'] ?></textarea>
+                                        <textarea name="deskripsi" class="form-control" id="deskripsi" rows="3"><?php echo $materi['deskripsi']; ?></textarea>
                                     </div>
-                                    <button type="button" onclick="clicked1()" id="alert_demo_4" class="btn btn-primary">Submit</button>
+                                    <div class="mb-3">
+                                        <label for="formFile" class="form-label">File PDF</label>
+                                        <input name="file_pdf" class="form-control" type="file" id="file_pdf" accept=".pdf">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <?php include './layout/footer.php'; ?>
         </div>
     </div>
-    </div>
-    </div>
-    </div>
-    <?php include './layout/footer.php'; ?>
-
-    <script>
-        function clicked1() {
-
-            data = {
-                judul: $("#judul").val(),
-                deskripsi: $("#deskripsi").val(),
-
-            }
-            var fd = new FormData();
-            fd.append('judul', data.judul);
-            fd.append('deskripsi', data.deskripsi);
-            console.log(fd);
-            // console.log(window.location.href)
-            $.ajax({
-                // headers: {
-                //     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                // },
-                type: "POST",
-                processData: false,
-                contentType: false,
-                cache: false,
-                data: fd,
-                enctype: 'multipart/form-data',
-                url: window.location.href,
-                success: function(res) {
-                    if (res.status === 'error') {
-                        Swal.fire({
-                            title: res.data,
-                            icon: 'error',
-                            confirmButtonColor: '#008000',
-                        })
-                        return;
-                    }
-                    data = res;
-                    Swal.fire({
-                        title: 'Berhasil',
-                        icon: 'success',
-                        confirmButtonColor: '#008000',
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            location.href = data.data;
-                        }
-                    })
-                }
-            });
-        }
-    </script>
+</body>

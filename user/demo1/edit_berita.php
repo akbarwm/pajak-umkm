@@ -1,51 +1,97 @@
 <?php
-error_reporting(false);
-session_start();
-include('../config/session.php');
-$id = $_SESSION['id_user'];
-$sql = "SELECT * FROM `users` WHERE id='$id'";
-$result = mysqli_query($db, $sql);
-$row = mysqli_fetch_assoc($result);
+// Koneksi ke database (gunakan kode koneksi yang telah diberikan sebelumnya)
+include '../config/koneksi.php';
 
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
+// Periksa apakah parameter id telah diberikan melalui URL
+if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $judul =  mysqli_real_escape_string($db, $_POST['judul']);
-    $isi = mysqli_real_escape_string($db, $_POST['isi']);
+
+    // Ambil data kategori_usaha dari database berdasarkan id
+    $query = "SELECT * FROM articles WHERE id = :id";
+    $statement = $koneksi->prepare($query);
+    $statement->bindParam(':id', $id);
+    $statement->execute();
+    $articles = $statement->fetch(PDO::FETCH_ASSOC);
+
+    if (!$articles) {
+        echo "Data tidak ditemukan.";
+        exit();
+    }
+} else {
+    echo "ID tidak diberikan.";
+    exit();
+}
+
+// Proses form jika ada data yang dikirimkan
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $judul = $_POST['judul'];
+    $deskripsi = $_POST['isi'];
     $kategori = $_POST['kategori'];
     $tanggal_upload = date('M d, Y', time());
-    $namaFile = $_FILES['cover']['name'];
-    $file_ext = pathinfo($namaFile, PATHINFO_EXTENSION);
 
-    $namaUpload = time() . '.' . $file_ext;
-    $namaSementara = $_FILES['cover']['tmp_name'];
+    // Mengelola file PDF yang diunggah
+    if (isset($_FILES['cover']['name']) && $_FILES['cover']['name']) {
+        $namaFile = $_FILES['cover']['name'];
+        $lokasiFile = $_FILES['cover']['tmp_name'];
+        $ukuranFile = $_FILES['cover']['size']; // Ukuran file dalam byte
 
+        // Batas maksimal ukuran file (5MB)
+        $batasUkuran = 5 * 1024 * 1024;
 
-    $sql = "UPDATE articles set judul = '$judul', isi='$isi', kategori='$kategori', cover ='$namaUpload' where id='$id'";
-    $result = mysqli_query($db, $sql);
+        // Pengecekan ukuran file
+        if ($ukuranFile <= $batasUkuran) {
+            // Tentukan folder penyimpanan
+            $folderUpload = "tables/cover_berita/";
 
-    if ($result) {
-        // tentukan lokasi file akan dipindahkan
-        $dirUpload = "tables/cover_berita/";
+            // Buat path penyimpanan file
+            $lokasiSimpan = $folderUpload . $namaFile;
 
-        $terupload = move_uploaded_file($namaSementara, $dirUpload . $namaUpload);
-        header('Content-Type: application/json; charset=utf-8');
-        echo json_encode(['data' => "../user/demo1/list_berita.php", 'status' => 'sukses']);
-        return;
-        if ($terupload) {
+            // Proses penyimpanan file
+            if (move_uploaded_file($lokasiFile, $lokasiSimpan)) {
+                // Update data ke database dengan file
+                $updateQuery = "UPDATE articles SET judul = :judul, isi = :isi, cover = :cover, kategori = :kategori, tanggal_upload = :tanggal_upload WHERE id = :id";
+                $updateStatement = $koneksi->prepare($updateQuery);
+                $updateStatement->bindParam(':judul', $judul);
+                $updateStatement->bindParam(':isi', $deskripsi);
+                $updateStatement->bindParam(':cover', $namaFile);
+                $updateStatement->bindParam(':kategori', $kategori);
+                $updateStatement->bindParam(':tanggal_upload', $tanggal_upload);
+                $updateStatement->bindParam(':id', $id);
+
+                if ($updateStatement->execute()) {
+                    echo '<script>alert("Data berhasil diupdate!");</script>';
+                    echo '<script>window.location.href = "list_berita.php";</script>';
+                    exit();
+                } else {
+                    echo "Gagal mengupdate data";
+                }
+            } else {
+                echo "Gagal menyimpan file";
+            }
         } else {
-            // header('Content-Type: application/json; charset=utf-8');
-            echo json_encode(['data' => "upload gagal", 'status' => 'error']);
-            return;
+            echo "Ukuran file melebihi batas maksimum (5 MB).";
         }
     } else {
-        // echo $sql;
-        echo json_encode(['data' => mysqli_error($db), 'status' => 'error']);
-        return;
+        // Update data ke database tanpa file
+        $updateQuery = "UPDATE articles SET judul = :judul, isi = :isi, kategori = :kategori, tanggal_upload = :tanggal_upload WHERE id = :id";
+        $updateStatement = $koneksi->prepare($updateQuery);
+        $updateStatement->bindParam(':judul', $judul);
+        $updateStatement->bindParam(':isi', $deskripsi);
+        $updateStatement->bindParam(':kategori', $kategori);
+        $updateStatement->bindParam(':tanggal_upload', $tanggal_upload);
+        $updateStatement->bindParam(':id', $id);
+
+        if ($updateStatement->execute()) {
+            echo '<script>alert("Data berhasil diupdate!");</script>';
+            echo '<script>window.location.href = "list_berita.php";</script>';
+            exit();
+        } else {
+            echo "Gagal mengupdate data";
+        }
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -72,20 +118,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body">
-                                <?php
-                                $sql = "SELECT * FROM articles where id=" . "'" . $_GET['id'] . "'";
-                                $result = mysqli_query($db, $sql);
-                                $row = mysqli_fetch_assoc($result);
-                                // var_dump($row);die;
-                                ?>
                                 <form action="" method="post" enctype="multipart/form-data">
                                     <div class="mb-3">
                                         <label for="exampleFormControlInput1" class="form-label">Judul</label>
-                                        <input name="judul" value="<?= $row['judul'] ?>" type="text" class="form-control" id="judul" placeholder="">
+                                        <input name="judul" value="<?php echo $articles['judul']; ?>" type="text" class="form-control" id="judul" placeholder="">
                                     </div>
                                     <div class="mb-3">
                                         <label for="exampleFormControlTextarea1" class="form-label">Deskripsi</label>
-                                        <textarea name="isi" value="" type="text" class="form-control" id="isi" rows="3"><?= $row['isi'] ?></textarea>
+                                        <textarea name="isi" value="" type="text" class="form-control" id="isi" rows="3"><?php echo $articles['isi']; ?></textarea>
                                     </div>
                                     <div class="mb-3">
                                         <label for="formFile" class="form-label">Gambar *</label>
@@ -96,14 +136,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                                         <select name="kategori" class="custom-select" id="kategori">
                                             <option selected>Pilih...</option>
-                                            <option value="Artikel" <?= $row['kategori'] == "Artikel" ? 'selected="selected"'  : '' ?>>Artikel</option>
-                                            <option value="Blog" <?= $row['kategori'] == "Blog" ? 'selected="selected"'  : '' ?>>Blog</option>
+                                            <option value="Artikel">Artikel</option>
+                                            <option value="Blog">Blog</option>
                                         </select>
                                         <div class="input-group-append">
                                             <label class="input-group-text" for="inputGroupSelect02">Pilihan</label>
                                         </div>
                                     </div>
-                                    <button type="button" onclick="clicked1()" id="alert_demo_4" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>
                             </div>
                         </div>
