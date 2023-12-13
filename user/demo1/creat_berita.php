@@ -1,44 +1,65 @@
 <?php
-error_reporting(false); session_start();
-include('../config/session.php');
-$id = $_SESSION['id_user'];
-$sql = "SELECT * FROM `users` WHERE id='$id'";
-$result = mysqli_query($db, $sql);
-$row = mysqli_fetch_assoc($result);
+// Koneksi ke database (gunakan kode koneksi yang telah diberikan sebelumnya)
+include '../config/koneksi.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    $judul =  mysqli_real_escape_string($db, $_POST['judul']);
-    $isi = mysqli_real_escape_string($db, $_POST['isi']);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $judul = $_POST['judul'];
+    $deskripsi = $_POST['isi'];
     $kategori = $_POST['kategori'];
     $tanggal_upload = date('M d, Y', time());
-    $namaFile = $_FILES['cover']['name'];
-    $file_ext = pathinfo($namaFile, PATHINFO_EXTENSION);
 
-    $namaUpload = time() . '.' . $file_ext;
-    $namaSementara = $_FILES['cover']['tmp_name'];
+    // Mengelola file PDF yang diunggah
+    if ($_FILES['cover']['name']) {
+        $namaFile = $_FILES['cover']['name'];
+        $lokasiFile = $_FILES['cover']['tmp_name'];
 
-    $sql = "INSERT INTO articles (judul, isi, cover, kategori, tanggal_upload) VALUES ('$judul', '$isi', '$namaUpload', '$kategori' , '$tanggal_upload')";
-    $result = mysqli_query($db, $sql);
+        // Tentukan folder penyimpanan
+        $folderUpload = "tables/cover_berita/";
 
-    if ($result) {
-        // tentukan lokasi file akan dipindahkan
-        $dirUpload = "tables/cover_berita/";
+        // Buat path penyimpanan file
+        $lokasiSimpan = $folderUpload . $namaFile;
 
-        $terupload = move_uploaded_file($namaSementara, $dirUpload . $namaUpload);
-        header('Content-Type: application/json; charset=utf-8');
-        echo json_encode(['data' => "/user/demo1/list_berita.php", 'status' => 'sukses']);
-        return;
-        if ($terupload) {
+        // Proses penyimpanan file
+        if (move_uploaded_file($lokasiFile, $lokasiSimpan)) {
+            // Tambahkan data ke database
+            $koneksi = new mysqli("localhost", "root", "", "pajak2");
+
+            if ($koneksi->connect_error) {
+                die("Koneksi Gagal: " . $koneksi->connect_error);
+            }
+
+            // Escape string untuk menghindari SQL Injection
+            $judul = $koneksi->real_escape_string($judul);
+            $deskripsi = $koneksi->real_escape_string($deskripsi);
+            $namaFile = $koneksi->real_escape_string($namaFile);
+            $kategori = $koneksi->real_escape_string($kategori);
+            $tanggal_upload = $koneksi->real_escape_string($tanggal_upload);
+
+            // Baca isi file sebagai blob
+            $fileContent = file_get_contents($lokasiSimpan);
+            $fileContent = $koneksi->real_escape_string($fileContent);
+
+            // Query untuk menambahkan data
+            $insertQuery = "INSERT INTO articles (judul, isi, kategori, tanggal_upload, cover) VALUES ('$judul', '$deskripsi', '$kategori', '$tanggal_upload', '$namaFile')";
+
+            // Eksekusi query
+            $result = $koneksi->query($insertQuery);
+
+            if ($result) {
+                echo '<script>alert("Data berhasil ditambahkan!");</script>';
+                echo '<script>window.location.href = "list_berita.php";</script>';
+                exit();
+            } else {
+                echo "Gagal menambahkan data: " . $koneksi->error;
+            }
+
+            // Tutup koneksi
+            $koneksi->close();
         } else {
-            // header('Content-Type: application/json; charset=utf-8');
-            echo json_encode(['data' => "upload gagal", 'status' => 'error']);
-            return;
+            echo "Gagal menyimpan file";
         }
     } else {
-        // echo $sql;
-        echo json_encode(['data' => mysqli_error($db), 'status' => 'error']);
-        return;
+        echo "File PDF tidak boleh kosong";
     }
 }
 ?>
@@ -92,7 +113,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                             <label class="input-group-text" for="inputGroupSelect02">Pilihan <b class="text-danger">*</b> </label>
                                         </div>
                                     </div>
-                                    <button type="button" onclick="clicked()" id="alert_demo_4" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-primary">Tambahkan</button>
                                 </form>
                             </div>
                         </div>

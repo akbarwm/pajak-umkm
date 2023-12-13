@@ -3,12 +3,11 @@
 
 <?php
 session_start();
-$id = $_SESSION['id'];
 
-if (!isset($_SESSION['unique_id'])) {
-    header("location: ../login.php?error=session_expired ");
+if (!isset($_SESSION['user']) || empty($_SESSION['user'])) {
+    header("Location: login.php");
+    exit;
 }
-require_once('../controller/session_expired.php');
 ?>
 
 
@@ -28,6 +27,7 @@ require_once('../controller/session_expired.php');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon -->
     <link rel="apple-touch-icon" href="apple-touch-icon.html">
+
     <link rel="shortcut icon" type="image/x-icon" href="images/fav.png">
     <!-- bootstrap v4 css -->
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
@@ -67,7 +67,7 @@ require_once('../controller/session_expired.php');
     <!-- konsultasi -->
     <nav aria-label="breadcrumb breadcrumb-lg">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="../index.php">Home</a></li>
             <li class="breadcrumb-item"><a href="#">Akun</a></li>
             <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
         </ol>
@@ -82,10 +82,14 @@ require_once('../controller/session_expired.php');
                         <div class="widget-profile pro-widget-content">
                             <div class="profile-info-widget">
                                 <a href="#" class="booking-doc-img">
-                                    <img src="../img/users_profil/<?= $_SESSION['foto_profil']; ?>" alt="User Image">
+                                    <img src="../images/foto_contoh.jpg" alt="User Image">
                                 </a>
                                 <div class="profile-det-info">
-                                    <h5><?= $_SESSION['nama']; ?></h3>
+                                    <h5><?php
+                                        if (isset($_SESSION['user'])) {
+                                            echo $_SESSION['user']['nama'];
+                                        }
+                                        ?></h3>
                                         <div class="patient-details">
                                         </div>
                                 </div>

@@ -1,48 +1,78 @@
 <?php
-error_reporting(false); session_start();
-include('../config/session.php');
-$id = $_SESSION['id_user'];
-$sql = "SELECT * FROM `users` WHERE id='$id'";
-$result = mysqli_query($db, $sql);
-$row = mysqli_fetch_assoc($result);
+// Koneksi ke database (gunakan kode koneksi yang telah diberikan sebelumnya)
+include '../config/koneksi.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+// Periksa apakah parameter id telah diberikan melalui URL
+if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $judul =  mysqli_real_escape_string($db, $_POST['judul']);
-    $deskripsi = mysqli_real_escape_string($db, $_POST['deskripsi']);
+
+    // Ambil data artikel dari database berdasarkan id
+    $query = "SELECT * FROM peraturan_pajak WHERE id = :id";
+    $statement = $koneksi->prepare($query);
+    $statement->bindParam(':id', $id);
+    $statement->execute();
+    $pajak = $statement->fetch(PDO::FETCH_ASSOC);
+
+    if (!$pajak) {
+        echo "Data tidak ditemukan.";
+        exit();
+    }
+} else {
+    echo "ID tidak diberikan.";
+    exit();
+}
+
+// Proses form jika ada data yang dikirimkan
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $judul = $_POST['judul'];
+    $deskripsi = $_POST['deskripsi'];
     $kategori = $_POST['kategori'];
 
-    $namaFile = $_FILES['file']['name'];
+    // File upload handling
+    $namaFile = $_FILES['file_pdf']['name'];
     $file_ext = pathinfo($namaFile, PATHINFO_EXTENSION);
+    $namaUpload = $namaFile;
+    $namaSementara = $_FILES['file_pdf']['tmp_name'];
 
-    $namaUpload = time() . '.' . $file_ext;
-    $namaSementara = $_FILES['file']['tmp_name'];
 
+    // Move the uploaded file to the specified directory
+    $dirUpload = "tables/PDF/";
+    $terupload = move_uploaded_file($namaSementara, $dirUpload . $namaUpload);
 
-    $sql = "UPDATE peraturan_pajak set judul = '$judul', deskripsi= '$deskripsi', kategori= '$kategori', file= '$namaUpload' where id=' $id'";
-    $result = mysqli_query($db, $sql);
-    // header("location: list_peraturanpajak.php");
-    if ($result) {
-        // tentukan lokasi file akan dipindahkan
-        $dirUpload = "tables/PDF/";
+    // Update data ke database
+    $updateQuery = "UPDATE peraturan_pajak SET judul = :judul, deskripsi = :deskripsi, kategori = :kategori, file_pdf = :file_pdf WHERE id = :id";
+    $updateStatement = $koneksi->prepare($updateQuery);
+    $updateStatement->bindParam(':judul', $judul);
+    $updateStatement->bindParam(':deskripsi', $deskripsi);
+    $updateStatement->bindParam(':kategori', $kategori);
 
-        $terupload = move_uploaded_file($namaSementara, $dirUpload . $namaUpload);
-        header('Content-Type: application/json; charset=utf-8');
-        echo json_encode(['data' => "/user/demo1/list_peraturanpajak.php", 'status' => 'sukses']);
-        return;
+    // Check if a new file is uploaded
+    if ($namaFile) {
+        $updateStatement->bindParam(':file_pdf', $namaUpload);
+    } else {
+        // If no new file is uploaded, keep the existing file name
+        $updateStatement->bindParam(':file_pdf', $pajak['file_pdf']);
+    }
+
+    $updateStatement->bindParam(':id', $id);
+
+    if ($updateStatement->execute()) {
+        // Check if the file upload is successful
         if ($terupload) {
+            echo '<script>alert("Data berhasil diupdate!");</script>';
+            echo '<script>window.location.href = "list_peraturanpajak.php";</script>';
+            exit();
         } else {
-            // header('Content-Type: application/json; charset=utf-8');
-            echo json_encode(['data' => "upload gagal", 'status' => 'error']);
-            return;
+            echo "Gagal menyimpan file";
         }
     } else {
-        // echo $sql;
-        echo json_encode(['data' => mysqli_error($db), 'status' => 'error']);
-        return;
+        echo "Gagal mengupdate data";
     }
 }
 ?>
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -69,38 +99,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body">
-                                <?php
-                                $sql = "SELECT * FROM peraturan_pajak where id=" . "'" . $_GET['id'] . "'";
-                                $result = mysqli_query($db, $sql);
-                                $row = mysqli_fetch_assoc($result);
-                                // var_dump($row);die;
-                                ?>
                                 <form action="" method="post" enctype="multipart/form-data">
                                     <div class="mb-3">
                                         <label for="exampleFormControlInput1" class="form-label">Judul</label>
-                                        <input name="judul" value="<?= $row['judul'] ?>" type="text" class="form-control" id="judul" placeholder="">
+                                        <input name="judul" value="<?php echo $pajak['judul']; ?>" type="text" class="form-control" id="judul" placeholder="">
                                     </div>
                                     <div class="mb-3">
                                         <label for="exampleFormControlTextarea1" class="form-label">Deskripsi</label>
-                                        <textarea name="deskripsi" value="<?= $row['deskripsi'] ?>" class="form-control" id="deskripsi" rows="3"><?= $row['deskripsi'] ?></textarea>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="formFile" class="form-label">File *</label>
-                                        <input name="file" class="form-control" type="file" id="file" accept=".pdf">
+                                        <textarea name="deskripsi" class="form-control" id="deskripsi" rows="3"><?php echo $pajak['deskripsi']; ?></textarea>
                                     </div>
                                     <label for="texarea" class="form-label">Kategori</label>
                                     <div class="input-group mb-3"><br>
 
                                         <select name="kategori" class="custom-select" id="kategori">
                                             <option selected>Pilih...</option>
-                                            <option value="pajak daerah" <?= $row['kategori'] == "pajak daerah" ? 'selected="selected"'  : '' ?>>Peraturan Pajak Daerah</option>
-                                            <option value="pajak daerah batam" <?= $row['kategori'] == "pajak daerah batam" ? 'selected="selected"'  : '' ?>>Peraturan Pajak Daerah Kota Batam</option>
+                                            <option value="Peraturan Pajak Daerah" <?= $pajak['kategori'] == "Peraturan Pajak Daerah" ? 'selected="selected"'  : '' ?>>Peraturan Pajak Daerah</option>
+                                            <option value="Peraturan Pajak Pusat" <?= $pajak['kategori'] == "Peraturan Pajak Pusat" ? 'selected="selected"'  : '' ?>>Peraturan Pajak Pusat</option>
+                                            <option value="Peraturan Pajak Daerah Kota Batam" <?= $pajak['kategori'] == "Peraturan Pajak Daerah Kota Batam" ? 'selected="selected"'  : '' ?>>Peraturan Pajak Daerah Kota Batam</option>
                                         </select>
                                         <div class="input-group-append">
                                             <label class="input-group-text" for="inputGroupSelect02">Pilihan</label>
                                         </div>
                                     </div>
-                                    <button type="button" onclick="clicked8()" id="alert_demo_4" class="btn btn-primary">Submit</button>
+                                    <div class="mb-3">
+                                        <label for="formFile" class="form-label">File PDF</label>
+                                        <input name="file_pdf" class="form-control" type="file" id="file_pdf" accept=".pdf">
+                                    </div>
+                                    <button type="submit" onclick="clicked8()" id="alert_demo_4" class="btn btn-primary">Submit</button>
                                 </form>
                             </div>
                         </div>

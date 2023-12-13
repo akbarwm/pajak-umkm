@@ -99,7 +99,7 @@ if (isset($_GET['error'])) {
                     <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
                 </div>
 
-                <a class="btn btn-primary btn-block" style="background-color: #3b5998" href="signUp.php" role="button">
+                <a class="btn btn-primary btn-block" style="background-color: #3b5998" href="daftar.php" role="button">
                     </i>Register
                 </a>
 

@@ -2,6 +2,8 @@
 <html lang="en">
 
 <?php
+// Di bagian atas skrip PHP
+error_reporting(0); // Matikan pelaporan error
 session_start();
 $id = $_SESSION['id'];
 
@@ -201,7 +203,8 @@ require_once('../controller/session_expired.php');
                                                     <!-- /Chat Left -->
 
 
-                                                    <?php if (empty($_GET['user_id'])) {
+                                                    <?php
+                                                    if (empty($_GET['user_id'])) {
                                                     } else { ?>
                                                         <!-- Chat Right -->
                                                         <div class="chat-cont-right">

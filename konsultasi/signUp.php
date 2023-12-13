@@ -1,3 +1,84 @@
+<?php
+
+include('../conf/config.php');
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+$error = '';
+$hasil = false;
+
+if (!empty($_POST)) {
+    $nama = $_POST['nama'];
+    $nohp = $_POST['no_hp'];
+    $username = $_POST['email'];
+    $password = $_POST['password'];
+
+    // Validation and processing logic
+    if ($password != $_POST['confirm_password']) {
+        $error = 'Password dan Ketik Ulang Password harus sama';
+    } else if (strlen($password) < 6) {
+        $error = 'Password harus minimal 6 karakter';
+    } else {
+        // Validasi email
+        if (!filter_var($username, FILTER_VALIDATE_EMAIL)) {
+            $error = 'Format email tidak valid';
+        } else {
+            // Your database connection logic, similar to daftar2.php
+            $pdo = require 'koneksi.php';
+
+            $sql = "SELECT COUNT(*) FROM tb_users WHERE email=:emailUser";
+            $query = $pdo->prepare($sql);
+
+            if (!$query) {
+                die("Query preparation failed: " . $pdo->errorInfo()[2]);
+            }
+
+            $query->bindParam(':emailUser', $username);
+            $query->execute();
+            $count = $query->fetchColumn();
+
+            if ($count > 0) {
+                $error = 'Gunakan email lain';
+            } else {
+                $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+
+                $sql = "INSERT INTO tb_users VALUES ('', :uniqueID, :username, :hashedPassword, :nama, 'default.png', 'Online', current_timestamp())";
+                $query2 = $pdo->prepare($sql);
+
+                if (!$query2) {
+                    die("Query preparation failed: " . $pdo->errorInfo()[2]);
+                }
+
+                $uniqueID = generateUniqueID();
+
+                $query2->bindParam(':uniqueID', $uniqueID);
+                $query2->bindParam(':username', $username);
+                $query2->bindParam(':hashedPassword', $hashedPassword);
+                $query2->bindParam(':nama', $nama);
+
+                $query2->execute();
+
+                $hasil = true;
+                unset($_POST);
+            }
+        }
+    }
+}
+
+function generateUniqueID()
+{
+    $characters = '0123456789';
+    $uniqueID = '';
+
+    for ($i = 0; $i < 7; $i++) {
+        $index = rand(0, strlen($characters) - 1);
+        $uniqueID .= $characters[$index];
+    }
+
+    return $uniqueID;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,10 +122,10 @@
                 <div class="col-12 col-md-5 p-5">
                     <h3 class="fw-bold mb-5">Lengkapi Biodata Diri</h3>
 
-                    <form action="controller/registrasi.php" method="post">
+                    <form action="controller/registrasi2.php" method="post">
                         <div class="mb-3 ">
                             <label for="namaLengkap" class="form-label">Nama Lengkap</label>
-                            <input type="text" class="form-control py-2 py-xxl-3" name="namaLengkap" placeholder="Nama" required>
+                            <input type="text" class="form-control py-2 py-xxl-3" name="namaLengkap" placeholder="Nama" required value="<?php echo isset($_POST['nama']) ? $_POST['nama'] : ''; ?>" required>
                         </div>
                         <div class="mb-3">
                             <label for="noHp" class="form-label">No Hp(opsional)</label>
@@ -52,12 +133,11 @@
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label">Email address</label>
-                            <input type="email" class="form-control py-2 py-xxl-3" name="email" placeholder="Email@anda.com" required>
+                            <input type="email" class="form-control py-2 py-xxl-3" name="email" placeholder="Email@anda.com" required value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>" required>
                         </div>
                         <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
                             <input type="password" class="form-control py-2 py-xxl-3" name="pass" id="txtPassword" placeholder="Minimal 8 karakter" required>
-
                         </div>
                         <div class="mb-5">
                             <label for="confirm_password">Konfirmasi Password:</label>

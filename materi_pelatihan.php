@@ -13,7 +13,7 @@
     include './connection.php';
     ?>
     <!-- Header Menu Start -->
-    <?php include 'konsultasi/navbar3.php'; ?>
+    <?php include 'konsultasi/navbar4.php'; ?>
     <!-- Header Menu End -->
 
     <!-- Breadcrumbs Start -->
@@ -73,7 +73,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-about no-bg-style top-border">
                         <div class="about-title">
-                            <a href="/user/demo1/tables/PPT/<?= $r['file_ppt'] ?>">
+                            <a href="viewer_ppt.php?nama=<?= $r['file_ppt'] ?>">
                                 <h4 class="title mb-20">Unduh Materi PPT</h4>
                             </a>
                         </div>
