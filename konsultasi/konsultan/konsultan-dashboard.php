@@ -1,8 +1,9 @@
 <?php include('layout/header.php');
 
 session_start();
-if (!isset($_SESSION['id_konsultan'])) {
-	header("location: index.php");
+include_once "php/config.php";
+if (!isset($_SESSION['unique_id'])) {
+	header("location: login.php");
 }
 ?>
 <!-- doccure/doctor-dashboard.html  30 Nov 2019 04:12:03 GMT -->
@@ -11,11 +12,6 @@ if (!isset($_SESSION['id_konsultan'])) {
 
 	<!-- Main Wrapper -->
 	<div class="main-wrapper">
-
-		<!-- Header -->
-		<!--  -->
-		<!-- /Header -->
-
 		<!-- Breadcrumb -->
 		<div class="breadcrumb-bar">
 			<div class="container-fluid">

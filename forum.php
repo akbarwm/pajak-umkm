@@ -5,11 +5,11 @@
     <title>Kategori Perbidang Usaha</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body>
     <?php
-
     session_start();
     ?>
     <!-- Header Section Start-->
@@ -37,28 +37,19 @@
     </div>
 
 
-    <div class="container">
-        <h3>
-            <?php
-            if (isset($_SESSION['user'])) {
-                echo $_SESSION['user']['nama'];
-            }
-            ?>
-            Selamat Datang di Forum PHP
-        </h3>
-        <a class="btn btn-primary" href="tambah-topik.php" role="button">Tambah Topik</a>
-
+    <div class="container my-5">
         <?php
         if (isset($_SESSION['user']) && !empty($_SESSION['user'])) {
             $pdo = require 'koneksi.php';
             $sql = "SELECT judul, tanggal, nama, email, topik.id, id_user FROM topik
-        INNER JOIN pengguna ON topik.id_user = pengguna.id
-        ORDER BY tanggal DESC";
-
+          INNER JOIN users ON topik.id_user = users.id
+          ORDER BY tanggal DESC";
             $query = $pdo->prepare($sql);
             $query->execute();
         ?>
-            <h3 class="mt-5">Daftar Topik</h3>
+            <div class="sec-title mb-36">
+                <h2 class="title bg-left text">Daftar Forum</h2>
+            </div>
             <hr />
             <?php
             while ($data = $query->fetch()) {
@@ -68,11 +59,9 @@
                         <img src="//www.gravatar.com/avatar/<?php echo md5($data['email']); ?>?s=48&d=monsterid" class="rounded-circle" />
                     </div>
                     <figure class="col">
-                        <blockquote class="blockquote">
-                            <p>
-                                <a href="lihat-topik.php?id=<?php echo $data['id']; ?>"><?php echo htmlentities($data['judul']); ?></a>
-                            </p>
-                        </blockquote>
+                        <p>
+                            <a href="lihat-topik.php?id=<?php echo $data['id']; ?>"><?php echo htmlentities($data['judul']); ?></a>
+                        </p>
                         <figcaption class="blockquote-footer">
                             Dari: <?php echo htmlentities($data['nama']); ?>
                             - <?php echo date('d M Y H:i', strtotime($data['tanggal'])); ?>
@@ -86,8 +75,9 @@
             <?php } ?>
         <?php } ?>
     </div>
-    <script src="boostrap/js/bootstrap.bundle.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
     <!-- Privacy Policy End -->
     <?php include './layout/footer.php'; ?>
 </body>

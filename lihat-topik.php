@@ -1,20 +1,18 @@
-<!DOCTYPE html>
+<?php
+require_once 'cek-akses.php';
+?>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <title>Kategori Perbidang Usaha</title>
-    <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Forum PHP: Lihat Topik</title>
 </head>
 
 <body>
-    <?php
-
-    session_start();
-    ?>
-    <!-- Header Section Start-->
     <?php include 'konsultasi/navbar4.php'; ?>
-    <!-- Header Menu End -->
 
     <!-- Breadcrumbs Start -->
     <div class="breadcrumbs">
@@ -35,13 +33,12 @@
             </div>
         </div>
     </div>
-
-    <div class="container">
+    <div class="container my-5">
         <?php
         if (isset($_GET['id']) && !empty($_GET['id'])) {
             $pdo = require 'koneksi.php';
-            $sql = "SELECT topik.*, pengguna.nama, pengguna.email FROM topik
-        INNER JOIN pengguna ON topik.id_user=pengguna.id
+            $sql = "SELECT topik.*, users.nama, users.email FROM topik
+        INNER JOIN users ON topik.id_user=users.id
         WHERE topik.id=:id";
             $query = $pdo->prepare($sql);
             $query->execute(array('id' => $_GET['id']));
@@ -59,12 +56,12 @@
                         <small class="text-muted"><?php echo date('d M Y H:i', strtotime($topik['tanggal'])); ?></small>
                     </div>
                 </div>
-                <h2><?php echo htmlentities($topik['judul']); ?></h2>
+                <h3><?php echo htmlentities($topik['judul']); ?></h3>
                 <p><?php echo nl2br(htmlentities($topik['deskripsi'])); ?></p>
                 <hr />
                 <?php
-                $sql2 = "SELECT komentar.*, pengguna.nama, pengguna.email FROM komentar
-          INNER JOIN pengguna ON pengguna.id = komentar.id_user
+                $sql2 = "SELECT komentar.*, users.nama, users.email FROM komentar
+          INNER JOIN users ON users.id = komentar.id_user
           WHERE id_topik=:id_topik";
                 $query2 = $pdo->prepare($sql2);
                 $query2->execute(array(
@@ -122,11 +119,8 @@
         }
         ?>
     </div>
-
-    <script src="boostrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Privacy Policy End -->
-    <?php include './layout/footer.php'; ?>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -16,7 +16,7 @@ $query->execute(array(
 
 $topik = $query->fetch();
 if (!$topik) {
-    header("Location: index.php");
+    header("Location: forum.php");
     exit;
 }
 

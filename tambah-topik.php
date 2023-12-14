@@ -10,10 +10,11 @@ if (!empty($_POST)) {
         'deskripsi' => $_POST['deskripsi'],
         'id_user' => $_SESSION['user']['id'],
     ));
-    header("Location: tambah-topik.php?sukses=1");
+    header("Location: forum.php");
     exit;
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,10 +26,6 @@ if (!empty($_POST)) {
 </head>
 
 <body>
-    <?php
-
-    session_start();
-    ?>
     <!-- Header Section Start-->
     <?php include 'konsultasi/navbar4.php'; ?>
     <!-- Header Menu End -->
@@ -40,11 +37,12 @@ if (!empty($_POST)) {
             <div class="breadcrumbs-inner">
                 <div class="container">
                     <div class="breadcrumbs-text">
-                        <h1 class="breadcrumbs-title mb-17">Forum Pajak</h1>
+                        <h1 class="breadcrumbs-title mb-17">Tambah Topik Pajak</h1>
                         <div class="categories">
                             <ul>
                                 <li><a href="index.php"><i class="fa fa-house"></i>Beranda</a></li>
                                 <li>Forum Pajak</li>
+                                <li>Tambah Topik Pajak</li>
                             </ul>
                         </div>
                     </div>
@@ -54,7 +52,9 @@ if (!empty($_POST)) {
     </div>
 
     <div class="container my-5">
-        <h2>Tambah Topik</h2>
+        <div class="sec-title mb-36">
+            <h2 class="title bg-left">Tambah Topik</h2>
+        </div>
         <?php
         if (isset($_GET['sukses']) && $_GET['sukses'] == '1') {
             echo '<p class="text-success">Topik berhasil dikirim</p>';
