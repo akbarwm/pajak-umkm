@@ -1,57 +1,33 @@
 <?php
 $error = '';
 $hasil = false;
-
 if (!empty($_POST)) {
     $pdo = require 'koneksi.php';
-
     if ($_POST['password'] != $_POST['password2']) {
         $error = 'Password dan Ketik Ulang Password harus sama';
     } else if (strlen($_POST['password']) < 6) {
         $error = 'Password harus minimal 6 karakter';
     } else {
         // Validasi email
-        if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-            $error = 'Format email tidak valid';
+        $sql = "select count(*) from users where email=:emailUser";
+        $query = $pdo->prepare($sql);
+        $query->execute(array('emailUser' => $_POST['email']));
+        $count = $query->fetchColumn();
+        if ($count > 0) {
+            $error = 'Gunakan email lain';
         } else {
-            // Generate unique_id
-            $unique_id = generateUniqueID();
-
-            $sql = "SELECT COUNT(*) FROM pengguna WHERE email=:emailUser";
-            $query = $pdo->prepare($sql);
-            $query->execute(array('emailUser' => $_POST['email']));
-            $count = $query->fetchColumn();
-
-            if ($count > 0) {
-                $error = 'Gunakan email lain';
-            } else {
-                $sql = "INSERT INTO pengguna (unique_id, nama, email, password) 
-                VALUES (:unique_id, :nama, :email, :password)";
-                $query2 = $pdo->prepare($sql);
-                $query2->execute(array(
-                    'unique_id' => $unique_id,
-                    'nama' => $_POST['nama'],
-                    'email' => $_POST['email'],
-                    'password' => password_hash($_POST['password'], PASSWORD_BCRYPT),
-                ));
-                $hasil = true;
-                unset($_POST);
-            }
+            $sql = "insert into users (nama, email , password) 
+            values (:nama, :email, :password)";
+            $query2 = $pdo->prepare($sql);
+            $query2->execute(array(
+                'nama' => $_POST['nama'],
+                'email' => $_POST['email'],
+                'password' => sha1($_POST['password']),
+            ));
+            $hasil = true;
+            unset($_POST);
         }
     }
-}
-
-function generateUniqueID()
-{
-    $characters = '0123456789';
-    $uniqueID = '';
-
-    for ($i = 0; $i < 7; $i++) {
-        $index = rand(0, strlen($characters) - 1);
-        $uniqueID .= $characters[$index];
-    }
-
-    return $uniqueID;
 }
 ?>
 
@@ -67,16 +43,14 @@ function generateUniqueID()
 </head>
 
 <body>
-    <?php
-    $__menuAktif = 'registrasi';
-    ?>
+
     <div class="container">
         <h1>Registrasi</h1>
         <p>Silahkan mendaftar sebelum menggunakan forum.</p>
         <hr />
         <?php if ($hasil == true) { ?>
             <p class="text-success">
-                Registrasi berhasil, silahkan <a href="login.php">login</a>.
+                Registrasi berhasil, silahkan <a href="login2.php">login</a>.
             </p>
         <?php } ?>
         <?php
