@@ -8,4 +8,4 @@ if (session_status() === PHP_SESSION_ACTIVE) {
 }
 
 // redirect ke halaman login
-header("location: ../index.php");
+header("location: ../login.php");

@@ -96,9 +96,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="layout/logout.php">
-                            <i class="fas fa-sign-out-alt"></i>
-                            <span>Logout</span>
+                        <a href="php/logout.php?logout_id=<?php echo $row['unique_id']; ?>" class="logout">
+                            <i class="fas fa-sign-out-alt"></i>Logout</a>
                         </a>
                     </li>
                 </ul>
