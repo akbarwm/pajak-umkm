@@ -155,7 +155,7 @@ if (isset($_GET['error'])) {
     </style>
     <section>
 
-        <div class="container mt-2 pt-2">
+        <div class="container mt-5 pt-2">
             <div class="row border-bottom ">
                 <div class="tutorialChatIlustration col-12 col-sm-5  p-3 border-end ">
                     <?php include 'caption-kiri.php'; ?>
@@ -208,7 +208,6 @@ if (isset($_GET['error'])) {
                                             <h6 class="mb-0"><?= $q['nama']; ?></h6>
                                             <p class="fw-light text-dark mb-0"><?= $q['bidang']; ?></p>
                                             <button type="button" class="btn btn-light btn-sm experienceBtn mb-1 bold"><i class="fa fa-suitcase"></i> &nbsp;<?= $q['pengalaman']; ?></button>
-                                            <button type="button" class="btn btn-primary" style="background-color: #01a0f9;" data-toggle="modal" data-target="#myModal">Chat</button>
 
 
 

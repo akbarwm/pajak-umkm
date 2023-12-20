@@ -105,38 +105,6 @@ if (!isset($_SESSION['user']) || empty($_SESSION['user'])) {
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="appointment_user.php">
-                                            <i class="fa fa-calendar"></i>
-                                            <span>Appointments</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="chat.php">
-                                            <i class="fa fa-comments"></i>
-                                            <span>Chat</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a>
-                                            <i class="fa fa-video"></i>
-                                            <span>Zoom</span>
-                                            <large class="unread-msg" style="background-color: orange;">soon</large>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a>
-                                            <large class="unread-msg" style="background-color: orange;">soon</large>
-                                            <i class="fa fa-globe"></i>
-                                            <span>Forum</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="profile-settings.html">
-                                            <i class="fa fa-cog"></i>
-                                            <span>Profile Settings</span>
-                                        </a>
-                                    </li>
-                                    <li>
                                         <a href="#" onclick="confirmLogout()">
                                             <i class="fa fa-sign-out"></i>
                                             <span>Logout</span>

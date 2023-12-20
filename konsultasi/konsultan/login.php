@@ -10,7 +10,7 @@ if (isset($_SESSION['unique_id'])) {
 <body>
   <div class="wrapper">
     <section class="form login">
-      <header>Login Konsultan</header>
+      <header>Login</header>
       <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
         <div class="error-text"></div>
         <div class="field input">
@@ -27,6 +27,7 @@ if (isset($_SESSION['unique_id'])) {
         </div>
       </form>
       <div class="link">Not yet signed up? <a href="registrasi.php">Signup now</a></div>
+      <div class="link"><a href="../index.php">Halaman Utama</a></div>
     </section>
   </div>
 

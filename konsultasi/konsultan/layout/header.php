@@ -1,6 +1,6 @@
 <head>
     <meta charset="utf-8">
-    <title>SUDUT PAJAK - Konsultan</title>
+    <title>SUDUT PAJAK - Chat</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 
     <!-- Favicons -->

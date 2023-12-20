@@ -56,8 +56,7 @@
                         <img src="images/kuliner.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Bidang Kuliner</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="kuliner.php" class="btn btn-primary">Go somewhere</a>
+                            <a href="kuliner.php" class="btn btn-primary mt-3">Lihat Selengkapnya</a>
                         </div>
                     </div>
                 </div>
@@ -66,8 +65,7 @@
                         <img src="images/pesyen.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Bidang Fashion</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="fashion.php" class="btn btn-primary">Go somewhere</a>
+                            <a href="fashion.php" class="btn btn-primary mt-3">Lihat Selengkapnya</a>
                         </div>
                     </div>
                 </div>
@@ -76,8 +74,7 @@
                         <img src="images/mobil.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Bidang Otomotif</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="otomotif.php" class="btn btn-primary">Go somewhere</a>
+                            <a href="otomotif.php" class="btn btn-primary mt-3">Lihat Selengkapnya</a>
                         </div>
                     </div>
                 </div>
@@ -88,8 +85,7 @@
                         <img src="images/agri.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Bidang Agribisnis</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="agribisnis.php" class="btn btn-primary">Go somewhere</a>
+                            <a href="agribisnis.php" class="btn btn-primary mt-3">Lihat Selengkapnya</a>
                         </div>
                     </div>
                 </div>
@@ -98,8 +94,7 @@
                         <img src="images/kosmetik.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Bidang Kosmetik</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="kosmetik.php" class="btn btn-primary">Go somewhere</a>
+                            <a href="kosmetik.php" class="btn btn-primary mt-3">Lihat Selengkapnya</a>
                         </div>
                     </div>
                 </div>
@@ -108,8 +103,7 @@
                         <img src="images/event-organizer.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Bidang Event Organizer</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="event.php" class="btn btn-primary">Go somewhere</a>
+                            <a href="event.php" class="btn btn-primary mt-3">Lihat Selengkapnya</a>
                         </div>
                     </div>
                 </div>

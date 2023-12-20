@@ -232,7 +232,7 @@
                         perusahaan Anda di satu aplikasi pajak online terpadu.</p>
                 </div>
                 <div class="about-btn">
-                    <a class="readon radius" href="/konsultasi">Mulai Sekarang</a>
+                    <a class="readon radius" href="#">Mulai Sekarang</a>
                 </div>
             </div>
         </div>

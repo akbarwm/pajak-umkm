@@ -69,20 +69,6 @@ include 'koneksi.php';
                 ?>
 
             </div>
-            <div class="row col-20 pt-50 md-pt-80">
-                <div class="col-lg-4 col-md-6 sm-mb-30">
-                    <div class="single-about no-bg-style top-border">
-                        <div class="about-title">
-                            <a href="view_pdf.php?nama=<?= $data['file_pdf'] ?>">
-                                <h4 class="title mb-20">Unduh Materi PDF</h4>
-                            </a>
-                        </div>
-                        <div class="about-desc">
-                            <p class="desc-txt">Anda dapat mengunduh materi perpajakan sesuai dengan apa yang anda butuhkan untuk mengatasi permasalahan perpajakan anda</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <!-- Privacy Policy End -->
