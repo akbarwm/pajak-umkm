@@ -10,18 +10,27 @@ if (isset($_SESSION['unique_id'])) {
 <body>
     <div class="wrapper">
         <section class="form signup">
-            <header>Realtime Chat App</header>
+            <header>Registrasi Konsultan</header>
             <form action="#" method="POST" enctype="multipart/form-data" autocomplete="off">
                 <div class="error-text"></div>
                 <div class="name-details">
                     <div class="field input">
-                        <label>First Name</label>
-                        <input type="text" name="fname" placeholder="First name" required>
+                        <label>Name</label>
+                        <input type="text" name="fname" placeholder="Name" required>
                     </div>
                     <div class="field input">
-                        <label>Last Name</label>
-                        <input type="text" name="lname" placeholder="Last name" required>
+                        <label>Bidang</label>
+                        <select name="lname" required>
+                            <option value="">Pilih Bidang</option>
+                            <option value="PPh badan">PPh badan</option>
+                            <option value="PPh tahunan orang pribadi">PPh tahunan orang pribadi</option>
+                            <option value="PPh pasal 21">PPh pasal 21</option>
+                            <option value="PPh pasal 22 dan 23">PPh pasal 22 dan 23</option>
+                            <option value="PPh pasal 25">PPh pasal 25</option>
+                            <option value="UMKM">UMKM</option>
+                        </select>
                     </div>
+
                 </div>
                 <div class="field input">
                     <label>Email Address</label>

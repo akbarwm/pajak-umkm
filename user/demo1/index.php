@@ -9,7 +9,7 @@ include '.././config/session.php';
 
 
 $id = $_SESSION['id_user'];
-$sql = "SELECT * FROM `users` WHERE id='$id'";
+$sql = "SELECT * FROM `admin` WHERE id='$id'";
 $result = mysqli_query($db, $sql);
 $row = mysqli_fetch_assoc($result);
 

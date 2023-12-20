@@ -180,7 +180,8 @@ if (!isset($_SESSION['unique_id'])) {
                     <img src="php/images/<?php echo $row['img']; ?>" alt="">
                   </div>
                   <div class="col-md-5">
-                    <h3 id="nama"><?php echo $row['fname'] . " " . $row['lname'] ?></h3>
+                    <h3 id="nama"><?php echo $row['fname'] ?></h3>
+                    <p id="nama">Bidang <?php echo $row['lname'] ?></p>
                   </div>
                   <div class="col-auto ml-auto"> <!-- Use 'ml-auto' to push it to the right -->
                     <h5 class="text-right <?php echo ($row['status'] === 'Active now') ? 'text-success' : 'text-warning'; ?>">

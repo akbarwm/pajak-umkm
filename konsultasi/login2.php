@@ -127,6 +127,11 @@ if (!empty($_POST)) {
                         </i>Register
                     </a>
 
+                    <div class="d-flex justify-content-around align-items-center my-4">
+                        <a href="../login.php">Login as admin</a>
+                        <a href="../konsultasi/konsultan/login.php">Login as konsultan</a>
+                    </div>
+
                 </form>
             </div>
         </div>

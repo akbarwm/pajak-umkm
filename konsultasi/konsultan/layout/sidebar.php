@@ -12,9 +12,9 @@
                     <img src="php/images/<?php echo $row['img']; ?>" alt="">
                 </a>
                 <div class="profile-det-info">
-                    <h3><?php echo $row['fname'] . " " . $row['lname'] ?></h3>
+                    <h3><?php echo $row['fname'] ?></h3>
                     <div class="patient-details">
-                        <h5 class="mb-0">Konsultan Pajak</h5>
+                        <h5 class="mb-0"><?php echo $row['lname'] ?></h5>
                     </div>
                 </div>
             </div>
@@ -33,66 +33,15 @@
                             <span>Dashboard</span>
                         </a>
                     </li>
-                    <li class="<?php
-                                $active = isset($_GET['apo']);
-                                if ($active == 1) {
-                                    echo "active";
-                                }
-                                ?>">
-                        <a href="appoinments.php?apo=1">
-                            <i class="fas fa-calendar-check"></i>
-                            <span>Appointments</span>
-                        </a>
-                    </li>
-                    <li class="<?php
-                                $active = isset($_GET['sch']);
-                                if ($active == 1) {
-                                    echo "active";
-                                }
-                                ?>">
-                        <a href="schedule-timings.php?sch=1">
-                            <i class="fas fa-hourglass-start"></i>
-                            <span>Schedule Timings</span>
-                        </a>
-                    </li>
-                    <li class="<?php
-                                $active = isset($_GET['rev']);
-                                if ($active == 1) {
-                                    echo "active";
-                                }
-                                ?>">
-                        <a href="reviews.php?rev=1">
-                            <i class="fas fa-star"></i>
-                            <span>Reviews</span>
-                        </a>
-                    </li>
                     <li>
                         <a href="users.php<?php ?>">
                             <i class="fas fa-comments"></i>
                             <span>Message</span>
                         </a>
                     </li>
-
-                    <li class="<?php
-                                $active = isset($_GET['edt']);
-                                if ($active == 1) {
-                                    echo "active";
-                                }
-                                ?>">
-                        <a href="konsultan-edit-profil.php?edt=1">
-                            <i class="fas fa-user-cog"></i>
-                            <span>Profile Settings</span>
-                        </a>
-                    </li>
-                    <li class="<?php
-                                $active = isset($_GET['chgp']);
-                                if ($active == 1) {
-                                    echo "active";
-                                }
-                                ?>">
-                        <a href="konsultan-change-password.php?chgp=1">
-                            <i class="fas fa-lock"></i>
-                            <span>Change Password</span>
+                    <li>
+                        <a href="../index.php">
+                            <i class="fas fa-sign-out-alt"></i>Sudut Pajak</a>
                         </a>
                     </li>
                     <li>

@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $myusername = $_POST['username'];
     $mypassword = $_POST['password'];
 
-    $sql = "SELECT * FROM `users` WHERE `LOGIN` = '$myusername' and `PASSWORD` = '$mypassword'";
+    $sql = "SELECT * FROM `admin` WHERE `LOGIN` = '$myusername' and `PASSWORD` = '$mypassword'";
 
     $result = mysqli_query($db, $sql);
 
