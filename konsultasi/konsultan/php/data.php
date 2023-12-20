@@ -21,7 +21,8 @@ while ($row = mysqli_fetch_assoc($query)) {
                 <img src="php/images/' . $row['img'] . '" alt="">
             </div>
             <div class="col-md-5">
-                <h5 id="nama">' . $row['fname'] . " " . $row['lname'] . '</h5>
+                <h5 id="nama">' . $row['fname'] . '</h5>
+                <p id="nama">' . $row['lname'] . '</p>
             </div>
             <div class="col-auto ml-auto">
                 <p class="text-right ' . (($row['status'] === 'Active now') ? 'text-success' : 'text-warning') . '">

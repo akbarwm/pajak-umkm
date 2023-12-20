@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Kategori Perbidang Usaha</title>
+    <title>Forum</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -48,8 +48,9 @@
             $query->execute();
         ?>
             <div class="sec-title mb-36">
-                <h2 class="title bg-left text">Daftar Forum</h2>
+                <h2 class="title bg-left text">Daftar Topik</h2>
             </div>
+            <a class="btn btn-primary" href="tambah-topik.php" role="button">Tambah Topik</a>
             <hr />
             <?php
             while ($data = $query->fetch()) {

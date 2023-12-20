@@ -172,15 +172,16 @@ if (isset($_GET['error'])) {
                         </div>
                     </div>
 
-                    <h1>
+                    <h3>
                         <?php
                         if (isset($_SESSION['user'])) {
                             echo $_SESSION['user']['nama'];
                         }
                         ?>
-                        Selamat Datang di Forum PHP
-                    </h1>
-
+                        Selamat Datang di Konsultasi
+                    </h3>
+                    <p>Ingin melakukan konsultasi dengan pakar pajak? tekan link dibawah ini</p>
+                    <a class="btn btn-primary" href="konsultan/registrasi.php" role="button">Chat Konsultasi</a>
                     <div class="row">
                         <div class="col-12 mt-10">
                             <h4 class="fs-5 fw-bold mb-1">Rekomendasi Pakar Pajak</h4>

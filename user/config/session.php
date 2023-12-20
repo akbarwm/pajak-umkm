@@ -8,7 +8,7 @@ include('connection.php');
 
 $user_check = $_SESSION['login_user'];
 
-$ses_sql = mysqli_query($db, "SELECT `NAME` FROM users WHERE `LOGIN` = '$user_check' ");
+$ses_sql = mysqli_query($db, "SELECT `NAME` FROM admin WHERE `LOGIN` = '$user_check' ");
 
 //    var_dump( $db ); die;
 
