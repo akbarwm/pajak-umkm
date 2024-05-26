@@ -197,7 +197,7 @@
               <div class="field">
                 <div class="label-long">9. Biaya Jabatan</div>
                 <div class="col-75">
-                  <input type="text" disabled="true" readonly="readonly" class="form-control" name="biayaJabatan" maxlength="500000" id="biayaJabatan" style="text-align:right;" placeholder="0">
+                  <input type="text" class="form-control" name="biayaJabatan" id="biayaJabatan" style="text-align:right;" placeholder="0">
                 </div>
               </div>
               <div class="field">

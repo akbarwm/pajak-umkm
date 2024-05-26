@@ -97,14 +97,6 @@ function calc(){
   hitungBiayaJabatan = (valueHasilBruto * 1) * (5 / 100);  
   
 
-  if (hitungBiayaJabatan == 500000) {
-    document.formMasa.biayaJabatan.value = 500000;
-  } else if (hitungBiayaJabatan > 500000) {
-    document.formMasa.biayaJabatan.value = 500000;
-  } else {
-    document.formMasa.biayaJabatan.value = hitungBiayaJabatan;
-  }
-
   var masaPenghasilan = document.getElementById('masaAkhir').value - document.getElementById('masaAwal').value + 1;
 
   document.formMasa.brutoSetahun.value = (valueHasilBruto * masaPenghasilan) ;  

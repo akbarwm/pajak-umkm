@@ -52,7 +52,7 @@ include('layouts/header.php');
                                     <td><?= $row['pengalaman'] ?></td>
                                     <td><?= $row['jenjang_karir'] ?></td>
                                     <td>
-                                        <a href="detail.php?id=<?= $row['id_konsultan'] ?>" class="btn btn-primary btn-sm">Detail</a>
+                                        <a href="edit.php?id=<?= $row['id_konsultan'] ?>" class="btn btn-primary btn-sm">Detail</a>
                                     </td>
                                 </tr>
                             <?php
