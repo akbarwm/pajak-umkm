@@ -8,8 +8,10 @@
   <meta name="description" content="">
   <!-- kalkulator css -->
   <link rel="stylesheet" type="text/css" href="stylekalkulator.css">
+  <link rel="stylesheet" href="icons/uicons/css/uicons-regular-rounded.css">
   <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/js/jquery/jquery-3.7.1.js"></script>
 </head>
 
 <body>
@@ -17,7 +19,10 @@
     <div class="row text-center ">
       <div class="col-md-12 text-center">
         <header style="margin-top:2rem; margin-left:60px;">
-          Kalkulator PPh 21 Masa
+        <div style="color: #63E6BE;">
+          <i class="fi fi-rr-calculator" style="font-size: 40px; "></i> 
+          KALKULATOR PAJAK PPh 21
+        </div>
         </header>
         <div class="progress-bar">
           <div class="step">
@@ -43,10 +48,79 @@
           </div>
         </div>
 
-        <div style="margin-left :200px" class="form-outer center">
-          <form name="formMasa" method="POST">
+        <div class="page-skema" id="pageSkema">
+          <div class="field">
+            <div class="label">Skema Pajak</div>
+            <select name="skema_pajak" id="skemaPajak" class="select">
+              <option value="">Pegawai Tetap</option>
+              <option value="">Pegawai Tidak Tetap</option>
+              <option value="">Bukan Pegawai</option>
+            </select>
+          </div>
+          <div class="field">
+            <div class="label">Jenis Pemotongan</div>
+            <select name="pemotongan_pegawai_tetap" id="jenisPemotongan" class="select">
+              <option value="setiap_masa">Setiap Masa</option>
+              <option value="masa_terakhir">Masa Pajak Terakhir</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="margin-left :200px; margin-bottom : 100px;" class="form-outer center " id="pemotonganSetiapMasa">
+          <form name="formMasaBulanan" method="POST">
+            <div class="page" id="pageBulanan">
+              <div class="field">
+								<div class="label">PTKP</div>
+								<select id="selectPTKP" class="select">
+									<option value="" disabled selected>Pilih PTKP</option>
+									<option value="54000000">TK/0</option>
+									<option value="58500000">TK/1</option>
+									<option value="63000000">TK/2</option>
+									<option value="67500000">TK/3</option>
+									<option value="58500000">K/0</option>
+									<option value="63000000">K/1</option>
+									<option value="67500000">K/2</option>
+									<option value="72000000">K/3</option>
+									<option value="112500000">K/I/0</option>
+									<option value="117000000">K/I/1</option>
+									<option value="121500000">K/I/2</option>
+									<option value="126000000">K/I/3</option>
+								</select>
+							</div>
+              <div class="field">
+                <div class="label-long">Penghasilan Bruto</div>
+                <div class="col-75">
+                  <input type="text" class="form-control" name="brutoSebulan" id="brutoSebulan" style="text-align:right; margin-right: 7px;" placeholder="0" onFocus="startCalc();" onBlur="stopCalc();">
+                </div>
+              </div>
+              <button class="btn" id="hitungBulanan">Hitung</button>
+              <div class="title">Perhitungan PPh 21</div>
+              <div class="field">
+                <div class="label-long">DPP</div>
+                <div class="col-75">
+                  <input type="text" disabled="true" readonly="readonly" class="form-control-select" name="dpp" id="dpp" style="text-align:right; margin-right: 7px;" placeholder="0" onFocus="startCalc();" onBlur="stopCalc();">
+                </div>
+              </div>
+              <div class="field">
+                <div class="label-long">Tarif</div>
+                <div class="col-75">
+                  <input type="text" disabled="true" readonly="readonly" class="form-control-select" name="ter" id="ter" style="text-align:right; margin-right: 7px;" placeholder="0" onFocus="startCalc();" onBlur="stopCalc();">
+                </div>
+              </div>
+              <div class="field">
+                <div class="label-long">PPh 21</div>
+                <div class="col-75">
+                  <input type="text" disabled="true" readonly="readonly" class="form-control-select" name="pph21Bulanan" id="pph21Bulanan" style="text-align:right; margin-right: 7px;" placeholder="0" onFocus="startCalc();" onBlur="stopCalc();">
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div style="margin-left :200px" class="form-outer center visually-hidden" id="pemotonganMasaTerakhir">
+          <form name="formMasaTerakhir" method="POST">
             <div class="page slide-page">
-              <div class="title">Informasi Wajib Pajak</div>
+              <div class="title">Informasi Wajib Pajak Masa Terakhir</div>
               <div class="field">
                 <div class="label">Status NPWP</div>
                 <select id="npwp" name="npwp" class="select">
@@ -54,22 +128,20 @@
                   <option value="0">Non NPWP</option>
                 </select>
               </div>
+              <!-- pakli gaming bilang suruh gabung -->
               <div class="field">
-                <div class="label">Status Kawin</div>
-                <select name="statusKawin" id="statusKawin" class="select">
-                  <option value="54000000" selected="selected">TK</option>
-                  <option value="58500000">K</option>
-                  <option value="112500000">KI</option>
-                </select>
-              </div>
-              <div class="field">
-                <div class="label">Tanggungan</div>
-                <select name="tanggungan" id="tanggungan" class="select">
-                  <option value="0" selected="selected">0</option>
-                  <option value="4500000">1</option>
-                  <option value="9000000">2</option>
-                  <option value="13500000">3</option>
-                </select>
+                <div class="label">PTKP</div>
+								<select id="selectPtkpTerakhir" class="select">
+									<option value="" disabled selected>Pilih PTKP</option>
+									<option value="54000000">TK/0 - 54000000</option>
+									<option value="58500000">TK/1 - 58500000</option>
+									<option value="63000000">TK/2 - 63000000</option>
+									<option value="67500000">TK/3 - 67500000</option>
+									<option value="58500000">K/0 - 58500000</option>
+									<option value="63000000">K/1 - 63000000</option>
+									<option value="67500000">K/2 - 67500000</option>
+									<option value="72000000">K/3 - 72000000</option>
+								</select>
               </div>
               <div class="field">
                 <label class="label">Masa Penghasilan</label>
@@ -89,12 +161,12 @@
                     <option value="12">Desember</option>
                   </select>
                 </div>
-                <div style="float:left;">
+                <div style="float:left; margin-left: 30px; margin-right: -30px;">
                   &nbsp;&nbsp;s/d&nbsp;
                 </div>
                 <div class="select-month">
                   <select id="masaAkhir" class="form-control-select">
-                    <option value="1" selected="selected">Januari</option>
+                    <option value="1">Januari</option>
                     <option value="2">Februari</option>
                     <option value="3">Maret</option>
                     <option value="4">April</option>
@@ -110,33 +182,7 @@
                 </div>
               </div>
               <div class="field">
-                <div class="label">Status Masuk</div>
-                <select id="statusMasuk" class="select">
-                  <option value="---" selected="selected">---</option>
-                  <option value="baru">Pegawai Baru</option>
-                  <option value="pindah">Pegawai Pindahan</option>
-                  <option value="ekspatriat">Ekspatriat</option>
-                </select>
-              </div>
-              <div class="title">Konfigurasi:</div>
-              <div class="field">
-                <div class="label">Tunjangan Pajak</div>
-                <input name="rbTunjPajak" type="radio" value="grossup" class="radio">
-                <label for="" class="label-radio">Gross-up</label>
-                <input checked="checked" name="rbTunjPajak" type="radio" value="nongrossup" class="radio">
-                <label for="" class="label-radio">Non Gross-up</label>
-              </div>
-              <div class="field">
-                <div class="label">Ketentuan PTKP</div>
-                <select id="ketentuan_ptkp" class="select">
-                  <option value="2011">Januari 2011 - Desember 2012</option>
-                  <option value="2013">Januari 2013 - Desember 2014</option>
-                  <option value="2015">Januari 2015 - Desember 2015</option>
-                  <option value="2016" selected="selected">Mulai Januari 2016</option>
-                </select>
-              </div>
-              <div class="field">
-                <button class="firstNext next">Selanjutnya</button>
+                <button class="firstNext next" id="nextAwal">Selanjutnya</button>
                 <button class="firstNext next">
                   <a href="index.php">BERANDA</a>
                 </button>
@@ -188,7 +234,7 @@
                 </div>
               </div>
               <div class="field">
-                <div class="label-long">8. Penghasilan Bruto</div>
+                <div class="label-long">8. Penghasilan Bruto (1-7)</div>
                 <div class="col-75">
                   <input type="text" disabled="true" readonly="readonly" class="form-control" name="hasilBruto" id="hasilBruto" style="text-align:right" placeholder="0">
                 </div>
@@ -197,7 +243,7 @@
               <div class="field">
                 <div class="label-long">9. Biaya Jabatan</div>
                 <div class="col-75">
-                  <input type="text" class="form-control" name="biayaJabatan" id="biayaJabatan" style="text-align:right;" placeholder="0">
+                  <input type="text" disabled="true" readonly="readonly" class="form-control" name="biayaJabatan" maxlength="6000000" id="biayaJabatan" style="text-align:right;" placeholder="0">
                 </div>
               </div>
               <div class="field">
@@ -206,114 +252,95 @@
                   <input type="text" class="form-control" name="iuranPensiun" id="iuranPensiun" style="text-align:right" placeholder="0" onFocus="startCalc();" onBlur="stopCalc();">
                 </div>
               </div>
+              <div class="field">
+                <div class="label-long">11. Zakat/Sumbangan Keagamaan yang Bersifat Wajib yang Dibayarkan Melalui Pemberi Kerja</div>
+                <div class="col-75">
+                  <input type="text" class="form-control" name="zakatSumbangan" id="zakatSumbangan" style="text-align:right" placeholder="0" onFocus="startCalc();" onBlur="stopCalc();">
+                </div>
+              </div>
+              <div class="field">
+                <div class="label-long">12. Jumlah Pengurang Setahun (9-11)</div>
+                <div class="col-75">
+                  <input type="text" disabled="true" readonly="readonly" class="form-control" name="pengurangSetahun" id="pengurangSetahun" placeholder="0" style="text-align:right">
+                </div>
+              </div>
               <div class="field btns">
                 <button class="prev-1 prev">Sebelumnya</button>
                 <button class="next-1 next">Selanjutnya</button>
               </div>
             </div>
-
-
             <div class="page">
               <div class="title">C. Penghitungan PPh Pasal 21:</div>
-              <div class="field-pph">
-                <div class="label-pph">11. Penghasilan Bruto Setahun</div>
+              <!-- <div class="field-pph">
+                <div class="label-pph">12. Penghasilan Bruto Setahun</div>
                 <div class="col-75">
                   <input type="text" disabled="true" readonly="readonly" class="form-control" name="brutoSetahun" id="brutoSetahun" placeholder="0" style="text-align:right">
                 </div>
-              </div>
-              <div class="field-pph">
-                <div class="label-pph">12. Biaya Jabatan Setahun</div>
+              </div> -->
+              <!-- <div class="field-pph">
+                <div class="label-pph">13. Biaya Jabatan Setahun</div>
                 <div class="col-75">
                   <input type="text" disabled="true" readonly="readonly" class="form-control" name="jabatanSetahun" id="jabatanSetahun" placeholder="0" style="text-align:right">
                 </div>
-              </div>
-              <div class="field-pph">
-                <div class="label-pph">13. Iuran Pensiun Setahun</div>
+              </div> -->
+              <!-- <div class="field-pph">
+                <div class="label-pph">14. Iuran Pensiun Setahun</div>
                 <div class="col-75">
                   <input type="text" disabled="true" readonly="readonly" class="form-control" name="iuranSetahun" id="iuranSetahun" placeholder="0" style="text-align:right">
                 </div>
-              </div>
-              <div class="field-pph">
-                <div class="label-pph">14. Jumlah Pengurang Setahun</div>
-                <div class="col-75">
-                  <input type="text" disabled="true" readonly="readonly" class="form-control" name="pengurangSetahun" id="pengurangSetahun" placeholder="0" style="text-align:right">
-                </div>
-              </div>
-              <div class="field-pph">
-                <div class="label-pph">15. Penghasilan Neto</div>
+              </div> -->
+              <div class="field">
+                <div class="label-long">13. Penghasilan Neto (8 - 12)</div>
                 <div class="col-75">
                   <input type="text" disabled="true" readonly="readonly" class="form-control" name="hasilNeto" id="hasilNeto" placeholder="0" style="text-align:right">
                 </div>
               </div>
-              <div class="field-pph">
-                <div class="label-pph">16. Penghasilan Neto Masa Sebelumnya</div>
+              <div class="field">
+                <div class="label-long">14. Penghasilan Neto Masa Pajak Sebelumnya</div>
                 <div class="col-75">
-                  <input type="text" disabled="true" readonly="" class="form-control" name="netoSebelum" id="netoSebelum" placeholder="0" style="text-align:right">
+                  <input type="text" class="form-control" name="netoSebelum" id="netoSebelum" placeholder="0" style="text-align:right" onFocus="startCalc();" onBlur="stopCalc();">
                 </div>
               </div>
-              <div class="field-pph">
-                <div class="label-pph">17. Penghasilan Neto Setahun/Disetahunkan</div>
+              <div class="field">
+                <div class="label-long">15. Jumlah Penghasilan Neto untuk Penghitungan PPh Pasal 21 (Setahun/Disetahunkan)</div>
                 <div class="col-75">
                   <input type="text" disabled="true" readonly="readonly" class="form-control" name="netoSetahun" id="netoSetahun" placeholder="0" style="text-align:right">
                 </div>
               </div>
-              <div class="field-pph">
-                <div class="label-pph">18. Penghasilan Tidak Kena Pajak</div>
+              <div class="field">
+                <div class="label-long">16. Penghasilan Tidak Kena Pajak (PTKP)</div>
                 <div class="col-75">
                   <input type="text" disabled="true" readonly="readonly" class="form-control" name="ptkp" id="ptkp" style="text-align:right" placeholder="0" onFocus="startCalc();" onBlur="stopCalc();">
                 </div>
               </div>
-              <div class="field-pph">
-                <div class="label-pph">19. PKP Setahun/Disetahunkan</div>
+              <div class="field">
+                <div class="label-long">17. Penghasilan Kena Pajak (PKP) Setahun/Disetahunkan (15 - 16)</div>
                 <div class="col-75">
                   <input type="text" disabled="true" readonly="readonly" class="form-control" name="pkp" id="pkp" placeholder="0" style="text-align:right">
                 </div>
               </div>
-              <div class="field-pph">
-                <div class="label-pph">20. PPh Pasal 21 atas PKP</div>
+              <div class="field">
+                <div class="label-long">18. PPh Pasal 21 atas Penghasilan Kena Pajak (PKP) Setahun/Disetahunkan</div>
                 <div class="col-75">
                   <input type="text" disabled="true" readonly="readonly" class="form-control" name="pkp21" id="pkp21" placeholder="0" style="text-align:right">
                 </div>
               </div>
-              <div class="field-pph">
-                <div class="label-pph">21. PPh Pasal 21 Dipotong Masa Sebelumnya</div>
+              <div class="field">
+                <div class="label-long">19. PPh Pasal 21 Dipotong Masa Pajak Sebelumnya</div>
                 <div class="col-75">
-                  <input type="text" disabled="true" readonly="" class="form-control" name="pph21Sebelum" id="pph21Sebelum" placeholder="0" style="text-align:right">
+                  <input type="text" class="form-control" name="pph21Sebelum" id="pph21Sebelum" placeholder="0" style="text-align:right" onFocus="startCalc();" onBlur="stopCalc();">
                 </div>
               </div>
-              <div class="field-pph">
-                <div class="label-pph">22. PPh Pasal 21 Terutang Setahun/Disetahunkan</div>
+              <!-- <div class="field-pph">
+                <div class="label-pph">23. PPh Pasal 21 Terutang Setahun/Disetahunkan</div>
                 <div class="col-75">
                   <input type="text" disabled="true" readonly="readonly" class="form-control" name="pph21Terutang" id="pph21Terutang" placeholder="0" style="text-align:right">
                 </div>
-              </div>
-              <div class="field-pph">
-                <div class="label-pph">
-                  23. <button type="button" class="collapsible"> >>
-                  </button> PPh Pasal 21 Terutang bulan ini
-                </div>
+              </div> -->
+              <div class="field">
+                <div class="label-long">20. PPh Pasal 21 Terutang (18 - 19)</div>
                 <div class="col-75">
-                  <input type="text" disabled="true" readonly="readonly" class="form-control" id="pph21TerutangSebulan" name="pph21TerutangSebulan" placeholder="0" style="text-align:right">
-                </div>
-              </div>
-              <div class="content-collapse" style="margin-top :5px">
-                <div class="field-pph">
-                  <label class="label-pph"> PKP atas Penghasilan Teratur Setahun</label>
-                  <div class="col-75">
-                    <input type="text" disabled="true" readonly="readonly" class="form-control" name="pkpSetahun" id="pkpTeraturSetahun" placeholder="0" style="text-align:right">
-                  </div>
-                </div>
-                <div class="field-pph">
-                  <label class="label-pph"> PPh Pasal 21 atas Penghasilan Teratur Setahun</label>
-                  <div class="col-75">
-                    <input type="text" disabled="true" readonly="readonly" class="form-control" name="pph21Teratur" id="pph21Teratur" placeholder="0" style="text-align:right">
-                  </div>
-                </div>
-                <div class="field-pph">
-                  <label class="label-pph">PPh Pasal 21 atas Penghasilan Tidak Teratur</label>
-                  <div class="col-75">
-                    <input type="text" disabled="true" readonly="readonly" class="form-control" name="pph21TakTeratur" id="pph21TakTeratur" placeholder="0" style="text-align:right">
-                  </div>
+                  <input type="text" disabled="true" readonly="readonly" class="form-control" id="pph21Terutang" name="pph21Terutang" placeholder="0" style="text-align:right">
                 </div>
               </div>
               <div class="field btns" style="padding-top: 20px;">
@@ -323,6 +350,7 @@
             </div>
           </form>
         </div>
+
       </div>
     </div>
   </div>
