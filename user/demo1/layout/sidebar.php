@@ -47,7 +47,7 @@ function site_url()
 				],
 				urls: ['../assets/css/fonts.min.css']
 			},
-			active: function () {
+			active: function() {
 				sessionStorage.fonts = true;
 			}
 		});
@@ -66,8 +66,7 @@ function site_url()
 				<a href="index.php" class="logo">
 					<img style="width:90px;" src="../assets/img/logo.png" alt="navbar brand" class="navbar-brand">
 				</a>
-				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"
-					data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon">
 						<i class="icon-menu"></i>
 					</span>
@@ -98,26 +97,24 @@ function site_url()
 					</div>
 					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
 						<li class="nav-item toggle-nav-search hidden-caret">
-							<a class="nav-link" data-toggle="collapse" href="#search-nav" role="button"
-								aria-expanded="false" aria-controls="search-nav">
+							<a class="nav-link" data-toggle="collapse" href="#search-nav" role="button" aria-expanded="false" aria-controls="search-nav">
 								<i class="fa fa-search"></i>
 							</a>
 						</li>
 						<li class="nav-item dropdown hidden-caret">
-							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#"
-								aria-expanded="false">
+							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
 								<div class="avatar-sm">
-									<img src="<?= $row['PROFILE'] ? './tables/upload_profil/' . $row['PROFILE'] :  '' ?>"
-										alt="..." class="avatar-img rounded-circle">
+									<img src="tables/upload_profil/adminpria.png" alt="..." class="avatar-img rounded-circle">
 								</div>
+
 							</a>
 							<ul class="dropdown-menu dropdown-user animated fadeIn">
 								<div class="dropdown-user-scroll scrollbar-outer">
 									<li>
 										<div class="user-box">
-											<div class="avatar-lg"><img
-													src="<?= $row['PROFILE'] ? './tables/upload_profil/' . $row['PROFILE'] :  '' ?>"
-													alt="image profile" class="avatar-img rounded"></div>
+											<div class="avatar-lg">
+												<img src="tables/upload_profil/adminpria.png" alt="image profile" class="avatar-img rounded">
+											</div>
 											<div class="u-text">
 												<h4>Admin</h4>
 											</div>
@@ -144,9 +141,7 @@ function site_url()
 					<!-- User -->
 					<div class="user">
 						<div class="avatar-sm float-left mr-2">
-							<img aria-label="User's Profile Picture"
-								src="<?= $row['PROFILE'] ? './tables/upload_profil/' . $row['PROFILE'] :  '' ?>"
-								alt="User's Profile Picture" class="avatar-img rounded-circle">
+							<img aria-label="User's Profile Picture" src="<?= $row['PROFILE'] ? 'tables/upload_profil/adminpria.png' : '' ?>" alt="User's Profile Picture" class="avatar-img rounded-circle">
 						</div>
 						<div class="info">
 							<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
@@ -162,8 +157,7 @@ function site_url()
 
 					<ul class="nav nav-primary">
 						<!-- Dashboard -->
-						<li
-							class="nav-item <?= (full_path() == site_url() . '/user/demo1/index.php') ? 'active' : '' ?>">
+						<li class="nav-item <?= (full_path() == site_url() . '/user/demo1/index.php') ? 'active' : '' ?>">
 							<a href="index.php" class="collapsed" aria-expanded="false">
 								<i class="fas fa-home"></i>
 								<p>Dashboard</p>
@@ -179,24 +173,20 @@ function site_url()
 							<h4 class="text-section">Menu</h4>
 						</li>
 						<!-- Berita -->
-						<li
-							class="nav-item <?= (full_path() == site_url() . '/user/demo1/creat_berita.php' || full_path() == site_url() . '/user/demo1/list_berita.php') ? 'active' : '' ?>">
+						<li class="nav-item <?= (full_path() == site_url() . '/user/demo1/creat_berita.php' || full_path() == site_url() . '/user/demo1/list_berita.php') ? 'active' : '' ?>">
 							<a data-toggle="collapse" href="#berita">
 								<i class="fas fa-newspaper"></i>
 								<p>Manajemen Berita</p>
 								<span class="caret"></span>
 							</a>
-							<div class="collapse <?= (full_path() == site_url() . '/user/demo1/creat_berita.php' || (explode("?", full_path())[0] == site_url() . '/user/demo1/edit_berita.php') || full_path() == site_url() . '/user/demo1/list_berita.php') ? 'show' : '' ?>"
-								id="berita">
+							<div class="collapse <?= (full_path() == site_url() . '/user/demo1/creat_berita.php' || (explode("?", full_path())[0] == site_url() . '/user/demo1/edit_berita.php') || full_path() == site_url() . '/user/demo1/list_berita.php') ? 'show' : '' ?>" id="berita">
 								<ul class="nav nav-collapse">
-									<li
-										class="<?= (full_path() == site_url() . '/user/demo1/creat_berita.php') || (full_path() == site_url() . '/user/demo1/edit_berita.php') ? 'active' : '' ?>">
+									<li class="<?= (full_path() == site_url() . '/user/demo1/creat_berita.php') || (full_path() == site_url() . '/user/demo1/edit_berita.php') ? 'active' : '' ?>">
 										<a href="creat_berita.php">
 											<span class="sub-item ">Tambah Berita</span>
 										</a>
 									</li>
-									<li
-										class="<?= (full_path() == site_url() . '/user/demo1/list_berita.php') ? 'active' : '' ?>">
+									<li class="<?= (full_path() == site_url() . '/user/demo1/list_berita.php') ? 'active' : '' ?>">
 										<a href="list_berita.php">
 											<span class="sub-item">List Berita</span>
 										</a>
@@ -205,18 +195,15 @@ function site_url()
 							</div>
 						</li>
 						<!-- Usaha -->
-						<li
-							class="nav-item <?= (full_path() == site_url() . '/user/demo1/list_usaha.php') ? 'active' : '' ?>">
+						<li class="nav-item <?= (full_path() == site_url() . '/user/demo1/list_usaha.php') ? 'active' : '' ?>">
 							<a data-toggle="collapse" href="#usaha">
 								<i class="fas fa-newspaper"></i>
 								<p>Manajemen Usaha</p>
 								<span class="caret"></span>
 							</a>
-							<div class="collapse <?= (full_path() == site_url() . '/user/demo1/creat_usaha.php' || (explode("?", full_path())[0] == site_url() . '/user/demo1/edit_usaha.php') || full_path() == site_url() . '/user/demo1/list_usaha.php') ? 'show' : '' ?>"
-								id="usaha">
+							<div class="collapse <?= (full_path() == site_url() . '/user/demo1/creat_usaha.php' || (explode("?", full_path())[0] == site_url() . '/user/demo1/edit_usaha.php') || full_path() == site_url() . '/user/demo1/list_usaha.php') ? 'show' : '' ?>" id="usaha">
 								<ul class="nav nav-collapse">
-									<li
-										class="<?= (full_path() == site_url() . '/user/demo1/list_usaha.php') ? 'active' : '' ?>">
+									<li class="<?= (full_path() == site_url() . '/user/demo1/list_usaha.php') ? 'active' : '' ?>">
 										<a href="list_usaha.php">
 											<span class="sub-item">List Usaha</span>
 										</a>
@@ -225,24 +212,20 @@ function site_url()
 							</div>
 						</li>
 						<!-- Pajak -->
-						<li
-							class="nav-item <?= (full_path() == site_url() . '/user/demo1/creat_peraturanpajak.php' || full_path() == site_url() . '/user/demo1/list_peraturanpajak.php') ? 'active' : '' ?>">
+						<li class="nav-item <?= (full_path() == site_url() . '/user/demo1/creat_peraturanpajak.php' || full_path() == site_url() . '/user/demo1/list_peraturanpajak.php') ? 'active' : '' ?>">
 							<a data-toggle="collapse" href="#peraturan">
 								<i class="far fa-newspaper"></i>
 								<p>Manajemen Pajak</p>
 								<span class="caret"></span>
 							</a>
-							<div class="collapse <?= (full_path() == site_url() . '/user/demo1/creat_peraturanpajak.php' || (explode("?", full_path())[0] == site_url() . '/user/demo1/edit_peraturanpajak.php') || full_path() == site_url() . '/user/demo1/list_peraturanpajak.php') ? 'show' : '' ?>"
-								id="peraturan">
+							<div class="collapse <?= (full_path() == site_url() . '/user/demo1/creat_peraturanpajak.php' || (explode("?", full_path())[0] == site_url() . '/user/demo1/edit_peraturanpajak.php') || full_path() == site_url() . '/user/demo1/list_peraturanpajak.php') ? 'show' : '' ?>" id="peraturan">
 								<ul class="nav nav-collapse">
-									<li
-										class="<?= (full_path() == site_url() . '/user/demo1/creat_peraturanpajak.php') || (full_path() == site_url() . '/user/demo1/edit_peraturanpajak.php') ? 'active' : '' ?>">
+									<li class="<?= (full_path() == site_url() . '/user/demo1/creat_peraturanpajak.php') || (full_path() == site_url() . '/user/demo1/edit_peraturanpajak.php') ? 'active' : '' ?>">
 										<a href="creat_peraturanpajak.php">
 											<span class="sub-item">Tambah Pajak</span>
 										</a>
 									</li>
-									<li
-										class="<?= (full_path() == site_url() . '/user/demo1/list_peraturanpajak.php') ? 'active' : '' ?>">
+									<li class="<?= (full_path() == site_url() . '/user/demo1/list_peraturanpajak.php') ? 'active' : '' ?>">
 										<a href="list_peraturanpajak.php">
 											<span class="sub-item">List Pajak</span>
 										</a>
@@ -251,24 +234,20 @@ function site_url()
 							</div>
 						</li>
 						<!-- Pelatihan -->
-						<li
-							class="nav-item <?= (full_path() == site_url() . '/user/demo1/create_pelatihan.php'  || full_path() == site_url() . '/user/demo1/list_pelatihan.php') ? 'active' : '' ?>">
+						<li class="nav-item <?= (full_path() == site_url() . '/user/demo1/create_pelatihan.php'  || full_path() == site_url() . '/user/demo1/list_pelatihan.php') ? 'active' : '' ?>">
 							<a data-toggle="collapse" href="#pelatihan">
 								<i class="fas fa-user-plus"></i>
 								<p>Manajemen Pelatihan</p>
 								<span class="caret"></span>
 							</a>
-							<div class="collapse <?= (full_path() == site_url() . '/user/demo1/create_pelatihan.php' || (explode("?", full_path())[0] == site_url() . '/user/demo1/edit_pelatihan.php') || full_path() == site_url() . '/user/demo1/list_pelatihan.php')  ? 'show' : '' ?>"
-								id="pelatihan">
+							<div class="collapse <?= (full_path() == site_url() . '/user/demo1/create_pelatihan.php' || (explode("?", full_path())[0] == site_url() . '/user/demo1/edit_pelatihan.php') || full_path() == site_url() . '/user/demo1/list_pelatihan.php')  ? 'show' : '' ?>" id="pelatihan">
 								<ul class="nav nav-collapse">
-									<li
-										class="<?= (full_path() == site_url() . '/user/demo1/create_pelatihan.php') || (full_path() == site_url() . '/user/demo1/edit_pelatihan.php') ? 'active' : '' ?>">
+									<li class="<?= (full_path() == site_url() . '/user/demo1/create_pelatihan.php') || (full_path() == site_url() . '/user/demo1/edit_pelatihan.php') ? 'active' : '' ?>">
 										<a href="create_pelatihan.php">
 											<span class="sub-item">Tambah Materi </span>
 										</a>
 									</li>
-									<li
-										class="<?= (full_path() == site_url() . '/user/demo1/list_pelatihan.php') ? 'active' : '' ?>">
+									<li class="<?= (full_path() == site_url() . '/user/demo1/list_pelatihan.php') ? 'active' : '' ?>">
 										<a href="list_pelatihan.php">
 											<span class="sub-item">List Materi </span>
 										</a>
@@ -277,24 +256,20 @@ function site_url()
 							</div>
 						</li>
 						<!-- Konsultan -->
-						<li
-							class="nav-item <?= (full_path() == site_url() . '/user/demo1/create_konsultan.php' || full_path() == site_url() . '/user/demo1/list_konsultan.php') ? 'active' : '' ?>">
+						<li class="nav-item <?= (full_path() == site_url() . '/user/demo1/create_konsultan.php' || full_path() == site_url() . '/user/demo1/list_konsultan.php') ? 'active' : '' ?>">
 							<a data-toggle="collapse" href="#konsultan">
 								<i class="fas fa-user-plus"></i>
 								<p>Manajemen Konsultan</p>
 								<span class="caret"></span>
 							</a>
-							<div class="collapse <?= (full_path() == site_url() . '/user/demo1/create_konsultan.php' || (explode("?", full_path())[0] == site_url() . '/user/demo1/edit_konsultan.php') || full_path() == site_url() . '/user/demo1/list_konsultan.php')  ? 'show' : '' ?>"
-								id="konsultan">
+							<div class="collapse <?= (full_path() == site_url() . '/user/demo1/create_konsultan.php' || (explode("?", full_path())[0] == site_url() . '/user/demo1/edit_konsultan.php') || full_path() == site_url() . '/user/demo1/list_konsultan.php')  ? 'show' : '' ?>" id="konsultan">
 								<ul class="nav nav-collapse">
-									<li
-										class="<?= (full_path() == site_url() . '/user/demo1/create_konsultan.php') || (full_path() == site_url() . '/user/demo1/edit_konsultan.php') ? 'active' : '' ?>">
+									<li class="<?= (full_path() == site_url() . '/user/demo1/create_konsultan.php') || (full_path() == site_url() . '/user/demo1/edit_konsultan.php') ? 'active' : '' ?>">
 										<a href="create_konsultan.php">
 											<span class="sub-item">Tambah Konsultan</span>
 										</a>
 									</li>
-									<li
-										class="<?= (full_path() == site_url() . '/user/demo1/list_konsultan.php') ? 'active' : '' ?>">
+									<li class="<?= (full_path() == site_url() . '/user/demo1/list_konsultan.php') ? 'active' : '' ?>">
 										<a href="list_konsultan.php">
 											<span class="sub-item">List Konsultan </span>
 										</a>
@@ -303,24 +278,20 @@ function site_url()
 							</div>
 						</li>
 						<!-- Kuis -->
-						<li
-							class="nav-item <?= (full_path() == site_url() . '/user/demo1/list_kuis.php' || full_path() == site_url() . '/user/demo1/riwayat_pengerjaan.php') ? 'active' : '' ?>">
+						<li class="nav-item <?= (full_path() == site_url() . '/user/demo1/list_kuis.php' || full_path() == site_url() . '/user/demo1/riwayat_pengerjaan.php') ? 'active' : '' ?>">
 							<a data-toggle="collapse" href="#kuis">
 								<i class="far fa-list-alt"></i>
 								<p>Manajemen Kuis</p>
 								<span class="caret"></span>
 							</a>
-							<div class="collapse <?= (full_path() == site_url() . '/user/demo1/list_kuis.php' || (explode("?", full_path())[0] == site_url() . '/user/demo1/create_kuis.php') || (explode("?", full_path())[0] == site_url() . '/user/demo1/list_soal.php') || full_path() == site_url() . '/user/demo1/riwayat_kuis.php')  ? 'show' : '' ?>"
-								id="kuis">
+							<div class="collapse <?= (full_path() == site_url() . '/user/demo1/list_kuis.php' || (explode("?", full_path())[0] == site_url() . '/user/demo1/create_kuis.php') || (explode("?", full_path())[0] == site_url() . '/user/demo1/list_soal.php') || full_path() == site_url() . '/user/demo1/riwayat_kuis.php')  ? 'show' : '' ?>" id="kuis">
 								<ul class="nav nav-collapse">
-									<li
-										class="<?= (full_path() == site_url() . '/user/demo1/list_kuis.php') || (full_path() == site_url() . '/user/demo1/create_kuis.php') || (full_path() == site_url() . '/user/demo1/list_soal.php') ? 'active' : '' ?>">
+									<li class="<?= (full_path() == site_url() . '/user/demo1/list_kuis.php') || (full_path() == site_url() . '/user/demo1/create_kuis.php') || (full_path() == site_url() . '/user/demo1/list_soal.php') ? 'active' : '' ?>">
 										<a href="list_kuis.php">
 											<span class="sub-item">List Kuis</span>
 										</a>
 									</li>
-									<li
-										class="<?= (full_path() == site_url() . '/user/demo1/riwayat_kuis.php') ? 'active' : '' ?>">
+									<li class="<?= (full_path() == site_url() . '/user/demo1/riwayat_kuis.php') ? 'active' : '' ?>">
 										<a href="riwayat_kuis.php">
 											<span class="sub-item">Riwayat Pengerjaan</span>
 										</a>
@@ -337,8 +308,7 @@ function site_url()
 							</span>
 							<h4 class="text-section">Akun</h4>
 						</li>
-						<li
-							class="nav-item  <?= (full_path() == site_url() . '/user/demo1/dashboard_admin.php') ? 'active' : '' ?>">
+						<li class="nav-item  <?= (full_path() == site_url() . '/user/demo1/dashboard_admin.php') ? 'active' : '' ?>">
 							<a href="dashboard_admin.php">
 								<i class="fas fa-user"></i>
 								<p>Pengaturan Profil</p>

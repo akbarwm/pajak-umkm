@@ -1,6 +1,8 @@
 <?php
-error_reporting(false); session_start();
-include('../config/session.php');$id = $_SESSION['id_user'];
+error_reporting(false);
+session_start();
+include('../config/session.php');
+$id = $_SESSION['id_user'];
 $err1 = null;
 $err2 = null;
 $sql = "SELECT * FROM `users` WHERE id='$id'";
