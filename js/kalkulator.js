@@ -26,14 +26,14 @@ nextBtnSec.addEventListener("click", function (event) {
 });
 nextBtnSec.addEventListener("click", function (event) {
 	event.preventDefault();
-	slidePage.style.marginLeft = "-50%";
+	slidePage.style.marginLeft = "-52.5%";
 	bullet[current - 1].classList.add("active");
 	progressCheck[current - 1].classList.add("active");
 	current += 1;
 });
 prevBtnSec.addEventListener("click", function (event) {
 	event.preventDefault();
-	slidePage.style.marginLeft = "0%";
+	slidePage.style.marginLeft = "2.5%";
 	slideSkema.classList.remove("visually-hidden");
 	bullet[current - 2].classList.remove("active");
 	progressCheck[current - 2].classList.remove("active");
@@ -223,7 +223,6 @@ function calc() {
 		valuePkpSetahun = 0
 	}
 	document.formMasaTerakhir.pkp.value = numeral(valuePkpSetahun).format();
-
 	// document.formMasaTerakhir.pkp.value = this.countPajakProgresif(valueNetoSetahun - valuePtkp, document.getElementById('npwp').value);
 	var valuePkp21 = countPajakProgresif(valuePkpSetahun, Boolean(document.formMasaTerakhir.npwp.value));
 	skemaPerhitungan = document.formMasaTerakhir.skemaPerhitungan.value;
@@ -250,7 +249,6 @@ function calc() {
 		}
 	}
 	document.formMasaTerakhir.pkp21.value = numeral(valuePkp21).format();
-	
 
 	valuePph21Sebelum = numeral(formMasaTerakhir.pph21Sebelum.value);
 	document.getElementById('pph21Sebelum').value = valuePph21Sebelum.format();
@@ -561,13 +559,16 @@ function calc() {
 		var hitungPphBulanan = DPP * valueTarif / 100;
 		document.formMasaBulanan.pph21Bulanan.value = numeral(hitungPphBulanan).format();
 	});
-}
+
 
 // Pegawai Tidak Tetap
 
+var valueBrutoTidakTetapHarian = numeral(document.getElementById("brutoTidakTetapHarian").value);
+document.getElementById("brutoTidakTetapHarian").value = valueBrutoTidakTetapHarian.format();
+
 // pegawai tidak tetap harian
 function hitungTidakTetapHarian() {
-	let penghasilanBruto = parseFloat(document.getElementById("brutoTidakTetapHarian").value);
+	let penghasilanBruto = valueBrutoTidakTetapHarian.value();
 	let dpp, tarif, pph21;
 
 	// Tarif Pajak TER Harian
@@ -599,6 +600,14 @@ function hitungTidakTetapHarian() {
 	document.getElementById("dppTidakTetapHarian").value = numeral(dpp).format();
 	document.getElementById("tarifTidakTetapHarian").value = (tarif * 100).toFixed(2) + '%';
 	document.getElementById("pph21TidakTetapHarian").value = numeral(pph21).format();
+}
+
+const btnHitungTidakTetapHarian = document.getElementById("hitungTidakTetapHarian");
+btnHitungTidakTetapHarian.addEventListener("click", function (event) {
+	event.preventDefault();
+	hitungTidakTetapHarian();
+});
+
 }
 
 // pegawai tidak tetap bulanan

@@ -10,6 +10,8 @@
    <link rel="stylesheet" type="text/css" href="stylekalkulator.css">
    <link rel="stylesheet" href="icons/uicons/css/uicons-regular-rounded.css">
    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
       integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
       crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -17,14 +19,15 @@
 </head>
 
 <body>
-   <div class="container text-center" style="width:100%;">
-      <div class="row text-center ">
+   <div class="container text-center" style="width:100%; margin-top: 50px;">
+      <div class="row text-center">
          <div class="col-md-12 text-center">
             <header>
-               <div style="color: #63E6BE;">
-                  <i class="fi fi-rr-calculator" style="font-size: 40px; "></i>
-                  KALKULATOR PAJAK PPh 21
+               <div style="color: green; margin-bottom: 20px;">
+                  <i class="fa-solid fa-calculator" style="font-size: 40px; margin-right: 10px;"></i>
+                  KALKULATOR PAJAK <span style="font-size: 0.9rem;">PPh 21</span>
                </div>
+               <hr>
             </header>
             <div class="progress-bar" id="progressBar">
                <div class="step">
@@ -79,12 +82,11 @@
             <!-- Pegawai Tetap -->
 
             <!-- pegawai tetap bulanan -->
-            <div style="margin-left :200px; margin-bottom : 100px;" class="form-outer center "
-               id="pemotonganSetiapMasa">
+            <div style="margin-left :200px" class="form-outer center" id="pemotonganSetiapMasa">
                <form name="formMasaBulanan" method="POST">
-                  <div class="page" id="pageBulanan">
+                  <div class="page slide-page2" id="pageBulanan">
                      <div class="field">
-                        <div class="label">PTKP</div>
+                        <div class="label1">PTKP</div>
                         <select id="selectPTKP" class="select">
                            <option value="" disabled selected>Pilih PTKP</option>
                            <option value="54000000">TK/0</option>
@@ -103,17 +105,17 @@
                      </div>
                      <div class="field">
                         <div class="label-long">Penghasilan Bruto</div>
-                        <div class="col-75">
+                        <div class="input-col-75">
                            <input type="text" class="form-control" name="brutoSebulan" id="brutoSebulan"
                               style="text-align:right; margin-right: 7px;" placeholder="0" onFocus="startCalc();"
                               onBlur="stopCalc();">
                         </div>
                      </div>
-                     <button class="btn" id="hitungBulanan">Hitung</button>
-                     <div class="title">Perhitungan PPh 21</div>
+                     <button type="button" id="hitungBulanan" class="hitung" onclick="hitungBulanan()">Hitung</button>
+                     <div class="title1">Penghitungan PPh Pasal 21</div>
                      <div class="field">
                         <div class="label-long">DPP</div>
-                        <div class="col-75">
+                        <div class="input-col-75">
                            <input type="text" disabled="true" readonly="readonly" class="form-control-select" name="dpp"
                               id="dpp" style="text-align:right; margin-right: 7px;" placeholder="0"
                               onFocus="startCalc();" onBlur="stopCalc();">
@@ -121,7 +123,7 @@
                      </div>
                      <div class="field">
                         <div class="label-long">Tarif</div>
-                        <div class="col-75">
+                        <div class="input-col-75">
                            <input type="text" disabled="true" readonly="readonly" class="form-control-select" name="ter"
                               id="ter" style="text-align:right; margin-right: 7px;" placeholder="0"
                               onFocus="startCalc();" onBlur="stopCalc();">
@@ -129,7 +131,7 @@
                      </div>
                      <div class="field">
                         <div class="label-long">PPh 21</div>
-                        <div class="col-75">
+                        <div class="input-col-75">
                            <input type="text" disabled="true" readonly="readonly" class="form-control-select"
                               name="pph21Bulanan" id="pph21Bulanan" style="text-align:right; margin-right: 7px;"
                               placeholder="0" onFocus="startCalc();" onBlur="stopCalc();">
@@ -143,7 +145,7 @@
             <div style="margin-left :200px" class="form-outer center visually-hidden" id="pemotonganMasaTerakhir">
                <form name="formMasaTerakhir" method="POST">
                   <div class="page slide-page">
-                     <div class="title">Informasi Wajib Pajak Masa Terakhir</div>
+                     <div class="title1">Informasi Wajib Pajak Masa Terakhir</div>
                      <div class="field">
                         <div class="label">Status NPWP</div>
                         <select id="npwp" name="npwp" class="select">
@@ -203,10 +205,11 @@
                            </select>
                         </div>
                      </div>
-                     <div class="title">Konfigurasi</div>
+                     <div class="title2">Konfigurasi</div>
                      <div class="field">
-                        <div class="label">Skema Perhitungan</div>
-                        <select id="skemaPerhitungan" name="skema_perhitungan" class="select">
+                        <div class="label2">Skema Perhitungan</div>
+                        <select id="skemaPerhitungan" name="skema_perhitungan" style="margin-left: 19.5%;"
+                           class="select">
                            <option value="0" selected="selected">Gross</option>
                            <option value="1">Gross Up</option>
                         </select>
@@ -221,7 +224,7 @@
 
                   <!-- halaman 2 -->
                   <div class="page">
-                     <div class="title">A. Penghasilan:</div>
+                     <div style="color: green;" class="title">A. Penghasilan:</div>
                      <div class="field">
                         <div class="label-long">1. Gaji/Pensiun atau THT/JHT</div>
                         <div class="col-75">
@@ -278,7 +281,7 @@
                               id="hasilBruto" style="text-align:right" placeholder="0">
                         </div>
                      </div>
-                     <div class="title">B. Pengurang:</div>
+                     <div style="color: green;" class="title">B. Pengurang:</div>
                      <div class="field">
                         <div class="label-long">9. Biaya Jabatan</div>
                         <div class="col-75">
@@ -317,7 +320,7 @@
 
                   <!-- halaman 3 -->
                   <div class="page">
-                     <div class="title">C. Penghitungan PPh Pasal 21:</div>
+                     <div style="color: green;" class="title">C. Penghitungan PPh Pasal 21:</div>
                      <!-- <div class="field-pph">
                 <div class="label-pph">12. Penghasilan Bruto Setahun</div>
                 <div class="col-75">
@@ -374,7 +377,8 @@
                         </div>
                      </div>
                      <div class="field">
-                        <div class="label-long">18. PPh Pasal 21 atas Penghasilan Kena Pajak (PKP) Setahun/Disetahunkan
+                        <div class="label-long">18. PPh Pasal 21 atas Penghasilan Kena Pajak (PKP)
+                           Setahun/Disetahunkan
                         </div>
                         <div class="col-75">
                            <input type="text" disabled="true" readonly="readonly" class="form-control" name="pkp21"
@@ -401,109 +405,114 @@
                               id="pph21Terutang" name="pph21Terutang" placeholder="0" style="text-align:right">
                         </div>
                      </div>
-                     <div class="field btns" style="padding-top: 20px;">
+                     <div class="field btns">
                         <button class="prev-2 prev">Sebelumnya</button>
                         <button class="reset" type="reset">Reset</button>
                      </div>
                   </div>
                </form>
             </div>
+         </div>
+         <!-- Pegawai Tidak Tetap -->
 
-            <!-- Pegawai Tidak Tetap -->
-
-            <!-- pegawai tidak tetap harian -->
-            <div style="margin-left: 200px" class="form-outer center visually-hidden" id="tidakTetapHarian">
-               <form name="formTidakTetapHarian" method="POST">
-                  <div class="page slide-page">
-                     <div class="field">
-                        <div class="label-long">Penghasilan Bruto</div>
-                        <div class="col-75">
-                           <input type="text" class="form-control" name="brutoTidakTetapHarian" id="brutoTidakTetapHarian"
-                              style="text-align:right" placeholder="0">
-                        </div>
-                     </div>
-                     <button type="button" class="hitung" onclick="hitungTidakTetapHarian()">Hitung</button>
-                     <div class="title">Penghitungan PPh Pasal 21</div>
-                     <div class="field-pph">
-                        <label class="label-pph">DPP</label>
-                        <div class="col-75">
-                           <input type="text" disabled="true" readonly="readonly" class="form-control" name="dppTidakTetapHarian"
-                              id="dppTidakTetapHarian" placeholder="0" style="text-align:right">
-                        </div>
-                     </div>
-                     <div class="field-pph">
-                        <label class="label-pph">Tarif</label>
-                        <div class="col-75">
-                           <input type="text" disabled="true" readonly="readonly" class="form-control" name="tarifTidakTetapHarian"
-                              id="tarifTidakTetapHarian" placeholder="0" style="text-align:right">
-                        </div>
-                     </div>
-                     <div class="field-pph">
-                        <label class="label-pph">PPh 21</label>
-                        <div class="col-75">
-                           <input type="text" disabled="true" readonly="readonly" class="form-control" name="pph21TidakTetapHarian"
-                              id="pph21TidakTetapHarian" placeholder="0" style="text-align:right">
-                        </div>
+         <!-- pegawai tidak tetap harian -->
+         <div style="margin-left :200px" class="form-outer center visually-hidden" id="tidakTetapHarian">
+            <form name="formTidakTetapHarian" method="POST">
+               <div class="page slide-page2">
+                  <div class="field">
+                     <div class="label-long">Penghasilan Bruto</div>
+                     <div class="col-75">
+                        <input type="text" class="form-control" name="brutoTidakTetapHarian" id="brutoTidakTetapHarian"
+                           style="text-align:right" placeholder="0" onFocus="startCalc();" onBlur="stopCalc();">
                      </div>
                   </div>
-               </form>
-            </div>
-
-            <!-- pegawai tidak tetap bulanan -->
-            <div style="margin-left: 200px" class="form-outer center visually-hidden" id="tidakTetapBulanan">
-               <form id="formTidakTetapBulanan" method="POST">
-                  <div class="page slide-page">
-                     <div class="field">
-                        <div class="label">PTKP</div>
-                        <select id="ptkpTidakTetap" class="select">
-                           <option value="" disabled selected>Pilih PTKP</option>
-                           <option value="54000000">TK/0</option>
-                           <option value="58500000">TK/1</option>
-                           <option value="63000000">TK/2</option>
-                           <option value="67500000">TK/3</option>
-                           <option value="58500000">K/0</option>
-                           <option value="63000000">K/1</option>
-                           <option value="67500000">K/2</option>
-                           <option value="72000000">K/3</option>
-                           <option value="112500000">K/I/0</option>
-                           <option value="117000000">K/I/1</option>
-                           <option value="121500000">K/I/2</option>
-                           <option value="126000000">K/I/3</option>
-                        </select>
-                     </div>
-                     <div class="field">
-                        <div class="label-long">Penghasilan Bruto</div>
-                        <div class="col-75">
-                           <input type="text" class="form-control" name="brutoTidakTetapBulanan" id="brutoTidakTetapBulanan"
-                              style="text-align:right" placeholder="0">
-                        </div>
-                     </div>
-                     <button type="button" class="hitung" onclick="hitungTidakTetapBulanan()">Hitung</button>
-                     <div class="title">Penghitungan PPh Pasal 21</div>
-                     <div class="field-pph">
-                        <label class="label-pph">DPP</label>
-                        <div class="col-75">
-                           <input type="text" disabled="true" readonly="readonly" class="form-control" name="dppTidakTetapBulanan"
-                              id="dppTidakTetapBulanan" placeholder="0" style="text-align:right">
-                        </div>
-                     </div>
-                     <div class="field-pph">
-                        <label class="label-pph">Tarif</label>
-                        <div class="col-75">
-                           <input type="text" disabled="true" readonly="readonly" class="form-control" name="tarifTidakTetapBulanan"
-                              id="tarifTidakTetapBulanan" placeholder="0" style="text-align:right">
-                        </div>
-                     </div>
-                     <div class="field-pph">
-                        <label class="label-pph">PPh 21</label>
-                        <div class="col-75">
-                           <input type="text" disabled="true" readonly="readonly" class="form-control" name="pph21TidakTetapBulanan"
-                              id="pph21TidakTetapBulanan" placeholder="0" style="text-align:right">
-                        </div>
+                  <button type="button" id="hitungTidakTetapHarian" class="hitung"
+                     onclick="hitungTidakTetapHarian()">Hitung</button>
+                  <div class="title1">Penghitungan PPh Pasal 21</div>
+                  <div class="field">
+                     <label class="label-long">DPP</label>
+                     <div class="col-75">
+                        <input type="text" disabled="true" readonly="readonly" class="form-control"
+                           name="dppTidakTetapHarian" id="dppTidakTetapHarian" placeholder="0" style="text-align:right">
                      </div>
                   </div>
-               </form>
-            </div>
+                  <div class="field">
+                     <label class="label-long">Tarif</label>
+                     <div class="col-75">
+                        <input type="text" disabled="true" readonly="readonly" class="form-control"
+                           name="tarifTidakTetapHarian" id="tarifTidakTetapHarian" placeholder="0"
+                           style="text-align:right">
+                     </div>
+                  </div>
+                  <div class="field">
+                     <label class="label-long">PPh 21</label>
+                     <div class="col-75">
+                        <input type="text" disabled="true" readonly="readonly" class="form-control"
+                           name="pph21TidakTetapHarian" id="pph21TidakTetapHarian" placeholder="0"
+                           style="text-align:right">
+                     </div>
+                  </div>
+               </div>
+            </form>
+         </div>
+
+         <!-- pegawai tidak tetap bulanan -->
+         <div class="form-outer center visually-hidden" id="tidakTetapBulanan">
+            <form id="formTidakTetapBulanan" method="POST">
+               <div class="page slide-page2">
+                  <div class="field">
+                     <div class="label1">PTKP</div>
+                     <select id="ptkpTidakTetap" class="select">
+                        <option value="" disabled selected>Pilih PTKP</option>
+                        <option value="54000000">TK/0</option>
+                        <option value="58500000">TK/1</option>
+                        <option value="63000000">TK/2</option>
+                        <option value="67500000">TK/3</option>
+                        <option value="58500000">K/0</option>
+                        <option value="63000000">K/1</option>
+                        <option value="67500000">K/2</option>
+                        <option value="72000000">K/3</option>
+                        <option value="112500000">K/I/0</option>
+                        <option value="117000000">K/I/1</option>
+                        <option value="121500000">K/I/2</option>
+                        <option value="126000000">K/I/3</option>
+                     </select>
+                  </div>
+                  <div class="field">
+                     <div class="label-long">Penghasilan Bruto</div>
+                     <div class="col-75">
+                        <input type="text" class="form-control" name="brutoTidakTetapBulanan"
+                           id="brutoTidakTetapBulanan" style="text-align:right" placeholder="0">
+                     </div>
+                  </div>
+                  <button type="button" class="hitung" onclick="hitungTidakTetapBulanan()">Hitung</button>
+                  <div class="title1">Penghitungan PPh Pasal 21</div>
+                  <div class="field">
+                     <label class="label-long">DPP</label>
+                     <div class="col-75">
+                        <input type="text" disabled="true" readonly="readonly" class="form-control"
+                           name="dppTidakTetapBulanan" id="dppTidakTetapBulanan" placeholder="0"
+                           style="text-align:right">
+                     </div>
+                  </div>
+                  <div class="field">
+                     <label class="label-long">Tarif</label>
+                     <div class="col-75">
+                        <input type="text" disabled="true" readonly="readonly" class="form-control"
+                           name="tarifTidakTetapBulanan" id="tarifTidakTetapBulanan" placeholder="0"
+                           style="text-align:right">
+                     </div>
+                  </div>
+                  <div class="field">
+                     <label class="label-long">PPh 21</label>
+                     <div class="col-75">
+                        <input type="text" disabled="true" readonly="readonly" class="form-control"
+                           name="pph21TidakTetapBulanan" id="pph21TidakTetapBulanan" placeholder="0"
+                           style="text-align:right">
+                     </div>
+                  </div>
+               </div>
+            </form>
          </div>
       </div>
    </div>
