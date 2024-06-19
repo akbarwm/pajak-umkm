@@ -203,6 +203,14 @@
                            </select>
                         </div>
                      </div>
+                     <div class="title">Konfigurasi</div>
+                     <div class="field">
+                        <div class="label">Skema Perhitungan</div>
+                        <select id="skemaPerhitungan" name="skema_perhitungan" class="select">
+                           <option value="0" selected="selected">Gross</option>
+                           <option value="1">Gross Up</option>
+                        </select>
+                     </div>
                      <div class="field">
                         <button class="firstNext next" id="nextAwal">Selanjutnya</button>
                         <button class="firstNext next">

@@ -223,9 +223,34 @@ function calc() {
 		valuePkpSetahun = 0
 	}
 	document.formMasaTerakhir.pkp.value = numeral(valuePkpSetahun).format();
+
 	// document.formMasaTerakhir.pkp.value = this.countPajakProgresif(valueNetoSetahun - valuePtkp, document.getElementById('npwp').value);
 	var valuePkp21 = countPajakProgresif(valuePkpSetahun, Boolean(document.formMasaTerakhir.npwp.value));
+	skemaPerhitungan = document.formMasaTerakhir.skemaPerhitungan.value;
+	if (skemaPerhitungan === '1') {
+		if (valuePkpSetahun <= 57000000) {
+			grossUp = (valuePkpSetahun - 0) * 1 / 19
+			valuePkp21 = grossUp
+		}
+		else if (valuePkpSetahun <= 218500000) {
+			grossUp = (valuePkpSetahun - 57000000) * 3 / 17 + 3000000
+			valuePkp21 = grossUp
+		}
+		else if (valuePkpSetahun <= 406000000) {
+			grossUp = (valuePkpSetahun - 218500000) * 1 / 3 + 31500000
+			valuePkp21 = grossUp
+		}
+		else if (valuePkpSetahun <= 3556000000) {
+			grossUp = (valuePkpSetahun - 406000000) * 3 / 7 + 94000000
+			valuePkp21 = grossUp
+		}
+		else if (valuePkpSetahun <= 99999999999) {
+			grossUp = (valuePkpSetahun - 3556000000) * 7 / 13 + 1444000000
+			valuePkp21 = grossUp
+		}
+	}
 	document.formMasaTerakhir.pkp21.value = numeral(valuePkp21).format();
+	
 
 	valuePph21Sebelum = numeral(formMasaTerakhir.pph21Sebelum.value);
 	document.getElementById('pph21Sebelum').value = valuePph21Sebelum.format();
