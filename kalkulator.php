@@ -482,17 +482,17 @@
                      <div class="label-long">Penghasilan Bruto</div>
                      <div class="col-75">
                         <input type="text" class="form-control" name="brutoTidakTetapBulanan"
-                           id="brutoTidakTetapBulanan" style="text-align:right" placeholder="0">
+                           id="brutoTidakTetapBulanan" style="text-align:right" placeholder="0" onFocus="startCalc();" onBlur="stopCalc();">
                      </div>
                   </div>
-                  <button type="button" class="hitung" onclick="hitungTidakTetapBulanan()">Hitung</button>
+                  <button type="button" id="hitungTidakTetapBulanan" class="hitung" onclick="hitungTidakTetapBulanan()">Hitung</button>
                   <div class="title1">Penghitungan PPh Pasal 21</div>
                   <div class="field">
                      <label class="label-long">DPP</label>
                      <div class="col-75">
                         <input type="text" disabled="true" readonly="readonly" class="form-control"
                            name="dppTidakTetapBulanan" id="dppTidakTetapBulanan" placeholder="0"
-                           style="text-align:right">
+                           style="text-align:right" onFocus="startCalc();" onBlur="stopCalc();">
                      </div>
                   </div>
                   <div class="field">
@@ -500,7 +500,7 @@
                      <div class="col-75">
                         <input type="text" disabled="true" readonly="readonly" class="form-control"
                            name="tarifTidakTetapBulanan" id="tarifTidakTetapBulanan" placeholder="0"
-                           style="text-align:right">
+                           style="text-align:right" onFocus="startCalc();" onBlur="stopCalc();">
                      </div>
                   </div>
                   <div class="field">
@@ -508,7 +508,7 @@
                      <div class="col-75">
                         <input type="text" disabled="true" readonly="readonly" class="form-control"
                            name="pph21TidakTetapBulanan" id="pph21TidakTetapBulanan" placeholder="0"
-                           style="text-align:right">
+                           style="text-align:right" onFocus="startCalc();" onBlur="stopCalc();">
                      </div>
                   </div>
                </div>

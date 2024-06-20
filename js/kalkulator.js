@@ -608,12 +608,15 @@ btnHitungTidakTetapHarian.addEventListener("click", function (event) {
 	hitungTidakTetapHarian();
 });
 
-}
-
 // pegawai tidak tetap bulanan
+
+var brutoTidakTetapBulanan = numeral(document.getElementById("brutoTidakTetapBulanan").value);
+document.getElementById("brutoTidakTetapBulanan").value = brutoTidakTetapBulanan.format();
+
 function hitungTidakTetapBulanan() {
 	var kategoriTer = parseFloat(document.getElementById("ptkpTidakTetap").value);
-	var brutoBulanan = parseFloat(document.getElementById("brutoTidakTetapBulanan").value);
+	var brutoBulanan = numeral(document.getElementById("brutoTidakTetapBulanan").value);
+	var brutoBulanan = brutoTidakTetapBulanan.value();
 	var ter = 0;
 
 	// kategori a
@@ -881,12 +884,21 @@ function hitungTidakTetapBulanan() {
 		}
 	}
 
-	document.getElementById("dppTidakTetapBulanan").value = brutoBulanan;
-	document.getElementById("tarifTidakTetapBulanan").value = ter + "%";
+	var pph21 = brutoBulanan * (ter / 100);
 
-	var pph21 = brutoBulanan * ter / 100;
-	document.getElementById("pph21TidakTetapBulanan").value = pph21;
+    document.getElementById("dppTidakTetapBulanan").value = numeral(brutoBulanan).format(); 
+    document.getElementById("tarifTidakTetapBulanan").value = ter.toFixed(2) + "%"; 
+    document.getElementById("pph21TidakTetapBulanan").value = numeral(pph21).format(); 
+
 }
+
+const btnHitungTidakTetapBulanan = document.getElementById("hitungTidakTetapBulanan");
+btnHitungTidakTetapBulanan.addEventListener("click", function (event) {
+	event.preventDefault();
+	hitungTidakTetapBulanan();
+});
+
+} 
 
 // 
 
