@@ -12,8 +12,7 @@ body {
   justify-content: center;
   min-height: 100vh;
   width: 100%;
-  overflow: visible;
-  background: url(/assets/images/bg.jpeg) no-repeat center fixed;
+  overflow-x: hidden;
 }
 
 .container {
@@ -28,9 +27,10 @@ body {
 
 hr {  /*garis horizontal*/
   width: 100%;
-  border: none;
   height: 1px;
+  border: none;
   background-color: green;
+  margin-bottom: 50px;
 }
 
 .container header {
@@ -82,7 +82,6 @@ form .page .field .label {
   font-size: 11px;
   float: left;
   width: 30%;  /* ptkp di masa pajak terakhir */
-  display: inline-block;
   text-align: left;
   margin-top: 3%;
 }
@@ -92,7 +91,6 @@ form .page .field .label1 {
   font-size: 15px;
   float: left;
   width: 30%;  /* ptkp */
-  display: inline-block;
   text-align: left;
   /* color: green; */
 }
@@ -139,20 +137,22 @@ form .page .field input { /* content bruto sampai pph 21 */
   font-size: 12px;
   float: right;
   border: 1px solid green; 
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
-/*form .page .field .label-radio {
-  margin-top: -4px;
+form .page .field .label-radio {
   float: left !important;
-}*/
+  font-size: 17px;
+  font-weight: 500;
+}
 
-/*form .page .field .radio {
-  height: 100%;
-  width: 8%;
-  margin-left: 50px;
+form .page .field .radio {
+  height: 18px;
+  width: 5%;
+  margin-left: 55px;
+  accent-color: green;
   float: left !important;
-}*/
+}
 
 form .page .field select { /* kolom input ptkp */
   font-size: 17px;
@@ -170,7 +170,6 @@ form .page .field .select-month {
   float: left;
   padding-left: 6%;
   width: 25%;
-  display: inline-block;
   text-align: left;
 }
 
@@ -247,7 +246,7 @@ form .page .field button:hover {
 
 .container .progress-bar {
   display: flex;
-  margin: 15px 0;
+  margin: 50px 0;
   user-select: none;
 }
 
@@ -383,7 +382,6 @@ fieldset[disabled] .form-control {
   /* color: green; */
   float: left;
   width: 30%;
-  display: inline-block;
   text-align: left;
 }
 
@@ -419,7 +417,7 @@ form .slide-page2 .field .input-col-75 input {
   font-size: 18px; 
   font-weight: 600; 
   margin-bottom: 35px; 
-  margin-top: 20px;
+  margin-top: 40px;
   color: green;
 }
 
@@ -462,7 +460,6 @@ form .page .field .label-long {
   font-size: 15px;
   float: left;
   width: 70%;
-  display: inline-block;
   text-align: left;
   /* color: green; */
 }

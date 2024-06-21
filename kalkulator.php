@@ -60,7 +60,6 @@
                   <select name="skema_pajak" id="skemaPajak" class="select">
                      <option value="pegawaiTetap" selected>Pegawai Tetap</option>
                      <option value="pegawaiTidakTetap">Pegawai Tidak Tetap</option>
-                     <option value="bukanPegawai">Bukan Pegawai</option>
                   </select>
                </div>
                <div class="field" id="pemotonganPegawaiTetap">
@@ -89,20 +88,24 @@
                         <div class="label1">PTKP</div>
                         <select id="selectPTKP" class="select">
                            <option value="" disabled selected>Pilih PTKP</option>
-                           <option value="54000000">TK/0</option>
-                           <option value="58500000">TK/1</option>
-                           <option value="63000000">TK/2</option>
-                           <option value="67500000">TK/3</option>
-                           <option value="58500000">K/0</option>
-                           <option value="63000000">K/1</option>
-                           <option value="67500000">K/2</option>
-                           <option value="72000000">K/3</option>
-                           <option value="112500000">K/I/0</option>
-                           <option value="117000000">K/I/1</option>
-                           <option value="121500000">K/I/2</option>
-                           <option value="126000000">K/I/3</option>
+                           <option value="54000000">TK/0 - 54000000</option>
+                           <option value="58500000">TK/1 - 58500000</option>
+                           <option value="63000000">TK/2 - 63000000</option>
+                           <option value="67500000">TK/3 - 67500000</option>
+                           <option value="58500000">K/0 - 58500000</option>
+                           <option value="63000000">K/1 - 63000000</option>
+                           <option value="67500000">K/2 - 67500000</option>
+                           <option value="72000000">K/3 - 72000000</option>
                         </select>
                      </div>
+                     <div class="field">
+                        <div class="label1">Skema Perhitungan</div>
+                        <input type="radio" name="skema_perhitungan" id="gross" value="gross" class="radio" checked>
+                        <label for="gross" class="label-radio">Gross</label>
+                        <input type="radio" name="skema_perhitungan" id="grossUp" value="grossUp" class="radio">
+                        <label for="grossUp" class="label-radio">Gross Up</label>
+                     </div>
+                     <div class="title1">Penghasilan</div>
                      <div class="field">
                         <div class="label-long">Penghasilan Bruto</div>
                         <div class="input-col-75">
@@ -111,7 +114,7 @@
                               onBlur="stopCalc();">
                         </div>
                      </div>
-                     <button type="button" id="hitungBulanan" class="hitung" onclick="hitungBulanan()">Hitung</button>
+                     <button type="button" name="hitungBulanan" id="hitungBulanan" onclick="hitungBulanan()" class="hitung">Hitung</button>
                      <div class="title1">Penghitungan PPh Pasal 21</div>
                      <div class="field">
                         <div class="label-long">DPP</div>
@@ -413,6 +416,7 @@
                </form>
             </div>
          </div>
+         
          <!-- Pegawai Tidak Tetap -->
 
          <!-- pegawai tidak tetap harian -->
@@ -464,18 +468,14 @@
                      <div class="label1">PTKP</div>
                      <select id="ptkpTidakTetap" class="select">
                         <option value="" disabled selected>Pilih PTKP</option>
-                        <option value="54000000">TK/0</option>
-                        <option value="58500000">TK/1</option>
-                        <option value="63000000">TK/2</option>
-                        <option value="67500000">TK/3</option>
-                        <option value="58500000">K/0</option>
-                        <option value="63000000">K/1</option>
-                        <option value="67500000">K/2</option>
-                        <option value="72000000">K/3</option>
-                        <option value="112500000">K/I/0</option>
-                        <option value="117000000">K/I/1</option>
-                        <option value="121500000">K/I/2</option>
-                        <option value="126000000">K/I/3</option>
+                        <option value="54000000">TK/0 - 54000000</option>
+                        <option value="58500000">TK/1 - 58500000</option>
+                        <option value="63000000">TK/2 - 63000000</option>
+                        <option value="67500000">TK/3 - 67500000</option>
+                        <option value="58500000">K/0 - 58500000</option>
+                        <option value="63000000">K/1 - 63000000</option>
+                        <option value="67500000">K/2 - 67500000</option>
+                        <option value="72000000">K/3 - 72000000</option>
                      </select>
                   </div>
                   <div class="field">
