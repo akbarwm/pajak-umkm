@@ -30,21 +30,21 @@
                <hr>
             </header>
             <div class="progress-bar" id="progressBar">
-               <div class="step">
+               <div class="step visually-hidden" id="step1">
                   <p>Informasi Wajib Pajak</p>
                   <div class="bullet">
                      <span>1</span>
                   </div>
                   <div class="check ">1</div>
                </div>
-               <div class="step">
+               <div class="step visually-hidden" id="step2">
                   <p>Penghasilan</p>
                   <div class="bullet">
                      <span>2</span>
                   </div>
                   <div class="check ">2</div>
                </div>
-               <div class="step">
+               <div class="step visually-hidden" id="step3">
                   <p>Penghitungan</p>
                   <div class="bullet">
                      <span>3</span>
@@ -80,7 +80,7 @@
 
             <!-- Pegawai Tetap -->
 
-            <!-- pegawai tetap bulanan -->
+            <!-- pegawai tetap setiap masa -->
             <div style="margin-left :200px" class="form-outer center" id="pemotonganSetiapMasa">
                <form name="formMasaBulanan" method="POST">
                   <div class="page slide-page2" id="pageBulanan">
@@ -144,7 +144,7 @@
                </form>
             </div>
 
-            <!-- pegawai tetap tahunan -->
+            <!-- pegawai tetap masa pajak terakhir -->
             <div style="margin-left :200px" class="form-outer center visually-hidden" id="pemotonganMasaTerakhir">
                <form name="formMasaTerakhir" method="POST">
                   <div class="page slide-page">
@@ -323,25 +323,7 @@
 
                   <!-- halaman 3 -->
                   <div class="page">
-                     <div style="color: green;" class="title">C. Penghitungan PPh Pasal 21:</div>
-                     <!-- <div class="field-pph">
-                <div class="label-pph">12. Penghasilan Bruto Setahun</div>
-                <div class="col-75">
-                  <input type="text" disabled="true" readonly="readonly" class="form-control" name="brutoSetahun" id="brutoSetahun" placeholder="0" style="text-align:right">
-                </div>
-              </div> -->
-                     <!-- <div class="field-pph">
-                <div class="label-pph">13. Biaya Jabatan Setahun</div>
-                <div class="col-75">
-                  <input type="text" disabled="true" readonly="readonly" class="form-control" name="jabatanSetahun" id="jabatanSetahun" placeholder="0" style="text-align:right">
-                </div>
-              </div> -->
-                     <!-- <div class="field-pph">
-                <div class="label-pph">14. Iuran Pensiun Setahun</div>
-                <div class="col-75">
-                  <input type="text" disabled="true" readonly="readonly" class="form-control" name="iuranSetahun" id="iuranSetahun" placeholder="0" style="text-align:right">
-                </div>
-              </div> -->
+                     <div style="color: green;" class="title">C. Penghitungan PPh Pasal 21:</div>                     
                      <div class="field">
                         <div class="label-long">13. Penghasilan Neto (8 - 12)</div>
                         <div class="col-75">
@@ -395,12 +377,6 @@
                               style="text-align:right" onFocus="startCalc();" onBlur="stopCalc();">
                         </div>
                      </div>
-                     <!-- <div class="field-pph">
-                <div class="label-pph">23. PPh Pasal 21 Terutang Setahun/Disetahunkan</div>
-                <div class="col-75">
-                  <input type="text" disabled="true" readonly="readonly" class="form-control" name="pph21Terutang" id="pph21Terutang" placeholder="0" style="text-align:right">
-                </div>
-              </div> -->
                      <div class="field">
                         <div class="label-long">20. PPh Pasal 21 Terutang (18 - 19)</div>
                         <div class="col-75">
@@ -516,6 +492,7 @@
          </div>
       </div>
    </div>
+   
    <!-- kalkulator js -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
    <script src="js/kalkulator.js"></script>

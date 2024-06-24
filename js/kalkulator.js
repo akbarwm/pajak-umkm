@@ -76,6 +76,9 @@ const selectPemotonganTidakTetap = document.getElementById("selectPemotonganTida
 const tidakTetapHarian = document.getElementById("tidakTetapHarian");
 const tidakTetapBulanan = document.getElementById("tidakTetapBulanan");
 const progressBar = document.getElementById("progressBar");
+const step1 = document.getElementById("step1");
+const step2 = document.getElementById("step2");
+const step3 = document.getElementById("step3");
 
 // mengatur skema pajak
 skemaPajak.addEventListener("change", () => {
@@ -100,12 +103,20 @@ skemaPajak.addEventListener("change", () => {
 // mengatur jenis pemotongan pegawai tetap
 pemotonganPegawaiTetap.addEventListener("change", () => {
 	if (selectPemotonganPegawaiTetap.value == "setiap_masa") {
+		progressBar.classList.add("visually-hidden");
+		step1.classList.add("visually-hidden");
+		step2.classList.add("visually-hidden");
+		step3.classList.add("visually-hidden");
 		pemotonganSetiapMasa.classList.remove("visually-hidden");
 		pemotonganMasaTerakhir.classList.add("visually-hidden");
 	}
 });
 pemotonganPegawaiTetap.addEventListener("change", () => {
 	if (selectPemotonganPegawaiTetap.value == "masa_terakhir") {
+		progressBar.classList.remove("visually-hidden");
+		step1.classList.remove("visually-hidden");
+		step2.classList.remove("visually-hidden");
+		step3.classList.remove("visually-hidden");
 		pemotonganMasaTerakhir.classList.remove("visually-hidden");
 		pemotonganSetiapMasa.classList.add("visually-hidden");
 	}
@@ -114,12 +125,20 @@ pemotonganPegawaiTetap.addEventListener("change", () => {
 // mengatur jenis pemotongan pegawai tidak tetap
 pemotonganTidakTetap.addEventListener("change", () => {
 	if (selectPemotonganTidakTetap.value == "harian") {
+		progressBar.classList.add("visually-hidden");
+		step1.classList.add("visually-hidden");
+		step2.classList.add("visually-hidden");
+		step3.classList.add("visually-hidden");
 		tidakTetapHarian.classList.remove("visually-hidden");
 		tidakTetapBulanan.classList.add("visually-hidden");
 	}
 });
 pemotonganTidakTetap.addEventListener("change", () => {
 	if (selectPemotonganTidakTetap.value == "bulanan") {
+		progressBar.classList.add("visually-hidden");
+		step1.classList.add("visually-hidden");
+		step2.classList.add("visually-hidden");
+		step3.classList.add("visually-hidden");
 		tidakTetapHarian.classList.add("visually-hidden");
 		tidakTetapBulanan.classList.remove("visually-hidden");
 	}

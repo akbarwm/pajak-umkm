@@ -30,7 +30,7 @@ hr {  /*garis horizontal*/
   height: 1px;
   border: none;
   background-color: green;
-  margin-bottom: 50px;
+  margin-bottom: -20px;
 }
 
 .container header {
