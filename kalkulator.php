@@ -9,7 +9,6 @@
    <!-- kalkulator css -->
    <link rel="stylesheet" type="text/css" href="stylekalkulator.css">
    <link rel="stylesheet" href="icons/uicons/css/uicons-regular-rounded.css">
-   <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
@@ -140,6 +139,9 @@
                               placeholder="0" onFocus="startCalc();" onBlur="stopCalc();">
                         </div>
                      </div>
+                     <button class="btnBeranda">
+                        <a href="index.php">BERANDA</a>
+                     </button>
                   </div>
                </form>
             </div>
@@ -399,6 +401,7 @@
          <div style="margin-left :200px" class="form-outer center visually-hidden" id="tidakTetapHarian">
             <form name="formTidakTetapHarian" method="POST">
                <div class="page slide-page2">
+                  <div class="title1">Penghasilan</div>
                   <div class="field">
                      <div class="label-long">Penghasilan Bruto</div>
                      <div class="col-75">
@@ -432,6 +435,9 @@
                            style="text-align:right">
                      </div>
                   </div>
+                  <button class="btnBeranda">
+                     <a href="index.php">BERANDA</a>
+                  </button>
                </div>
             </form>
          </div>
@@ -454,6 +460,7 @@
                         <option value="72000000">K/3 - 72000000</option>
                      </select>
                   </div>
+                  <div class="title1">Penghasilan</div>
                   <div class="field">
                      <div class="label-long">Penghasilan Bruto</div>
                      <div class="col-75">
@@ -487,6 +494,9 @@
                            style="text-align:right" onFocus="startCalc();" onBlur="stopCalc();">
                      </div>
                   </div>
+                  <button class="btnBeranda">
+                     <a href="index.php">BERANDA</a>
+                  </button>
                </div>
             </form>
          </div>

@@ -53,7 +53,6 @@ hr {  /*garis horizontal*/
   width: 25%;
   margin-left: 150px; /*ubah item jadi ke kanan di pegawai tetap */
   transition: margin-left 0.3s ease-in-out;
-  /* margin-top: -5px; */
 }
 
 .form-outer form .page .title {
@@ -68,14 +67,6 @@ hr {  /*garis horizontal*/
   margin: 20px 0;
   display: row;
 }
-
-/*.form-outer form .page .field-pph {
-  width: 800px;
-  height: 5px;
-  margin: 18px 0;
-  display: row;
-  position: relative;
-}*/
 
 form .page .field .label {
   font-weight: 600;
@@ -94,40 +85,6 @@ form .page .field .label1 {
   text-align: left;
   /* color: green; */
 }
-
-/*form .page .field .label-long {
-  font-weight: 500;
-  font-size: 15px;
-  float: left;
-  width: 70%;
-  display: inline-block;
-  text-align: left;
-}*/
-
-/*form .page .field-pph .label-pph {
-  font-weight: 600;
-  font-size: 11px;
-  float: left;
-  width: 70%;
-  display: inline-block;
-  text-align: left;
-  line-height: 15px;
-  height: 5px;
-  padding: 2px 2px 0 2px;
-}*/
-
-/*form .page .field .col-75 {
-  float: left;
-  padding-left: 10%;
-  width: 19%;
-}*/
-
-/*form .page .field-pph input {
-  border: 1px solid lightgrey;
-  font-size: 12px;
-  width: 20%;
-  float: right;
-}*/
 
 form .page .field input { /* content bruto sampai pph 21 */
   height: 100%;
@@ -177,18 +134,48 @@ form .page .field .select-month .form-control-select {
   width: 96%;
 }
 
+.form-outer form .page .btnBeranda {
+  width: 100px;
+  height: 35px;
+  margin-left: 680px;
+  margin-top: 50px;
+  border: none;
+  border-radius: 3px;
+  background-color: green;
+  cursor: pointer;
+  display: block;
+}
+
+.form-outer form .page .btnBeranda a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+
+.form-outer form .page .btnBeranda:hover {
+  background-color: #000;
+  transition: 0.5s ease;
+}
+
 .form-outer form .page .field .firstNext {
   margin: 2% 0;
   width: 60%;
   float: right;
   margin-right: 2%;
-  margin-top: 15%; /*ubah button jadi ke bawah di pegawai tetap tahunan*/
+  margin-top: 100px; /*ubah button jadi ke bawah di pegawai tetap tahunan*/
+}
+
+.form-outer form .page .field .firstNext a {
+  text-decoration: none;
+  color: white;
 }
 
 .form-outer form .page .btns {
   width: 800px;
   height: 15px;
   margin-right: 10%;
+  margin-top: 50px;
   display: row;
   position: relative;
 }
@@ -208,11 +195,6 @@ form .page .field .select-month .form-control-select {
   display: row;
   position: relative;
 }
-
-/*form .page .btns button {
-  margin-top: -15px !important;
-  width: 48% !important;
-}*/
 
 form .page .field button {
   width: 100%;
@@ -234,15 +216,6 @@ form .page .field button {
 form .page .field button:hover {
   background: #000;
 }
-
-/* form .page .btns button.prev { 
-  margin-left: 0.5%;
-  font-size: 17px;
-}*/
-
-/*form .page .btns button.next {
-  margin-right: 0.5%;
-}*/
 
 .container .progress-bar {
   display: flex;
@@ -396,11 +369,9 @@ fieldset[disabled] .form-control {
   border-radius: 5px; 
 }
 
-
 /* Pegawai Tetap */
 
 /* pegawai tetap bulanan */
-
 form .slide-page2 .input-col-75 {
   width: 80%; 
   margin-right: 10px;
@@ -456,12 +427,10 @@ form .slide-page2 .field .input-col-75 input {
 }
 
 form .page .field .label-long {
-  font-weight: 500;
   font-size: 15px;
   float: left;
   width: 70%;
   text-align: left;
-  /* color: green; */
 }
 
 /* Pegawai Tidak Tetap */
@@ -478,12 +447,10 @@ form .field {
 }
 
 form .slide-page2 .field .label-long {
-  font-weight: 500;
   font-size: 15px; 
   width: 20%; 
   text-align: left; 
   display: inline-block;
-  /* color: green; */
 }
 
 form .slide-page2 .field .label {

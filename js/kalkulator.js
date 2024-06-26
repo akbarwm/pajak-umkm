@@ -82,16 +82,18 @@ const step3 = document.getElementById("step3");
 
 // mengatur skema pajak
 skemaPajak.addEventListener("change", () => {
+	progressBar.classList.add("visually-hidden");
+	step1.classList.add("visually-hidden");
+	step2.classList.add("visually-hidden");
+	step3.classList.add("visually-hidden");
+
 	if (skemaPajak.value == "pegawaiTetap") {
 		pemotonganPegawaiTetap.classList.remove("visually-hidden");
 		pemotonganSetiapMasa.classList.remove("visually-hidden");
 		pemotonganTidakTetap.classList.add("visually-hidden");
 		tidakTetapHarian.classList.add("visually-hidden");
 		tidakTetapBulanan.classList.add("visually-hidden");
-	}
-});
-skemaPajak.addEventListener("change", () => {
-	if (skemaPajak.value == "pegawaiTidakTetap") {
+	} else if (skemaPajak.value == "pegawaiTidakTetap") {
 		pemotonganPegawaiTetap.classList.add("visually-hidden");
 		pemotonganSetiapMasa.classList.add("visually-hidden");
 		pemotonganMasaTerakhir.classList.add("visually-hidden");
@@ -109,10 +111,7 @@ pemotonganPegawaiTetap.addEventListener("change", () => {
 		step3.classList.add("visually-hidden");
 		pemotonganSetiapMasa.classList.remove("visually-hidden");
 		pemotonganMasaTerakhir.classList.add("visually-hidden");
-	}
-});
-pemotonganPegawaiTetap.addEventListener("change", () => {
-	if (selectPemotonganPegawaiTetap.value == "masa_terakhir") {
+	} else if (selectPemotonganPegawaiTetap.value == "masa_terakhir") {
 		progressBar.classList.remove("visually-hidden");
 		step1.classList.remove("visually-hidden");
 		step2.classList.remove("visually-hidden");
@@ -131,10 +130,7 @@ pemotonganTidakTetap.addEventListener("change", () => {
 		step3.classList.add("visually-hidden");
 		tidakTetapHarian.classList.remove("visually-hidden");
 		tidakTetapBulanan.classList.add("visually-hidden");
-	}
-});
-pemotonganTidakTetap.addEventListener("change", () => {
-	if (selectPemotonganTidakTetap.value == "bulanan") {
+	} else if (selectPemotonganTidakTetap.value == "bulanan") {
 		progressBar.classList.add("visually-hidden");
 		step1.classList.add("visually-hidden");
 		step2.classList.add("visually-hidden");
@@ -203,24 +199,6 @@ function calc() {
 	valuePengurangSetahun = ((biayaJabatan * 1) + (valueIuranPensiun.value() * 1) + (valueZakatSumbangan.value() * 1));
 	document.formMasaTerakhir.pengurangSetahun.value = numeral(valuePengurangSetahun).format();
 
-	// var masaPenghasilan = document.getElementById('masaAkhir').value - document.getElementById('masaAwal').value + 1;
-
-	// var bruto = valueHasilBruto * masaPenghasilan;
-	// document.formMasaTerakhir.brutoSetahun.value = numeral(bruto).format();  
-
-	// var valueBiayaJabatan = biayaJabatan;
-	// var valueJabatanSetahun = valueBiayaJabatan * masaPenghasilan;
-	// document.formMasaTerakhir.jabatanSetahun.value = numeral(valueJabatanSetahun).format(); 
-
-	// var valueIuranSetahun = valueIuranPensiun.value() * masaPenghasilan;
-	// document.formMasaTerakhir.iuranSetahun.value = numeral(valueIuranSetahun).format(); 
-
-	// var valueZakatSumbanganTotal = valueZakatSumbangan.value() * masaPenghasilan;
-	// document.formMasaTerakhir.zakatSumbangan.value = numeral(valueZakatSumbangan).format(); 
-
-	// var valuePengurangSetahun = (valueJabatanSetahun * 1) + (valueIuranSetahun * 1) + (valueZakatSumbanganTotal * 1)
-	// document.formMasaTerakhir.pengurangSetahun.value = numeral(valuePengurangSetahun).format(); 
-
 	valueBrutoSetahun = valueHasilBruto;
 
 	var valueHasilNeto = (valueBrutoSetahun * 1) - (valuePengurangSetahun * 1);
@@ -242,7 +220,6 @@ function calc() {
 		valuePkpSetahun = 0
 	}
 	document.formMasaTerakhir.pkp.value = numeral(valuePkpSetahun).format();
-	// document.formMasaTerakhir.pkp.value = this.countPajakProgresif(valueNetoSetahun - valuePtkp, document.getElementById('npwp').value);
 	var valuePkp21 = countPajakProgresif(valuePkpSetahun, Boolean(document.formMasaTerakhir.npwp.value));
 	skemaPerhitungan = document.formMasaTerakhir.skemaPerhitungan.value;
 	if (skemaPerhitungan === '1') {
@@ -270,17 +247,6 @@ function calc() {
 
 	var valuePph21Terutang = ((valuePkp21 * 1) - (valuePph21Sebelum.value() * 1));
 	document.formMasaTerakhir.pph21Terutang.value = numeral(valuePph21Terutang).format();
-
-	// valuePkp21 = document.formMasaTerakhir.pkp21.value;
-	// document.formMasaTerakhir.pph21TerutangSebulan.value = numeral(valuePkp21 / 12).format(); 
-
-	// document.formMasaTerakhir.pph21Teratur.value = (valuePkp21) ;
-
-	// valuePph21Teratur = document.formMasaTerakhir.pph21Teratur.value;
-	// document.formMasaTerakhir.pph21TakTeratur.value = (valuePkp21) - (valuePph21Teratur);
-
-	// valuePph21TakTeratur = document.formMasaTerakhir.pph21TakTeratur.value;
-	// document.formMasaTerakhir.pph21TerutangSebulan.value = numeral(valuePkp21 * (1)).format();
 
 	// pegawai tetap setiap masa (bulanan)
 	let brutoSebulan = numeral(document.getElementById("brutoSebulan").value);
@@ -966,11 +932,8 @@ function countPajakProgresif(pkpr, npwpStatus) {
 		pkpCounted = (60000000 * (npwpStatus ? 0.05 : 0.06)) + (190000000 * (npwpStatus ? 0.15 : 0.18)) + (250000000 * (npwpStatus ? 0.25 : 0.3)) + (4500000000 * (npwpStatus ? 0.3 : 0.36)) + (differentNumber(pkp, 5000000000) * (npwpStatus ? 0.35 : 0.42))
 		return pkpCounted;
 	}
-	// if(pkp > 5000000000){
-	//     pkpCounted = (60000000 * 0.5) + (250000000 * 0.15) + (500000000 * 0.25) + ((pkp - 60000000 - 250000000 - 500000000) * 0.30) + ((pkp - 60000000 - 250000000 - 500000000))
-	// }    
-	return pkpCounted;
 
+	return pkpCounted;
 }
 
 function stopCalc() {
