@@ -140,6 +140,184 @@ pemotonganTidakTetap.addEventListener("change", () => {
 	}
 });
 
+//
+
+const masaAwalTahun = document.getElementById("masaAwal");
+const masaAkhir1 = document.getElementById("masaAkhir1");
+const masaAkhir2 = document.getElementById("masaAkhir2");
+const masaAkhir3 = document.getElementById("masaAkhir3");
+const masaAkhir4 = document.getElementById("masaAkhir4");
+const masaAkhir5 = document.getElementById("masaAkhir5");
+const masaAkhir6 = document.getElementById("masaAkhir6");
+const masaAkhir7 = document.getElementById("masaAkhir7");
+const masaAkhir8 = document.getElementById("masaAkhir8");
+const masaAkhir9 = document.getElementById("masaAkhir9");
+const masaAkhir10 = document.getElementById("masaAkhir10");
+const masaAkhir11 = document.getElementById("masaAkhir11");
+const masaAkhir12 = document.getElementById("masaAkhir12");
+
+// mengatur bulan dalam kalkulator pegawai tetap masa pajak terakhir (tahunan)
+
+masaAwalTahun.addEventListener("change", () => {
+	if (masaAwalTahun.value == "1") {
+		masaAkhir1.classList.remove("visually-hidden");
+		masaAkhir2.classList.remove("visually-hidden");
+		masaAkhir3.classList.remove("visually-hidden");
+		masaAkhir4.classList.remove("visually-hidden");
+		masaAkhir5.classList.remove("visually-hidden");
+		masaAkhir6.classList.remove("visually-hidden");
+		masaAkhir7.classList.remove("visually-hidden");
+		masaAkhir8.classList.remove("visually-hidden");
+		masaAkhir9.classList.remove("visually-hidden");
+		masaAkhir10.classList.remove("visually-hidden");
+		masaAkhir11.classList.remove("visually-hidden");
+		masaAkhir12.classList.remove("visually-hidden");
+	} else if (masaAwalTahun.value == "2") {
+		masaAkhir1.classList.add("visually-hidden");
+		masaAkhir2.classList.remove("visually-hidden");
+		masaAkhir3.classList.remove("visually-hidden");
+		masaAkhir4.classList.remove("visually-hidden");
+		masaAkhir5.classList.remove("visually-hidden");
+		masaAkhir6.classList.remove("visually-hidden");
+		masaAkhir7.classList.remove("visually-hidden");
+		masaAkhir8.classList.remove("visually-hidden");
+		masaAkhir9.classList.remove("visually-hidden");
+		masaAkhir10.classList.remove("visually-hidden");
+		masaAkhir11.classList.remove("visually-hidden");
+		masaAkhir12.classList.remove("visually-hidden");
+	} else if (masaAwalTahun.value == "3") {
+		masaAkhir1.classList.add("visually-hidden");
+		masaAkhir2.classList.add("visually-hidden");
+		masaAkhir3.classList.remove("visually-hidden");
+		masaAkhir4.classList.remove("visually-hidden");
+		masaAkhir5.classList.remove("visually-hidden");
+		masaAkhir6.classList.remove("visually-hidden");
+		masaAkhir7.classList.remove("visually-hidden");
+		masaAkhir8.classList.remove("visually-hidden");
+		masaAkhir9.classList.remove("visually-hidden");
+		masaAkhir10.classList.remove("visually-hidden");
+		masaAkhir11.classList.remove("visually-hidden");
+		masaAkhir12.classList.remove("visually-hidden");
+	} else if (masaAwalTahun.value == "4") {
+		masaAkhir1.classList.add("visually-hidden");
+		masaAkhir2.classList.add("visually-hidden");
+		masaAkhir3.classList.add("visually-hidden");
+		masaAkhir4.classList.remove("visually-hidden");
+		masaAkhir5.classList.remove("visually-hidden");
+		masaAkhir6.classList.remove("visually-hidden");
+		masaAkhir7.classList.remove("visually-hidden");
+		masaAkhir8.classList.remove("visually-hidden");
+		masaAkhir9.classList.remove("visually-hidden");
+		masaAkhir10.classList.remove("visually-hidden");
+		masaAkhir11.classList.remove("visually-hidden");
+		masaAkhir12.classList.remove("visually-hidden");
+	} else if (masaAwalTahun.value == "5") {
+		masaAkhir1.classList.add("visually-hidden");
+		masaAkhir2.classList.add("visually-hidden");
+		masaAkhir3.classList.add("visually-hidden");
+		masaAkhir4.classList.add("visually-hidden");
+		masaAkhir5.classList.remove("visually-hidden");
+		masaAkhir6.classList.remove("visually-hidden");
+		masaAkhir7.classList.remove("visually-hidden");
+		masaAkhir8.classList.remove("visually-hidden");
+		masaAkhir9.classList.remove("visually-hidden");
+		masaAkhir10.classList.remove("visually-hidden");
+		masaAkhir11.classList.remove("visually-hidden");
+		masaAkhir12.classList.remove("visually-hidden");
+	} else if (masaAwalTahun.value == "6") {
+		masaAkhir1.classList.add("visually-hidden");
+		masaAkhir2.classList.add("visually-hidden");
+		masaAkhir3.classList.add("visually-hidden");
+		masaAkhir4.classList.add("visually-hidden");
+		masaAkhir5.classList.add("visually-hidden");
+		masaAkhir6.classList.remove("visually-hidden");
+		masaAkhir7.classList.remove("visually-hidden");
+		masaAkhir8.classList.remove("visually-hidden");
+		masaAkhir9.classList.remove("visually-hidden");
+		masaAkhir10.classList.remove("visually-hidden");
+		masaAkhir11.classList.remove("visually-hidden");
+		masaAkhir12.classList.remove("visually-hidden");
+	} else if (masaAwalTahun.value == "7") {
+		masaAkhir1.classList.add("visually-hidden");
+		masaAkhir2.classList.add("visually-hidden");
+		masaAkhir3.classList.add("visually-hidden");
+		masaAkhir4.classList.add("visually-hidden");
+		masaAkhir5.classList.add("visually-hidden");
+		masaAkhir6.classList.add("visually-hidden");
+		masaAkhir7.classList.remove("visually-hidden");
+		masaAkhir8.classList.remove("visually-hidden");
+		masaAkhir9.classList.remove("visually-hidden");
+		masaAkhir10.classList.remove("visually-hidden");
+		masaAkhir11.classList.remove("visually-hidden");
+		masaAkhir12.classList.remove("visually-hidden");
+	} else if (masaAwalTahun.value == "8") {
+		masaAkhir1.classList.add("visually-hidden");
+		masaAkhir2.classList.add("visually-hidden");
+		masaAkhir3.classList.add("visually-hidden");
+		masaAkhir4.classList.add("visually-hidden");
+		masaAkhir5.classList.add("visually-hidden");
+		masaAkhir6.classList.add("visually-hidden");
+		masaAkhir7.classList.add("visually-hidden");
+		masaAkhir8.classList.remove("visually-hidden");
+		masaAkhir9.classList.remove("visually-hidden");
+		masaAkhir10.classList.remove("visually-hidden");
+		masaAkhir11.classList.remove("visually-hidden");
+		masaAkhir12.classList.remove("visually-hidden");
+	} else if (masaAwalTahun.value == "9") {
+		masaAkhir1.classList.add("visually-hidden");
+		masaAkhir2.classList.add("visually-hidden");
+		masaAkhir3.classList.add("visually-hidden");
+		masaAkhir4.classList.add("visually-hidden");
+		masaAkhir5.classList.add("visually-hidden");
+		masaAkhir6.classList.add("visually-hidden");
+		masaAkhir7.classList.add("visually-hidden");
+		masaAkhir8.classList.add("visually-hidden");
+		masaAkhir9.classList.remove("visually-hidden");
+		masaAkhir10.classList.remove("visually-hidden");
+		masaAkhir11.classList.remove("visually-hidden");
+		masaAkhir12.classList.remove("visually-hidden");
+	} else if (masaAwalTahun.value == "10") {
+		masaAkhir1.classList.add("visually-hidden");
+		masaAkhir2.classList.add("visually-hidden");
+		masaAkhir3.classList.add("visually-hidden");
+		masaAkhir4.classList.add("visually-hidden");
+		masaAkhir5.classList.add("visually-hidden");
+		masaAkhir6.classList.add("visually-hidden");
+		masaAkhir7.classList.add("visually-hidden");
+		masaAkhir8.classList.add("visually-hidden");
+		masaAkhir9.classList.add("visually-hidden");
+		masaAkhir10.classList.remove("visually-hidden");
+		masaAkhir11.classList.remove("visually-hidden");
+		masaAkhir12.classList.remove("visually-hidden");
+	} else if (masaAwalTahun.value == "11") {
+		masaAkhir1.classList.add("visually-hidden");
+		masaAkhir2.classList.add("visually-hidden");
+		masaAkhir3.classList.add("visually-hidden");
+		masaAkhir4.classList.add("visually-hidden");
+		masaAkhir5.classList.add("visually-hidden");
+		masaAkhir6.classList.add("visually-hidden");
+		masaAkhir7.classList.add("visually-hidden");
+		masaAkhir8.classList.add("visually-hidden");
+		masaAkhir9.classList.add("visually-hidden");
+		masaAkhir10.classList.add("visually-hidden");
+		masaAkhir11.classList.remove("visually-hidden");
+		masaAkhir12.classList.remove("visually-hidden");
+	} else if (masaAwalTahun.value == "12") {
+		masaAkhir1.classList.add("visually-hidden");
+		masaAkhir2.classList.add("visually-hidden");
+		masaAkhir3.classList.add("visually-hidden");
+		masaAkhir4.classList.add("visually-hidden");
+		masaAkhir5.classList.add("visually-hidden");
+		masaAkhir6.classList.add("visually-hidden");
+		masaAkhir7.classList.add("visually-hidden");
+		masaAkhir8.classList.add("visually-hidden");
+		masaAkhir9.classList.add("visually-hidden");
+		masaAkhir10.classList.add("visually-hidden");
+		masaAkhir11.classList.add("visually-hidden");
+		masaAkhir12.classList.remove("visually-hidden");
+	}
+});
+
 // fungsi kalkulator
 
 function startCalc() {
@@ -207,7 +385,16 @@ function calc() {
 	valueNetoSebelum = numeral(formMasaTerakhir.netoSebelum.value);
 	document.getElementById('netoSebelum').value = valueNetoSebelum.format();
 
-	var valueNetoSetahun = ((valueHasilNeto * 1) + (valueNetoSebelum.value() * 1))
+	var valueNetoSetahun = ((valueHasilNeto * 1) + (valueNetoSebelum.value() * 1));
+	var disetahunkan = 12 / masaPenghasilan;
+	penghitungan = document.formMasaTerakhir.selectPenghitungan.value;
+	if (penghitungan === "disetahunkan") {
+		netoDisetahunkan = disetahunkan * valueNetoSetahun;
+		valueNetoSetahun = netoDisetahunkan;
+	}
+	else if (penghitungan === "setahun") {
+		valueNetoSetahun = valueNetoSetahun;
+	}
 	document.formMasaTerakhir.netoSetahun.value = numeral(valueNetoSetahun).format();
 
 	valuePtkpTerakhir = document.formMasaTerakhir.selectPtkpTerakhir.value;
@@ -224,21 +411,28 @@ function calc() {
 	skemaPerhitungan = document.formMasaTerakhir.skemaPerhitungan.value;
 	if (skemaPerhitungan === '1') {
 		if (valuePkpSetahun <= 57000000) {
-			grossUp = (valuePkpSetahun - 0) * 1 / 19
-			valuePkp21 = grossUp
+			grossUp = (valuePkpSetahun - 0) * 1 / 19;
+			valuePkp21 = grossUp;
 		} else if (valuePkpSetahun <= 218500000) {
-			grossUp = (valuePkpSetahun - 57000000) * 3 / 17 + 3000000
-			valuePkp21 = grossUp
+			grossUp = (valuePkpSetahun - 57000000) * 3 / 17 + 3000000;
+			valuePkp21 = grossUp;
 		} else if (valuePkpSetahun <= 406000000) {
-			grossUp = (valuePkpSetahun - 218500000) * 1 / 3 + 31500000
-			valuePkp21 = grossUp
+			grossUp = (valuePkpSetahun - 218500000) * 1 / 3 + 31500000;
+			valuePkp21 = grossUp;
 		} else if (valuePkpSetahun <= 3556000000) {
-			grossUp = (valuePkpSetahun - 406000000) * 3 / 7 + 94000000
-			valuePkp21 = grossUp
+			grossUp = (valuePkpSetahun - 406000000) * 3 / 7 + 94000000;
+			valuePkp21 = grossUp;
 		} else if (valuePkpSetahun <= 99999999999) {
-			grossUp = (valuePkpSetahun - 3556000000) * 7 / 13 + 1444000000
-			valuePkp21 = grossUp
+			grossUp = (valuePkpSetahun - 3556000000) * 7 / 13 + 1444000000;
+			valuePkp21 = grossUp;
 		}
+	}
+	if (penghitungan === "disetahunkan") {
+		pkpDisetahunkan = valuePkp21 / disetahunkan;
+		valuePkp21 = pkpDisetahunkan;
+	}
+	else if (penghitungan === "setahun") {
+		valuePkp21 = valuePkp21;
 	}
 	document.formMasaTerakhir.pkp21.value = numeral(valuePkp21).format();
 
@@ -918,7 +1112,6 @@ function countPajakProgresif(pkpr, npwpStatus) {
 		pkpCounted = (60000000 * (npwpStatus ? 0.05 : 0.06)) + (differentNumber(pkp, 60000000) * (npwpStatus ? 0.15 : 0.18))
 		return pkpCounted;
 	}
-
 	if (pkp > 250000000 && pkp <= 500000000) {
 		pkpCounted = (60000000 * (npwpStatus ? 0.05 : 0.06)) + (190000000 * (npwpStatus ? 0.15 : 0.18)) + (differentNumber(pkp, 250000000) * (npwpStatus ? 0.25 : 0.3))
 		return pkpCounted;

@@ -154,14 +154,15 @@
                      <div class="field">
                         <div class="label">Status NPWP</div>
                         <select id="npwp" name="npwp" class="select">
-                           <option value="1" selected="selected">NPWP</option>
+                           <option value="" class="visually-hidden" disabled selected>Pilih Status NPWP</option>
+                           <option value="1">NPWP</option>
                            <option value="0">Non NPWP</option>
                         </select>
                      </div>
                      <div class="field">
                         <div class="label">PTKP</div>
-                        <select id="selectPtkpTerakhir" class="select">
-                           <option value="" disabled selected>Pilih PTKP</option>
+                        <select id="selectPtkpTerakhir" class="select" onFocus="startCalc();" onBlur="stopCalc();">
+                           <option value="" class="visually-hidden" disabled selected>Pilih PTKP</option>
                            <option value="54000000">TK/0 - 54000000</option>
                            <option value="58500000">TK/1 - 58500000</option>
                            <option value="63000000">TK/2 - 63000000</option>
@@ -173,40 +174,50 @@
                         </select>
                      </div>
                      <div class="field">
+                        <div class="label">Penghitungan</div>
+                        <select id="selectPenghitungan" class="select" onFocus="startCalc();" onBlur="stopCalc();">
+                           <option value="" class="visually-hidden" disabled selected>Pilih Penghitungan</option>
+                           <option value="setahun">Setahun</option>
+                           <option value="disetahunkan">Disetahunkan</option>
+                        </select>
+                     </div>
+                     <div class="field">
                         <label class="label">Masa Penghasilan</label>
                         <div class="select-month">
-                           <select id="masaAwal" class="form-control-select">
-                              <option value="1" selected="selected">Januari</option>
-                              <option value="2">Februari</option>
-                              <option value="3">Maret</option>
-                              <option value="4">April</option>
-                              <option value="5">Mei</option>
-                              <option value="6">Juni</option>
-                              <option value="7">Juli</option>
-                              <option value="8">Agustus</option>
-                              <option value="9">September</option>
-                              <option value="10">Oktober</option>
-                              <option value="11">November</option>
-                              <option value="12">Desember</option>
+                           <select id="masaAwal" class="form-control-select" onFocus="startCalc();" onBlur="stopCalc();">
+                           <option value="" class="visually-hidden" disabled selected>Pilih Masa Awal</option>
+                              <option id="masaAwal1" value="1">Januari</option>
+                              <option id="masaAwal2" value="2">Februari</option>
+                              <option id="masaAwal3" value="3">Maret</option>
+                              <option id="masaAwal4" value="4">April</option>
+                              <option id="masaAwal5" value="5">Mei</option>
+                              <option id="masaAwal6" value="6">Juni</option>
+                              <option id="masaAwal7" value="7">Juli</option>
+                              <option id="masaAwal8" value="8">Agustus</option>
+                              <option id="masaAwal9" value="9">September</option>
+                              <option id="masaAwal10" value="10">Oktober</option>
+                              <option id="masaAwal11" value="11">November</option>
+                              <option id="masaAwal12" value="12">Desember</option>
                            </select>
                         </div>
                         <div style="float:left; margin-left: 30px; margin-right: -30px;">
                            &nbsp;&nbsp;s/d&nbsp;
                         </div>
                         <div class="select-month">
-                           <select id="masaAkhir" class="form-control-select">
-                              <option value="1">Januari</option>
-                              <option value="2">Februari</option>
-                              <option value="3">Maret</option>
-                              <option value="4">April</option>
-                              <option value="5">Mei</option>
-                              <option value="6">Juni</option>
-                              <option value="7">Juli</option>
-                              <option value="8">Agustus</option>
-                              <option value="9">September</option>
-                              <option value="10">Oktober</option>
-                              <option value="11">November</option>
-                              <option value="12" selected="selected">Desember</option>
+                           <select id="masaAkhir" class="form-control-select" onFocus="startCalc();" onBlur="stopCalc();">
+                              <option value="" class="visually-hidden" disabled selected>Pilih Masa Akhir</option>
+                              <option id="masaAkhir1" value="1">Januari</option>
+                              <option id="masaAkhir2" value="2">Februari</option>
+                              <option id="masaAkhir3" value="3">Maret</option>
+                              <option id="masaAkhir4" value="4">April</option>
+                              <option id="masaAkhir5" value="5">Mei</option>
+                              <option id="masaAkhir6" value="6">Juni</option>
+                              <option id="masaAkhir7" value="7">Juli</option>
+                              <option id="masaAkhir8" value="8">Agustus</option>
+                              <option id="masaAkhir9" value="9">September</option>
+                              <option id="masaAkhir10" value="10">Oktober</option>
+                              <option id="masaAkhir11" value="11">November</option>
+                              <option id="masaAkhir12" value="12">Desember</option>
                            </select>
                         </div>
                      </div>
@@ -214,16 +225,17 @@
                      <div class="field">
                         <div class="label2">Skema Perhitungan</div>
                         <select id="skemaPerhitungan" name="skema_perhitungan" style="margin-left: 19.5%;"
-                           class="select">
-                           <option value="0" selected="selected">Gross</option>
+                           class="select" onFocus="startCalc();" onBlur="stopCalc();">
+                           <option value="" class="visually-hidden" disabled selected>Pilih Skema Perhitungan</option>
+                           <option value="0">Gross</option>
                            <option value="1">Gross Up</option>
                         </select>
                      </div>
                      <div class="field">
-                        <button class="firstNext next" id="nextAwal">Selanjutnya</button>
-                        <button class="firstNext next">
+                        <button class="firstHome next">
                            <a href="index.php">BERANDA</a>
                         </button>
+                        <button class="firstNext next" id="nextAwal">Selanjutnya</button>
                      </div>
                   </div>
 

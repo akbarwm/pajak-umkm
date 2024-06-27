@@ -171,6 +171,19 @@ form .page .field .select-month .form-control-select {
   color: white;
 }
 
+.form-outer form .page .field .firstHome {
+  margin: 2% 0;
+  width: 60%;
+  float: right;
+  margin-right: 2%;
+  margin-top: 100px; /*ubah button jadi ke bawah di pegawai tetap tahunan*/
+}
+
+.form-outer form .page .field .firstHome a {
+  text-decoration: none;
+  color: white;
+}
+
 .form-outer form .page .btns {
   width: 800px;
   height: 15px;
