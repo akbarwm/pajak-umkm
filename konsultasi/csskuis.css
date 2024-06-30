@@ -1,0 +1,128 @@
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.small-img {
+    display: block;
+    margin: 0 auto;
+}
+
+.text {
+    text-align: center;
+}
+
+/* Container styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.row {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col-md-2, .col-md-4 {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.col-md-6 {
+    flex: 2;
+}
+
+/* Box styling for question and answers */
+.box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Text styling */
+.text-left {
+    text-align: left;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.red-text {
+    color: red;
+}
+
+.lowered-text {
+    text-transform: lowercase;
+}
+
+/* Radio button styling */
+.radio-container {
+    margin-top: 10px;
+}
+
+/* Button styling */
+.button {
+    text-align: center;
+}
+
+.number-button, .finish-button, .next-button {
+    margin: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.number-button {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.number-button:hover {
+    background-color: #0056b3;
+}
+
+.finish-button {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.finish-button:hover {
+    background-color: #c82333;
+}
+
+.next-button {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.next-button:hover {
+    background-color: #218838;
+}
+
+/* Footer styling */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #343a40;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
