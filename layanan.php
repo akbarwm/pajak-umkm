@@ -55,7 +55,7 @@
             </div>
             <div class="row col-20 d-flex justify-content-center">
                 <div class="col-lg-6 col-md-6 mb-40">
-                    <a href="../PBL-25/konsultasi/index.php">
+                    <a href="../pajak-umkm/konsultasi/index.php">
                         <div class="single-about style4 box-shadow">
                             <div class="about-title">
                                 <h2 class="title">Konsultasi</h2>
@@ -115,7 +115,7 @@
                     </a>
                     </div>
                     <div class="col-lg-6 col-md-6 md-mb-40">
-                    <a href="kuis.php">
+                    <a href="konsultasi/kuis_pajak.php">
                         <div class="single-about style4 box-shadow">
                             <div class="about-title">
                                 <h2 class="title">Kuis Pajak</h2>
