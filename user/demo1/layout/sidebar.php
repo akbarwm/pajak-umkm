@@ -278,16 +278,16 @@ function site_url()
 							</div>
 						</li>
 						<!-- Kuis -->
-						<li class="nav-item <?= (full_path() == site_url() . '/user/demo1/list_kuis.php' || full_path() == site_url() . '/user/demo1/riwayat_pengerjaan.php') ? 'active' : '' ?>">
+						<li class="nav-item <?= (full_path() == site_url() . '/user/demo1/dashboard_kuis.php' || full_path() == site_url() . '/user/demo1/riwayat_pengerjaan.php') ? 'active' : '' ?>">
 							<a data-toggle="collapse" href="#kuis">
 								<i class="far fa-list-alt"></i>
 								<p>Manajemen Kuis</p>
 								<span class="caret"></span>
 							</a>
-							<div class="collapse <?= (full_path() == site_url() . '/user/demo1/list_kuis.php' || (explode("?", full_path())[0] == site_url() . '/user/demo1/create_kuis.php') || (explode("?", full_path())[0] == site_url() . '/user/demo1/list_soal.php') || full_path() == site_url() . '/user/demo1/riwayat_kuis.php')  ? 'show' : '' ?>" id="kuis">
+							<div class="collapse <?= (full_path() == site_url() . '/user/demo1/dashboard_kuis.php' || (explode("?", full_path())[0] == site_url() . '/user/demo1/tambah_kuis.php') || (explode("?", full_path())[0] == site_url() . '/user/demo1/tambah_soal.php') || full_path() == site_url() . '/user/demo1/riwayat_kuis.php')  ? 'show' : '' ?>" id="kuis">
 								<ul class="nav nav-collapse">
-									<li class="<?= (full_path() == site_url() . '/user/demo1/list_kuis.php') || (full_path() == site_url() . '/user/demo1/create_kuis.php') || (full_path() == site_url() . '/user/demo1/list_soal.php') ? 'active' : '' ?>">
-										<a href="list_kuis.php">
+									<li class="<?= (full_path() == site_url() . '/user/demo1/dashboard_kuis.php') || (full_path() == site_url() . '/user/demo1/tambah_kuis.php') || (full_path() == site_url() . '/user/demo1/tambah_soal.php') ? 'active' : '' ?>">
+										<a href="dashboard_kuis.php">
 											<span class="sub-item">List Kuis</span>
 										</a>
 									</li>

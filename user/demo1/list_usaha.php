@@ -15,7 +15,6 @@ if (isset($_POST['type'])) {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <title>List Usaha | Sudut Pajak </title>
@@ -24,7 +23,6 @@ if (isset($_POST['type'])) {
 <body>
     <?php include './layout/sidebar.php'; ?>
 
-    <!-- Data Table start -->
     <div class="main-panel">
         <div class="container">
             <div class="page-inner">
@@ -80,16 +78,14 @@ if (isset($_POST['type'])) {
                 </div>
             </div>
         </div>
-        <!-- Data Table End -->
     </div>
     </div>
     </div>
     </div>
     </div>
     <?php include './layout/footer.php'; ?>
-    <!-- Sweet Alert -->
+
     <script src="../assets/js/plugin/sweetalert/sweetalert.min.js"></script>
-    <!-- Datatables -->
     <script src="../assets/js/plugin/datatables/datatables.min.js"></script>
     <script>
         $(document).ready(function() {
@@ -118,8 +114,6 @@ if (isset($_POST['type'])) {
                     });
                 }
             });
-
-            // Add Row
             $('#add-row').DataTable({
                 "pageLength": 5,
             });
@@ -188,10 +182,7 @@ if (isset($_POST['type'])) {
                             })
                         }
                     });
-                    // const element = document.getElementById("deletebutton2");
-                    // element.click();
                 } else if (
-                    /* Read more about handling dismissals below */
                     result.dismiss === Swal.DismissReason.cancel
                 ) {
                     swalWithBootstrapButtons.fire(

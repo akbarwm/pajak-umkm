@@ -1,0 +1,247 @@
+body {
+    background-color: #ffffff; /* Ubah warna latar belakang menjadi putih */
+}
+
+.single-about {
+    height: 300px;
+}
+
+.single-about > p {
+    color: black;
+}
+
+.small-img {
+    width: 50px;
+    height: auto;
+}
+
+.text {
+    margin-left: 370px;
+    font-size: 14px;
+    margin-top: -40px;
+    font-weight: bold;
+}
+
+.box {
+    width: 18%;
+    max-width: 1030px;
+    height: 150px;
+    background-color: white;
+    border: 20px solid transparent;
+    background-clip: padding-box;
+    border-radius: 30px;
+    margin-top: 80px;
+    position: relative;
+    margin-left: 10px;
+}
+
+.box::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(to top, #289C5E, #4FA2ED);
+    z-index: -1;
+    border-radius: 20px;
+}
+
+.box1 {
+    width: 900px;
+    max-width: 1350px;
+    height: 400px;
+    background-color: white;
+    border: 10px solid transparent;
+    background-clip: padding-box;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: -130px;
+    margin-left: 250px;
+    position: relative;
+}
+
+.box1::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(to top, #289C5E, #4FA2ED);
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.box3 {
+    max-width: 1350px;
+    background-color: white;
+    width: 240px;
+    height: 230px;
+    border: 10px solid transparent;
+    background-clip: padding-box;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: -280px;
+    margin-left: 770px;
+    position: absolute;
+}
+
+.box3::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(to top, #289C5E, #4FA2ED);
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.big-img {
+    position: absolute;
+    margin-right: 100px;
+    margin-top: 50px;
+    width: 1200px;
+    height: auto;
+}
+
+.text-bold {
+    font-weight: 900;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.red-text {
+    color: red;
+    margin-bottom: 590px;
+}
+
+.no-margin {
+    margin-bottom: 0;
+}
+
+.lowered-text {
+    margin-top: 500px;
+}
+
+.time-box {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    border-color: red;
+    padding: 10px;
+    width: 170px;
+    height: 40px;
+    margin-left: 490px;
+    margin-top: 20px;
+    display: inline-block;
+    font-weight: 800;
+}
+
+.input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #3498db;
+    border-radius: 50%;
+    outline: none;
+    transition-duration: 0.4s;
+    background-color: transparent;
+}
+
+.input[type="radio"]:checked {
+    background-color: #3498db;
+}
+
+.radio-container {
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #3498db;
+    margin-top: 20px;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px; /* Kurangi jarak dari atas */
+}
+
+.number-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.number-list li {
+    margin: 5px; /* Kurangi jarak antar tombol */
+}
+
+.number-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.number-button:hover {
+    background-color: #3e8e41;
+}
+
+.finish-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px; /* Kurangi jarak dari atas */
+}
+
+.finish-button:hover {
+    background-color: #d32f2f;
+}
+
+.next-button,
+.awal-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.next-button:hover,
+.awal-button:hover {
+    background-color: #3e8e41;
+}
+
+footer {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer {
+    color: #555;
+}

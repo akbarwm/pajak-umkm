@@ -113,9 +113,9 @@
                             </div>
                         </div>
                     </a>
-                    </div>
-                    <div class="col-lg-6 col-md-6 md-mb-40">
-                    <a href="kuis.php">
+                </div>
+                <div class="col-lg-6 col-md-6 md-mb-40">
+                    <a href="konsultasi/kuis_pajak.php">
                         <div class="single-about style4 box-shadow">
                             <div class="about-title">
                                 <h2 class="title">Kuis Pajak</h2>

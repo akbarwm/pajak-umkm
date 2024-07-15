@@ -117,10 +117,7 @@
                                                     <td class="fw-bold bg-light">Selesai</td>
                                                     <td>Rabu, 24 April 2024 08:20</td>
                                                 </tr>
-                                                <tr>
-                                                    <td class="fw-bold bg-light">Lama Pengerjaan</td>
-                                                    <td>1 jam 20 menit</td>
-                                                </tr>
+
                                             </tbody>
                                         </table>
 
@@ -252,34 +249,9 @@
                                 <!-- End Soal 3-->
 
                                 <div class="flex justify-center items-center mt-10 text-center">
-                                    <a class="btn" href="kirimkuis.php" style="background-image: linear-gradient(135deg, #09c778, #01a0f9); color: #fff;">
-                                        Kembali
+                                    <a class="btn" href="hasil_kuis.php" style="background-image: linear-gradient(135deg, #09c778, #01a0f9); color: #fff;">
+                                        Selesaikan Evaluasi
                                     </a>
-
-                                </div>
-                            </div>
-
-                            <!-- Start Navigasi soal -->
-                            <div class="nav-card">
-                                <div class="card card-border card-nav shadow mb-4 mt-0">
-                                    <div class="card-body">
-                                        <div class="self-center">
-                                            <h2 class="card-title text-center fw-bold">Navigasi Soal</h2>
-                                        </div>
-                                        <div class="d-flex justify-content-center gap-3 mt-3">
-                                            <a class="btn text-white m-2 " href="#soal-1">1</a>
-                                            <a class="btn text-white m-2 " href="#soal-2">2</a>
-                                            <a class="btn text-white m-2 " href="#soal-3">3</a>
-                                        </div>
-                                    </div>
-
-                                    <div class="self-center text-center mt-2 mb-3 ">
-                                        <a href="#" class="link link-accent link-hover">
-                                            Selesaikan Evaluasi
-                                        </a>
-                                    </div>
-
-                                    <!-- End Navigasi soal -->
 
                                 </div>
                             </div>

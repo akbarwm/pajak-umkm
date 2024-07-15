@@ -43,7 +43,7 @@ if (!empty($_POST)) {
 </head>
 
 <body>
-
+    <br><br>
     <div class="container">
         <h1>Registrasi</h1>
         <p>Silahkan mendaftar sebelum menggunakan forum.</p>

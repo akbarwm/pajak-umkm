@@ -31,39 +31,23 @@ if (!empty($_POST)) {
 <head>
 
     <head>
-        <!-- meta tag -->
         <meta charset="utf-8">
         <title>Home | Sudut Pajak </title>
         <meta name="description" content="">
-        <!-- responsive tag -->
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- favicon -->
         <link rel="apple-touch-icon" href="apple-touch-icon.html">
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
-        <!-- bootstrap v4 css -->
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-        <!-- font-awesome css -->
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-        <!-- animate css -->
         <link rel="stylesheet" type="text/css" href="css/animate.css">
-        <!-- owl.carousel css -->
         <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
-        <!-- rsmenu CSS -->
         <link rel="stylesheet" type="text/css" href="css/rsmenu-main.css">
-        <!-- magnific popup css -->
-        <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
-        <!-- rsmenu transitions CSS -->
         <link rel="stylesheet" type="text/css" href="css/rsmenu-transitions.css">
-        <!-- style css -->
+        <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
         <link rel="stylesheet" type="text/css" href="style.css">
-        <!-- <link rel="stylesheet" href="css/style2.css"> -->
-
-        <!-- switch color presets css -->
         <link id="switch_style" href="#" rel="stylesheet" type="text/css">
-        <!-- Spacing css -->
         <link rel="stylesheet" type="text/css" href="css/spacing.css">
-        <!-- responsive css -->
         <link rel="stylesheet" type="text/css" href="css/responsive.css">
     </head>
     <style>
@@ -94,29 +78,23 @@ if (!empty($_POST)) {
                 }
                 ?>
                 <form action="" method="POST">
-                    <!-- Email input -->
                     <div class="form-outline mb-4">
                         <label class="form-label" for="form1Example13">Email</label>
                         <input type="email" id="form1Example13" class="form-control" placeholder="Email address" name="email" required />
 
                     </div>
-
-                    <!-- Password input -->
                     <div class="form-outline mb-4">
                         <label class="form-label" for="form1Example23">Password</label>
                         <input type="password" id="form1Example23" class="form-control" placeholder="Password" name="password" required />
                     </div>
 
                     <div class="d-flex justify-content-around align-items-center mb-4">
-                        <!-- Checkbox -->
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
                             <label class="form-check-label" for="form1Example3"> Remember me </label>
                         </div>
                         <a href="#!">Forgot password?</a>
                     </div>
-
-                    <!-- Submit button -->
                     <button type="submit" class="btn btn-success btn-block">Sign in</button>
 
                     <div class="divider d-flex align-items-center my-4">
@@ -136,10 +114,6 @@ if (!empty($_POST)) {
             </div>
         </div>
     </div>
-
-
-
-
     <script src="boostrap/js/bootstrap.bundle.min.js"></script>
 </body>
 

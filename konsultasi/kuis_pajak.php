@@ -3,8 +3,8 @@
 <?php session_start(); ?>
 
 <head>
-    <title>Kuis Pajak</title>
-    <link rel="stylesheet" type="text/css" href="kuispajak.css">
+    <title>Kuis Pajak PPh Pasal 21</title>
+    <link rel="stylesheet" type="text/css" href="css/kuispajak.css">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
 </head>
 
@@ -50,14 +50,22 @@
                 </div>
             </div>
             <div class="quiz-container">
-                <div class="quiz-card">
-                    <div class="quiz-content">
-                        <img src="../img/kuislogo.png" alt="Logo Kuis" class="quiz-logo">
-                        <h3>Kuis PPh 21: Perhitungan PPh 21</h3>
-                    </div>
-                    <button class="btn text-white"><a href="login_kuis.php" class="text-white">Lihat</a></button>
-                </div>
+                <?php
+                // Query untuk mengambil data dari tabel quiz_pajak
+                $query = "SELECT * FROM quiz_pajak";
+                $result = mysqli_query($db, $query); // Gunakan variabel $db
 
+                // Loop untuk menampilkan setiap quiz
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo '<div class="quiz-card">';
+                    echo '    <div class="quiz-content">';
+                    echo '        <img src="../img/kuislogo.png" alt="Logo Kuis" class="quiz-logo">';
+                    echo '        <h3>' . $row['judul_kuis'] . '</h3>';
+                    echo '    </div>';
+                    echo '    <button class="btn text-white"><a href="form_kuis.php?id=' . $row['id'] . '" class="text-white">Lihat</a></button>';
+                    echo '</div>';
+                }
+                ?>
             </div>
         </div>
     </div>
