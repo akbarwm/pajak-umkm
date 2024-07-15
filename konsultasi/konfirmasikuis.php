@@ -363,10 +363,8 @@ mysqli_close($db);
             <h4>Kuis PPh 21: Penghitungan PPh 21</h4>
         </div>
     </div>
-    <div class="text">
-        <div class="time-box" style="margin-left: 800px">
-            <p>Sisa Waktu 00:00</p>
-        </div>
+    <div class="text mt-2">
+
     </div>
     </div>
     <div class="container mt-5 mb-5">
