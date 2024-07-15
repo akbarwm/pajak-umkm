@@ -121,7 +121,7 @@
                                 <h2 class="title">Kuis Pajak</h2>
                             </div>
                             <div class="about-desc">
-                                <p class="desc-txt">Tempat untuk melakukan tes tentang perpajakan.</p>
+                                <p class="desc-txt">Kuis pajak yang berisikan pertanyaan-pertanyaan tentang perhitungan pajak PPh 21.</p>
                             </div>
                         </div>
                     </a>

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 24 Des 2023 pada 07.31
--- Versi server: 10.4.32-MariaDB
--- Versi PHP: 8.2.12
+-- Waktu pembuatan: 01 Jul 2024 pada 01.19
+-- Versi server: 10.4.28-MariaDB
+-- Versi PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -197,6 +197,58 @@ INSERT INTO `peraturan_pajak` (`id`, `judul`, `deskripsi`, `kategori`, `file_pdf
 (107, 'PERATURAN WALIKOTA BATAM NOMOR 73 TAHUN 2020', 'PERUBAHAN TARIF RETRIBUSI PENGUJIAN KENDARAAN BERMOTOR KOTA BATAM', 'Peraturan Pajak Daerah Kota Batam', ''),
 (108, 'PERATURAN WALIKOTA BATAM NOMOR 66 TAHUN 2020', 'PETUNJUK PELAKSANAAN PEMUNGUTAN RETRIBUSI RUMAH POTONG HEWAN', 'Peraturan Pajak Daerah Kota Batam', ''),
 (109, 'PERATURAN WALIKOTA BATAM NOMOR 38 TAHUN 2021', 'TATA CARA PENAGIHAN DAN PENINDAKAN PAJAK DAERAH ', 'Peraturan Pajak Daerah Kota Batam', '');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `quiz_pajak`
+--
+
+CREATE TABLE `quiz_pajak` (
+  `id` int(100) NOT NULL,
+  `soal` varchar(500) NOT NULL,
+  `jawaban_a` varchar(50) NOT NULL,
+  `jawaban_b` varchar(50) NOT NULL,
+  `jawaban_c` varchar(255) NOT NULL,
+  `jawaban_d` varchar(255) NOT NULL,
+  `jawaban_benar` enum('A','B','C','D','') DEFAULT NULL,
+  `no_soal` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `quiz_pajak`
+--
+
+INSERT INTO `quiz_pajak` (`id`, `soal`, `jawaban_a`, `jawaban_b`, `jawaban_c`, `jawaban_d`, `jawaban_benar`, `no_soal`) VALUES
+(5, 'Apa yang dimaksud dengan Pajak Penghasilan (PPh)?', 'Pajak yang dikenakan pada penjualan barang', 'Pajak yang dikenakan pada penghasilan individu ata', 'Pajak yang dikenakan pada kepemilikan tanah dan bangunan', 'Pajak yang dikenakan pada transaksi keuangan', 'B', 2),
+(6, 'Pajak yang dikenakan pada penghasilan karyawan dan pegawai adalah...', 'PPh 21', 'PPh 22', 'PPh 23', 'PPN', 'A', 3),
+(7, 'Siapa yang wajib membayar PPh 22?', 'Wajib Pajak Orang Pribadi', 'Wajib Pajak Badan', 'Wajib Pajak Umum', 'Wajib Pajak Karyawan', 'B', 4),
+(8, 'Pajak yang dikenakan pada Usaha Mikro, Kecil, dan Menengah (UMKM) disebut...', 'PPh 21', 'PPh 22', 'PPh 23', 'PPN', 'C', 5);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `riwayat_pengerjaan`
+--
+
+CREATE TABLE `riwayat_pengerjaan` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `skor` int(11) NOT NULL,
+  `tanggal` date NOT NULL,
+  `no_soal` int(11) NOT NULL,
+  `total_soal` varchar(255) NOT NULL,
+  `jawaban` varchar(255) NOT NULL,
+  `jawaban_benar` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `riwayat_pengerjaan`
+--
+
+INSERT INTO `riwayat_pengerjaan` (`id`, `nama`, `email`, `skor`, `tanggal`, `no_soal`, `total_soal`, `jawaban`, `jawaban_benar`) VALUES
+(48, 'Nama Pengguna', 'email@example.com', 0, '2024-06-23', 0, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -490,8 +542,8 @@ INSERT INTO `topik` (`id`, `judul`, `deskripsi`, `tanggal`, `id_user`) VALUES
 --
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
-  `unique_id` int(255) NOT NULL,
+  `users_id` int(11) NOT NULL,
+  `id` int(255) NOT NULL,
   `nama` varchar(255) NOT NULL,
   `role` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
@@ -504,11 +556,12 @@ CREATE TABLE `users` (
 -- Dumping data untuk tabel `users`
 --
 
-INSERT INTO `users` (`id`, `unique_id`, `nama`, `role`, `email`, `password`, `img`, `status`) VALUES
+INSERT INTO `users` (`users_id`, `id`, `nama`, `role`, `email`, `password`, `img`, `status`) VALUES
 (1, 0, 'Daffa', '', 'daffaaqshal04@gmail.com', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', '', ''),
 (2, 0, 'Junn', '', 'daffaaqshal@gmail.com', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', '', ''),
 (8, 1608449461, 'rafi', '', 'rafi@gmail.com', '5f4dcc3b5aa765d61d8327deb882cf99', '1702970795foto_contoh.jpg', 'Active now'),
-(9, 0, 'Yayan Ruhian', '', 'yayan@gmail.com', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', '', '');
+(9, 0, 'Yayan Ruhian', '', 'yayan@gmail.com', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8', '', ''),
+(10, 9, 'akbar ', '', 'akbar@gmai.com', '01b73830e76a1491801be36ede4f5de4aed4edda', '', '');
 
 -- --------------------------------------------------------
 
@@ -581,6 +634,18 @@ ALTER TABLE `peraturan_pajak`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `quiz_pajak`
+--
+ALTER TABLE `quiz_pajak`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `riwayat_pengerjaan`
+--
+ALTER TABLE `riwayat_pengerjaan`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `tb_admin`
 --
 ALTER TABLE `tb_admin`
@@ -630,7 +695,7 @@ ALTER TABLE `topik`
 -- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
+  ADD PRIMARY KEY (`users_id`),
   ADD UNIQUE KEY `email_unik` (`email`);
 
 --
@@ -680,6 +745,18 @@ ALTER TABLE `peraturan_pajak`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
 
 --
+-- AUTO_INCREMENT untuk tabel `quiz_pajak`
+--
+ALTER TABLE `quiz_pajak`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT untuk tabel `riwayat_pengerjaan`
+--
+ALTER TABLE `riwayat_pengerjaan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+
+--
 -- AUTO_INCREMENT untuk tabel `tb_appoinment`
 --
 ALTER TABLE `tb_appoinment`
@@ -713,7 +790,7 @@ ALTER TABLE `topik`
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `users_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT untuk tabel `users_konsultan`
@@ -730,7 +807,7 @@ ALTER TABLE `users_konsultan`
 --
 ALTER TABLE `komentar`
   ADD CONSTRAINT `topik_komentar` FOREIGN KEY (`id_topik`) REFERENCES `topik` (`id`),
-  ADD CONSTRAINT `user_komenter` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `user_komenter` FOREIGN KEY (`id_user`) REFERENCES `users` (`users_id`);
 
 --
 -- Ketidakleluasaan untuk tabel `tb_appoinment`
@@ -743,7 +820,7 @@ ALTER TABLE `tb_appoinment`
 -- Ketidakleluasaan untuk tabel `topik`
 --
 ALTER TABLE `topik`
-  ADD CONSTRAINT `topik_user` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`);
+  ADD CONSTRAINT `topik_user` FOREIGN KEY (`id_user`) REFERENCES `users` (`users_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
