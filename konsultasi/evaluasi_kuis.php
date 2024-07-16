@@ -268,8 +268,8 @@ $answer_map = [
                                                 <div class="col-lg-3 mt-3">
                                                     <div class="card card-border" id="soal-<?php echo $key + 1; ?>">
                                                         <div class="card-body">
-                                                            <p class="fw-bold">Pertanyaan <?php echo $key + 1; ?></p>
-                                                            <p class="text-primary"><?php echo isset($answers[$key]) && $answers[$key] === $question['jawaban'] ? 'Benar' : 'Salah'; ?></p>
+                                                            <p class="fw-bold"><b>Pertanyaan <?php echo $key + 1; ?></b></p>
+                                                            <p class="text-primary"><?php echo isset($answers[$key]) && $answers[$key] === $question['jawaban'] ? 'Benar' : ''; ?></p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -311,17 +311,13 @@ $answer_map = [
                                                     </div>
                                                     <div class="custom-card mt-3 text-white mb-4">
                                                         <div class="card-body">
-                                                            <?php if (isset($answers[$key])) : ?>
-                                                                <p>Jawaban Anda: <?php echo htmlspecialchars(isset($answer_map[$answers[$key]]) ? $answer_map[$answers[$key]] : 'Belum dijawab'); ?></p>
-                                                            <?php else : ?>
-                                                                <p>Jawaban Anda: Belum dijawab</p>
-                                                            <?php endif; ?>
+
 
                                                             <?php
                                                             // Pastikan $question['jawaban'] sudah tersedia dari tabel soal_pajak
                                                             $jawaban_benar = isset($question['jawaban']) ? htmlspecialchars($question['jawaban']) : 'Tidak tersedia';
                                                             ?>
-                                                            <p>Jawaban Benar: <?php echo $jawaban_benar; ?></p>
+                                                            <p>Jawaban Benar : <?php echo $jawaban_benar; ?></p>
                                                         </div>
 
                                                     </div>

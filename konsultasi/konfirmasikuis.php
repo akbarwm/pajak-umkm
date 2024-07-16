@@ -429,7 +429,6 @@ mysqli_close($db);
     </div>
 
     <div class="bottom-buttons">
-        <a href="quiz_pajak1.php"><button class="back-button">Kembali ke Soal</button></a>
         <form method="POST" action="hasil_kuis.php">
             <input type="hidden" name="skor" value="<?php echo $skor; ?>">
             <button type="submit" class="send-button">Kirim Jawaban</button>

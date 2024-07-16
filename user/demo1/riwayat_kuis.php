@@ -58,9 +58,9 @@ if (isset($_POST['type'])) {
 												<th>Nama</th>
 												<th>Email</th>
 												<th>Skor Akhir</th>
-												<th>Tanggal Pengerjaan</th>
 												<th>Waktu Mulai Pengerjaan</th>
 												<th>Waktu Selesai Pengerjaan</th>
+
 												<th style="width: 10%">Aksi</th>
 											</tr>
 										</thead>
@@ -78,9 +78,9 @@ if (isset($_POST['type'])) {
 													<td><?= $r['nama'] ?></td>
 													<td><?= $r['email'] ?></td>
 													<td><?= $r['skor_akhir'] ?>.00</td>
-													<td><?= $r['tanggal'] ?></td>
 													<td><?= $r['waktu_mulai'] ?></td>
 													<td><?= $r['waktu_selesai'] ?></td>
+
 													<td style="width: 20%">
 														<div class="form-button-action">
 															<button id="deletebutton" onclick="deleteData(this)" data-id="<?= $r['id'] ?>" type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Hapus">
@@ -89,11 +89,13 @@ if (isset($_POST['type'])) {
 														</div>
 													</td>
 
+
 												</tr>
 											<?php
 												$idx++;
 											}
 											?>
+
 										</tbody>
 									</table>
 								</div>
