@@ -34,11 +34,11 @@
             <div class="breadcrumbs-inner">
                 <div class="container">
                     <div class="breadcrumbs-text">
-                        <h1 class="breadcrumbs-title mb-17">Kategori Perbidang Usaha</h1>
+                        <h1 class="breadcrumbs-title mb-17">Layanan</h1>
                         <div class="categories">
                             <ul>
                                 <li><a href="index.php"><i class="fa fa-house"></i>Beranda</a></li>
-                                <li>Kategori Perbidang Usaha</li>
+                                <li>Layanan</li>
                             </ul>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
             </div>
             <div class="row col-20 d-flex justify-content-center">
                 <div class="col-lg-6 col-md-6 mb-40">
-                    <a href="../PBL-25/konsultasi/index.php">
+                    <a href="konsultasi/index.php">
                         <div class="single-about style4 box-shadow">
                             <div class="about-title">
                                 <h2 class="title">Konsultasi</h2>
