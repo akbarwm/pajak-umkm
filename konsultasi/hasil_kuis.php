@@ -6,6 +6,13 @@ include 'navbar4.php';
 // Query untuk mengambil data riwayat pengerjaan
 $sql = "SELECT * FROM riwayat_pengerjaan";
 $result = mysqli_query($db, $sql);
+
+$skor = isset($_POST['skor']) ? $_POST['skor'] : 0;
+$answers = isset($_POST['answers']) ? $_POST['answers'] : [];
+
+$_SESSION['skor'] = $skor;
+$_SESSION['answers'] = $answers;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -302,8 +309,8 @@ $result = mysqli_query($db, $sql);
                         <?php while ($row = mysqli_fetch_assoc($result)) : ?>
                             <tr class="odd">
                                 <td>Selesai</td>
-                                <td><br>Dikirim <?php echo hari_indonesia(date('l', strtotime($row['tanggal']))); ?>, <?php echo date('j F Y', strtotime($row['tanggal'])); ?></td>
-                                <td><?php echo $row['skor_akhir']; ?>.00</td>
+                                <td>Dikirim <?php echo hari_indonesia(date('l', strtotime($row['tanggal']))); ?>, <?php echo date('j', strtotime($row['tanggal'])); ?> <?php echo bulan_indonesia(date('F', strtotime($row['tanggal']))); ?> <?php echo date('Y', strtotime($row['tanggal'])); ?></td>
+                                <td><b><?php echo $row['skor_akhir']; ?>.00/100</b></td>
                                 <td><a href="evaluasi_kuis.php?id=<?php echo $row['id']; ?>">Evaluasi</a></td>
                             </tr>
                         <?php endwhile; ?>
@@ -329,7 +336,39 @@ $result = mysqli_query($db, $sql);
                         case 'Saturday':
                             return 'Sabtu';
                         default:
-                            return $day;
+                            return 'Hari tidak valid';
+                    }
+                }
+
+                function bulan_indonesia($month)
+                {
+                    switch ($month) {
+                        case 'January':
+                            return 'Januari';
+                        case 'February':
+                            return 'Februari';
+                        case 'March':
+                            return 'Maret';
+                        case 'April':
+                            return 'April';
+                        case 'May':
+                            return 'Mei';
+                        case 'June':
+                            return 'Juni';
+                        case 'July':
+                            return 'Juli';
+                        case 'August':
+                            return 'Agustus';
+                        case 'September':
+                            return 'September';
+                        case 'October':
+                            return 'Oktober';
+                        case 'November':
+                            return 'November';
+                        case 'December':
+                            return 'Desember';
+                        default:
+                            return 'Bulan tidak valid';
                     }
                 }
                 ?>

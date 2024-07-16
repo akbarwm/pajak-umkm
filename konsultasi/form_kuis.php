@@ -6,19 +6,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nama = $_POST['nama'];
     $email = $_POST['email'];
 
-    // Masukkan data ke tabel riwayat_pengerjaan
-    $sql = "INSERT INTO riwayat_pengerjaan (nama, email, skor_akhir, tanggal) VALUES (?, ?, '0', CURDATE())";
-    $stmt = $db->prepare($sql);
-    $stmt->bind_param("ss", $nama, $email);
-    $stmt->execute();
-
-    // Simpan ID terakhir yang dimasukkan
-    $last_id = $stmt->insert_id;
+    // Waktu mulai kuis
+    $_SESSION['waktu_mulai'] = date('Y-m-d H:i:s');
 
     // Simpan nama dan email ke session
     $_SESSION['nama'] = $nama;
     $_SESSION['email'] = $email;
-    $_SESSION['riwayat_id'] = $last_id;
 
     // Redirect ke halaman quiz_pajak1.php
     header('Location: quiz_pajak1.php');
@@ -93,7 +86,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
-
     <!-- Header Menu Start -->
     <?php include 'navbar4.php'; ?>
     <br>
@@ -113,7 +105,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <button class="btn text-white text-center" type="submit">Mulai</button>
             </div>
         </form>
-    </div>
     </div>
     <?php include '../layout/footer.php'; ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qm1uZY5ZsDJPXyMN1Xy2PyoEzNLC6rZ2y5+KZ8+FfqM7LTzh8DP4I4BYIkQ1L/s" crossorigin="anonymous"></script>

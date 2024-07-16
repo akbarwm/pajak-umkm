@@ -2,6 +2,9 @@
 session_start();
 include '../connection.php';
 
+// Set default timezone to WIB (Waktu Indonesia Barat)
+date_default_timezone_set('Asia/Jakarta');
+
 // Fetch questions from database
 $sql = "SELECT * FROM soal_pajak ORDER BY id";
 $result = mysqli_query($db, $sql);
@@ -31,25 +34,32 @@ foreach ($questions as $key => $question) {
     }
 }
 
-// Save score and date to riwayat_pengerjaan table
-if (isset($_SESSION['nama'], $_SESSION['email'])) {
+// Save answers to session
+$_SESSION['answers'] = $answers;
+
+// Save score, date, and time to riwayat_pengerjaan table
+if (isset($_SESSION['nama'], $_SESSION['email'], $_SESSION['waktu_mulai'], $_SESSION['id_kuis'])) {
     $nama = $_SESSION['nama'];
     $email = $_SESSION['email'];
     $tanggal = date('Y-m-d'); // Current date
-    $sql_insert = "INSERT INTO riwayat_pengerjaan (nama, email, skor_akhir, tanggal) 
-                   VALUES ('$nama', '$email', $skor, '$tanggal')";
+    $waktu_mulai = $_SESSION['waktu_mulai'];
+    $waktu_selesai = date('Y-m-d H:i:s');
+    $id_kuis = $_SESSION['id_kuis'];
+
+    $sql_insert = "INSERT INTO riwayat_pengerjaan (id_kuis, nama, email, skor_akhir, tanggal, waktu_mulai, waktu_selesai) 
+                   VALUES ('$id_kuis', '$nama', '$email', $skor, '$tanggal', '$waktu_mulai', '$waktu_selesai')";
     mysqli_query($db, $sql_insert);
 
     // Clear session variables
-    unset($_SESSION['nama']);
-    unset($_SESSION['email']);
+    $_SESSION['nama'] = $_POST['nama'];
+    $_SESSION['email'] = $_POST['email'];
+    $_SESSION['waktu_mulai'] = date('Y-m-d H:i:s');
+    unset($_SESSION['id_kuis']);
 }
 
-// Optionally, you can provide feedback to the user here
-
-// Close database connection
 mysqli_close($db);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -356,7 +366,8 @@ mysqli_close($db);
 </head>
 
 <body>
-    <?php include 'navbar4.php'; ?><br><br>
+    <?php include 'navbar4.php'; ?>
+    <br>
     <div class="mt-5 mb-5">
         <img src="../img/kuislogo.png " alt="" class="small-img" style="margin-top: 70px; margin-left: 100px">
         <div class="text">

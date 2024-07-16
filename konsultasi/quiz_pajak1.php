@@ -1,11 +1,17 @@
 <?php
 session_start();
 include 'navbar4.php';
-include '../connection.php';
+include '../connection.php'; // Sesuaikan path ke file connection.php
+
 if (!isset($_SESSION['nama'])) {
     // Jika tidak ada, redirect ke form_kuis.php
     header('Location: form_kuis.php');
     exit();
+}
+
+// Simpan waktu mulai ke dalam session jika belum diset
+if (!isset($_SESSION['waktu_mulai'])) {
+    $_SESSION['waktu_mulai'] = date('H:i:s');
 }
 
 $sql = "SELECT * FROM soal_pajak ORDER BY id";
@@ -16,21 +22,27 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 $first_question = isset($questions[0]) ? $questions[0] : null;
 
-$sql_quiz = "SELECT waktu FROM quiz_pajak WHERE id = 9";
+$sql_quiz = "SELECT waktu FROM quiz_pajak WHERE id = 9"; // Ganti ID kuis sesuai kebutuhan
 $result_quiz = mysqli_query($db, $sql_quiz);
 if ($result_quiz) {
     $quiz_data = mysqli_fetch_assoc($result_quiz);
     $quiz_time = (int) $quiz_data['waktu'];
+
+    // Simpan ID kuis ke dalam session
+    $_SESSION['id_kuis'] = 9; // Ganti dengan nilai ID kuis yang sesuai
 } else {
     echo "Error fetching quiz time: " . mysqli_error($db);
     exit();
 }
-// Di halaman quiz_pajak1.php, ambil jawaban dari session jika ada
-if (isset($_SESSION['jawaban'])) {
-    $jawaban = $_SESSION['jawaban'];
+
+if (isset($_POST['answers'])) {
+    $selectedAnswers = $_POST['answers'];
+} else {
+    $selectedAnswers = []; // Atau inisialisasi sesuai kebutuhan
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
